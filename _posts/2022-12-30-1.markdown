@@ -4,6 +4,9 @@ title:  "O que é um banco de dados?"
 date:   2022-12-30 18:42:47 -0300
 categories: Dados
 ---
+<p align="center">
+  <img src="https://img.freepik.com/fotos-gratis/senha-com-a-mao-segurando-uma-pinca-e-codigo-binario_23-2148578091.jpg?w=740&t=st=1694350742~exp=1694351342~hmac=4c04419fb3ff1bbfd3364f9cb17b5ce99ec84bb3efcc4e2fd38bbc3473af72ae" width="500" height="250">
+</p>
 
 ## Os diferentes tipos de bancos de dados e suas aplicações
 

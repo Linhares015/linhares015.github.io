@@ -125,7 +125,7 @@ code {
   font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #2D333B;
 }
 
 code {
@@ -448,10 +448,10 @@ table td {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff;
+  background: #2D333B;
 }
 .highlighter-rouge .highlight {
-  background: #eef;
+  background: #2D333B;
 }
 .highlight .c {
   color: #998;

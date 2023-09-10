@@ -3,12 +3,9 @@ layout: post
 title:  "O que é um projeto de BI?"
 date:   2022-12-30 18:42:47 -0300
 categories: Dados
+thumbnail: "https://img.freepik.com/fotos-gratis/trabalhadores-de-escritorio-usando-graficos-de-financas_23-2150408661.jpg?w=740&t=st=1694352687~exp=1694353287~hmac=1d5d4a5cfba1823dfe5431172e7893879f0ad8f283bb18ca6d1ec46418e941ce"
+excerpt: "A Chave para Decisões Empresariais Estratégicas"
 ---
-<p align="center">
-  <img src="
-  https://img.freepik.com/fotos-gratis/trabalhadores-de-escritorio-usando-graficos-de-financas_23-2150408661.jpg?w=740&t=st=1694352687~exp=1694353287~hmac=1d5d4a5cfba1823dfe5431172e7893879f0ad8f283bb18ca6d1ec46418e941ce" width="500" height="250">
-</p>
-
 # A Chave para Decisões Empresariais Estratégicas
 
 Em um mundo empresarial cada vez mais orientado por dados, a capacidade de compreender e utilizar esses dados é crucial. É aqui que entra o Business Intelligence (BI). Mas o que é exatamente um projeto de BI e por que ele é tão vital para as empresas modernas?

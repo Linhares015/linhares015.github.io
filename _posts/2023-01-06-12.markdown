@@ -3,10 +3,9 @@ layout: post
 title:  "Dominando a função DELETE"
 date:   2023-01-06 18:42:47 -0300
 categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg"
+excerpt: " "
 ---
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg" width="300" height="250">
-</p>
 
 # Dicas e truques para excluir dados com segurança no SQL.
 

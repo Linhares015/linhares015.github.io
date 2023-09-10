@@ -3,10 +3,9 @@ layout: post
 title:  "Data Lake vs. Data Warehouse"
 date:   2023-01-03 18:42:47 -0300
 categories: Dados
+thumbnail: "https://img.freepik.com/fotos-gratis/fundo-de-armazenamento-em-nuvem-remixado-do-dominio-publico-pela-nasa_53876-104240.jpg?t=st=1694353570~exp=1694354170~hmac=345948e71323f1c2d18c9720d7dd44b3229f39df5e46df3a408682cfaa7a2c21"
+excerpt: " "
 ---
-<p align="center">
-  <img src="https://img.freepik.com/fotos-gratis/fundo-de-armazenamento-em-nuvem-remixado-do-dominio-publico-pela-nasa_53876-104240.jpg?t=st=1694353570~exp=1694354170~hmac=345948e71323f1c2d18c9720d7dd44b3229f39df5e46df3a408682cfaa7a2c21" width="500" height="250">
-</p>
 
 # Desvendando as Diferenças e Identificando a Melhor Escolha
 

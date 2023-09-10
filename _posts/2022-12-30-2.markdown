@@ -3,10 +3,9 @@ layout: post
 title:  "ETL x ELT"
 date:   2022-12-30 18:42:47 -0300
 categories: Dados
+thumbnail: "https://img.freepik.com/fotos-gratis/conceito-de-seguranca-cibernetica-com-computador-de-perto_23-2149101201.jpg?w=360&t=st=1694350697~exp=1694351297~hmac=9b503580b2cd686ebe7b32edc8e23a18ecced482888153b0434ec305469bc4b5"
+excerpt: " "
 ---
-<p align="center">
-  <img src="https://img.freepik.com/fotos-gratis/conceito-de-seguranca-cibernetica-com-computador-de-perto_23-2149101201.jpg?w=360&t=st=1694350697~exp=1694351297~hmac=9b503580b2cd686ebe7b32edc8e23a18ecced482888153b0434ec305469bc4b5" width="300" height="250">
-</p>
 
 ## Escolhendo a Melhor Abordagem de Integração de Dados
 

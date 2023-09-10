@@ -3,10 +3,9 @@ layout: post
 title:  "Crontab Linux"
 date:   2023-01-07 18:42:47 -0300
 categories: Linux
+thumbnail: "https://static.wixstatic.com/media/710ee0_efd78d79a1d845009117111f68574344~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_efd78d79a1d845009117111f68574344~mv2.webp"
+excerpt: " "
 ---
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_efd78d79a1d845009117111f68574344~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_efd78d79a1d845009117111f68574344~mv2.webp" width="500" height="250">
-</p>
 
 # Tudo que você precisa saber sobre o agendador de tarefas linux
 

@@ -3,11 +3,9 @@ layout: post
 title:  "Data Lake"
 date:   2023-01-03 18:42:47 -0300
 categories: Dados
+thumbnail: "https://img.freepik.com/vetores-gratis/fundo-de-matriz-de-fluxo-de-algoritmo-de-codigo-binario-digital_1017-25328.jpg?w=360&t=st=1694351624~exp=1694352224~hmac=3dd47ea929b2adf71e0b9dd0c70563a03790f35b05f80b5a57f1d27d3a5920fd"
+excerpt: " "
 ---
-<p align="center">
-  <img src="
-  https://img.freepik.com/fotos-gratis/sala-de-hub-de-racks-de-servidor-de-dados-com-centro-de-computacao-de-big-data-interior-azul-para-hospedar-hardware-de-armazenamento_90220-1033.jpg?w=360&t=st=1694353576~exp=1694354176~hmac=bf43d5a8f2adc10dc50b8411202a03ecdd7748519b45f0d40aea338659d6a80b" width="300" height="250">
-</p>
 
 # Descubra como um Data Lake pode armazenar e gerenciar grandes quantidades de dados não estruturados.
 

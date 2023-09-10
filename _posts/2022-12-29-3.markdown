@@ -3,10 +3,9 @@ layout: post
 title:  "ETL"
 date:   2022-12-29 18:42:47 -0300
 categories: Dados
+thumbnail: "https://img.freepik.com/vetores-gratis/fundo-de-matriz-de-fluxo-de-algoritmo-de-codigo-binario-digital_1017-25328.jpg?w=740&t=st=1694351624~exp=1694352224~hmac=3dd47ea929b2adf71e0b9dd0c70563a03790f35b05f80b5a57f1d27d3a5920fd"
+excerpt: "Extração, Transformação e Carregamento"
 ---
-<p align="center">
-  <img src="https://img.freepik.com/vetores-gratis/fundo-de-matriz-de-fluxo-de-algoritmo-de-codigo-binario-digital_1017-25328.jpg?w=740&t=st=1694351624~exp=1694352224~hmac=3dd47ea929b2adf71e0b9dd0c70563a03790f35b05f80b5a57f1d27d3a5920fd" width="500" height="250">
-</p>
 
 # A Espinha Dorsal da Integração de Dados Moderna
 
@@ -34,6 +33,6 @@ No contexto do Big Data, o ETL assume uma importância ainda maior. Com volumes 
 Integração em Tempo Real e Decisões Ágeis
 
 Uma das maiores vantagens do ETL é sua capacidade de integrar dados em tempo real. Em um mundo onde as condições de mercado podem mudar em um piscar de olhos, ter acesso a informações atualizadas é inestimável. Com o ETL, as empresas podem reagir rapidamente às mudanças, tomando decisões informadas que maximizam a eficiência e a lucratividade.
-Conclusão: ETL - Uma Necessidade Empresarial
+# Conclusão: ETL - Uma Necessidade Empresarial
 
 A integração de dados não é apenas uma opção - é uma necessidade para qualquer empresa que deseja se manter competitiva na era digital. O ETL é uma ferramenta poderosa nesse arsenal, permitindo que as organizações transformem dados brutos em insights acionáveis. Ao fazer isso, as empresas estão melhor equipadas para navegar no complexo cenário de negócios de hoje, tomando decisões que impulsionam o sucesso e a inovação.

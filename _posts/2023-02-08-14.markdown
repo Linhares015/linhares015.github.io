@@ -3,10 +3,9 @@ layout: post
 title:  "Procedures SQL"
 date:   2023-02-08 18:42:47 -0300
 categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.webp"
+excerpt: "Entendendo e Criando para Eficiência"
 ---
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.webp" width="500" height="250">
-</p>
 
 # Entendendo e Criando para Eficiência
 

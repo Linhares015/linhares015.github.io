@@ -1,0 +1,7 @@
+/vendor
+.DS_Store
+._*
+*.swp
+*.bak
+*.tmp
+*.log

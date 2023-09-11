@@ -4,8 +4,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.
 #header-img: "img/home-bg.jpg"
 #header-text: "Cognitio Arcanum"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://linhares015.github.io" # the base hostname & protocol for your site
+baseurl: "/linhares015.github.io"
+url: "https://linhares015.github.io"
+
 #twitter_username: jekyllrb
 github_username: Linhares015
 

@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +18,23 @@ jobs:
       with:
         ruby-version: '2.7'
 
+    - name: Cache gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
     - name: Update Bundler
       run: gem install bundler:2.4.19
+
+    - name: Configure Bundler
+      run: |
+        bundle config path vendor/bundle
 
     - name: Install dependencies
       run: bundle install
 
-    - name: Build Jekyll site
-      uses: actions/jekyll-build-pages@v1
-      
     - name: Build site
       run: bundle exec jekyll build

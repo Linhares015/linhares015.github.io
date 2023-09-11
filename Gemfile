@@ -5,6 +5,15 @@ gem "jekyll"
 gem "minima"
 gem "webrick"
 
+# Gems faltantes identificadas anteriormente
+gem 'minitest'
+gem 'activesupport'
+gem 'addressable'
+gem 'commonmarker'
+gem 'faraday'
+gem 'rexml'
+gem 'nokogiri'
+
 # GitHub Pages
 gem "github-pages", group: :jekyll_plugins
 

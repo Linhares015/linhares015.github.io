@@ -14,3 +14,7 @@ gem "jekyll-readme-index"
 gem "jekyll-default-layout"
 gem "jekyll-titles-from-headings"
 gem "bundler", "2.4.19"
+gem 'jekyll-archives'
+gem 'kramdown-parser-gfm'
+gem 'webrick'
+

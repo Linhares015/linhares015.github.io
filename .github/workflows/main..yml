@@ -25,5 +25,8 @@ jobs:
     - name: Install dependencies
       run: bundle install
 
+    - name: Build Jekyll site
+      uses: actions/jekyll-build-pages@v1
+      
     - name: Build site
       run: bundle exec jekyll build

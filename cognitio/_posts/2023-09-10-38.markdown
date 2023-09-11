@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Autenticação Segura no Linux"
+date:   2023-09-10 18:42:47 -0300
+categories: Linux
+thumbnail: "https://diolinux.com.br/wp-content/uploads/2019/01/seguran%C3%A7a-no-linux.jpg"
+excerpt: " "
+---
+
+# Entendendo Senhas Sombra e PAM
+
+A segurança cibernética é uma preocupação crescente em nossa era digital. Com o aumento constante de ameaças e ataques cibernéticos, é essencial garantir que nossos sistemas e dados estejam protegidos. Um vídeo recente no YouTube destacou algumas práticas recomendadas para fortalecer a segurança no Linux. Aqui estão os principais insights:
+
+## Senhas Sombra no Linux
+
+Uma das características notáveis do Linux é o uso de "senhas sombra". Em vez de armazenar senhas criptografadas no arquivo /etc/passwd, que é tradicionalmente acessível a todos os usuários, o Linux introduziu o conceito de senhas sombra. Essas senhas são armazenadas em um arquivo separado, proporcionando uma camada extra de segurança. Isso garante que mesmo que um invasor obtenha acesso ao sistema, ele não possa facilmente acessar as senhas criptografadas.
+
+## A Importância de Alterar Senhas Regularmente
+
+Mudar senhas regularmente é uma prática recomendada em segurança cibernética. Mesmo que isso possa parecer tedioso ou inconveniente, é uma medida preventiva crucial. Forçar os usuários a alterar suas senhas em intervalos regulares pode prevenir muitos ataques potenciais, especialmente se uma senha for comprometida.
+
+## PAM: Flexibilidade em Autenticação
+
+O Módulo de Autenticação Pluggable (PAM) é outra característica notável do Linux. Ele permite a criação de várias regras de autenticação. Isso significa que os administradores do sistema podem configurar o sistema para exigir vários tipos de autenticação, tornando-o ainda mais seguro contra ameaças.
+
+## Conclusão
+
+A segurança é uma jornada contínua, e é essencial estar sempre atualizado com as melhores práticas e ferramentas. O Linux, com suas características de senhas sombra e PAM, oferece robustez e flexibilidade em segurança. Ao entender e implementar esses recursos, podemos dar um passo significativo para proteger nossos sistemas e dados.
+
+Abaixo video mostrando tudo isso na prática:
+
+[![Segurança 2 Autenticação](https://img.youtube.com/vi/IYSuY9jRKQg/0.jpg)](https://youtu.be/IYSuY9jRKQg)

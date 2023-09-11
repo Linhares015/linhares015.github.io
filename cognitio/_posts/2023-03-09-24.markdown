@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "Storytelling"
+date:   2023-03-09 18:42:47 -0300
+categories: Dados
+thumbnail: "https://static.wixstatic.com/media/710ee0_472e6ac195c74b7697a7c76c562f3cec~mv2.jpg/v1/fill/w_3520,h_1640,al_c,q_90/710ee0_472e6ac195c74b7697a7c76c562f3cec~mv2.webp"
+excerpt: "Como contar histórias com dados"
+---
+
+Storytelling é a arte de contar histórias de maneira envolvente e cativante. Essa técnica tem sido usada por séculos para transmitir informações e transmitir conhecimentos, e agora está sendo aplicada em análise de dados e business intelligence. 
+
+Storytelling de dados é a prática de contar histórias com dados, usando gráficos e visualizações para transmitir informações de maneira clara e concisa.
+
+## Por que o Storytelling é importante?
+
+O Storytelling é importante porque ajuda as pessoas a entenderem os dados de maneira mais eficaz. As visualizações de dados são uma maneira poderosa de apresentar informações, mas elas podem ser confusas ou até mesmo enganosas se não forem apresentadas de maneira clara. 
+
+Storytelling de dados permite que as pessoas entendam os dados de maneira mais profunda e contextualizada, identificando padrões e tendências que podem não ser óbvios em um conjunto de dados.
+
+Além disso, o Storytelling de dados é uma maneira eficaz de persuadir as pessoas a agir com base nos dados apresentados. Quando os dados são apresentados em uma história envolvente, as pessoas são mais propensas a compreender a importância dos dados e tomar medidas com base neles.
+
+## Como contar histórias com dados?
+
+Para contar histórias com dados, é importante seguir algumas práticas recomendadas:
+
+1. Conheça a sua audiência: 
+
+Ao criar uma história com dados, é importante saber quem será o público-alvo da apresentação. Isso ajudará a personalizar a história e criar um impacto mais significativo.
+
+2. Escolha uma mensagem clara: 
+
+A história deve ter uma mensagem clara e concisa que seja fácil de entender e lembra. Isso ajudará a manter o interesse da audiência e garantir que a história seja compreendida.
+
+3. Use visualizações de dados apropriadas: 
+
+A escolha das visualizações de dados é importante. A visualização correta pode destacar a mensagem da história, enquanto a visualização incorreta pode confundir o público.
+
+4. Use a narrativa para conectar os pontos: 
+
+A narrativa é uma maneira eficaz de conectar os pontos entre os dados e destacar a mensagem da história. Uma narrativa bem pensada pode ajudar a esclarecer a importância dos dados apresentados.
+
+5. Crie um clímax: 
+
+Uma história bem contada deve ter um clímax que cative a atenção da audiência. O clímax pode ser um ponto crucial da narrativa ou uma visualização de dados que revele uma informação surpreendente.
+
+## Exemplo de Storytelling de dados
+
+Um exemplo de Storytelling de dados pode ser a apresentação de um relatório de vendas trimestral. Ao invés de apenas apresentar números de vendas, o Storytelling de dados pode ser usado para criar uma narrativa em torno do desempenho de vendas. 
+
+A história poderia começar com a introdução da empresa e seus objetivos de vendas, seguida por uma análise dos resultados trimestrais. A visualização de dados apropriada pode ser usada para destacar os pontos-chave da narrativa, incluindo informações sobre os produtos mais vendidos, regiões com maior ou menor desempenho e qualquer outra informação relevante. 
+
+A história pode culminar em um clímax, que poderia ser uma visualização que revela uma informação surpreendente, como o desempenho inesperado de um produto ou região. Em seguida, a história pode ser concluída com uma mensagem clara e concisa sobre a importância dos dados apresentados e as ações que a empresa deve tomar com base nos dados.
+
+## Conclusão
+
+O Storytelling de dados é uma técnica poderosa que pode ajudar as empresas a transmitir informações de maneira eficaz e persuasiva. Ao contar histórias com dados, as empresas podem garantir que seus públicos entendam as informações de maneira profunda e contextualizada e sejam motivados a agir com base nesses dados. Ao seguir as práticas recomendadas de Storytelling de dados, as empresas podem criar histórias envolventes e impactantes que melhoram sua comunicação e tomada de decisões.

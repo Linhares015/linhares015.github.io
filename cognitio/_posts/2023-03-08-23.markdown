@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Análise Exploratória de Dados"
+date:   2023-03-08 18:42:47 -0300
+categories: Dados
+thumbnail: "https://static.wixstatic.com/media/710ee0_9b3f149f2c9b493798a62a1d3db26f86~mv2.jpg/v1/fill/w_2187,h_1640,al_c,q_90/710ee0_9b3f149f2c9b493798a62a1d3db26f86~mv2.webp"
+excerpt: " "
+---
+
+## Técnicas e Ferramentas
+
+A análise exploratória de dados é uma técnica que permite explorar dados de maneira eficaz, identificar padrões e extrair informações úteis para a tomada de decisões. Essa técnica é usada em diversas áreas, como ciência de dados, business intelligence e outras áreas que dependem da análise de dados.
+
+A análise exploratória de dados envolve o uso de técnicas e ferramentas para visualizar, resumir e explorar os dados. Algumas das técnicas mais comuns de análise exploratória de dados incluem visualizações e análises estatísticas básicas.
+
+## Visualizações
+
+As visualizações são uma das ferramentas mais poderosas para a análise exploratória de dados. Elas ajudam a representar dados de maneira visual e compreensível, permitindo que os usuários identifiquem padrões e tendências de maneira eficaz. Algumas das visualizações mais comuns usadas na análise exploratória de dados incluem:
+
+1. Gráficos de barras: 
+
+Os gráficos de barras são usados para comparar diferentes valores ou categorias de dados. Eles são úteis para visualizar a distribuição de dados e identificar tendências.
+
+2. Gráficos de linhas: 
+
+Os gráficos de linhas são usados para visualizar a mudança de valores ao longo do tempo. Eles são úteis para identificar tendências e padrões em dados temporais.
+
+3. Gráficos de dispersão: 
+
+Os gráficos de dispersão são usados para mostrar a relação entre duas variáveis. Eles são úteis para identificar correlações e padrões em dados.
+
+## Análises estatísticas básicas
+
+As análises estatísticas básicas também são uma ferramenta útil para a análise exploratória de dados. Algumas das análises estatísticas mais comuns usadas na análise exploratória de dados incluem:
+
+1. Média, mediana e moda: 
+
+Essas são medidas de tendência central que ajudam a identificar a distribuição dos dados.
+
+2. Desvio padrão e variância: 
+
+Essas são medidas de dispersão que ajudam a identificar a variabilidade dos dados.
+
+3. Testes de hipóteses: 
+
+Esses testes são usados para avaliar se as diferenças entre dois grupos de dados são significativas ou não.
+
+## Conclusão
+
+A análise exploratória de dados é uma técnica importante para a tomada de decisões de negócios e ciência de dados. As ferramentas e técnicas usadas na análise exploratória de dados, como visualizações e análises estatísticas básicas, podem ajudar a identificar padrões e tendências nos dados e fornecer informações valiosas para a tomada de decisões.

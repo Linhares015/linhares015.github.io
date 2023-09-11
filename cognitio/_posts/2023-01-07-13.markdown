@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Crontab Linux"
+date:   2023-01-07 18:42:47 -0300
+categories: Linux
+thumbnail: "https://static.wixstatic.com/media/710ee0_efd78d79a1d845009117111f68574344~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_efd78d79a1d845009117111f68574344~mv2.webp"
+excerpt: " "
+---
+
+# Tudo que você precisa saber sobre o agendador de tarefas linux
+
+Crontab é um utilitário do sistema operacional Unix que permite agendar tarefas para serem executadas automaticamente em determinados momentos. Ele é muito útil para automatizar tarefas rotineiras, como backups, atualizações de software e outras tarefas que precisam ser executadas com frequência.
+
+Cada linha de um arquivo crontab representa uma tarefa a ser agendada e é composta por seis campos separados por espaços:
+
+    Minuto (0-59)
+
+    Hora (0-23)
+
+    Dia do mês (1-31)
+
+    Mês (1-12)
+
+    Dia da semana (0-6, sendo 0=domingo)
+
+    Comando a ser executado
+
+Além disso, é possível usar símbolos como *, - e / para especificar quando a tarefa deve ser executada. Por exemplo:
+
+    */5 significa que a tarefa deve ser executada a cada 5 unidades de tempo
+
+    1-10 significa que a tarefa deve ser executada nas primeiras 10 unidades de tempo
+
+Para criar um novo arquivo crontab, basta usar o comando `crontab -e` e adicionar as linhas com as tarefas a serem agendadas. É importante lembrar que cada linha deve terminar com um caractere de nova linha, senão a tarefa não será adicionada.
+
+Para verificar as tarefas agendadas, basta usar o comando `crontab -l`. Para remover um arquivo crontab, basta usar o comando `crontab -r`.
+
+## Aqui vão alguns exemplos práticos de uso do crontab:
+
+### Executar uma tarefa todos os dias às 22h:
+
+```bash
+0 22 * * * /path/to/command
+```
+
+### Executar uma tarefa todas as segundas-feiras às 8h:
+
+```bash
+0 8 * * 1 /path/to/command
+```
+
+### Executar uma tarefa a cada 15 minutos:
+
+```bash
+*/15 * * * * /path/to/command
+```
+
+### Executar uma tarefa todos os dias às 9h, 12h, 15h e 18h:
+
+```bash
+0 9,12,15,18 * * * /path/to/command
+```
+
+### Executar uma tarefa todos os dias de janeiro às 8h:
+
+```bash
+0 8 1 * 1 /path/to/command
+```
+
+Abaixo video mostrando tudo isso na prática:
+
+[![Crontab Linux](https://img.youtube.com/vi/pm2sprLIPpY/0.jpg)](https://youtu.be/pm2sprLIPpY)

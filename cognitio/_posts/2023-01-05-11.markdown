@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "Dominando a função SELECT"
+date:   2023-01-05 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg"
+excerpt: " "
+---
+
+# Dicas e truques para selecionar dados com precisão no SQL.
+
+A função SELECT no SQL é utilizada para selecionar dados de um banco de dados. Ela é uma das mais importantes e versáteis cláusulas da linguagem de consulta de dados, e é utilizada em quase todas as consultas SQL.
+
+## A sintaxe básica da cláusula SELECT é a seguinte:
+```sql
+SELECT coluna1, coluna2, ...
+FROM nome_da_tabela;
+```
+
+Isso selecionará as colunas especificadas da tabela especificada. Você também pode usar a cláusula WHERE para filtrar os resultados da consulta e retornar apenas os dados que atendem a determinadas condições.
+
+Além disso, a função SELECT permite que você faça operações de agregação, como somar, contar e calcular a média de valores em uma coluna. Isso é útil para obter informações resumidas e importantes sobre seus dados.
+
+Aqui estão algumas dicas e truques para dominar a função SELECT e selecionar dados com precisão no SQL:
+
+Use a cláusula `WHERE` para filtrar os resultados da consulta e retornar apenas os dados relevantes.
+
+Use operadores de comparação, como `=, >, < e BETWEEN`, para especificar condições precisas.
+
+Use a cláusula `ORDER BY` para classificar os resultados da consulta em ordem crescente ou decrescente.
+
+Use a cláusula `LIMIT` para limitar o número de linhas retornadas pelo SELECT.
+
+Use a cláusula `GROUP BY` para agrupar os resultados da consulta por uma ou mais colunas.
+
+Use funções de agregação, como `SUM, COUNT e AVG`, para obter informações resumidas e importantes sobre seus dados.
+
+Com prática e familiaridade com as diversas opções disponíveis na cláusula SELECT, você poderá selecionar dados com precisão e eficiência no SQL.
+
+Abaixo um vídeo com tudo que você precisa saber sobre a cláusula SELECT:
+
+[![SELECT e suas Instâncias](https://img.youtube.com/vi/-HmgKAK-UdA/0.jpg)](https://youtu.be/-HmgKAK-UdA)

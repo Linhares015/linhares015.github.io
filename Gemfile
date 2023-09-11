@@ -3,6 +3,7 @@ source "https://rubygems.org"
 # Jekyll e Minima
 gem "jekyll"
 gem "minima"
+gem "webrick"
 
 # GitHub Pages
 gem "github-pages", group: :jekyll_plugins

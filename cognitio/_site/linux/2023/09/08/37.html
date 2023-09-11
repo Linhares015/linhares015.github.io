@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Docker e Portainer em Linux | Cognitio Arcanum</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Docker e Portainer em Linux" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+<meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+<link rel="canonical" href="http://localhost:4000/linux/2023/09/08/37.html" />
+<meta property="og:url" content="http://localhost:4000/linux/2023/09/08/37.html" />
+<meta property="og:site_name" content="Cognitio Arcanum" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-08T18:42:47-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Docker e Portainer em Linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-08T18:42:47-03:00","datePublished":"2023-09-08T18:42:47-03:00","description":"Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.","headline":"Docker e Portainer em Linux","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/linux/2023/09/08/37.html"},"url":"http://localhost:4000/linux/2023/09/08/37.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Cognitio Arcanum</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">Cognitio Arcanum!</a><a class="page-link" href="/category/dados/">Dados</a><a class="page-link" href="/category/sql/">SQL</a><a class="page-link" href="/category/linux/">Linux</a><a class="page-link" href="/category/projeto/">Projeto</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Docker e Portainer em Linux</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-09-08T18:42:47-03:00" itemprop="datePublished">Sep 8, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
+
+<p>O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.</p>
+
+<h2 id="docker-desktop-uma-visão-geral">Docker Desktop: Uma Visão Geral</h2>
+
+<p>O Docker Desktop é uma solução completa que permite aos desenvolvedores configurar, iniciar e gerenciar contêineres Docker através de uma interface gráfica amigável. Ele integra-se perfeitamente aos sistemas operacionais Windows e macOS, proporcionando uma experiência de usuário suave. No entanto, o Docker Desktop não está disponível para Linux. Isso pode parecer estranho, dado que o Docker foi originalmente construído para Linux!</p>
+
+<h2 id="a-solução-para-usuários-de-linux-docker-cli-e-portainer">A Solução para Usuários de Linux: Docker CLI e Portainer</h2>
+
+<p>Embora o Docker Desktop não esteja disponível para Linux, os usuários de Fedora, Ubuntu e outras distribuições não estão sem opções. O Docker CLI, embora não seja uma interface gráfica, é uma ferramenta extremamente poderosa que permite aos usuários fazer tudo o que o Docker Desktop faz e até mais. Mas, para aqueles que ainda desejam uma interface gráfica, o Portainer é a solução.</p>
+
+<h2 id="configurando-o-docker">Configurando o Docker</h2>
+
+<h3 id="no-fedora">No Fedora:</h3>
+
+<ol>
+  <li>Instalação:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>docker-ce
+</code></pre></div></div>
+
+<ol>
+  <li>Iniciar e Habilitar o Docker:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start docker
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
+</code></pre></div></div>
+
+<ol>
+  <li>Verificar a Instalação:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h3 id="no-ubuntu">No Ubuntu:</h3>
+
+<ol>
+  <li>Instalação:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>docker.io
+</code></pre></div></div>
+
+<ol>
+  <li>Iniciar e Habilitar o Docker:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start docker
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
+</code></pre></div></div>
+
+<ol>
+  <li>Verificar a Instalação:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h2 id="introdução-ao-portainer">Introdução ao Portainer</h2>
+
+<p>O Portainer é uma solução de gerenciamento para Docker com uma interface de usuário baseada na web. Ele permite que você gerencie seus contêineres, imagens, redes e volumes do Docker. Além disso, é de código aberto e extremamente leve.</p>
+
+<h2 id="instalando-e-configurando-o-portainer">Instalando e Configurando o Portainer</h2>
+
+<ol>
+  <li>Puxe a Imagem do Portainer:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull portainer/portainer-ce
+</code></pre></div></div>
+
+<ol>
+  <li>Execute o Portainer:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 9000:9000 <span class="nt">--name</span> portainer <span class="nt">--restart</span> always <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce
+</code></pre></div></div>
+
+<ol>
+  <li>Acesse o Portainer: Abra um navegador e vá para <code class="language-plaintext highlighter-rouge">http://localhost:9000</code> Você será saudado pela interface do Portainer, onde pode configurar o usuário administrador e começar a gerenciar seus contêineres.</li>
+</ol>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.</p>
+
+  </div><a class="u-url" href="/linux/2023/09/08/37.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li><li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Linhares015"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Linhares015</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -16,7 +16,7 @@ jekyll-archives:
     category: '/category/:name/'
 
 # Build settings
-theme: Beautiful Jekyll
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-archives

@@ -1,519 +1,974 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-10T17:14:18-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Procedures SQL</title><link href="http://localhost:4000/sql/2023/02/08/14.html" rel="alternate" type="text/html" title="Procedures SQL" /><published>2023-02-08T18:42:47-03:00</published><updated>2023-02-08T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/02/08/14</id><content type="html" xml:base="http://localhost:4000/sql/2023/02/08/14.html"><![CDATA[<h1 id="entendendo-e-criando-para-eficiência">Entendendo e Criando para Eficiência</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-10T21:26:46-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
 
-<p>A linguagem SQL é fundamental para interagir com bancos de dados. Uma das ferramentas mais poderosas que o SQL oferece são os procedimentos armazenados ou procedures. Vamos mergulhar no que são, como funcionam e como você pode criar os seus.</p>
+<p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
 
-<h2 id="o-que-são-procedimentos-armazenados-ou-procedures">O que são Procedimentos Armazenados ou procedures?</h2>
+<h2 id="por-que-a-cláusula-union-é-importante">Por que a cláusula UNION é importante?</h2>
 
-<p>Procedimentos armazenados são blocos de código SQL que são salvos no banco de dados e podem ser reutilizados. Eles encapsulam uma sequência de operações em uma única entidade, que pode ser invocada como uma função.</p>
+<p>Imagine que você tenha dois conjuntos de dados distintos em tabelas diferentes, mas deseja combiná-los para uma análise unificada. A cláusula UNION permite fazer exatamente isso, combinando resultados de múltiplas consultas.</p>
 
-<h2 id="benefícios-dos-procedimentos-armazenados">Benefícios dos Procedimentos Armazenados:</h2>
-
-<p>Reutilização de Código: Evita repetir o mesmo código SQL.</p>
-
-<p>Eficiência: Executam mais rapidamente do que múltiplas instruções SQL individuais.</p>
-
-<p>Segurança: Podem restringir o acesso direto às tabelas de dados, servindo como uma camada adicional de segurança.</p>
-
-<h2 id="como-funcionam">Como Funcionam?</h2>
-
-<p>Os procedimentos armazenados ou procedures são compilados e armazenados no banco de dados. Quando são chamados, o banco de dados apenas executa o plano de execução já compilado, em vez de recompilar o SQL, tornando a execução mais rápida.</p>
-
-<h2 id="criando-um-procedimento-armazenado">Criando um Procedimento Armazenado:</h2>
-
-<h4 id="aqui-está-um-exemplo-básico-de-como-criar-um-procedimento-armazenado">Aqui está um exemplo básico de como criar um procedimento armazenado:</h4>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">NomeDoProcedimento</span>
-<span class="k">AS</span>
-<span class="k">BEGIN</span> <span class="c1">-- Abre um bloco de código</span>
-    
-    <span class="c1">-- Seu código SQL aqui</span>
-    <span class="k">SELECT</span> 
-      <span class="o">*</span> 
-    <span class="k">FROM</span> <span class="n">NomeDaTabela</span><span class="p">;</span>
-
-<span class="k">END</span><span class="p">;</span> <span class="c1">-- Fecha o bloco de código</span>
-</code></pre></div></div>
-
-<h4 id="para-invocar-o-procedimento-armazenado">Para invocar o procedimento armazenado:</h4>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXEC</span> <span class="n">NomeDoProcedimento</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h4 id="parâmetros-em-procedimentos-armazenados">Parâmetros em Procedimentos Armazenados:</h4>
-
-<p>Você pode tornar seus procedimentos armazenados mais flexíveis usando parâmetros:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">NomeDoProcedimento</span> <span class="o">@</span><span class="n">NomeParametro</span> <span class="n">TipoDeDado</span>
-<span class="k">AS</span>
-<span class="k">BEGIN</span>
-    <span class="c1">-- Seu código SQL aqui</span>
-    <span class="k">SELECT</span> 
-      <span class="o">*</span> 
-    <span class="k">FROM</span> <span class="n">NomeDaTabela</span> 
-    <span class="k">WHERE</span> <span class="n">Coluna</span> <span class="o">=</span> <span class="o">@</span><span class="n">NomeParametro</span><span class="p">;</span>
-<span class="k">END</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Para invocar o procedimento armazenado com um parâmetro:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXEC</span> <span class="n">NomeDoProcedimento</span> <span class="o">@</span><span class="n">NomeParametro</span> <span class="o">=</span> <span class="s1">'ValorDesejado'</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="sempre-pense-em-otimizar-sua-procedure">Sempre pense em otimizar sua procedure</h2>
-
-<p>Otimizar procedimentos armazenados não é apenas uma questão de velocidade. Trata-se de escalabilidade. À medida que sua base de dados cresce, consultas não otimizadas podem se tornar o gargalo de sua aplicação.</p>
-
-<h2 id="técnicas-de-otimização">Técnicas de Otimização:</h2>
+<h2 id="entendendo-union-e-suas-variantes">Entendendo UNION e suas variantes:</h2>
 
 <ol>
-  <li>Índices Apropriados</li>
+  <li>UNION:</li>
 </ol>
 
-<p>Índices são como índices de livros para bancos de dados. Eles permitem que o sistema de banco de dados encontre dados sem ler toda a tabela.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">idx_nome_coluna</span> <span class="k">ON</span> <span class="n">nome_tabela</span><span class="p">(</span><span class="n">nome_coluna</span><span class="p">);</span>
-</code></pre></div></div>
-
-<ol>
-  <li>Subconsultas vs. Junções</li>
-</ol>
-
-<p>Junções são poderosas, mas podem ser caras em termos de desempenho. Subconsultas, em <code class="language-plaintext highlighter-rouge">certos cenários</code>, podem ser mais eficientes, mas tome cuidado nem sempre é o melhor caminho usar subconsultas.</p>
+<p>Combina os resultados de duas ou mais consultas removendo duplicatas.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
-  <span class="n">coluna1</span>
-  <span class="p">,</span> <span class="n">coluna2</span> 
-<span class="k">FROM</span> <span class="n">tabela1</span> 
-<span class="k">WHERE</span> <span class="n">coluna1</span> <span class="k">IN</span> <span class="p">(</span>
-                  <span class="k">SELECT</span> 
-                    <span class="n">coluna3</span> 
-                  <span class="k">FROM</span> <span class="n">tabela2</span> 
-                  <span class="k">WHERE</span> <span class="n">condicao</span><span class="p">);</span>
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">estudantes_2019</span>
+
+<span class="k">UNION</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">estudantes_2020</span><span class="p">;</span>
 </code></pre></div></div>
+<p>Uso típico: Quando você deseja combinar listas, mas garantir que cada item apareça apenas uma vez.</p>
 
 <ol>
-  <li>Evite Cursores</li>
+  <li>UNION ALL:</li>
 </ol>
 
-<p>Cursores permitem a iteração através de um conjunto de resultados linha por linha. No entanto, eles são lentos e, muitas vezes, uma abordagem baseada em conjunto é mais eficiente.</p>
+<p>Semelhante ao UNION, mas inclui duplicatas.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">vendedores_regiao_norte</span>
+
+<span class="k">UNION</span> <span class="k">ALL</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">vendedores_regiao_sul</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Uso típico: Quando você deseja combinar listas e manter todas as entradas, incluindo duplicatas.</p>
 
 <ol>
-  <li>Teste de Performance</li>
+  <li>INTERSECT:</li>
 </ol>
 
-<p>Antes de implementar qualquer otimização, saiba onde você está. Use ferramentas e comandos para analisar o desempenho de suas consultas.</p>
+<p>Retorna apenas as linhas que aparecem em ambos os conjuntos de resultados.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXPLAIN</span> <span class="k">ANALYZE</span> <span class="k">SELECT</span> <span class="n">coluna1</span><span class="p">,</span> <span class="n">coluna2</span> <span class="k">FROM</span> <span class="n">tabela1</span> <span class="k">WHERE</span> <span class="n">coluna1</span> <span class="o">=</span><span class="s1">'valor'</span><span class="p">;</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">alunos_matriculados</span>
+
+<span class="k">INTERSECT</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">alunos_presentes_hoje</span><span class="p">;</span>
 </code></pre></div></div>
 
-<h2 id="conclusão">Conclusão</h2>
+<p>Uso típico: Quando você deseja encontrar itens comuns entre dois conjuntos de dados.</p>
 
-<p>Os procedimentos armazenados são ferramentas poderosas que oferecem eficiência, segurança e reutilização de código. Eles são essenciais para desenvolvedores e administradores de banco de dados que desejam otimizar suas operações e garantir que suas aplicações sejam escaláveis e eficientes. Ao dominar os procedimentos armazenados, você estará equipado com uma habilidade valiosa que pode transformar a maneira como você interage com bancos de dados.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[Entendendo e Criando para Eficiência]]></summary></entry><entry><title type="html">Crontab Linux</title><link href="http://localhost:4000/linux/2023/01/07/13.html" rel="alternate" type="text/html" title="Crontab Linux" /><published>2023-01-07T18:42:47-03:00</published><updated>2023-01-07T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/01/07/13</id><content type="html" xml:base="http://localhost:4000/linux/2023/01/07/13.html"><![CDATA[<h1 id="tudo-que-você-precisa-saber-sobre-o-agendador-de-tarefas-linux">Tudo que você precisa saber sobre o agendador de tarefas linux</h1>
+<ol>
+  <li>EXCEPT (ou MINUS em alguns sistemas):</li>
+</ol>
 
-<p>Crontab é um utilitário do sistema operacional Unix que permite agendar tarefas para serem executadas automaticamente em determinados momentos. Ele é muito útil para automatizar tarefas rotineiras, como backups, atualizações de software e outras tarefas que precisam ser executadas com frequência.</p>
+<p>Retorna linhas do primeiro conjunto de resultados que não aparecem no segundo.</p>
 
-<p>Cada linha de um arquivo crontab representa uma tarefa a ser agendada e é composta por seis campos separados por espaços:</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">todos_os_funcionarios</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Minuto (0-59)
+<span class="k">EXCEPT</span>
 
-Hora (0-23)
-
-Dia do mês (1-31)
-
-Mês (1-12)
-
-Dia da semana (0-6, sendo 0=domingo)
-
-Comando a ser executado
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">funcionarios_de_ferias</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Além disso, é possível usar símbolos como *, - e / para especificar quando a tarefa deve ser executada. Por exemplo:</p>
+<p>Uso típico: Quando você deseja encontrar itens em um conjunto de dados que não estão em outro.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*/5 significa que a tarefa deve ser executada a cada 5 unidades de tempo
+<h2 id="considerações-de-performance">Considerações de Performance:</h2>
 
-1-10 significa que a tarefa deve ser executada nas primeiras 10 unidades de tempo
-</code></pre></div></div>
+<p>Assim como com os JOINs, as operações de conjunto podem ser intensivas em termos de recursos. Algumas dicas para otimizar:</p>
 
-<p>Para criar um novo arquivo crontab, basta usar o comando <code class="language-plaintext highlighter-rouge">crontab -e</code> e adicionar as linhas com as tarefas a serem agendadas. É importante lembrar que cada linha deve terminar com um caractere de nova linha, senão a tarefa não será adicionada.</p>
+<p>Certifique-se de que as colunas que você está combinando tenham tipos de dados compatíveis.</p>
 
-<p>Para verificar as tarefas agendadas, basta usar o comando <code class="language-plaintext highlighter-rouge">crontab -l</code>. Para remover um arquivo crontab, basta usar o comando <code class="language-plaintext highlighter-rouge">crontab -r</code>.</p>
+<p>Use cláusulas WHERE para limitar os resultados antes de combiná-los.</p>
 
-<h2 id="aqui-vão-alguns-exemplos-práticos-de-uso-do-crontab">Aqui vão alguns exemplos práticos de uso do crontab:</h2>
-
-<h3 id="executar-uma-tarefa-todos-os-dias-às-22h">Executar uma tarefa todos os dias às 22h:</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 22 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /path/to/command
-</code></pre></div></div>
-
-<h3 id="executar-uma-tarefa-todas-as-segundas-feiras-às-8h">Executar uma tarefa todas as segundas-feiras às 8h:</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 8 <span class="k">*</span> <span class="k">*</span> 1 /path/to/command
-</code></pre></div></div>
-
-<h3 id="executar-uma-tarefa-a-cada-15-minutos">Executar uma tarefa a cada 15 minutos:</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">*</span>/15 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /path/to/command
-</code></pre></div></div>
-
-<h3 id="executar-uma-tarefa-todos-os-dias-às-9h-12h-15h-e-18h">Executar uma tarefa todos os dias às 9h, 12h, 15h e 18h:</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 9,12,15,18 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /path/to/command
-</code></pre></div></div>
-
-<h3 id="executar-uma-tarefa-todos-os-dias-de-janeiro-às-8h">Executar uma tarefa todos os dias de janeiro às 8h:</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 8 1 <span class="k">*</span> 1 /path/to/command
-</code></pre></div></div>
-
-<p>Abaixo video mostrando tudo isso na prática:</p>
-
-<p><a href="https://youtu.be/pm2sprLIPpY"><img src="https://img.youtube.com/vi/pm2sprLIPpY/0.jpg" alt="Crontab Linux" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Dominando a função DELETE</title><link href="http://localhost:4000/sql/2023/01/06/12.html" rel="alternate" type="text/html" title="Dominando a função DELETE" /><published>2023-01-06T18:42:47-03:00</published><updated>2023-01-06T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/01/06/12</id><content type="html" xml:base="http://localhost:4000/sql/2023/01/06/12.html"><![CDATA[<h1 id="dicas-e-truques-para-excluir-dados-com-segurança-no-sql">Dicas e truques para excluir dados com segurança no SQL.</h1>
-
-<p>A função DELETE no SQL é utilizada para excluir dados de um banco. Ela é uma das cláusulas mais simples da linguagem de consulta de dados, mas também pode ser uma das mais perigosas se não for usada com cuidado.</p>
-
-<h2 id="a-sintaxe-básica-da-cláusula-delete-é-a-seguinte">A sintaxe básica da cláusula DELETE é a seguinte:</h2>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">nome_da_tabela</span>
-<span class="k">WHERE</span> <span class="n">condicao</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Isso excluirá todas as linhas da tabela que atendem à condição especificada. Se você omitir a cláusula WHERE, todas as linhas da tabela serão excluídas. Isso é conhecido como uma exclusão em massa e deve ser evitada a menos que você tenha certeza de que é o que deseja fazer.</p>
-
-<p>Aqui estão algumas dicas e truques para dominar a função DELETE e excluir dados com segurança no SQL:</p>
-
-<p>Quem nunca ouviu a expressão <code class="language-plaintext highlighter-rouge">"DELETE sem WHERE"?</code> Isso é um pesadelo para qualquer DBA, pois pode excluir todos os dados de uma tabela. 
-Por isso, a minha melhor dica é, <code class="language-plaintext highlighter-rouge">antes de qualquer DELETE, faça um SELECT</code>. Assim você terá certeza que está excluindo os dados corretos.</p>
-
-<p>Exemplo: Digamos que você queira excluir os clientes de uma tabela que não compraram nada nos últimos 3 anos. Você pode fazer um SELECT para ver quais clientes atendem a essa condição:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span>
-<span class="k">FROM</span> <span class="n">customers</span>
-<span class="k">WHERE</span> <span class="n">last_purchase_date</span> <span class="o">&lt;</span> <span class="s1">'2018-01-01'</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Depois de ter certeza de que a condição está correta, você pode executar a consulta DELETE:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">customers</span>
-<span class="k">WHERE</span> <span class="n">last_purchase_date</span> <span class="o">&lt;</span> <span class="s1">'2018-01-01'</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Sempre use a cláusula <code class="language-plaintext highlighter-rouge">WHERE</code> para especificar uma condição quando excluir dados. Isso evitará exclusões em massa acidentais.</p>
-
-<p>Use operadores de comparação, como <code class="language-plaintext highlighter-rouge">=, &gt;, &lt; e BETWEEN</code>, para especificar condições precisas.</p>
-
-<p>Tenha cuidado ao excluir dados de tabelas relacionadas. Certifique-se de entender como as restrições de chave estrangeira afetam as outras tabelas.</p>
-
-<p>Considere usar a cláusula <code class="language-plaintext highlighter-rouge">TRUNCATE TABLE</code> ao invés de <code class="language-plaintext highlighter-rouge">DELETE</code> para excluir todas as linhas de uma tabela. Isso é mais eficiente e rápido do que excluir linhas individualmente.</p>
-
-<p>Com prática e cuidado, você poderá dominar a função DELETE e excluir dados com segurança no SQL. Lembre-se de que a <code class="language-plaintext highlighter-rouge">exclusão de dados é irreversível</code>, então é importante ter certeza de que é o que você deseja fazer antes de executar uma consulta DELETE.</p>
-
-<p>Abaixo video mostrando tudo isso na prática:</p>
-
-<p><a href="https://youtu.be/9Iqp6pP0qGw"><img src="https://img.youtube.com/vi/9Iqp6pP0qGw/0.jpg" alt="DELETE e suas Instâncias" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Dominando a função SELECT</title><link href="http://localhost:4000/sql/2023/01/05/11.html" rel="alternate" type="text/html" title="Dominando a função SELECT" /><published>2023-01-05T18:42:47-03:00</published><updated>2023-01-05T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/01/05/11</id><content type="html" xml:base="http://localhost:4000/sql/2023/01/05/11.html"><![CDATA[<h1 id="dicas-e-truques-para-selecionar-dados-com-precisão-no-sql">Dicas e truques para selecionar dados com precisão no SQL.</h1>
-
-<p>A função SELECT no SQL é utilizada para selecionar dados de um banco de dados. Ela é uma das mais importantes e versáteis cláusulas da linguagem de consulta de dados, e é utilizada em quase todas as consultas SQL.</p>
-
-<h2 id="a-sintaxe-básica-da-cláusula-select-é-a-seguinte">A sintaxe básica da cláusula SELECT é a seguinte:</h2>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">coluna1</span><span class="p">,</span> <span class="n">coluna2</span><span class="p">,</span> <span class="p">...</span>
-<span class="k">FROM</span> <span class="n">nome_da_tabela</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Isso selecionará as colunas especificadas da tabela especificada. Você também pode usar a cláusula WHERE para filtrar os resultados da consulta e retornar apenas os dados que atendem a determinadas condições.</p>
-
-<p>Além disso, a função SELECT permite que você faça operações de agregação, como somar, contar e calcular a média de valores em uma coluna. Isso é útil para obter informações resumidas e importantes sobre seus dados.</p>
-
-<p>Aqui estão algumas dicas e truques para dominar a função SELECT e selecionar dados com precisão no SQL:</p>
-
-<p>Use a cláusula <code class="language-plaintext highlighter-rouge">WHERE</code> para filtrar os resultados da consulta e retornar apenas os dados relevantes.</p>
-
-<p>Use operadores de comparação, como <code class="language-plaintext highlighter-rouge">=, &gt;, &lt; e BETWEEN</code>, para especificar condições precisas.</p>
-
-<p>Use a cláusula <code class="language-plaintext highlighter-rouge">ORDER BY</code> para classificar os resultados da consulta em ordem crescente ou decrescente.</p>
-
-<p>Use a cláusula <code class="language-plaintext highlighter-rouge">LIMIT</code> para limitar o número de linhas retornadas pelo SELECT.</p>
-
-<p>Use a cláusula <code class="language-plaintext highlighter-rouge">GROUP BY</code> para agrupar os resultados da consulta por uma ou mais colunas.</p>
-
-<p>Use funções de agregação, como <code class="language-plaintext highlighter-rouge">SUM, COUNT e AVG</code>, para obter informações resumidas e importantes sobre seus dados.</p>
-
-<p>Com prática e familiaridade com as diversas opções disponíveis na cláusula SELECT, você poderá selecionar dados com precisão e eficiência no SQL.</p>
-
-<p>Abaixo um vídeo com tudo que você precisa saber sobre a cláusula SELECT:</p>
-
-<p><a href="https://youtu.be/-HmgKAK-UdA"><img src="https://img.youtube.com/vi/-HmgKAK-UdA/0.jpg" alt="SELECT e suas Instâncias" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">SQL</title><link href="http://localhost:4000/sql/2023/01/04/10.html" rel="alternate" type="text/html" title="SQL" /><published>2023-01-04T18:42:47-03:00</published><updated>2023-01-04T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/01/04/10</id><content type="html" xml:base="http://localhost:4000/sql/2023/01/04/10.html"><![CDATA[<h1 id="a-linguagem-essencial-para-decifrar-dados">A Linguagem Essencial para Decifrar Dados</h1>
-
-<p>Em um mundo onde os dados são o novo petróleo, a capacidade de extrair, analisar e interpretar esses dados é crucial. Aqui entra o SQL (Structured Query Language) - a chave mestra que desbloqueia o tesouro escondido em montanhas de dados.</p>
-
-<h2 id="o-que-é-sql">O que é SQL?</h2>
-
-<p>SQL é mais do que uma simples linguagem de consulta para bancos de dados relacionais. É a ponte entre perguntas complexas e respostas claras. Em sua essência, o SQL permite que analistas, cientistas de dados e profissionais de BI interroguem bancos de dados, transformem informações cruas em insights valiosos e moldem a narrativa dos negócios.</p>
-
-<h2 id="por-que-o-sql-é-tão-revolucionário">Por que o SQL é tão revolucionário?</h2>
-
-<p>Integração de Dados: Com o SQL, é possível unificar dados de múltiplas fontes, criando uma visão holística do negócio.</p>
-
-<p>Flexibilidade: De consultas simples a análises complexas, o SQL se adapta às necessidades, oferecendo soluções personalizadas.</p>
-
-<p>Autonomia: Em vez de depender de softwares específicos, com o SQL, os profissionais têm o poder de criar suas próprias consultas e relatórios.</p>
-
-<h2 id="comandos-essenciais-do-sql">Comandos Essenciais do SQL:</h2>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="c1">--Extrai dados de uma tabela.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span> <span class="c1">--Especifica a tabela de onde os dados serão extraídos.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WHERE</span> <span class="c1">--Filtra registros com base em uma condição.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">GROUP</span> <span class="k">BY</span> <span class="c1">--Agrupa linhas que possuem os mesmos valores.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ORDER</span> <span class="k">BY</span> <span class="c1">--Ordena os registros em ordem crescente ou decrescente.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">JOIN</span> <span class="c1">--Combina linhas de duas ou mais tabelas com base em uma coluna relacionada.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="c1">--Adiciona novos registros a uma tabela.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="c1">--Modifica registros existentes em uma tabela.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DELETE</span> <span class="c1">--Remove registros de uma tabela.</span>
-</code></pre></div></div>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span><span class="o">/</span><span class="k">TABLE</span> <span class="c1">--Cria um novo banco de dados ou tabela.</span>
-</code></pre></div></div>
-
-<h2 id="sql-no-contexto-empresarial">SQL no Contexto Empresarial:</h2>
-
-<p>O verdadeiro valor do SQL não está apenas em sua capacidade técnica, mas em como ele capacita as empresas a tomar decisões informadas. Seja identificando tendências emergentes, otimizando operações ou prevendo demandas futuras, o SQL é a ferramenta que transforma dados em estratégia.</p>
+<p>Pense na ordem das operações; às vezes, reordenar as consultas pode melhorar a performance.</p>
 
 <h2 id="conclusão">Conclusão:</h2>
 
-<p>Na era digital, onde os dados são abundantes, o SQL emerge não apenas como uma linguagem técnica, mas como uma linguagem de negócios. Para aqueles que buscam liderar na vanguarda da transformação digital, dominar o SQL é mais do que uma habilidade técnica; é uma competência essencial para navegar no futuro orientado por dados.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[A Linguagem Essencial para Decifrar Dados]]></summary></entry><entry><title type="html">Data Warehouse</title><link href="http://localhost:4000/dados/2023/01/03/6.html" rel="alternate" type="text/html" title="Data Warehouse" /><published>2023-01-03T18:42:47-03:00</published><updated>2023-01-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/01/03/6</id><content type="html" xml:base="http://localhost:4000/dados/2023/01/03/6.html"><![CDATA[<h1 id="a-fundação-da-análise-de-dados-moderna">A Fundação da Análise de Dados Moderna</h1>
+<p>A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
 
-<p>Em um mundo onde os dados são o novo ouro, a capacidade de armazenar, acessar e analisar esses dados de maneira eficiente é crucial. Aqui, o Data Warehouse (DW) emerge como uma solução robusta e indispensável. Mas o que é exatamente um Data Warehouse e por que ele é tão vital para as empresas contemporâneas?</p>
+<p>O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.</p>
 
-<h2 id="desvendando-o-data-warehouse">Desvendando o Data Warehouse</h2>
+<h2 id="docker-desktop-uma-visão-geral">Docker Desktop: Uma Visão Geral</h2>
 
-<p>Um Data Warehouse não é apenas um banco de dados comum. É uma infraestrutura projetada especificamente para consolidar dados de diversas origens, transformando-os em informações significativas. Ao contrário dos bancos de dados tradicionais, que focam em transações rápidas e operações diárias, um DW é otimizado para análise e relatórios.</p>
+<p>O Docker Desktop é uma solução completa que permite aos desenvolvedores configurar, iniciar e gerenciar contêineres Docker através de uma interface gráfica amigável. Ele integra-se perfeitamente aos sistemas operacionais Windows e macOS, proporcionando uma experiência de usuário suave. No entanto, o Docker Desktop não está disponível para Linux. Isso pode parecer estranho, dado que o Docker foi originalmente construído para Linux!</p>
 
-<h2 id="características-principais">Características Principais</h2>
+<h2 id="a-solução-para-usuários-de-linux-docker-cli-e-portainer">A Solução para Usuários de Linux: Docker CLI e Portainer</h2>
 
-<h3 id="performance-otimizada">Performance Otimizada:</h3>
+<p>Embora o Docker Desktop não esteja disponível para Linux, os usuários de Fedora, Ubuntu e outras distribuições não estão sem opções. O Docker CLI, embora não seja uma interface gráfica, é uma ferramenta extremamente poderosa que permite aos usuários fazer tudo o que o Docker Desktop faz e até mais. Mas, para aqueles que ainda desejam uma interface gráfica, o Portainer é a solução.</p>
 
-<p>Graças à sua arquitetura e técnicas de indexação, os DWs garantem consultas rápidas, mesmo em grandes volumes de dados.</p>
+<h2 id="configurando-o-docker">Configurando o Docker</h2>
 
-<h3 id="integração-de-dados">Integração de Dados:</h3>
+<h3 id="no-fedora">No Fedora:</h3>
 
-<p>Ao consolidar dados de múltiplas fontes, um DW oferece uma visão holística e unificada, eliminando silos de informação.</p>
+<ol>
+  <li>Instalação:</li>
+</ol>
 
-<h3 id="facilidade-de-uso">Facilidade de Uso:</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>docker-ce
+</code></pre></div></div>
 
-<p>Integrado a ferramentas analíticas, um DW permite visualizações intuitivas, dashboards e relatórios detalhados.</p>
+<ol>
+  <li>Iniciar e Habilitar o Docker:</li>
+</ol>
 
-<h3 id="escalabilidade">Escalabilidade:</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start docker
+</code></pre></div></div>
 
-<p>Projetado para crescer, um DW pode se adaptar às crescentes demandas de dados sem sacrificar a performance.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
+</code></pre></div></div>
 
-<h3 id="segurança-robusta">Segurança Robusta:</h3>
+<ol>
+  <li>Verificar a Instalação:</li>
+</ol>
 
-<p>Com protocolos avançados, os DWs garantem que os dados sensíveis estejam protegidos contra ameaças.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
+</code></pre></div></div>
 
-<h2 id="por-que-sua-empresa-precisa-de-um-data-warehouse">Por que sua empresa precisa de um Data Warehouse?</h2>
+<h3 id="no-ubuntu">No Ubuntu:</h3>
 
-<h3 id="tomada-de-decisão-estratégica">Tomada de Decisão Estratégica</h3>
+<ol>
+  <li>Instalação:</li>
+</ol>
 
-<p>Com um DW, as empresas têm acesso a insights profundos, permitindo decisões mais informadas e estratégicas. Seja avaliando o desempenho de um produto, identificando tendências de mercado ou otimizando operações, um DW fornece as respostas.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+</code></pre></div></div>
 
-<h3 id="visão-360-dos-negócios">Visão 360° dos Negócios</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>docker.io
+</code></pre></div></div>
 
-<p>Ao integrar dados de diferentes departamentos e fontes, um DW oferece uma visão completa da empresa, revelando interconexões e insights que poderiam permanecer ocultos em sistemas isolados.</p>
+<ol>
+  <li>Iniciar e Habilitar o Docker:</li>
+</ol>
 
-<h3 id="competitividade-no-mercado">Competitividade no Mercado</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start docker
+</code></pre></div></div>
 
-<p>Em mercados saturados, ter acesso rápido e confiável a informações pode ser o diferencial que coloca uma empresa à frente de seus concorrentes.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
+</code></pre></div></div>
+
+<ol>
+  <li>Verificar a Instalação:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h2 id="introdução-ao-portainer">Introdução ao Portainer</h2>
+
+<p>O Portainer é uma solução de gerenciamento para Docker com uma interface de usuário baseada na web. Ele permite que você gerencie seus contêineres, imagens, redes e volumes do Docker. Além disso, é de código aberto e extremamente leve.</p>
+
+<h2 id="instalando-e-configurando-o-portainer">Instalando e Configurando o Portainer</h2>
+
+<ol>
+  <li>Puxe a Imagem do Portainer:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull portainer/portainer-ce
+</code></pre></div></div>
+
+<ol>
+  <li>Execute o Portainer:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 9000:9000 <span class="nt">--name</span> portainer <span class="nt">--restart</span> always <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce
+</code></pre></div></div>
+
+<ol>
+  <li>Acesse o Portainer: Abra um navegador e vá para <code class="language-plaintext highlighter-rouge">http://localhost:9000</code> Você será saudado pela interface do Portainer, onde pode configurar o usuário administrador e começar a gerenciar seus contêineres.</li>
+</ol>
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>O Data Warehouse não é apenas uma opção tecnológica; é uma necessidade estratégica. Ele representa a espinha dorsal da análise de dados moderna, permitindo que as empresas transformem dados brutos em ações concretas. Se você deseja que sua empresa seja orientada por dados e preparada para os desafios do futuro, investir em um DW é o primeiro passo essencial.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[A Fundação da Análise de Dados Moderna]]></summary></entry><entry><title type="html">Data Lake</title><link href="http://localhost:4000/dados/2023/01/03/7.html" rel="alternate" type="text/html" title="Data Lake" /><published>2023-01-03T18:42:47-03:00</published><updated>2023-01-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/01/03/7</id><content type="html" xml:base="http://localhost:4000/dados/2023/01/03/7.html"><![CDATA[<h1 id="descubra-como-um-data-lake-pode-armazenar-e-gerenciar-grandes-quantidades-de-dados-não-estruturados">Descubra como um Data Lake pode armazenar e gerenciar grandes quantidades de dados não estruturados.</h1>
+<p>Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.</p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Apache Airflow</title><link href="http://localhost:4000/dados/2023/08/21/36.html" rel="alternate" type="text/html" title="Apache Airflow" /><published>2023-08-21T18:42:47-03:00</published><updated>2023-08-21T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/08/21/36</id><content type="html" xml:base="http://localhost:4000/dados/2023/08/21/36.html"><![CDATA[<h1 id="uma-visão-geral-funcionamento-e-sua-importância-no-mundo-dos-dados">Uma Visão Geral, Funcionamento e Sua Importância no Mundo dos Dados</h1>
 
-<p>Um Data Lake é um repositório de dados que é usado para armazenar grandes quantidades de dados não estruturados e semi-estruturados de várias fontes de dados. Ele é projetado para ser um local centralizado para armazenar todos os dados da empresa, incluindo dados estruturados, como dados de transações, e dados não estruturados, como log de cliques e arquivos de mídia.</p>
+<p>O mundo dos dados tem se tornado cada vez mais complexo e dinâmico. Com o aumento do volume de dados e a necessidade de processá-los rapidamente, as ferramentas de orquestração de fluxo de trabalho se tornaram essenciais.</p>
 
-<p>O objetivo principal de um Data Lake é fornecer uma plataforma para armazenar e gerenciar grandes quantidades de dados de maneira eficiente, permitindo que os usuários façam consultas e análises avançadas. Além disso, ele é projetado para ser flexível e escalável, permitindo que a empresa adicione novos tipos de dados e novas fontes de dados com facilidade.</p>
+<p>Uma das ferramentas mais populares e poderosas nesse domínio é o Apache Airflow. Neste artigo, vamos explorar o que é o Airflow, como ele funciona e por que é tão importante no cenário atual de dados.</p>
 
-<p>Existem muitas vantagens em se utilizar um Data Lake, incluindo:</p>
+<h2 id="o-que-é-apache-airflow">O que é Apache Airflow?</h2>
 
-<h2 id="armazenamento-de-grandes-quantidades-de-dados">Armazenamento de grandes quantidades de dados:</h2>
+<p>Apache Airflow é uma plataforma open-source para orquestrar fluxos de trabalho complexos de processamento de dados. Ele permite que os desenvolvedores programem, agendem e monitorem fluxos de trabalho usando programação em Python. Em outras palavras, o Airflow permite definir uma série de tarefas e suas dependências e executá-las em uma ordem específica para alcançar um objetivo de processamento de dados.</p>
 
-<p>Os Data Lakes são projetados para armazenar grandes quantidades de dados de maneira eficiente, o que significa que a empresa pode armazenar todos os seus dados em um único local.</p>
+<h2 id="como-o-apache-airflow-funciona">Como o Apache Airflow funciona?</h2>
 
-<h2 id="suporte-a-vários-tipos-de-dados">Suporte a vários tipos de dados:</h2>
-
-<p>Os Data Lakes podem armazenar vários tipos de dados, incluindo dados estruturados, não estruturados e semi-estruturados, o que significa que a empresa pode armazenar praticamente qualquer tipo de dado que desejar.</p>
-
-<h2 id="flexibilidade">Flexibilidade:</h2>
-
-<p>Os Data Lakes são projetados para ser flexíveis, permitindo que a empresa adicione novos tipos de dados e novas fontes de dados com facilidade.</p>
-
-<h2 id="escalabilidade">Escalabilidade:</h2>
-
-<p>Os Data Lakes podem ser facilmente dimensionados para atender às necessidades crescentes de armazenamento de dados.</p>
-
-<h2 id="integração-com-várias-ferramentas-de-análise">Integração com várias ferramentas de análise:</h2>
-
-<p>Os Data Lakes são geralmente integrados com várias ferramentas de análise de dados, o que significa que os usuários podem realizar consultas e análises avançadas de maneira fácil e intuitiva.</p>
-
-<h1 id="conclusão">Conclusão</h1>
-
-<p>Os Data Lakes são uma ferramenta valiosa para armazenar e gerenciar grandes quantidades de dados não estruturados e semi-estruturados. Eles oferecem flexibilidade, escalabilidade e integração com várias ferramentas de análise, permitindo que as empresas façam consultas e análises avançadas de maneira eficiente.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Data Lake vs. Data Warehouse</title><link href="http://localhost:4000/dados/2023/01/03/8.html" rel="alternate" type="text/html" title="Data Lake vs. Data Warehouse" /><published>2023-01-03T18:42:47-03:00</published><updated>2023-01-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/01/03/8</id><content type="html" xml:base="http://localhost:4000/dados/2023/01/03/8.html"><![CDATA[<h1 id="desvendando-as-diferenças-e-identificando-a-melhor-escolha">Desvendando as Diferenças e Identificando a Melhor Escolha</h1>
-
-<p>No universo em rápida evolução da ciência de dados, dois termos têm se destacado: Data Lake e Data Warehouse. Ambos são fundamentais para o armazenamento e análise de dados, mas servem a propósitos distintos e têm características únicas. Vamos mergulhar nas diferenças e ajudá-lo a determinar qual é a melhor opção para sua organização.</p>
-
-<h2 id="o-que-são-e-para-que-servem">O que são e para que servem?</h2>
-
-<h3 id="data-warehouse-dw">Data Warehouse (DW)</h3>
-
-<p>Um Data Warehouse é um sistema otimizado para análise e relatório de dados. Ele armazena dados estruturados de diferentes fontes em um formato unificado e organizado. A estrutura e a natureza dos DWs são projetadas para responder consultas complexas de forma rápida e eficiente.</p>
-
-<h3 id="data-lake">Data Lake</h3>
-
-<p>Um Data Lake é um vasto reservatório que armazena uma grande quantidade de dados brutos em seu formato natural, sejam eles estruturados, semi-estruturados ou não estruturados. Ele é altamente escalável e é ideal para empresas que desejam armazenar todos os seus dados em um único local para análises futuras.</p>
-
-<h2 id="diferenças-chave">Diferenças-chave</h2>
 <ol>
-  <li>
-    <p>Tipo e Estrutura de Dados</p>
-
-    <p>DW: Focado em dados estruturados com uma estrutura pré-definida.</p>
-
-    <p>Data Lake: Acomoda todos os tipos de dados: estruturados, semi-estruturados e não estruturados, sem uma estrutura fixa.</p>
-  </li>
-  <li>
-    <p>Performance e Escalabilidade</p>
-
-    <p>DW: Otimizado para consultas rápidas e análises complexas.</p>
-
-    <p>Data Lake: Armazena grandes volumes de dados com flexibilidade, mas pode exigir ferramentas adicionais para análises rápidas.</p>
-  </li>
-  <li>
-    <p>Flexibilidade e Adaptação</p>
-
-    <p>DW: Estrutura fixa, o que pode tornar a adição de novos tipos ou fontes de dados um desafio.</p>
-
-    <p>Data Lake: Altamente adaptável, permitindo a incorporação de novos dados com facilidade.</p>
-  </li>
+  <li>DAG (Directed Acyclic Graph):</li>
 </ol>
 
-<h2 id="qual-escolher">Qual escolher?</h2>
+<p>No coração do Airflow está o conceito de DAG, que é um conjunto de todas as tarefas que você deseja executar, organizadas de forma que reflitam suas relações e dependências. Um DAG não é apenas uma definição das tarefas, mas também define como as tarefas são executadas: em que ordem, com que frequência e sob quais condições.</p>
 
-<p>A decisão entre Data Lake e Data Warehouse depende das necessidades específicas da sua empresa:</p>
+<ol>
+  <li>Operadores:</li>
+</ol>
 
-<h3 id="para-análises-profundas-e-integradas-de-dados-estruturados">Para análises profundas e integradas de dados estruturados:</h3>
+<p>O Airflow utiliza operadores como uma representação abstrata de uma tarefa. Existem diferentes tipos de operadores disponíveis, como:</p>
 
-<p>Um DW pode ser mais apropriado.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PythonOperator (para executar funções Python)
+BashOperator (para executar comandos bash)
+PostgresOperator (para executar comandos SQL em um banco de dados Postgres)
+... e muitos outros.
+</code></pre></div></div>
 
-<h3 id="para-armazenar-uma-vasta-quantidade-de-dados-de-diferentes-tipos-e-fontes">Para armazenar uma vasta quantidade de dados de diferentes tipos e fontes:</h3>
+<ol>
+  <li>Executor:</li>
+</ol>
 
-<p>Um Data Lake é ideal.</p>
+<p>O executor determina como as tarefas são executadas em diferentes máquinas. Existem diferentes tipos de executores, como:</p>
 
-<h3 id="para-uma-solução-híbrida">Para uma solução híbrida:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SequentialExecutor
+LocalExecutor
+CeleryExecutor
+</code></pre></div></div>
 
-<p>Muitas empresas modernas estão adotando uma abordagem combinada, usando Data Lakes para armazenar dados brutos e DWs para análises específicas e otimizadas.</p>
+<ol>
+  <li>Interface Web:</li>
+</ol>
+
+<p>O Airflow vem com uma interface web rica que permite monitorar e gerenciar seus fluxos de trabalho. Através desta interface, você pode visualizar logs, reexecutar tarefas, monitorar execuções e muito mais.</p>
+
+<h2 id="por-que-o-apache-airflow-é-importante-no-mundo-dos-dados">Por que o Apache Airflow é importante no mundo dos dados?</h2>
+
+<ol>
+  <li>Flexibilidade:</li>
+</ol>
+
+<p>O Airflow é extremamente flexível, permitindo que você defina qualquer fluxo de trabalho, independentemente da complexidade. Com sua capacidade de definir dependências, você pode garantir que as tarefas sejam executadas na ordem correta.</p>
+
+<ol>
+  <li>Escalabilidade:</li>
+</ol>
+
+<p>Com executores como o CeleryExecutor, o Airflow pode escalar para executar milhares de tarefas por dia em múltiplas máquinas.</p>
+
+<ol>
+  <li>Programático:</li>
+</ol>
+
+<p>Como os fluxos de trabalho são definidos em Python, você tem toda a flexibilidade e poder da linguagem de programação à sua disposição. Isso também facilita a manutenção e revisão do código.</p>
+
+<ol>
+  <li>Comunidade Ativa:</li>
+</ol>
+
+<p>Sendo um projeto open-source, o Airflow tem uma comunidade ativa que contribui com novos recursos, correções de bugs e suporte.</p>
+
+<ol>
+  <li>Integração:</li>
+</ol>
+
+<p>O Airflow oferece integração com várias fontes de dados, APIs e sistemas, tornando-o uma ferramenta versátil para orquestrar fluxos de trabalho em ambientes heterogêneos.</p>
+
+<ol>
+  <li>Monitoramento e Alertas:</li>
+</ol>
+
+<p>Com sua interface web e capacidades de logging, o Airflow facilita o monitoramento de fluxos de trabalho. Além disso, ele pode ser configurado para enviar alertas em caso de falhas, garantindo que os problemas sejam tratados prontamente.</p>
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>Tanto Data Lakes quanto Data Warehouses têm seu lugar no ecossistema de dados. A chave é entender suas diferenças, avaliar as necessidades da sua empresa e escolher a solução (ou combinação de soluções) que melhor atenda a essas necessidades. Ao fazer isso, sua organização estará bem posicionada para extrair o máximo valor de seus dados.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Git</title><link href="http://localhost:4000/dados/2023/01/03/9.html" rel="alternate" type="text/html" title="Git" /><published>2023-01-03T18:42:47-03:00</published><updated>2023-01-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/01/03/9</id><content type="html" xml:base="http://localhost:4000/dados/2023/01/03/9.html"><![CDATA[<h1 id="a-fundação-do-desenvolvimento-colaborativo">A Fundação do Desenvolvimento Colaborativo</h1>
+<p>O Apache Airflow emergiu como uma ferramenta essencial no mundo dos dados devido à sua flexibilidade, escalabilidade e capacidade de orquestrar fluxos de trabalho complexos. Para organizações que lidam com grandes volumes de dados e necessitam de processamento e análise em tempo real, o Airflow oferece uma solução robusta e confiável. Seja você um engenheiro de dados, cientista de dados ou analista, entender o Airflow e suas capacidades pode ser um trunfo valioso em sua carreira.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
 
-<p>O universo do desenvolvimento de software é vasto e em constante evolução. No entanto, algumas ferramentas tornaram-se fundamentais nesse cenário, e uma delas é o Git. Vamos explorar o que é o Git, sua importância e os comandos essenciais que todo desenvolvedor deve conhecer.</p>
+<p>A versão Cloud do dbt apresenta uma série de características avançadas e funcionalidades adicionais em comparação com a versão Core. Estas funcionalidades otimizam a experiência do usuário, tornando certas operações mais intuitivas e menos <code class="language-plaintext highlighter-rouge">verbosas</code>. No entanto, é importante destacar que existem métodos para integrar algumas dessas funcionalidades exclusivas da versão Cloud na versão Core.</p>
 
-<h2 id="o-que-é-git">O que é Git?</h2>
+<p>Neste artigo, nosso objetivo é orientar você através desse processo.</p>
 
-<p>Git é mais do que apenas um sistema de controle de versão; é uma ferramenta que moldou a maneira como os desenvolvedores colaboram e gerenciam projetos de software. Criado por <code class="language-plaintext highlighter-rouge">Linus Torvalds</code>, a mente por trás do Linux, o Git foi projetado para lidar com tudo, desde pequenos projetos a aplicações de grande escala, com velocidade e eficiência.</p>
+<p>O primeiro passo fundamental é garantir que você tenha o <code class="language-plaintext highlighter-rouge">Visual Studio Code (VSCode)</code> instalado em sua máquina, uma vez que será nossa interface principal de desenvolvimento. Após a instalação do VSCode, é essencial que o <code class="language-plaintext highlighter-rouge">dbt Core</code> esteja devidamente configurado em seu sistema. Este processo envolve a criação de um ambiente virtual <code class="language-plaintext highlighter-rouge">Python (venv)</code> e a instalação de dependências específicas. Se você ainda não configurou o dbt Core, pode seguir as instruções detalhadas disponíveis na <a href="https://docs.getdbt.com/docs/core/installation">documentação oficial</a></p>
 
-<h2 id="por-que-o-git-é-tão-revolucionário">Por que o Git é tão revolucionário?</h2>
+<h2 id="iniciando-as-configurações">Iniciando as configurações</h2>
 
-<ol>
-  <li>Controle Granular de Alterações</li>
-</ol>
+<p>Com o ambiente preparado, o próximo passo é a instalação da extensão <code class="language-plaintext highlighter-rouge">Dbt Power User</code> no VSCode. Para isso, acesse a seção de extensões do VSCode e insira <code class="language-plaintext highlighter-rouge">Dbt Power User</code> no campo de pesquisa:</p>
 
-<p>Cada alteração, ou “commit”, é uma fotografia do código em um determinado momento. Isso permite que os desenvolvedores não apenas vejam o que foi alterado, mas também por quem e quando.</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_d44d8a2890c0436a8a8e61019a0bdcb2~mv2.png" alt="image" /></p>
 
-<ol>
-  <li>Branching e Merging</li>
-</ol>
+<p>Agora vamos as configurações para que a extensão funcione, primeiro abra suas <code class="language-plaintext highlighter-rouge">configurações do VSCode</code>:</p>
 
-<p>O Git permite que os desenvolvedores trabalhem em diferentes “ramificações” (branches) do código simultaneamente. Isso significa que a nova funcionalidade pode ser desenvolvida em um branch separado sem afetar o código principal. Uma vez finalizado, esse branch pode ser mesclado de volta ao código principal.</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_e0c148fcf8924e268ed24bfa7804b9c2~mv2.png" alt="image" /></p>
 
-<ol>
-  <li>Colaboração</li>
-</ol>
+<p>Agora você vai em <code class="language-plaintext highlighter-rouge">Editor de texto &gt; Arquivos</code>:</p>
 
-<p>Em um mundo onde o trabalho remoto e as equipes distribuídas são comuns, o Git serve como a plataforma de colaboração definitiva, permitindo que múltiplos desenvolvedores contribuam para um projeto sem pisar nos pés uns dos outros.</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_d8fbac57c09b42de82267041593e61f9~mv2.png" alt="image" /></p>
 
-<ol>
-  <li>Reversibilidade</li>
-</ol>
+<p>Em arquivos vc vai adicionar um item onde Item deve ser: <code class="language-plaintext highlighter-rouge">*.sql</code> e Valor vai ser: <code class="language-plaintext highlighter-rouge">jinja-sql</code></p>
 
-<p>Cometeu um erro? Sem problemas. O Git permite que você reverta para qualquer commit anterior, garantindo que os erros possam ser corrigidos com facilidade.</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_968444276de643f3a2c6ba80f0fae9ac~mv2.png" alt="image" /></p>
 
-<h2 id="comandos-git-essenciais">Comandos Git Essenciais</h2>
+<p>Depois disso você ira pesquisar <code class="language-plaintext highlighter-rouge">python</code> nas <code class="language-plaintext highlighter-rouge">configurações de Pesquisa</code>:</p>
 
-<p>Para quem está começando com o Git, aqui estão alguns dos comandos mais usados:</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_970ddf664eaf4f8d873d7b88163ec0e2~mv2.png" alt="image" /></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init <span class="c">#Inicializa um novo repositório Git.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="o">[</span>url] <span class="c">#Clona (ou faz uma cópia) de um repositório.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="o">[</span>arquivo] <span class="c">#Adiciona um arquivo ao staging area.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"[Mensagem Descritiva]"</span> <span class="c">#Registra suas alterações.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status <span class="c">#Lista todos os arquivos modificados.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull <span class="c">#Atualiza seu repositório local.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="c">#Envia suas alterações para o repositório remoto.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="c">#Lista todos os branches do seu repositório.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="o">[</span>nome_branch] <span class="c">#Muda para outro branch.</span>
-</code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git merge <span class="o">[</span>nome_branch] <span class="c">#Mescla as alterações de um branch ao seu branch atual.</span>
-</code></pre></div></div>
+<p>Vai em <code class="language-plaintext highlighter-rouge">Extensões</code> e depois em <code class="language-plaintext highlighter-rouge">Python › Interpreter: Info Visibility (Não sincronizado)</code> e vai por a opção de <code class="language-plaintext highlighter-rouge">always</code>:</p>
 
-<h2 id="github-gitlab-e-afins-qual-a-diferença">GitHub, GitLab e afins: Qual a diferença?</h2>
+<p><img src="https://static.wixstatic.com/media/710ee0_288e78ae14e743fda7f15d0f54c0ab46~mv2.png" alt="image" /></p>
 
-<p>Enquanto o Git é a ferramenta, plataformas como GitHub e GitLab são serviços que oferecem uma interface gráfica e recursos adicionais em cima do Git, facilitando a colaboração e o gerenciamento de projetos.</p>
+<p>Agora você vai clicar no canto <code class="language-plaintext highlighter-rouge">inferior direito</code> onde aparece seu <code class="language-plaintext highlighter-rouge">interpretador python</code>:</p>
 
-<h3 id="github">GitHub:</h3>
+<p><img src="https://static.wixstatic.com/media/710ee0_4af92524e8c0444e9ccca4b0a01f9b45~mv2.png" alt="image" /></p>
 
-<p>Popularidade: É a plataforma de hospedagem de código mais popular e conta com uma vasta comunidade.</p>
+<p>Aqui vem a jogada, você precisa por um novo interpretador e nele por o caminho da <code class="language-plaintext highlighter-rouge">venv</code> onde o <code class="language-plaintext highlighter-rouge">python3</code> está instalado:</p>
 
-<p>Integração: Oferece integrações com muitas ferramentas e serviços de terceiros.</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_f5429c4f372c4cc28d96975b18fe01b6~mv2.png" alt="image" /></p>
 
-<p>Marketplace: Possui um mercado onde os desenvolvedores podem encontrar e usar aplicativos e extensões para otimizar o fluxo de trabalho.</p>
+<p>Dessa forma agora a extensão vai conseguir identificar o <code class="language-plaintext highlighter-rouge">dbt</code> e no canto esquerdo vai paracer o nome dbt e um <code class="language-plaintext highlighter-rouge">certinho</code>, isso quer dizer que funcionou, agora temos mais uma configuração, você irá precisar <code class="language-plaintext highlighter-rouge">acessar a extensão</code> na aba de extensões do VSCODE e assim clicar na <code class="language-plaintext highlighter-rouge">engrenagem e ir em Extension Settings</code>, nessa você vai ir na configuração Dbt: <code class="language-plaintext highlighter-rouge">Profiles Dir Override</code> e então nele adicionar o caminho onde fica salvo seu <code class="language-plaintext highlighter-rouge">profiles.yml</code>:</p>
 
-<h3 id="gitlab">GitLab:</h3>
+<p><img src="https://static.wixstatic.com/media/710ee0_f8b801eac15844eb82f95d663c20ed9d~mv2.png" alt="image" /></p>
 
-<p>Auto-hospedagem: Além da versão baseada em nuvem, o GitLab oferece uma versão que você pode hospedar em seu próprio servidor.</p>
+<p>E tudo certo, você vai ver as funções da extensão em ação vou mostrar algumas delas mas exitem muito mais, aqui os botões de ação direto no arquivo:</p>
 
-<p>CI/CD Integrado: O GitLab vem com ferramentas de Integração Contínua e Entrega Contínua integradas.</p>
+<p><img src="https://static.wixstatic.com/media/710ee0_44653cf6688145cd85f1f7faa692ce6c~mv2.png" alt="image" /></p>
 
-<p>Visão Holística: O GitLab visa cobrir todo o ciclo de vida do DevOps em uma única plataforma, desde a criação do código até a implantação.</p>
+<h2 id="linhagem-das-tabelas">Linhagem das tabelas:</h2>
 
-<h3 id="outras-plataformas">Outras Plataformas:</h3>
+<p><img src="https://static.wixstatic.com/media/710ee0_ac5f81411dfb4b0db11e010eaccb3d1a~mv2.png" alt="image" /></p>
 
-<p>Existem outras plataformas como Bitbucket e Azure DevOps que também oferecem recursos semelhantes, mas cada uma com suas próprias características e benefícios.</p>
+<p>e muito mais, adicione no seu VSCODE e seja feliz!</p>
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>O Git, em sua essência, revolucionou a maneira como desenvolvemos software. Plataformas como GitHub e GitLab ampliaram essa revolução, adicionando camadas de funcionalidade e colaboração. Ao escolher a plataforma certa para sua equipe ou projeto, considere suas necessidades específicas, a escala do projeto e as integrações necessárias. Independentemente da sua escolha, o Git permanecerá como a fundação sólida por trás de todo o processo.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">O que é um banco de dados?</title><link href="http://localhost:4000/dados/2022/12/30/1.html" rel="alternate" type="text/html" title="O que é um banco de dados?" /><published>2022-12-30T18:42:47-03:00</published><updated>2022-12-30T18:42:47-03:00</updated><id>http://localhost:4000/dados/2022/12/30/1</id><content type="html" xml:base="http://localhost:4000/dados/2022/12/30/1.html"><![CDATA[<h2 id="os-diferentes-tipos-de-bancos-de-dados-e-suas-aplicações">Os diferentes tipos de bancos de dados e suas aplicações</h2>
+<p>A versão Cloud do dbt oferece uma série de funcionalidades avançadas que podem melhorar significativamente a experiência do usuário. No entanto, é importante destacar que algumas dessas funcionalidades podem ser integradas à versão Core, permitindo que você aproveite o melhor dos dois mundos.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">🌟 Projeto Dracma</title><link href="http://localhost:4000/projeto/2023/08/06/34.html" rel="alternate" type="text/html" title="🌟 Projeto Dracma" /><published>2023-08-06T18:42:47-03:00</published><updated>2023-08-06T18:42:47-03:00</updated><id>http://localhost:4000/projeto/2023/08/06/34</id><content type="html" xml:base="http://localhost:4000/projeto/2023/08/06/34.html"><![CDATA[<p><a href="https://dracma-13f31b0b0e16.herokuapp.com">Acesse o App</a></p>
 
-<p>Os bancos de dados são uma parte fundamental de muitos sistemas de informação e aplicações, pois permitem armazenar e gerenciar grandes quantidades de dados de forma organizada e acessível. Eles são utilizados em uma ampla variedade de contextos, como empresas, governos, organizações sem fins lucrativos e até mesmo em aplicações pessoais.</p>
+<p>Em um mundo onde o controle financeiro se torna cada vez mais vital, nasceu o Dracma, um projeto inovador que visa ajudar as pessoas a gerenciar suas finanças pessoais.</p>
 
-<p>Existem vários tipos de bancos de dados, cada um com suas próprias características e aplicações.</p>
+<p>Desde sua primeira versão em no-code até sua evolução para uma plataforma robusta construída com Python, o Dracma representa uma jornada de crescimento e inovação.</p>
 
-<p>Os bancos de dados <code class="language-plaintext highlighter-rouge">relacionais</code> são os mais comuns e são organizados em tabelas de dados relacionadas entre si. Eles são muito flexíveis e permitem a realização de consultas complexas, mas podem ser mais difíceis de manter e escalar.</p>
+<p>Neste post, vamos explorar a história do Dracma, seus recursos exclusivos, minha experiência pessoal com ele e os emocionantes planos futuros para este projeto.</p>
 
-<p>Outro tipo de banco de dados é o <code class="language-plaintext highlighter-rouge">orientado a objetos</code>, que é organizado em objetos e permite a realização de consultas baseadas em atributos. Eles são geralmente mais fáceis de manter e escalar, mas podem ser menos flexíveis do que os bancos de dados relacionais.</p>
+<h2 id="a-jornada-do-dracma-de-no-code-a-python">A Jornada do Dracma: De No-Code a Python</h2>
 
-<p>Os bancos de dados <code class="language-plaintext highlighter-rouge">NoSQL</code> são uma opção mais recente e são projetados para armazenar grandes quantidades de dados não estruturados, como logs de eventos ou dados de redes sociais. Eles são geralmente mais flexíveis do que os bancos de dados relacionais e orientados a objetos, mas podem ser menos precisos e exigir mais esforço para manter.</p>
+<p>O Dracma começou como um projeto no-code, uma abordagem que permitiu uma prototipagem rápida e a validação da ideia.</p>
 
-<p>Independentemente do tipo de banco de dados, eles são geralmente gerenciados por um <code class="language-plaintext highlighter-rouge">sistema de gerenciamento de banco de dados (DBMS)</code>, que é responsável por criar, armazenar e gerenciar os dados do banco de dados. O DBMS também fornece uma interface para que os usuários possam acessar e manipular os dados do banco de dados.</p>
+<p>Essa primeira versão foi crucial para entender as necessidades dos usuários e moldar a visão do projeto.</p>
 
-<p>Os bancos de dados são uma ferramenta valiosa para armazenar e gerenciar grandes quantidades de dados, mas requerem planejamento cuidadoso e atenção constante para garantir que os dados estejam sempre atualizados e precisos. Eles também podem exigir recursos de hardware e software adicionais para gerenciá-los e garantir a segurança dos dados.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<h2 id="a-evolução-para-python">A Evolução para Python</h2>
+
+<p>Com o tempo, percebi que precisava de mais flexibilidade e controle sobre o projeto. Assim, decidi migrar para Python, uma linguagem de programação poderosa que ofereceu as ferramentas necessárias para levar o Dracma ao próximo nível.</p>
+
+<h2 id="a-estrutura-atual-do-projeto">A Estrutura Atual do Projeto</h2>
+
+<h3 id="python">Python</h3>
+
+<p>O núcleo do Dracma é construído em Python, permitindo uma análise de dados sofisticada e a implementação de modelos de machine learning.</p>
+
+<h3 id="heroku">Heroku</h3>
+
+<p>Hospedado no Heroku, o Dracma aproveita a escalabilidade e a facilidade de uso desta plataforma em nuvem.</p>
+
+<h3 id="html">HTML</h3>
+
+<p>A interface do usuário, criada com HTML, oferece uma experiência amigável e intuitiva.</p>
+
+<h3 id="bigquery">BigQuery</h3>
+
+<p>O BigQuery serve como o banco de dados, garantindo eficiência e desempenho na manipulação de grandes volumes de dados.</p>
+
+<h2 id="foco-e-diferenciais-do-dracma">Foco e Diferenciais do Dracma</h2>
+
+<h3 id="foco-em-finanças-pessoais">Foco em Finanças Pessoais</h3>
+
+<p>O Dracma é dedicado a ajudar as pessoas a controlarem suas finanças pessoais. É uma ferramenta gratuita, refletindo meu compromisso em tornar o gerenciamento financeiro acessível a todos.</p>
+
+<h3 id="insights-personalizados">Insights Personalizados</h3>
+
+<p>Com um modelo de machine learning, o Dracma oferece insights personalizados, fornecendo recomendações e dicas adaptadas às necessidades individuais.</p>
+
+<h3 id="gráficos-e-análises">Gráficos e Análises</h3>
+
+<p>A plataforma inclui gráficos e análises detalhadas, permitindo uma visualização clara e compreensível das finanças.</p>
+
+<h3 id="minha-experiência-com-o-dracma">Minha Experiência com o Dracma</h3>
+
+<p>Em um ano usando o Dracma, transformei minha vida financeira, economizando <code class="language-plaintext highlighter-rouge">8 mil reais</code>. O aplicativo me deu a clareza e os insights necessários para tomar decisões financeiras informadas.</p>
+
+<h2 id="o-futuro-do-dracma">O Futuro do Dracma</h2>
+
+<h3 id="melhorar-os-insights-personalizados">Melhorar os Insights Personalizados</h3>
+
+<p>Estou trabalhando para aprimorar ainda mais os insights personalizados, tornando-os mais precisos e úteis.</p>
+
+<h3 id="controles-de-investimentos">Controles de Investimentos</h3>
+
+<p>O próximo passo inclui melhorar os controles de investimentos, fornecendo ferramentas mais robustas para gerenciar portfólios.</p>
+
+<h3 id="gerador-de-renda-extra">Gerador de Renda Extra</h3>
+
+<p>Estou desenvolvendo um gerador de renda extra, uma funcionalidade que ajudará os usuários a encontrar oportunidades de aumentar sua renda.</p>
+
+<h3 id="projeto-prometheus">Projeto Prometheus</h3>
+
+<p>O projeto Prometheus, ainda em segredo, promete ser uma adição revolucionária ao Dracma. Embora os detalhes permaneçam confidenciais, posso garantir que ele terá um impacto significativo na geração de renda.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>O Dracma é mais do que um aplicativo de finanças pessoais; é uma missão para tornar o gerenciamento financeiro acessível e eficaz.</p>
+
+<p>Desde sua humilde origem no-code até sua evolução em uma plataforma poderosa, o Dracma continua a crescer e inovar.</p>
+
+<p>Com planos emocionantes para o futuro, incluindo melhorias nos insights, controles de investimentos, um gerador de renda extra e o misterioso projeto Prometheus, o Dracma está posicionado para se tornar uma ferramenta indispensável nas finanças pessoais.</p>
+
+<p>Se você está buscando uma maneira de transformar suas finanças, convido você a experimentar o Dracma aqui. Junte-se a mim nesta jornada financeira e descubra o poder do controle financeiro inteligente.</p>]]></content><author><name></name></author><category term="Projeto" /><summary type="html"><![CDATA[Uma Revolução nas Finanças Pessoais]]></summary></entry><entry><title type="html">Modelo de escrita CTE</title><link href="http://localhost:4000/sql/2023/07/17/33.html" rel="alternate" type="text/html" title="Modelo de escrita CTE" /><published>2023-07-17T18:42:47-03:00</published><updated>2023-07-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/07/17/33</id><content type="html" xml:base="http://localhost:4000/sql/2023/07/17/33.html"><![CDATA[<h1 id="como-ele-pode-melhorar-suas-consultas">Como ele pode melhorar suas consultas</h1>
+
+<p>O SQL (Structured Query Language) é uma linguagem de programação usada para gerenciar e manipular bancos de dados.</p>
+
+<p>Uma das características mais poderosas do SQL é a capacidade de escrever consultas complexas para extrair informações valiosas dos dados.</p>
+
+<p>Uma dessas técnicas avançadas é o uso de Expressões de Tabela Comum, ou <code class="language-plaintext highlighter-rouge">CTEs (Common Table Expressions)</code>.</p>
+
+<p>As CTEs são uma forma de criar consultas temporárias que são usadas dentro de uma instrução SQL maior.</p>
+
+<p>Elas são úteis para simplificar consultas complexas, dividindo-as em partes menores e mais gerenciáveis. Neste post, vamos explorar o que são CTEs, como usá-las e como elas podem melhorar suas consultas SQL.</p>
+
+<h2 id="o-que-é-uma-cte">O que é uma CTE?</h2>
+
+<p>Uma CTE é uma expressão de tabela nomeada temporária que você pode referenciar dentro de uma instrução <code class="language-plaintext highlighter-rouge">SELECT</code>, <code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code>, <code class="language-plaintext highlighter-rouge">DELETE</code> ou outra <code class="language-plaintext highlighter-rouge">CTE</code>.</p>
+
+<p>Ela é usada para simplificar consultas SQL complexas, dividindo-as em partes menores e mais gerenciáveis. A CTE é definida usando a cláusula <code class="language-plaintext highlighter-rouge">WITH</code> antes da consulta SQL e pode ser pensada como uma visão temporária que existe apenas durante a execução da consulta.</p>
+
+<h3 id="aqui-está-um-exemplo-básico-de-uma-cte">Aqui está um exemplo básico de uma CTE:</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">Sales_CTE</span> <span class="p">(</span><span class="n">SalesPersonID</span><span class="p">,</span> <span class="n">NumberOfOrders</span><span class="p">)</span>
+<span class="k">AS</span>
+<span class="p">(</span>
+<span class="k">SELECT</span> 
+    <span class="n">SalesPersonID</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">OrderID</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">SalesOrderHeader</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">SalesPersonID</span>
+<span class="p">)</span>
+
+<span class="k">SELECT</span> 
+    <span class="n">SalesPersonID</span>
+    <span class="p">,</span> <span class="n">NumberOfOrders</span>
+<span class="k">FROM</span> <span class="n">Sales_CTE</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Neste exemplo, a CTE Sales_CTE agrupa as vendas por SalesPersonID. A consulta principal então seleciona os dados da CTE.</p>
+
+<h2 id="como-as-ctes-podem-melhorar-suas-consultas-sql">Como as CTEs podem melhorar suas consultas SQL?</h2>
+
+<p>As CTEs podem melhorar suas consultas SQL de várias maneiras:</p>
+
+<ol>
+  <li>Simplificação de consultas complexas:</li>
+</ol>
+
+<p>As CTEs permitem que você divida consultas complexas em partes menores e mais gerenciáveis. Isso torna o código mais fácil de entender e manter.</p>
+
+<ol>
+  <li>Reutilização de código:</li>
+</ol>
+
+<p>As CTEs podem ser referenciadas várias vezes na mesma consulta, o que evita a necessidade de repetir o mesmo código.</p>
+
+<ol>
+  <li>Recursividade:</li>
+</ol>
+
+<p>As CTEs permitem consultas recursivas, o que é útil para trabalhar com dados hierárquicos.</p>
+
+<ol>
+  <li>Melhor desempenho:</li>
+</ol>
+
+<p>Em alguns casos, o uso de CTEs pode resultar em um desempenho melhorado em comparação com subconsultas ou joins complexos.</p>
+
+<h2 id="exemplos-práticos-de-ctes">Exemplos práticos de CTEs</h2>
+
+<p>Vamos ver alguns exemplos de como as CTEs podem ser usadas para melhorar suas consultas SQL.</p>
+
+<h3 id="simplificando-consultas-complexas">Simplificando consultas complexas</h3>
+
+<p>Suponha que você tenha uma consulta que envolva várias junções e agregações. Sem CTEs, sua consulta pode parecer algo assim:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">SalesPersonID</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">OrderID</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">SalesOrderHeader</span>
+<span class="k">WHERE</span> <span class="n">SalesPersonID</span> <span class="k">IN</span>
+
+<span class="p">(</span>
+<span class="k">SELECT</span> 
+    <span class="n">SalesPersonID</span>
+<span class="k">FROM</span> <span class="n">SalesPerson</span>
+<span class="k">WHERE</span> <span class="n">TerritoryID</span> <span class="k">IN</span>
+<span class="p">(</span>
+<span class="k">SELECT</span> 
+    <span class="n">TerritoryID</span>
+<span class="k">FROM</span> <span class="n">SalesTerritory</span>
+<span class="k">WHERE</span> <span class="p">[</span><span class="k">Group</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'North America'</span>
+<span class="p">)</span>
+<span class="p">)</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">SalesPersonID</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Com CTEs, você pode dividir essa consulta complexa em partes menores:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">NorthAmericanTerritories</span> <span class="k">AS</span>
+<span class="p">(</span>
+<span class="k">SELECT</span> 
+    <span class="n">TerritoryID</span>
+<span class="k">FROM</span> <span class="n">SalesTerritory</span>
+<span class="k">WHERE</span> <span class="p">[</span><span class="k">Group</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'North America'</span>
+
+<span class="p">),</span> <span class="n">NorthAmericanSalesPeople</span> <span class="k">AS</span>
+
+<span class="p">(</span>
+<span class="k">SELECT</span> 
+    <span class="n">SalesPersonID</span>
+<span class="k">FROM</span> <span class="n">SalesPerson</span>
+<span class="k">WHERE</span> <span class="n">TerritoryID</span> <span class="k">IN</span> <span class="p">(</span>
+                        <span class="k">SELECT</span> 
+                            <span class="n">TerritoryID</span> 
+                        <span class="k">FROM</span> <span class="n">NorthAmericanTerritories</span>
+                    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">SELECT</span> 
+    <span class="n">SalesPersonID</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">OrderID</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">SalesOrderHeader</span>
+<span class="k">WHERE</span> <span class="n">SalesPersonID</span> <span class="k">IN</span> <span class="p">(</span>
+                        <span class="k">SELECT</span> 
+                            <span class="n">SalesPersonID</span> 
+                        <span class="k">FROM</span> <span class="n">NorthAmericanSalesPeople</span>
+                        <span class="p">)</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">SalesPersonID</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="consultas-recursivas">Consultas recursivas</h2>
+
+<p>As CTEs também podem ser usadas para consultas recursivas. Por exemplo, suponha que você tenha uma tabela Employees com uma relação hierárquica de gerente-empregado. Você pode usar uma CTE recursiva para obter todos os subordinados diretos e indiretos de um gerente:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">EmployeeHierarchy</span> <span class="k">AS</span>
+<span class="p">(</span>
+<span class="k">SELECT</span> 
+    <span class="n">EmployeeID</span>
+    <span class="p">,</span> <span class="n">FirstName</span>
+    <span class="p">,</span> <span class="n">LastName</span>
+    <span class="p">,</span> <span class="n">ManagerID</span>
+<span class="k">FROM</span> <span class="n">Employees</span>
+<span class="k">WHERE</span> <span class="n">ManagerID</span> <span class="k">IS</span> <span class="k">NULL</span>
+
+<span class="k">UNION</span> <span class="k">ALL</span>
+
+<span class="k">SELECT</span> 
+    <span class="n">E</span><span class="p">.</span><span class="n">EmployeeID</span>
+    <span class="p">,</span> <span class="n">E</span><span class="p">.</span><span class="n">FirstName</span>
+    <span class="p">,</span> <span class="n">E</span><span class="p">.</span><span class="n">LastName</span>
+    <span class="p">,</span> <span class="n">E</span><span class="p">.</span><span class="n">ManagerID</span>
+<span class="k">FROM</span> <span class="n">Employees</span> <span class="n">E</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">EmployeeHierarchy</span> <span class="n">EH</span> <span class="k">ON</span> <span class="n">E</span><span class="p">.</span><span class="n">ManagerID</span> <span class="o">=</span> <span class="n">EH</span><span class="p">.</span><span class="n">EmployeeID</span>
+<span class="p">)</span>
+<span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">EmployeeHierarchy</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Em resumo, as CTEs são uma ferramenta poderosa que pode melhorar a legibilidade, a manutenção e o desempenho de suas consultas SQL. Se você ainda não está usando CTEs em suas consultas SQL, eu recomendo que você comece a explorá-las.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Como a Análise de Dados pode impulsionar o seu negócio</title><link href="http://localhost:4000/dados/2023/07/03/32.html" rel="alternate" type="text/html" title="Como a Análise de Dados pode impulsionar o seu negócio" /><published>2023-07-03T18:42:47-03:00</published><updated>2023-07-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/07/03/32</id><content type="html" xml:base="http://localhost:4000/dados/2023/07/03/32.html"><![CDATA[<h1 id="análise-de-dados-para-negócios">Análise de Dados para Negócios</h1>
+
+<p>Em um mundo cada vez mais digitalizado e competitivo, a análise de dados tornou-se uma ferramenta essencial para o sucesso dos negócios.</p>
+
+<p>Ela permite que as empresas entendam melhor seus clientes, otimizem suas operações, tomem decisões informadas e, em última análise, impulsionem o crescimento.</p>
+
+<p>Neste artigo, vamos explorar como a análise de dados pode impulsionar o seu negócio.</p>
+
+<h2 id="entendendo-a-análise-de-dados">Entendendo a Análise de Dados</h2>
+
+<p>A análise de dados é o processo de coletar, limpar, transformar e modelar dados para descobrir informações úteis, sugerir conclusões e apoiar a tomada de decisões.</p>
+
+<p>Ela pode ser dividida em várias técnicas, incluindo análise <code class="language-plaintext highlighter-rouge">descritiva</code>, <code class="language-plaintext highlighter-rouge">diagnóstica</code>, <code class="language-plaintext highlighter-rouge">preditiva</code> e <code class="language-plaintext highlighter-rouge">prescritiva</code>.</p>
+
+<h2 id="como-a-análise-de-dados-pode-beneficiar-o-seu-negócio">Como a Análise de Dados pode Beneficiar o seu Negócio</h2>
+
+<p>A análise de dados pode beneficiar o seu negócio de várias maneiras. Aqui estão algumas das principais:</p>
+
+<ol>
+  <li>Melhor compreensão do cliente:</li>
+</ol>
+
+<p>A análise de dados pode ajudá-lo a entender melhor seus clientes, incluindo seus comportamentos, preferências e necessidades. Isso pode permitir que você personalize suas ofertas, melhore a satisfação do cliente e aumente a retenção.</p>
+
+<ol>
+  <li>Otimização das operações:</li>
+</ol>
+
+<p>A análise de dados pode ajudá-lo a identificar ineficiências em suas operações e encontrar maneiras de otimizá-las. Isso pode levar a uma maior produtividade e a uma redução de custos.</p>
+
+<ol>
+  <li>Tomada de decisões informada:</li>
+</ol>
+
+<p>A análise de dados pode fornecer insights valiosos que podem informar a tomada de decisões em todos os níveis da sua organização. Isso pode levar a melhores decisões que impulsionam o crescimento e a rentabilidade.</p>
+
+<ol>
+  <li>Previsão de tendências e comportamentos:</li>
+</ol>
+
+<p>A análise de dados pode ajudá-lo a prever tendências futuras e comportamentos, permitindo que você se antecipe e se posicione de forma mais eficaz.</p>
+
+<h2 id="exemplo-prático">Exemplo Prático</h2>
+
+<p>Vamos considerar um exemplo prático de como a análise de dados pode impulsionar o seu negócio.</p>
+
+<p>Suponha que você seja o proprietário de uma loja de varejo online. Você tem acesso a uma grande quantidade de dados, incluindo informações sobre vendas, visitas ao site, comportamento do cliente e muito mais.</p>
+
+<p>Primeiro, você pode usar a análise de dados para entender melhor seus clientes. Por exemplo, você pode analisar os dados de vendas para identificar quais produtos são mais populares, ou você pode analisar os dados do site para entender como os clientes interagem com o seu site.</p>
+
+<p>Em seguida, você pode usar a análise de dados para otimizar suas operações. Por exemplo, você pode analisar os dados de vendas e estoque para otimizar seus níveis de estoque e reduzir os custos.</p>
+
+<p>Além disso, você pode usar a análise de dados para informar suas decisões. Por exemplo, você pode analisar os dados de vendas para decidir quais produtos promover, ou você pode analisar os dados do cliente para decidir onde focar seus esforços de marketing.</p>
+
+<p>Finalmente, você pode usar a análise de dados para prever tendências futuras. Por exemplo, você pode analisar os dados de vendas passadas para prever quais produtos serão populares no futuro, ou você pode analisar os dados do cliente para prever quais segmentos de clientes provavelmente crescerão.</p>
+
+<h2 id="ferramentas-para-análise-de-dados">Ferramentas para Análise de Dados</h2>
+
+<p>Existem várias ferramentas que você pode usar para análise de dados. Algumas das mais populares incluem:</p>
+
+<ol>
+  <li>Excel:</li>
+</ol>
+
+<p>Uma ferramenta básica, mas poderosa, para análise de dados. É ótimo para análise descritiva e pode ser uma boa opção para pequenas empresas.</p>
+
+<ol>
+  <li>SQL:</li>
+</ol>
+
+<p>Uma linguagem de programação usada para gerenciar e consultar bancos de dados relacionais. É essencial para trabalhar com grandes conjuntos de dados.</p>
+
+<ol>
+  <li>Python/R:</li>
+</ol>
+
+<p>Linguagens de programação que são amplamente usadas em análise de dados devido às suas poderosas bibliotecas e frameworks.</p>
+
+<ol>
+  <li>Tableau/Power BI:</li>
+</ol>
+
+<p>Ferramentas de visualização de dados que permitem criar painéis interativos e relatórios.</p>
+
+<ol>
+  <li>Google Analytics:</li>
+</ol>
+
+<p>Uma ferramenta essencial para análise de dados de sites e comportamento do cliente online.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>A análise de dados é uma ferramenta poderosa que pode impulsionar o seu negócio de várias maneiras. Ao fornecer insights valiosos sobre seus clientes, operações e tendências futuras, ela pode ajudá-lo a tomar decisões informadas, otimizar suas operações e, em última análise, impulsionar o crescimento do seu negócio.</p>
+
+<p>No entanto, a análise de dados não é uma solução mágica. Ela requer uma compreensão clara dos seus objetivos de negócios, uma estratégia de dados sólida e a capacidade de interpretar e agir com base nos insights gerados. Além disso, a análise de dados deve ser combinada com outras ferramentas e técnicas de negócios para ser verdadeiramente eficaz.</p>
+
+<h2 id="recursos-adicionais">Recursos Adicionais</h2>
+
+<p>Para aprofundar ainda mais seus conhecimentos em análise de dados e como ela pode impulsionar o seu negócio, recomendo os seguintes livros:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Data Science para Negócios" por Foster Provost e Tom Fawcett
+"Big Data no Trabalho: Desmistificando o Big Data e a Análise de Dados para Empresas" por Thomas H. Davenport
+"A Arte da Análise de Dados" por Cole Nussbaumer Knaflic
+</code></pre></div></div>
+
+<p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Análise de Dados Quantitativos vs Qualitativos</title><link href="http://localhost:4000/dados/2023/06/12/31.html" rel="alternate" type="text/html" title="Análise de Dados Quantitativos vs Qualitativos" /><published>2023-06-12T18:42:47-03:00</published><updated>2023-06-12T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/12/31</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/12/31.html"><![CDATA[<h1 id="entendendo-as-diferenças">Entendendo as diferenças</h1>
+
+<p>A análise de dados é uma parte crucial de qualquer pesquisa ou estudo.</p>
+
+<p>Ela permite que você entenda as informações coletadas e tire conclusões com base nesses dados.</p>
+
+<p>No entanto, nem todos os dados são iguais.</p>
+
+<p>Eles podem ser categorizados em dois tipos principais: <code class="language-plaintext highlighter-rouge">quantitativos</code> e <code class="language-plaintext highlighter-rouge">qualitativos</code>.</p>
+
+<p>Cada tipo tem suas próprias características, métodos de coleta e técnicas de análise. Neste artigo, vamos explorar as diferenças entre a análise de dados quantitativos e qualitativos.</p>
+
+<h2 id="o-que-são-dados-quantitativos">O que são Dados Quantitativos?</h2>
+
+<p>Dados quantitativos são informações que podem ser medidas e escritas em números. Eles são frequentemente coletados através de métodos estruturados, como questionários ou pesquisas que incluem perguntas fechadas.</p>
+
+<p>Exemplos de dados quantitativos incluem <code class="language-plaintext highlighter-rouge">idade</code>, <code class="language-plaintext highlighter-rouge">altura</code>, <code class="language-plaintext highlighter-rouge">peso</code>, <code class="language-plaintext highlighter-rouge">temperatura</code>, ou a <code class="language-plaintext highlighter-rouge">quantidade de pessoas que preferem um produto em relação a outro</code>.</p>
+
+<p>A análise de dados quantitativos envolve o uso de estatísticas e números. Isso pode incluir calcular a média, a mediana, o desvio padrão, ou usar técnicas mais complexas, como a análise de regressão.</p>
+
+<h2 id="o-que-são-dados-qualitativos">O que são Dados Qualitativos?</h2>
+
+<p>Dados qualitativos, por outro lado, são informações que não podem ser medidas em números. Eles são frequentemente coletados através de métodos não estruturados, como entrevistas ou grupos de discussão que incluem perguntas abertas.</p>
+
+<p>Exemplos de dados qualitativos incluem <code class="language-plaintext highlighter-rouge">opiniões</code>, <code class="language-plaintext highlighter-rouge">experiências</code>, e <code class="language-plaintext highlighter-rouge">descrições</code>.</p>
+
+<p>A análise de dados qualitativos envolve a interpretação de textos e imagens. Isso pode incluir a codificação de respostas, a identificação de temas ou padrões, ou a construção de teorias.</p>
+
+<h2 id="diferenças-entre-dados-quantitativos-e-qualitativos">Diferenças entre Dados Quantitativos e Qualitativos</h2>
+
+<p>A principal diferença entre dados quantitativos e qualitativos reside no que eles representam e como são coletados e analisados.</p>
+
+<p>Dados quantitativos são objetivos e representam fenômenos que podem ser contados ou medidos. Eles são coletados de maneira estruturada e analisados usando técnicas estatísticas.</p>
+
+<p>Dados qualitativos, por outro lado, são subjetivos e representam fenômenos que são descritivos por natureza. Eles são coletados de maneira não estruturada e analisados através da interpretação.</p>
+
+<h2 id="exemplo-prático">Exemplo Prático</h2>
+
+<p>Vamos considerar um exemplo prático para entender melhor a diferença entre a análise de dados quantitativos e qualitativos.</p>
+
+<p>Suponha que você esteja conduzindo uma pesquisa para entender a satisfação do cliente com seu produto. Você pode coletar dados quantitativos perguntando aos clientes para classificar sua satisfação em uma escala de 1 a 10.</p>
+
+<p>Você pode então calcular a média e o desvio padrão dessas classificações para obter uma medida quantitativa da satisfação do cliente.</p>
+
+<p>Por outro lado, você pode coletar dados qualitativos perguntando aos clientes para descrever em suas próprias palavras por que eles estão satisfeitos ou insatisfeitos com o produto. Você pode então analisar essas respostas para identificar temas comuns ou padrões.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>A análise de dados, seja ela quantitativa ou qualitativa, é uma parte essencial de qualquer pesquisa.</p>
+
+<p>Cada tipo tem suas próprias forças e fraquezas, e a escolha entre eles depende do tipo de pergunta de pesquisa que você está tentando responder.</p>
+
+<p>Dados quantitativos são excelentes para responder a perguntas como <code class="language-plaintext highlighter-rouge">quantos?</code> ou <code class="language-plaintext highlighter-rouge">quanto?</code>. Eles fornecem resultados que são objetivos e geralmente mais fáceis de generalizar para uma população maior. No entanto, eles podem não ser capazes de capturar toda a complexidade ou nuances de uma situação.</p>
+
+<p>Por outro lado, dados qualitativos são excelentes para responder a perguntas como <code class="language-plaintext highlighter-rouge">por quê?</code> ou <code class="language-plaintext highlighter-rouge">como?</code>. Eles fornecem uma riqueza de detalhes e insights que podem ajudar a entender os contextos, percepções e experiências das pessoas. No entanto, eles são geralmente mais difíceis de analisar e os resultados podem não ser tão facilmente generalizáveis.</p>
+
+<p>Em muitos casos, a combinação de métodos quantitativos e qualitativos - conhecida como pesquisa de métodos mistos - pode ser a abordagem mais eficaz. Isso permite que você aproveite as forças de ambos os tipos de dados, proporcionando uma compreensão mais completa do fenômeno que você está estudando.</p>
+
+<h2 id="exemplo-prático-continuado">Exemplo Prático Continuado</h2>
+
+<p>Vamos voltar ao nosso exemplo de pesquisa de satisfação do cliente. Depois de coletar e analisar seus dados quantitativos e qualitativos, você pode combinar os resultados para obter uma imagem mais completa da satisfação do cliente.</p>
+
+<p>Por exemplo, seus dados quantitativos podem mostrar que a maioria dos clientes está satisfeita com o produto. No entanto, seus dados qualitativos podem revelar que existem alguns problemas comuns que estão causando insatisfação entre um subconjunto de clientes. Combinando esses insights, você pode desenvolver estratégias para melhorar a satisfação geral do cliente, abordando tanto os pontos fortes identificados nos dados quantitativos quanto os problemas identificados nos dados qualitativos.</p>
+
+<h2 id="recursos-adicionais">Recursos Adicionais</h2>
+
+<p>Para aprofundar ainda mais seus conhecimentos em análise de dados quantitativos e qualitativos, recomendo os seguintes livros:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Pesquisa Qualitativa e Quantitativa: Conceitos e Métodos" por Michael Crotty
+
+"Métodos de Pesquisa em Ciências Sociais: Uma Introdução" por Earl Babbie
+
+"Análise de Dados Qualitativos: Estratégias Metodológicas para as Ciências da Saúde, Humanas e Sociais" por Denise Figueiredo
+</code></pre></div></div>
+
+<p>Lembre-se, a escolha entre dados quantitativos e qualitativos - ou uma combinação de ambos - depende das suas perguntas de pesquisa e dos seus objetivos. Ambos os tipos de dados têm um papel importante a desempenhar na pesquisa e podem fornecer insights valiosos quando usados de forma eficaz.</p>
+
+<h2 id="referências">Referências</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sandelowski, M. (2000). Combining Qualitative and Quantitative Sampling, Data Collection, and Analysis Techniques in Mixed-Method Studies.  
+
+Knigge, L., &amp; Cope, M. (2006). Grounded Visualization: Integrating the Analysis of Qualitative and Quantitative Data through Grounded Theory and Visualization. 
+
+Elo, S., &amp; Kyngäs, H. (2008). The qualitative content analysis process.
+
+Creswell, J. W., &amp; Plano Clark, V. L. (2007). Designing and Conducting Mixed Methods Research.
+</code></pre></div></div>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Análise de Dados no Excel</title><link href="http://localhost:4000/dados/2023/06/11/30.html" rel="alternate" type="text/html" title="Análise de Dados no Excel" /><published>2023-06-11T18:42:47-03:00</published><updated>2023-06-11T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/11/30</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/11/30.html"><![CDATA[<h1 id="dicas-e-truques-para-maximizar-a-eficiência">Dicas e truques para maximizar a eficiência</h1>
+
+<h2 id="o-microsoft-excel-na-análise-de-dados">O Microsoft Excel na Análise de Dados</h2>
+
+<p>O Microsoft Excel é uma das ferramentas mais utilizadas no mundo dos negócios.</p>
+
+<p>Sua capacidade de lidar com grandes conjuntos de dados e realizar cálculos complexos o torna uma ferramenta indispensável para qualquer pessoa que trabalhe com análise de dados.</p>
+
+<p>Este guia irá apresentar algumas dicas e truques para maximizar a eficiência ao usar o Excel para análise de dados.
+Entendendo o Excel</p>
+
+<p>O Excel é uma ferramenta de planilha que permite aos usuários organizar, formatar e calcular dados com fórmulas usando um sistema de células divididas por linhas e colunas.</p>
+
+<p>Ele também oferece a capacidade de criar gráficos e visualizações de dados, o que pode ser extremamente útil na análise de dados.</p>
+
+<ol>
+  <li>Passo: Domine as Fórmulas e Funções Básicas</li>
+</ol>
+
+<p>O Excel tem uma variedade de fórmulas e funções que podem ser usadas para realizar cálculos e análises. Algumas das mais úteis para a análise de dados incluem:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SUM: Esta função é usada para somar uma série de números.
+AVERAGE: Esta função é usada para calcular a média de uma série de números.
+COUNT: Esta função é usada para contar o número de células que contêm números.
+VLOOKUP: Esta função é usada para encontrar coisas em uma tabela ou um intervalo por linha.
+</code></pre></div></div>
+
+<ol>
+  <li>Passo: Aprenda a usar Tabelas Dinâmicas</li>
+</ol>
+
+<p>As Tabelas Dinâmicas são uma das ferramentas mais poderosas do Excel para análise de dados.</p>
+
+<p>Elas permitem que você resuma e analise grandes conjuntos de dados de maneira rápida e fácil. Com as Tabelas Dinâmicas, você pode reorganizar, classificar, agrupar e somar dados em segundos.</p>
+
+<ol>
+  <li>Passo: Use Gráficos para Visualizar Dados</li>
+</ol>
+
+<p>Os gráficos podem ser uma maneira eficaz de visualizar dados.</p>
+
+<p>O Excel oferece uma variedade de tipos de gráficos, incluindo gráficos de linhas, gráficos de barras, gráficos de pizza e muito mais. Ao escolher o tipo de gráfico a ser usado, é importante considerar o que você está tentando comunicar com os dados.</p>
+
+<h2 id="exemplo-prático">Exemplo Prático</h2>
+
+<p>Vamos fazer um exemplo prático usando um conjunto de dados fictício de vendas.</p>
+
+<p>Digamos que temos uma planilha com quatro colunas: “Produto”, “Região”, “Mês” e “Vendas”.</p>
+
+<p>Primeiro, vamos usar a função SUM para calcular o total de vendas. Em uma célula vazia, podemos escrever a seguinte fórmula:</p>
+
+<pre><code class="language-Excel">=SUM(D2:D100)
+</code></pre>
+
+<p>Esta fórmula irá somar todas as vendas listadas na <code class="language-plaintext highlighter-rouge">coluna D</code>.</p>
+
+<p>Agora, digamos que queremos saber a média de vendas por produto. Podemos usar a função:</p>
+
+<pre><code class="language-Excel">=AVERAGEIF(A2:A100, "Produto X", D2:D100)
+</code></pre>
+
+<p>Esta fórmula irá calcular a média de vendas para o <code class="language-plaintext highlighter-rouge">Produto X</code>.</p>
+
+<p>Em seguida, podemos usar uma Tabela Dinâmica para analisar nossos dados.</p>
+
+<ol>
+  <li>Passo: Aprenda a usar a Função de Filtro</li>
+</ol>
+
+<p>A função de filtro no Excel pode ser uma ferramenta poderosa para analisar dados. Ela permite que você filtre e visualize apenas os dados que atendem a certos critérios.</p>
+
+<p>Por exemplo, se você quiser ver apenas as vendas que foram feitas na região “Norte”, você pode usar a função de filtro para fazer isso.</p>
+
+<ol>
+  <li>Passo: Use a Função de Classificação para Organizar Dados</li>
+</ol>
+
+<p>A função de classificação no Excel permite que você organize seus dados de acordo com qualquer critério que você escolher. Por exemplo, você pode classificar suas vendas do maior para o menor valor, ou você pode classificar seus produtos alfabeticamente.</p>
+
+<h2 id="exemplo-prático-continuado">Exemplo Prático Continuado</h2>
+
+<p>Agora, vamos criar uma Tabela Dinâmica para analisar nossos dados de vendas. Primeiro, selecione seus dados e vá para <code class="language-plaintext highlighter-rouge">Inserir -&gt; Tabela Dinâmica</code>.</p>
+
+<p>Em seguida, você pode arrastar e soltar os campos para a tabela dinâmica. Por exemplo, você pode colocar <code class="language-plaintext highlighter-rouge">Produto</code> no campo de linhas, <code class="language-plaintext highlighter-rouge">Região</code> no campo de colunas e <code class="language-plaintext highlighter-rouge">Vendas</code> no campo de valores. Isso criará uma tabela dinâmica que mostra as vendas totais para cada produto por região.</p>
+
+<p>Finalmente, vamos criar um gráfico para visualizar nossos dados. Selecione sua Tabela Dinâmica e vá para 
+<code class="language-plaintext highlighter-rouge">Inserir -&gt; Gráfico</code>.</p>
+
+<p>Você pode escolher o tipo de gráfico que melhor se adapta aos seus dados. Por exemplo, um gráfico de colunas empilhadas pode ser uma boa escolha para visualizar as vendas por produto e região.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>O Excel é uma ferramenta poderosa para a análise de dados, e aprender a usá-lo eficientemente pode economizar muito tempo e esforço. Com as dicas e truques apresentados neste guia, você estará bem equipado para começar a usar o Excel para análise de dados.</p>
+
+<h2 id="recursos-adicionais">Recursos Adicionais</h2>
+
+<p>Para aprofundar ainda mais seus conhecimentos em Excel e análise de dados, recomendo os seguintes livros:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Excel para Finanças Pessoais" por Elisabeth Soria
+"A Bíblia do Excel: Aprenda com o mestre ensina" por John Walkenbach
+"Excel Avançado: Alta produtividade" por Fabrizio Vesica
+</code></pre></div></div>
+
+<p>Lembre-se, a prática é a chave para se tornar proficiente em qualquer habilidade, então continue praticando e explorando novas maneiras de usar o Excel para análise de dados.</p>
+
+<p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>
+
+<h2 id="referências">Referências</h2>
+
+<p><a href="https://doi.org/10.1186/2046-4053-3-110">Brown, S.J., Hutton, B., Clifford, T. et al. A Microsoft-Excel-based tool for running and critically appraising network meta-analyses—an overview and application of NetMetaXL. Syst Rev 3, 110 (2014).</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Como começar com a Análise de Dados</title><link href="http://localhost:4000/dados/2023/06/10/29.html" rel="alternate" type="text/html" title="Como começar com a Análise de Dados" /><published>2023-06-10T18:42:47-03:00</published><updated>2023-06-10T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/10/29</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/10/29.html"><![CDATA[<h1 id="um-guia-para-iniciantes">Um guia para iniciantes</h1>
+
+<p>A análise de dados é uma disciplina que está se tornando cada vez mais relevante em quase todas as indústrias.</p>
+
+<p>Com a quantidade crescente de dados disponíveis, a necessidade de profissionais qualificados para interpretar e tirar conclusões desses dados também está aumentando.</p>
+
+<p>Se você é um iniciante no campo da análise de dados, este guia irá ajudá-lo a dar os primeiros passos.</p>
+
+<h2 id="entendendo-a-análise-de-dados">Entendendo a Análise de Dados</h2>
+
+<p>A análise de dados é o processo de inspecionar, limpar, transformar e modelar dados com o objetivo de descobrir informações úteis, sugerir conclusões e apoiar a tomada de decisões.</p>
+
+<p>A análise de dados tem várias facetas e abordagens, abrangendo diversas técnicas sob uma variedade de nomes, em diferentes domínios de negócios, ciência e ciências sociais.</p>
+
+<ol>
+  <li>Passo: Adquirir uma base sólida em Matemática e Estatística</li>
+</ol>
+
+<p>A análise de dados é uma disciplina altamente quantitativa. Portanto, é essencial ter uma compreensão sólida de matemática e estatística. Isso inclui tópicos como álgebra linear, cálculo, probabilidade e inferência estatística.</p>
+
+<p>Existem muitos recursos online gratuitos e pagos que você pode usar para aprender ou revisar esses conceitos.</p>
+
+<ol>
+  <li>Passo: Aprenda a programar</li>
+</ol>
+
+<p>A programação é uma habilidade essencial para os analistas de dados. As linguagens de programação mais comuns na análise de dados são <code class="language-plaintext highlighter-rouge">Python</code> e <code class="language-plaintext highlighter-rouge">SQL</code>.</p>
+
+<p>Ambas são linguagens de alto nível que suportam uma variedade de operações de análise de dados. Python é conhecido por sua simplicidade e legibilidade, tornando-o uma excelente escolha para iniciantes.</p>
+
+<p>Programar não é algo obrigatório mas com certeza vai ampliar seus horizontes na área, outra coisas muito importante é a lógica de programação, mesmo que você não saiba programar entender e ter um pensamento lógico vai ajudar muito você, essa é uma habilidade que pode ser treinada e desenvolvida.</p>
+
+<ol>
+  <li>Passo: Familiarize-se com as ferramentas de Análise de Dados</li>
+</ol>
+
+<p>Existem muitas ferramentas que podem facilitar a análise de dados.</p>
+
+<p>Além de Python é útil se familiarizar com SQL, uma linguagem de consulta de banco de dados, bem como Excel, uma ferramenta de planilha amplamente utilizada que possui algumas funcionalidades de análise de dados.</p>
+
+<p>Além disso, existem muitas bibliotecas Python, como <code class="language-plaintext highlighter-rouge">Pandas</code>, <code class="language-plaintext highlighter-rouge">NumPy</code> e <code class="language-plaintext highlighter-rouge">Matplotlib</code>, que são essenciais para a análise de dados.</p>
+
+<ol>
+  <li>Passo: Pratique com Dados Reais</li>
+</ol>
+
+<p>A melhor maneira de aprender análise de dados é praticar com dados reais. Existem muitos conjuntos de dados disponíveis gratuitamente na internet que você pode usar para praticar suas habilidades. Alguns exemplos incluem o conjunto de dados Titanic e o conjunto de dados Iris, ambos disponíveis no repositório de aprendizado de máquina da UCI.</p>
+
+<h2 id="exemplo-prático">Exemplo Prático</h2>
+
+<p>Vamos fazer um exemplo prático usando o conjunto de dados Titanic disponível no <a href="https://www.kaggle.com/c/titanic/data">Kaggle</a></p>
+
+<p>Este conjunto de dados contém informações sobre os passageiros do Titanic, incluindo se eles sobreviveram ou não ao desastre.</p>
+
+<p>Primeiro, vamos carregar os dados usando a biblioteca Pandas em Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># Carregando o conjunto de dados
+</span><span class="n">titanic_data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">'</span><span class="s">titanic.csv</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="c1"># Visualizando as primeiras lin{
+</span>  <span class="sh">"</span><span class="s">keywords</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">beginner guide, data analysis</span><span class="sh">"</span><span class="p">,</span>
+  <span class="sh">"</span><span class="s">query</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">How to start with Data Analysis: A guide for beginners</span><span class="sh">"</span><span class="p">,</span>
+  <span class="sh">"</span><span class="s">sort</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">cited_by_count</span><span class="sh">"</span>
+</code></pre></div></div>
+
+<p>Este código irá mostrar as primeiras linhas do conjunto de dados, permitindo que você veja os diferentes tipos de informações disponíveis.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">.</span><span class="nf">head</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>Agora, digamos que queremos descobrir a taxa de sobrevivência com base no sexo do passageiro. Podemos fazer isso com o seguinte código:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Agrupando os dados por sexo e calculando a média de sobrevivência
+</span><span class="n">survival_rate</span> <span class="o">=</span> <span class="n">titanic_data</span><span class="p">.</span><span class="nf">groupby</span><span class="p">(</span><span class="sh">'</span><span class="s">Sex</span><span class="sh">'</span><span class="p">)[</span><span class="sh">'</span><span class="s">Survived</span><span class="sh">'</span><span class="p">].</span><span class="nf">mean</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">survival_rate</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Este código agrupa os dados pelo sexo do passageiro e calcula a média de sobrevivência para cada grupo. O resultado será a taxa de sobrevivência para homens e mulheres.</p>
+
+<ol>
+  <li>Passo: Continue aprendendo e explorando</li>
+</ol>
+
+<p>A análise de dados é um campo vasto e em constante evolução. Há sempre algo novo para aprender, seja uma nova técnica, uma nova ferramenta ou uma nova perspectiva sobre como abordar um problema. Portanto, é importante continuar aprendendo e explorando.</p>
+
+<p>Uma ótima maneira de fazer isso é através da leitura de artigos e livros sobre análise de dados. Por exemplo, o artigo <code class="language-plaintext highlighter-rouge">Nine quick tips for analyzing network data</code> oferece conselhos úteis para iniciantes na análise de dados de rede.</p>
+
+<p>Além disso, participar de cursos online, workshops e conferências também pode ser muito útil. Isso não só lhe dará a oportunidade de aprender com especialistas na área, mas também de se conectar com outros profissionais e entusiastas da análise de dados.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Começar com a análise de dados pode parecer uma tarefa assustadora, mas com o conhecimento certo e as ferramentas certas, você pode começar a fazer sentido dos dados e a tirar conclusões valiosas deles.</p>
+
+<p>Lembre-se, a análise de dados é uma habilidade que se desenvolve com o tempo e a prática, então não desanime se as coisas parecerem difíceis no início.</p>
+
+<p>Continue aprendendo, continue explorando e, acima de tudo, continue se divertindo com os dados!</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>

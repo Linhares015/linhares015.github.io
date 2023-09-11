@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Automatizando tarefas do dia a dia com scripts bash no Linux | Cognitio Arcanum</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Automatizando tarefas do dia a dia com scripts bash no Linux" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+<meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+<link rel="canonical" href="http://localhost:4000/linux/2023/02/13/19.html" />
+<meta property="og:url" content="http://localhost:4000/linux/2023/02/13/19.html" />
+<meta property="og:site_name" content="Cognitio Arcanum" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-13T18:42:47-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Automatizando tarefas do dia a dia com scripts bash no Linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-13T18:42:47-03:00","datePublished":"2023-02-13T18:42:47-03:00","description":"Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.","headline":"Automatizando tarefas do dia a dia com scripts bash no Linux","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/linux/2023/02/13/19.html"},"url":"http://localhost:4000/linux/2023/02/13/19.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Cognitio Arcanum</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">Cognitio Arcanum!</a><a class="page-link" href="/category/dados/">Dados</a><a class="page-link" href="/category/sql/">SQL</a><a class="page-link" href="/category/linux/">Linux</a><a class="page-link" href="/category/projeto/">Projeto</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Automatizando tarefas do dia a dia com scripts bash no Linux</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-02-13T18:42:47-03:00" itemprop="datePublished">Feb 13, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Um script bash é um arquivo de texto que contém uma série de comandos que podem ser executados pelo shell bash, um interpretador de comandos comum em sistemas operacionais baseados em Unix, como o Linux.</p>
+
+<p>Com esses comandos, é possível realizar uma ampla variedade de tarefas de automação, desde backups e limpeza de arquivos até monitoramento de recursos do sistema.</p>
+
+<p>Ao criar um script bash, é importante que ele comece com a linha <code class="language-plaintext highlighter-rouge">#!/bin/bash</code>, que indica ao sistema operacional que o arquivo deve ser interpretado pelo shell bash. Em seguida, você pode começar a escrever os comandos que deseja executar.</p>
+
+<p>Esses comandos podem ser qualquer coisa que possa ser executada no terminal, incluindo comandos do sistema, comandos do próprio shell bash e até mesmo outros scripts bash.</p>
+
+<p>Para tornar um script bash executável, é necessário torná-lo executável com o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x nome-do-arquivo.sh 
+</code></pre></div></div>
+
+<p>Em seguida, é só digitar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./nome-do-arquivo.sh
+</code></pre></div></div>
+
+<p>Um dos principais benefícios dos scripts bash é que eles podem ser usados para automatizar tarefas do dia a dia e aumentar a produtividade. Aqui estão alguns exemplos de como os scripts bash podem ser usados para automatizar tarefas comuns:</p>
+
+<ol>
+  <li>Backup de arquivos</li>
+</ol>
+
+<p>Um script bash pode ser usado para fazer backup de arquivos importantes automaticamente. Por exemplo, o seguinte script copia todos os arquivos em um diretório para um diretório de backup:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">cp</span> /caminho/do/diretorio/<span class="k">*</span> /caminho/do/backup/
+</code></pre></div></div>
+<ol>
+  <li>Limpeza de arquivos antigos</li>
+</ol>
+
+<p>Um script bash pode ser usado para excluir automaticamente arquivos antigos em um diretório. O seguinte script excluirá todos os arquivos em um diretório que foram modificados há mais de 30 dias:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash </span>
+
+find /caminho/do/diretorio <span class="nt">-type</span> f <span class="nt">-mtime</span> +30 <span class="nt">-execrm</span> <span class="o">{}</span> <span class="se">\;</span>
+</code></pre></div></div>
+<ol>
+  <li>Monitoramento de espaço em disco</li>
+</ol>
+
+<p>Um script bash pode ser usado para monitorar o espaço em disco em um sistema e enviar alertas quando o espaço livre estiver baixo. O seguinte script envia um e-mail de alerta quando o espaço livre em disco cai abaixo de um determinado limite:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash </span>
+
+<span class="nv">espaco_livre</span><span class="o">=</span><span class="si">$(</span><span class="nb">df</span> / | <span class="nb">awk</span> <span class="s1">'/\// {print $4}'</span><span class="si">)</span> 
+
+<span class="nv">limite</span><span class="o">=</span>500000 
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$espaco_livre</span> <span class="nt">-lt</span> <span class="nv">$limite</span> <span class="o">]</span> 
+
+<span class="k">then
+
+	</span><span class="nb">echo</span><span class="s2">"O espaço livre em disco está abaixo do limite de </span><span class="nv">$limite</span><span class="s2"> bytes."</span> | mail <span class="nt">-s</span> <span class="s2">"Alerta de espaço em disco"</span> seu-email@example.com 
+
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Comando que atualiza os repósitórios e depois atualiza o sistema:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+apt-get update <span class="o">&amp;&amp;</span> apt-get upgrade <span class="nt">-y</span>
+</code></pre></div></div>
+
+<p>Você pode casar esses scripts com o agendador Linux o Crontab. <a href="http://127.0.0.1:4000/linux/2023/01/07/13.html">Artigo sobre Crontab</a> e assim tornar ainda mais automatizado o processo no seu Linux.</p>
+
+<p>Existem muitos outros exemplos de como os scripts bash podem ser usados para automatizar tarefas, desde tarefas simples como exibir a data e hora atual até tarefas mais complexas, como atualizar e reiniciar servidores automaticamente.</p>
+
+<p>Com um pouco de prática, você pode criar scripts para lidar com uma ampla variedade de tarefas e economizar tempo e esforço.</p>
+
+<p>Neste vídeo mostro mais exemplos na prática:</p>
+
+<p><a href="https://youtu.be/gu7JRy1Vv-c"><img src="https://img.youtube.com/vi/gu7JRy1Vv-c/0.jpg" alt="SHELL SCRIPTS" /></a></p>
+
+  </div><a class="u-url" href="/linux/2023/02/13/19.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li><li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Linhares015"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Linhares015</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

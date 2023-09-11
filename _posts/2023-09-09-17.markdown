@@ -1,0 +1,103 @@
+---
+layout: post
+title:  "Combinando Resultados com SQL com UNION"
+date:   2023-09-09 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp"
+excerpt: " "
+---
+
+# A Magia da Cláusula UNION
+
+O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.
+
+## Por que a cláusula UNION é importante?
+
+Imagine que você tenha dois conjuntos de dados distintos em tabelas diferentes, mas deseja combiná-los para uma análise unificada. A cláusula UNION permite fazer exatamente isso, combinando resultados de múltiplas consultas.
+
+## Entendendo UNION e suas variantes:
+
+1. UNION:
+
+Combina os resultados de duas ou mais consultas removendo duplicatas.
+
+```sql
+SELECT 
+  nome 
+FROM estudantes_2019
+
+UNION
+
+SELECT 
+  nome 
+FROM estudantes_2020;
+```
+Uso típico: Quando você deseja combinar listas, mas garantir que cada item apareça apenas uma vez.
+
+2. UNION ALL:
+
+Semelhante ao UNION, mas inclui duplicatas.
+
+```sql
+SELECT 
+  nome 
+FROM vendedores_regiao_norte
+
+UNION ALL
+
+SELECT 
+  nome 
+FROM vendedores_regiao_sul;
+```
+
+Uso típico: Quando você deseja combinar listas e manter todas as entradas, incluindo duplicatas.
+
+3. INTERSECT:
+
+Retorna apenas as linhas que aparecem em ambos os conjuntos de resultados.
+
+```sql
+SELECT 
+  nome 
+FROM alunos_matriculados
+
+INTERSECT
+
+SELECT 
+  nome 
+FROM alunos_presentes_hoje;
+```
+
+Uso típico: Quando você deseja encontrar itens comuns entre dois conjuntos de dados.
+
+4. EXCEPT (ou MINUS em alguns sistemas):
+
+Retorna linhas do primeiro conjunto de resultados que não aparecem no segundo.
+
+```sql
+SELECT 
+  nome 
+FROM todos_os_funcionarios
+
+EXCEPT
+
+SELECT 
+  nome 
+FROM funcionarios_de_ferias;
+```
+
+Uso típico: Quando você deseja encontrar itens em um conjunto de dados que não estão em outro.
+
+## Considerações de Performance:
+
+Assim como com os JOINs, as operações de conjunto podem ser intensivas em termos de recursos. Algumas dicas para otimizar:
+
+Certifique-se de que as colunas que você está combinando tenham tipos de dados compatíveis.
+    
+Use cláusulas WHERE para limitar os resultados antes de combiná-los.
+    
+Pense na ordem das operações; às vezes, reordenar as consultas pode melhorar a performance.
+
+## Conclusão:
+
+A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.

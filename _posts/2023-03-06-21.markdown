@@ -1,0 +1,68 @@
+---
+layout: post
+title:  "Melhores práticas para modelagem de dados"
+date:   2023-03-06 18:42:47 -0300
+categories: Dados
+thumbnail: "https://static.wixstatic.com/media/710ee0_d7f11dae3e8f4e2281a6d8c98c0afa96~mv2.jpg/v1/fill/w_2734,h_1640,al_c,q_90/710ee0_d7f11dae3e8f4e2281a6d8c98c0afa96~mv2.webp"
+excerpt: " "
+---
+
+## Normalização e Denormalização em projetos de BI.
+
+Modelagem de dados é uma prática importante em projetos de Business Intelligence (BI). A modelagem de dados ajuda a garantir que os dados sejam organizados de maneira eficiente e que possam ser acessados e analisados ​​com facilidade. Existem duas abordagens comuns para modelagem de dados: normalização e denormalização.
+
+## Normalização
+
+A normalização é uma técnica de modelagem de dados que envolve a organização de dados em tabelas separadas, com cada tabela representando uma entidade específica no sistema. A normalização é baseada em um conjunto de regras de normalização, que são usadas para garantir que os dados sejam organizados de maneira lógica e consistente.
+
+### A normalização pode ter várias vantagens em projetos de BI:
+
+1. Economia de espaço: 
+
+A normalização pode economizar espaço de armazenamento, pois os dados são armazenados em tabelas separadas em vez de duplicados em várias tabelas.
+
+2. Redução de redundância: 
+
+A normalização ajuda a reduzir a redundância nos dados, o que pode melhorar a consistência e a qualidade dos dados.
+
+3. Facilidade de manutenção: 
+
+A normalização pode tornar mais fácil a manutenção dos dados, pois as alterações precisam ser feitas apenas em uma tabela em vez de várias.
+
+### No entanto, a normalização também pode ter desvantagens em projetos de BI:
+
+1. Dificuldade na recuperação de dados: 
+
+A normalização pode tornar mais difícil recuperar dados de várias tabelas, o que pode afetar negativamente o desempenho do sistema.
+
+2. Complexidade na compreensão dos dados: 
+
+A normalização pode tornar mais difícil entender os dados, pois eles estão espalhados em várias tabelas.
+
+## Denormalização
+
+A denormalização é uma técnica de modelagem de dados que envolve a combinação de dados de várias tabelas em uma única tabela. A denormalização é usada para melhorar o desempenho do sistema, reduzindo o número de junções necessárias para recuperar os dados.
+
+### A denormalização pode ter várias vantagens em projetos de BI:
+
+1. Melhoria de desempenho: 
+
+A denormalização pode melhorar o desempenho do sistema, pois reduz o número de junções necessárias para recuperar os dados.
+
+2. Facilidade de compreensão dos dados: 
+
+A denormalização pode tornar mais fácil entender os dados, pois eles estão todos em uma única tabela.
+
+### No entanto, a denormalização também pode ter desvantagens em projetos de BI:
+
+1. Aumento de redundância: 
+
+A denormalização pode aumentar a redundância dos dados, o que pode afetar negativamente a consistência e a qualidade dos dados.
+
+2. Dificuldade na manutenção dos dados: 
+
+A denormalização pode tornar mais difícil manter a integridade dos dados, pois as alterações precisam ser feitas em várias tabelas em vez de apenas uma.
+
+## Conclusão
+
+A modelagem de dados é uma prática importante em projetos de BI, e as técnicas de normalização e denormalização são comuns na modelagem de dados. A normalização pode economizar espaço de armazenamento e reduzir a redundância, mas pode tornar mais difícil recuperar os dados

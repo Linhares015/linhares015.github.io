@@ -9,6 +9,14 @@ description: "Um espaço dedicado a compartilhar insights, tutoriais e notícias
 
 Foco desse blog é falarmos de Dados e Tecnologia da Informação. Aqui você encontrará artigos sobre Engenharia de Dados, Analise de Dados, Programação, Desenvolvimento, inteligência artificial e muito mais.
 
+👷 [Meus Projetos](/category/projeto/index.html) 
+
+📓 [Posts sobre Dados](/category/dados/index.html) 
+
+👩‍💻 [Posts sobre SQL](/category/sql/index.html)
+
+🐧 [Posts sobre Linux](/category/linux/index.html)
+
 ## Últimos Posts
 
 {% for post in site.posts limit:5 %}

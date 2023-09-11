@@ -30,9 +30,11 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-
-    - name: Update Bundler
-      run: gem install bundler:2.4.19
+    
+    - name: Install Bundler
+      run: |
+        gem install bundler:2.4.19
+        bundle -v
 
     - name: Configure Bundler
       run: |

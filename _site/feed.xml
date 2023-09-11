@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-10T21:26:46-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-10T21:55:56-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Autenticação Segura no Linux</title><link href="http://localhost:4000/linux/2023/09/10/38.html" rel="alternate" type="text/html" title="Autenticação Segura no Linux" /><published>2023-09-10T18:42:47-03:00</published><updated>2023-09-10T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/10/38</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/10/38.html"><![CDATA[<h1 id="entendendo-senhas-sombra-e-pam">Entendendo Senhas Sombra e PAM</h1>
+
+<p>A segurança cibernética é uma preocupação crescente em nossa era digital. Com o aumento constante de ameaças e ataques cibernéticos, é essencial garantir que nossos sistemas e dados estejam protegidos. Um vídeo recente no YouTube destacou algumas práticas recomendadas para fortalecer a segurança no Linux. Aqui estão os principais insights:</p>
+
+<h2 id="senhas-sombra-no-linux">Senhas Sombra no Linux</h2>
+
+<p>Uma das características notáveis do Linux é o uso de “senhas sombra”. Em vez de armazenar senhas criptografadas no arquivo /etc/passwd, que é tradicionalmente acessível a todos os usuários, o Linux introduziu o conceito de senhas sombra. Essas senhas são armazenadas em um arquivo separado, proporcionando uma camada extra de segurança. Isso garante que mesmo que um invasor obtenha acesso ao sistema, ele não possa facilmente acessar as senhas criptografadas.</p>
+
+<h2 id="a-importância-de-alterar-senhas-regularmente">A Importância de Alterar Senhas Regularmente</h2>
+
+<p>Mudar senhas regularmente é uma prática recomendada em segurança cibernética. Mesmo que isso possa parecer tedioso ou inconveniente, é uma medida preventiva crucial. Forçar os usuários a alterar suas senhas em intervalos regulares pode prevenir muitos ataques potenciais, especialmente se uma senha for comprometida.</p>
+
+<h2 id="pam-flexibilidade-em-autenticação">PAM: Flexibilidade em Autenticação</h2>
+
+<p>O Módulo de Autenticação Pluggable (PAM) é outra característica notável do Linux. Ele permite a criação de várias regras de autenticação. Isso significa que os administradores do sistema podem configurar o sistema para exigir vários tipos de autenticação, tornando-o ainda mais seguro contra ameaças.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>A segurança é uma jornada contínua, e é essencial estar sempre atualizado com as melhores práticas e ferramentas. O Linux, com suas características de senhas sombra e PAM, oferece robustez e flexibilidade em segurança. Ao entender e implementar esses recursos, podemos dar um passo significativo para proteger nossos sistemas e dados.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/IYSuY9jRKQg"><img src="https://img.youtube.com/vi/IYSuY9jRKQg/0.jpg" alt="Segurança 2 Autenticação" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
 
 <p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
 
@@ -873,102 +895,4 @@ VLOOKUP: Esta função é usada para encontrar coisas em uma tabela ou um interv
 
 <h2 id="referências">Referências</h2>
 
-<p><a href="https://doi.org/10.1186/2046-4053-3-110">Brown, S.J., Hutton, B., Clifford, T. et al. A Microsoft-Excel-based tool for running and critically appraising network meta-analyses—an overview and application of NetMetaXL. Syst Rev 3, 110 (2014).</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Como começar com a Análise de Dados</title><link href="http://localhost:4000/dados/2023/06/10/29.html" rel="alternate" type="text/html" title="Como começar com a Análise de Dados" /><published>2023-06-10T18:42:47-03:00</published><updated>2023-06-10T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/10/29</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/10/29.html"><![CDATA[<h1 id="um-guia-para-iniciantes">Um guia para iniciantes</h1>
-
-<p>A análise de dados é uma disciplina que está se tornando cada vez mais relevante em quase todas as indústrias.</p>
-
-<p>Com a quantidade crescente de dados disponíveis, a necessidade de profissionais qualificados para interpretar e tirar conclusões desses dados também está aumentando.</p>
-
-<p>Se você é um iniciante no campo da análise de dados, este guia irá ajudá-lo a dar os primeiros passos.</p>
-
-<h2 id="entendendo-a-análise-de-dados">Entendendo a Análise de Dados</h2>
-
-<p>A análise de dados é o processo de inspecionar, limpar, transformar e modelar dados com o objetivo de descobrir informações úteis, sugerir conclusões e apoiar a tomada de decisões.</p>
-
-<p>A análise de dados tem várias facetas e abordagens, abrangendo diversas técnicas sob uma variedade de nomes, em diferentes domínios de negócios, ciência e ciências sociais.</p>
-
-<ol>
-  <li>Passo: Adquirir uma base sólida em Matemática e Estatística</li>
-</ol>
-
-<p>A análise de dados é uma disciplina altamente quantitativa. Portanto, é essencial ter uma compreensão sólida de matemática e estatística. Isso inclui tópicos como álgebra linear, cálculo, probabilidade e inferência estatística.</p>
-
-<p>Existem muitos recursos online gratuitos e pagos que você pode usar para aprender ou revisar esses conceitos.</p>
-
-<ol>
-  <li>Passo: Aprenda a programar</li>
-</ol>
-
-<p>A programação é uma habilidade essencial para os analistas de dados. As linguagens de programação mais comuns na análise de dados são <code class="language-plaintext highlighter-rouge">Python</code> e <code class="language-plaintext highlighter-rouge">SQL</code>.</p>
-
-<p>Ambas são linguagens de alto nível que suportam uma variedade de operações de análise de dados. Python é conhecido por sua simplicidade e legibilidade, tornando-o uma excelente escolha para iniciantes.</p>
-
-<p>Programar não é algo obrigatório mas com certeza vai ampliar seus horizontes na área, outra coisas muito importante é a lógica de programação, mesmo que você não saiba programar entender e ter um pensamento lógico vai ajudar muito você, essa é uma habilidade que pode ser treinada e desenvolvida.</p>
-
-<ol>
-  <li>Passo: Familiarize-se com as ferramentas de Análise de Dados</li>
-</ol>
-
-<p>Existem muitas ferramentas que podem facilitar a análise de dados.</p>
-
-<p>Além de Python é útil se familiarizar com SQL, uma linguagem de consulta de banco de dados, bem como Excel, uma ferramenta de planilha amplamente utilizada que possui algumas funcionalidades de análise de dados.</p>
-
-<p>Além disso, existem muitas bibliotecas Python, como <code class="language-plaintext highlighter-rouge">Pandas</code>, <code class="language-plaintext highlighter-rouge">NumPy</code> e <code class="language-plaintext highlighter-rouge">Matplotlib</code>, que são essenciais para a análise de dados.</p>
-
-<ol>
-  <li>Passo: Pratique com Dados Reais</li>
-</ol>
-
-<p>A melhor maneira de aprender análise de dados é praticar com dados reais. Existem muitos conjuntos de dados disponíveis gratuitamente na internet que você pode usar para praticar suas habilidades. Alguns exemplos incluem o conjunto de dados Titanic e o conjunto de dados Iris, ambos disponíveis no repositório de aprendizado de máquina da UCI.</p>
-
-<h2 id="exemplo-prático">Exemplo Prático</h2>
-
-<p>Vamos fazer um exemplo prático usando o conjunto de dados Titanic disponível no <a href="https://www.kaggle.com/c/titanic/data">Kaggle</a></p>
-
-<p>Este conjunto de dados contém informações sobre os passageiros do Titanic, incluindo se eles sobreviveram ou não ao desastre.</p>
-
-<p>Primeiro, vamos carregar os dados usando a biblioteca Pandas em Python:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-
-<span class="c1"># Carregando o conjunto de dados
-</span><span class="n">titanic_data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">'</span><span class="s">titanic.csv</span><span class="sh">'</span><span class="p">)</span>
-
-<span class="c1"># Visualizando as primeiras lin{
-</span>  <span class="sh">"</span><span class="s">keywords</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">beginner guide, data analysis</span><span class="sh">"</span><span class="p">,</span>
-  <span class="sh">"</span><span class="s">query</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">How to start with Data Analysis: A guide for beginners</span><span class="sh">"</span><span class="p">,</span>
-  <span class="sh">"</span><span class="s">sort</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">cited_by_count</span><span class="sh">"</span>
-</code></pre></div></div>
-
-<p>Este código irá mostrar as primeiras linhas do conjunto de dados, permitindo que você veja os diferentes tipos de informações disponíveis.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">.</span><span class="nf">head</span><span class="p">())</span>
-</code></pre></div></div>
-
-<p>Agora, digamos que queremos descobrir a taxa de sobrevivência com base no sexo do passageiro. Podemos fazer isso com o seguinte código:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Agrupando os dados por sexo e calculando a média de sobrevivência
-</span><span class="n">survival_rate</span> <span class="o">=</span> <span class="n">titanic_data</span><span class="p">.</span><span class="nf">groupby</span><span class="p">(</span><span class="sh">'</span><span class="s">Sex</span><span class="sh">'</span><span class="p">)[</span><span class="sh">'</span><span class="s">Survived</span><span class="sh">'</span><span class="p">].</span><span class="nf">mean</span><span class="p">()</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="n">survival_rate</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Este código agrupa os dados pelo sexo do passageiro e calcula a média de sobrevivência para cada grupo. O resultado será a taxa de sobrevivência para homens e mulheres.</p>
-
-<ol>
-  <li>Passo: Continue aprendendo e explorando</li>
-</ol>
-
-<p>A análise de dados é um campo vasto e em constante evolução. Há sempre algo novo para aprender, seja uma nova técnica, uma nova ferramenta ou uma nova perspectiva sobre como abordar um problema. Portanto, é importante continuar aprendendo e explorando.</p>
-
-<p>Uma ótima maneira de fazer isso é através da leitura de artigos e livros sobre análise de dados. Por exemplo, o artigo <code class="language-plaintext highlighter-rouge">Nine quick tips for analyzing network data</code> oferece conselhos úteis para iniciantes na análise de dados de rede.</p>
-
-<p>Além disso, participar de cursos online, workshops e conferências também pode ser muito útil. Isso não só lhe dará a oportunidade de aprender com especialistas na área, mas também de se conectar com outros profissionais e entusiastas da análise de dados.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>Começar com a análise de dados pode parecer uma tarefa assustadora, mas com o conhecimento certo e as ferramentas certas, você pode começar a fazer sentido dos dados e a tirar conclusões valiosas deles.</p>
-
-<p>Lembre-se, a análise de dados é uma habilidade que se desenvolve com o tempo e a prática, então não desanime se as coisas parecerem difíceis no início.</p>
-
-<p>Continue aprendendo, continue explorando e, acima de tudo, continue se divertindo com os dados!</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><a href="https://doi.org/10.1186/2046-4053-3-110">Brown, S.J., Hutton, B., Clifford, T. et al. A Microsoft-Excel-based tool for running and critically appraising network meta-analyses—an overview and application of NetMetaXL. Syst Rev 3, 110 (2014).</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>

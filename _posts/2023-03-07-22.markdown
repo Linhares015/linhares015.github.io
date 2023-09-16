@@ -51,4 +51,6 @@ As tabelas de dimensões são tabelas que contêm informações sobre os objetos
 
 ## Conclusão
 
-Data warehousing é uma técnica importante para armazenar e organizar dados de várias fontes para análise e tomada de decisões de negócios. Um data warehouse é projetado para armazenar
+Data warehousing é uma técnica importante para armazenar e organizar dados de várias fontes para análise e tomada de decisões de negócios. Um data warehouse é projetado para armazenar.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

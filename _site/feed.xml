@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-11T18:51:30-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Autenticação Segura no Linux</title><link href="http://localhost:4000/linux/2023/09/10/38.html" rel="alternate" type="text/html" title="Autenticação Segura no Linux" /><published>2023-09-10T18:42:47-03:00</published><updated>2023-09-10T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/10/38</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/10/38.html"><![CDATA[<h1 id="entendendo-senhas-sombra-e-pam">Entendendo Senhas Sombra e PAM</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-16T18:08:49-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Zsh</title><link href="http://localhost:4000/linux/2023/09/16/39.html" rel="alternate" type="text/html" title="Zsh" /><published>2023-09-16T16:42:47-03:00</published><updated>2023-09-16T16:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/16/39</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/16/39.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
+
+<p>Neste artigo, vamos explorar como instalar o Zsh, configurá-lo e personalizá-lo com temas para tornar seu terminal mais atraente e funcional.</p>
+
+<h1 id="1-instalação-do-zsh">1. Instalação do Zsh</h1>
+
+<p>A instalação do Zsh é simples e pode ser feita na maioria das distribuições Linux e sistemas macOS:</p>
+
+<ul>
+  <li>Ubuntu/Debian:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>zsh
+</code></pre></div></div>
+
+<ul>
+  <li>Fedora:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>zsh
+</code></pre></div></div>
+
+<ul>
+  <li>Arch Linux:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> zsh
+</code></pre></div></div>
+
+<ul>
+  <li>macOS:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>zsh
+</code></pre></div></div>
+
+<p>Após a instalação, você pode definir o Zsh como seu shell padrão com o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh <span class="nt">-s</span> <span class="si">$(</span>which zsh<span class="si">)</span>
+</code></pre></div></div>
+
+<h1 id="2-oh-my-zsh-um-framework-para-gerenciar-sua-configuração-zsh">2. Oh My Zsh: Um Framework para Gerenciar sua Configuração Zsh</h1>
+
+<p>Oh My Zsh é um framework de código aberto e uma comunidade que ajuda a gerenciar sua configuração Zsh. Ele vem com um conjunto de plugins, temas e funções úteis que podem ser habilitadas ou desabilitadas conforme sua preferência.</p>
+
+<h2 id="para-instalar-o-oh-my-zsh-use">Para instalar o Oh My Zsh, use:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h1 id="3-personalizando-com-temas">3. Personalizando com Temas</h1>
+
+<p>Um dos maiores atrativos do Zsh é a capacidade de personalizá-lo com temas. O Oh My Zsh, por exemplo, vem com muitos temas pré-instalados. Para alterar o tema, edite o arquivo <code class="language-plaintext highlighter-rouge">~/.zshrc</code> e modifique a linha <code class="language-plaintext highlighter-rouge">ZSH_THEME</code> com o nome do tema desejado.</p>
+
+<ul>
+  <li>Por exemplo, para usar o tema agnoster, altere a linha para:</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">ZSH_THEME="agnoster"</span>
+</code></pre></div></div>
+
+<h2 id="onde-encontrar-mais-temas">Onde encontrar mais temas?</h2>
+
+<p>Oh My Zsh Temas: O próprio Oh My Zsh tem uma <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">galeria de temas</a> que você pode explorar.</p>
+
+<p>Zsh Users: O repositório <a href="https://github.com/zsh-users">zsh-users</a> no GitHub tem uma variedade de temas e plugins úteis.</p>
+
+<p>Outros repositórios: Muitos desenvolvedores e entusiastas do Zsh criam e compartilham seus próprios temas. Uma busca rápida no GitHub por “Zsh themes” pode revelar muitas joias escondidas.</p>
+
+<p>Dois themas que gosto muito:</p>
+
+<ul>
+  <li>Fino</li>
+</ul>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49100982/108254809-82cfdf80-716c-11eb-8d66-027fe4ecfd55.jpg" />
+</p>
+
+<ul>
+  <li>Robbyrussell</li>
+</ul>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49100982/108254738-764b8700-716c-11eb-9a59-4deb8c8c6193.jpg" />
+</p>
+
+<h1 id="conclusão">Conclusão</h1>
+
+<p>O Zsh é uma poderosa ferramenta que melhora significativamente a experiência no terminal. Com a capacidade de personalizar e usar temas, os usuários podem criar um ambiente de trabalho que não é apenas funcional, mas também esteticamente agradável. Se você ainda não experimentou o Zsh, recomendamos que o faça e explore as infinitas possibilidades que ele oferece.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[Terminal Linux Personalizado]]></summary></entry><entry><title type="html">Autenticação Segura no Linux</title><link href="http://localhost:4000/linux/2023/09/10/38.html" rel="alternate" type="text/html" title="Autenticação Segura no Linux" /><published>2023-09-10T18:42:47-03:00</published><updated>2023-09-10T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/10/38</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/10/38.html"><![CDATA[<h1 id="entendendo-senhas-sombra-e-pam">Entendendo Senhas Sombra e PAM</h1>
 
 <p>A segurança cibernética é uma preocupação crescente em nossa era digital. Com o aumento constante de ameaças e ataques cibernéticos, é essencial garantir que nossos sistemas e dados estejam protegidos. Um vídeo recente no YouTube destacou algumas práticas recomendadas para fortalecer a segurança no Linux. Aqui estão os principais insights:</p>
 
@@ -20,7 +111,9 @@
 
 <p>Abaixo video mostrando tudo isso na prática:</p>
 
-<p><a href="https://youtu.be/IYSuY9jRKQg"><img src="https://img.youtube.com/vi/IYSuY9jRKQg/0.jpg" alt="Segurança 2 Autenticação" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
+<p><a href="https://youtu.be/IYSuY9jRKQg"><img src="https://img.youtube.com/vi/IYSuY9jRKQg/0.jpg" alt="Segurança 2 Autenticação" /></a></p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
 
 <p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
 
@@ -117,7 +210,9 @@
 
 <h2 id="conclusão">Conclusão:</h2>
 
-<p>A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
+<p>A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
 
 <p>O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.</p>
 
@@ -212,7 +307,9 @@
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.</p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Apache Airflow</title><link href="http://localhost:4000/dados/2023/08/21/36.html" rel="alternate" type="text/html" title="Apache Airflow" /><published>2023-08-21T18:42:47-03:00</published><updated>2023-08-21T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/08/21/36</id><content type="html" xml:base="http://localhost:4000/dados/2023/08/21/36.html"><![CDATA[<h1 id="uma-visão-geral-funcionamento-e-sua-importância-no-mundo-dos-dados">Uma Visão Geral, Funcionamento e Sua Importância no Mundo dos Dados</h1>
+<p>Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Apache Airflow</title><link href="http://localhost:4000/dados/2023/08/21/36.html" rel="alternate" type="text/html" title="Apache Airflow" /><published>2023-08-21T18:42:47-03:00</published><updated>2023-08-21T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/08/21/36</id><content type="html" xml:base="http://localhost:4000/dados/2023/08/21/36.html"><![CDATA[<h1 id="uma-visão-geral-funcionamento-e-sua-importância-no-mundo-dos-dados">Uma Visão Geral, Funcionamento e Sua Importância no Mundo dos Dados</h1>
 
 <p>O mundo dos dados tem se tornado cada vez mais complexo e dinâmico. Com o aumento do volume de dados e a necessidade de processá-los rapidamente, as ferramentas de orquestração de fluxo de trabalho se tornaram essenciais.</p>
 
@@ -299,7 +396,9 @@ CeleryExecutor
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>O Apache Airflow emergiu como uma ferramenta essencial no mundo dos dados devido à sua flexibilidade, escalabilidade e capacidade de orquestrar fluxos de trabalho complexos. Para organizações que lidam com grandes volumes de dados e necessitam de processamento e análise em tempo real, o Airflow oferece uma solução robusta e confiável. Seja você um engenheiro de dados, cientista de dados ou analista, entender o Airflow e suas capacidades pode ser um trunfo valioso em sua carreira.</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
+<p>O Apache Airflow emergiu como uma ferramenta essencial no mundo dos dados devido à sua flexibilidade, escalabilidade e capacidade de orquestrar fluxos de trabalho complexos. Para organizações que lidam com grandes volumes de dados e necessitam de processamento e análise em tempo real, o Airflow oferece uma solução robusta e confiável. Seja você um engenheiro de dados, cientista de dados ou analista, entender o Airflow e suas capacidades pode ser um trunfo valioso em sua carreira.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
 
 <p>A versão Cloud do dbt apresenta uma série de características avançadas e funcionalidades adicionais em comparação com a versão Core. Estas funcionalidades otimizam a experiência do usuário, tornando certas operações mais intuitivas e menos <code class="language-plaintext highlighter-rouge">verbosas</code>. No entanto, é importante destacar que existem métodos para integrar algumas dessas funcionalidades exclusivas da versão Cloud na versão Core.</p>
 
@@ -357,7 +456,9 @@ CeleryExecutor
 
 <h2 id="conclusão">Conclusão</h2>
 
-<p>A versão Cloud do dbt oferece uma série de funcionalidades avançadas que podem melhorar significativamente a experiência do usuário. No entanto, é importante destacar que algumas dessas funcionalidades podem ser integradas à versão Core, permitindo que você aproveite o melhor dos dois mundos.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">🌟 Projeto Dracma</title><link href="http://localhost:4000/projeto/2023/08/06/34.html" rel="alternate" type="text/html" title="🌟 Projeto Dracma" /><published>2023-08-06T18:42:47-03:00</published><updated>2023-08-06T18:42:47-03:00</updated><id>http://localhost:4000/projeto/2023/08/06/34</id><content type="html" xml:base="http://localhost:4000/projeto/2023/08/06/34.html"><![CDATA[<p><a href="https://dracma-13f31b0b0e16.herokuapp.com">Acesse o App</a></p>
+<p>A versão Cloud do dbt oferece uma série de funcionalidades avançadas que podem melhorar significativamente a experiência do usuário. No entanto, é importante destacar que algumas dessas funcionalidades podem ser integradas à versão Core, permitindo que você aproveite o melhor dos dois mundos.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">🌟 Projeto Dracma</title><link href="http://localhost:4000/projeto/2023/08/06/34.html" rel="alternate" type="text/html" title="🌟 Projeto Dracma" /><published>2023-08-06T18:42:47-03:00</published><updated>2023-08-06T18:42:47-03:00</updated><id>http://localhost:4000/projeto/2023/08/06/34</id><content type="html" xml:base="http://localhost:4000/projeto/2023/08/06/34.html"><![CDATA[<p><a href="https://dracma-13f31b0b0e16.herokuapp.com">Acesse o App</a></p>
 
 <p>Em um mundo onde o controle financeiro se torna cada vez mais vital, nasceu o Dracma, um projeto inovador que visa ajudar as pessoas a gerenciar suas finanças pessoais.</p>
 
@@ -437,7 +538,9 @@ CeleryExecutor
 
 <p>Com planos emocionantes para o futuro, incluindo melhorias nos insights, controles de investimentos, um gerador de renda extra e o misterioso projeto Prometheus, o Dracma está posicionado para se tornar uma ferramenta indispensável nas finanças pessoais.</p>
 
-<p>Se você está buscando uma maneira de transformar suas finanças, convido você a experimentar o Dracma aqui. Junte-se a mim nesta jornada financeira e descubra o poder do controle financeiro inteligente.</p>]]></content><author><name></name></author><category term="Projeto" /><summary type="html"><![CDATA[Uma Revolução nas Finanças Pessoais]]></summary></entry><entry><title type="html">Modelo de escrita CTE</title><link href="http://localhost:4000/sql/2023/07/17/33.html" rel="alternate" type="text/html" title="Modelo de escrita CTE" /><published>2023-07-17T18:42:47-03:00</published><updated>2023-07-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/07/17/33</id><content type="html" xml:base="http://localhost:4000/sql/2023/07/17/33.html"><![CDATA[<h1 id="como-ele-pode-melhorar-suas-consultas">Como ele pode melhorar suas consultas</h1>
+<p>Se você está buscando uma maneira de transformar suas finanças, convido você a experimentar o Dracma aqui. Junte-se a mim nesta jornada financeira e descubra o poder do controle financeiro inteligente.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Projeto" /><summary type="html"><![CDATA[Uma Revolução nas Finanças Pessoais]]></summary></entry><entry><title type="html">Modelo de escrita CTE</title><link href="http://localhost:4000/sql/2023/07/17/33.html" rel="alternate" type="text/html" title="Modelo de escrita CTE" /><published>2023-07-17T18:42:47-03:00</published><updated>2023-07-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/07/17/33</id><content type="html" xml:base="http://localhost:4000/sql/2023/07/17/33.html"><![CDATA[<h1 id="como-ele-pode-melhorar-suas-consultas">Como ele pode melhorar suas consultas</h1>
 
 <p>O SQL (Structured Query Language) é uma linguagem de programação usada para gerenciar e manipular bancos de dados.</p>
 
@@ -595,7 +698,9 @@ CeleryExecutor
 <span class="k">FROM</span> <span class="n">EmployeeHierarchy</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>Em resumo, as CTEs são uma ferramenta poderosa que pode melhorar a legibilidade, a manutenção e o desempenho de suas consultas SQL. Se você ainda não está usando CTEs em suas consultas SQL, eu recomendo que você comece a explorá-las.</p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Como a Análise de Dados pode impulsionar o seu negócio</title><link href="http://localhost:4000/dados/2023/07/03/32.html" rel="alternate" type="text/html" title="Como a Análise de Dados pode impulsionar o seu negócio" /><published>2023-07-03T18:42:47-03:00</published><updated>2023-07-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/07/03/32</id><content type="html" xml:base="http://localhost:4000/dados/2023/07/03/32.html"><![CDATA[<h1 id="análise-de-dados-para-negócios">Análise de Dados para Negócios</h1>
+<p>Em resumo, as CTEs são uma ferramenta poderosa que pode melhorar a legibilidade, a manutenção e o desempenho de suas consultas SQL. Se você ainda não está usando CTEs em suas consultas SQL, eu recomendo que você comece a explorá-las.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Como a Análise de Dados pode impulsionar o seu negócio</title><link href="http://localhost:4000/dados/2023/07/03/32.html" rel="alternate" type="text/html" title="Como a Análise de Dados pode impulsionar o seu negócio" /><published>2023-07-03T18:42:47-03:00</published><updated>2023-07-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/07/03/32</id><content type="html" xml:base="http://localhost:4000/dados/2023/07/03/32.html"><![CDATA[<h1 id="análise-de-dados-para-negócios">Análise de Dados para Negócios</h1>
 
 <p>Em um mundo cada vez mais digitalizado e competitivo, a análise de dados tornou-se uma ferramenta essencial para o sucesso dos negócios.</p>
 
@@ -700,7 +805,9 @@ CeleryExecutor
 "A Arte da Análise de Dados" por Cole Nussbaumer Knaflic
 </code></pre></div></div>
 
-<p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Análise de Dados Quantitativos vs Qualitativos</title><link href="http://localhost:4000/dados/2023/06/12/31.html" rel="alternate" type="text/html" title="Análise de Dados Quantitativos vs Qualitativos" /><published>2023-06-12T18:42:47-03:00</published><updated>2023-06-12T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/12/31</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/12/31.html"><![CDATA[<h1 id="entendendo-as-diferenças">Entendendo as diferenças</h1>
+<p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Análise de Dados Quantitativos vs Qualitativos</title><link href="http://localhost:4000/dados/2023/06/12/31.html" rel="alternate" type="text/html" title="Análise de Dados Quantitativos vs Qualitativos" /><published>2023-06-12T18:42:47-03:00</published><updated>2023-06-12T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/12/31</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/12/31.html"><![CDATA[<h1 id="entendendo-as-diferenças">Entendendo as diferenças</h1>
 
 <p>A análise de dados é uma parte crucial de qualquer pesquisa ou estudo.</p>
 
@@ -786,113 +893,6 @@ Knigge, L., &amp; Cope, M. (2006). Grounded Visualization: Integrating the Analy
 Elo, S., &amp; Kyngäs, H. (2008). The qualitative content analysis process.
 
 Creswell, J. W., &amp; Plano Clark, V. L. (2007). Designing and Conducting Mixed Methods Research.
-</code></pre></div></div>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Análise de Dados no Excel</title><link href="http://localhost:4000/dados/2023/06/11/30.html" rel="alternate" type="text/html" title="Análise de Dados no Excel" /><published>2023-06-11T18:42:47-03:00</published><updated>2023-06-11T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/11/30</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/11/30.html"><![CDATA[<h1 id="dicas-e-truques-para-maximizar-a-eficiência">Dicas e truques para maximizar a eficiência</h1>
-
-<h2 id="o-microsoft-excel-na-análise-de-dados">O Microsoft Excel na Análise de Dados</h2>
-
-<p>O Microsoft Excel é uma das ferramentas mais utilizadas no mundo dos negócios.</p>
-
-<p>Sua capacidade de lidar com grandes conjuntos de dados e realizar cálculos complexos o torna uma ferramenta indispensável para qualquer pessoa que trabalhe com análise de dados.</p>
-
-<p>Este guia irá apresentar algumas dicas e truques para maximizar a eficiência ao usar o Excel para análise de dados.
-Entendendo o Excel</p>
-
-<p>O Excel é uma ferramenta de planilha que permite aos usuários organizar, formatar e calcular dados com fórmulas usando um sistema de células divididas por linhas e colunas.</p>
-
-<p>Ele também oferece a capacidade de criar gráficos e visualizações de dados, o que pode ser extremamente útil na análise de dados.</p>
-
-<ol>
-  <li>Passo: Domine as Fórmulas e Funções Básicas</li>
-</ol>
-
-<p>O Excel tem uma variedade de fórmulas e funções que podem ser usadas para realizar cálculos e análises. Algumas das mais úteis para a análise de dados incluem:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SUM: Esta função é usada para somar uma série de números.
-AVERAGE: Esta função é usada para calcular a média de uma série de números.
-COUNT: Esta função é usada para contar o número de células que contêm números.
-VLOOKUP: Esta função é usada para encontrar coisas em uma tabela ou um intervalo por linha.
 </code></pre></div></div>
 
-<ol>
-  <li>Passo: Aprenda a usar Tabelas Dinâmicas</li>
-</ol>
-
-<p>As Tabelas Dinâmicas são uma das ferramentas mais poderosas do Excel para análise de dados.</p>
-
-<p>Elas permitem que você resuma e analise grandes conjuntos de dados de maneira rápida e fácil. Com as Tabelas Dinâmicas, você pode reorganizar, classificar, agrupar e somar dados em segundos.</p>
-
-<ol>
-  <li>Passo: Use Gráficos para Visualizar Dados</li>
-</ol>
-
-<p>Os gráficos podem ser uma maneira eficaz de visualizar dados.</p>
-
-<p>O Excel oferece uma variedade de tipos de gráficos, incluindo gráficos de linhas, gráficos de barras, gráficos de pizza e muito mais. Ao escolher o tipo de gráfico a ser usado, é importante considerar o que você está tentando comunicar com os dados.</p>
-
-<h2 id="exemplo-prático">Exemplo Prático</h2>
-
-<p>Vamos fazer um exemplo prático usando um conjunto de dados fictício de vendas.</p>
-
-<p>Digamos que temos uma planilha com quatro colunas: “Produto”, “Região”, “Mês” e “Vendas”.</p>
-
-<p>Primeiro, vamos usar a função SUM para calcular o total de vendas. Em uma célula vazia, podemos escrever a seguinte fórmula:</p>
-
-<pre><code class="language-Excel">=SUM(D2:D100)
-</code></pre>
-
-<p>Esta fórmula irá somar todas as vendas listadas na <code class="language-plaintext highlighter-rouge">coluna D</code>.</p>
-
-<p>Agora, digamos que queremos saber a média de vendas por produto. Podemos usar a função:</p>
-
-<pre><code class="language-Excel">=AVERAGEIF(A2:A100, "Produto X", D2:D100)
-</code></pre>
-
-<p>Esta fórmula irá calcular a média de vendas para o <code class="language-plaintext highlighter-rouge">Produto X</code>.</p>
-
-<p>Em seguida, podemos usar uma Tabela Dinâmica para analisar nossos dados.</p>
-
-<ol>
-  <li>Passo: Aprenda a usar a Função de Filtro</li>
-</ol>
-
-<p>A função de filtro no Excel pode ser uma ferramenta poderosa para analisar dados. Ela permite que você filtre e visualize apenas os dados que atendem a certos critérios.</p>
-
-<p>Por exemplo, se você quiser ver apenas as vendas que foram feitas na região “Norte”, você pode usar a função de filtro para fazer isso.</p>
-
-<ol>
-  <li>Passo: Use a Função de Classificação para Organizar Dados</li>
-</ol>
-
-<p>A função de classificação no Excel permite que você organize seus dados de acordo com qualquer critério que você escolher. Por exemplo, você pode classificar suas vendas do maior para o menor valor, ou você pode classificar seus produtos alfabeticamente.</p>
-
-<h2 id="exemplo-prático-continuado">Exemplo Prático Continuado</h2>
-
-<p>Agora, vamos criar uma Tabela Dinâmica para analisar nossos dados de vendas. Primeiro, selecione seus dados e vá para <code class="language-plaintext highlighter-rouge">Inserir -&gt; Tabela Dinâmica</code>.</p>
-
-<p>Em seguida, você pode arrastar e soltar os campos para a tabela dinâmica. Por exemplo, você pode colocar <code class="language-plaintext highlighter-rouge">Produto</code> no campo de linhas, <code class="language-plaintext highlighter-rouge">Região</code> no campo de colunas e <code class="language-plaintext highlighter-rouge">Vendas</code> no campo de valores. Isso criará uma tabela dinâmica que mostra as vendas totais para cada produto por região.</p>
-
-<p>Finalmente, vamos criar um gráfico para visualizar nossos dados. Selecione sua Tabela Dinâmica e vá para 
-<code class="language-plaintext highlighter-rouge">Inserir -&gt; Gráfico</code>.</p>
-
-<p>Você pode escolher o tipo de gráfico que melhor se adapta aos seus dados. Por exemplo, um gráfico de colunas empilhadas pode ser uma boa escolha para visualizar as vendas por produto e região.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>O Excel é uma ferramenta poderosa para a análise de dados, e aprender a usá-lo eficientemente pode economizar muito tempo e esforço. Com as dicas e truques apresentados neste guia, você estará bem equipado para começar a usar o Excel para análise de dados.</p>
-
-<h2 id="recursos-adicionais">Recursos Adicionais</h2>
-
-<p>Para aprofundar ainda mais seus conhecimentos em Excel e análise de dados, recomendo os seguintes livros:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Excel para Finanças Pessoais" por Elisabeth Soria
-"A Bíblia do Excel: Aprenda com o mestre ensina" por John Walkenbach
-"Excel Avançado: Alta produtividade" por Fabrizio Vesica
-</code></pre></div></div>
-
-<p>Lembre-se, a prática é a chave para se tornar proficiente em qualquer habilidade, então continue praticando e explorando novas maneiras de usar o Excel para análise de dados.</p>
-
-<p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>
-
-<h2 id="referências">Referências</h2>
-
-<p><a href="https://doi.org/10.1186/2046-4053-3-110">Brown, S.J., Hutton, B., Clifford, T. et al. A Microsoft-Excel-based tool for running and critically appraising network meta-analyses—an overview and application of NetMetaXL. Syst Rev 3, 110 (2014).</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>

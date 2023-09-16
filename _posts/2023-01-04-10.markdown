@@ -63,3 +63,5 @@ O verdadeiro valor do SQL não está apenas em sua capacidade técnica, mas em c
 ## Conclusão:
 
 Na era digital, onde os dados são abundantes, o SQL emerge não apenas como uma linguagem técnica, mas como uma linguagem de negócios. Para aqueles que buscam liderar na vanguarda da transformação digital, dominar o SQL é mais do que uma habilidade técnica; é uma competência essencial para navegar no futuro orientado por dados.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

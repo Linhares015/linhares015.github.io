@@ -137,3 +137,5 @@ O SQL Fluff é uma ferramenta útil para melhorar a qualidade do código SQL, re
 Neste artigo, exploramos como o SQL Fluff funciona e como usá-lo para melhorar a qualidade do código SQL. Demonstramos exemplos práticos de como verificar a sintaxe do código SQL, verificar nomes de tabela e aplicar regras personalizadas de linting.
 
 Com o SQL Fluff, você pode escrever código SQL de alta qualidade e garantir que ele atenda aos padrões de sua equipe ou projeto.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

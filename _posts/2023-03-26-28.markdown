@@ -36,3 +36,5 @@ Além disso, o arquivo `README.md` contém todas as instruções necessárias pa
 Em resumo, o script import_excel_to_postgres.py é uma ferramenta poderosa para importar dados de arquivos Excel para o banco de dados PostgreSQL. Com ele, você pode economizar tempo e evitar erros ao importar seus dados. Se você trabalha com análise de dados, é altamente recomendado que experimente este script e veja como ele pode facilitar seu trabalho.
 
 [Repositório GIT](https://github.com/Linhares015/upload_excel/tree/main)
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

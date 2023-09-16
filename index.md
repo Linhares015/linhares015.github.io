@@ -46,4 +46,4 @@ Se você tiver alguma dúvida, sugestão ou apenas quiser bater um papo sobre te
 </a>
 &nbsp;
 <a href="https://github.com/Linhares015">
-    <img src="https://assets.stickpng.com/images/629b7adc7c5cd817694c3231.png" alt="GitHub" width="100" height="40">
+    <img src="https://www.genexus.com/media/images/github-logo-2-imagen.jpg?timestamp=20190527124425" alt="GitHub" width="100" height="40">

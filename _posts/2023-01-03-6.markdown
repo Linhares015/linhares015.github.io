@@ -54,3 +54,5 @@ Em mercados saturados, ter acesso rápido e confiável a informações pode ser 
 ## Conclusão
 
 O Data Warehouse não é apenas uma opção tecnológica; é uma necessidade estratégica. Ele representa a espinha dorsal da análise de dados moderna, permitindo que as empresas transformem dados brutos em ações concretas. Se você deseja que sua empresa seja orientada por dados e preparada para os desafios do futuro, investir em um DW é o primeiro passo essencial.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

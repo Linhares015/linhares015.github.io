@@ -58,3 +58,5 @@ Não existe uma resposta única para todos. A escolha entre ETL e ELT depende da
 O ETL pode ser a escolha certa para organizações que precisam de um alto grau de controle sobre as transformações e têm sistemas legados. Já o ELT pode ser ideal para empresas que utilizam plataformas de BI modernas e desejam uma abordagem mais ágil e escalável.
 
 Independentemente da abordagem escolhida, o mais importante é garantir que seus dados sejam precisos, consistentes e prontos para fornecer insights valiosos para sua organização.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

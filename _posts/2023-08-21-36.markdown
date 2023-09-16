@@ -73,3 +73,5 @@ Com sua interface web e capacidades de logging, o Airflow facilita o monitoramen
 ## Conclusão
 
 O Apache Airflow emergiu como uma ferramenta essencial no mundo dos dados devido à sua flexibilidade, escalabilidade e capacidade de orquestrar fluxos de trabalho complexos. Para organizações que lidam com grandes volumes de dados e necessitam de processamento e análise em tempo real, o Airflow oferece uma solução robusta e confiável. Seja você um engenheiro de dados, cientista de dados ou analista, entender o Airflow e suas capacidades pode ser um trunfo valioso em sua carreira.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

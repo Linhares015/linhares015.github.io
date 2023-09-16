@@ -83,3 +83,4 @@ Neste exemplo, estamos gerando e inserindo valores de uma outra tabela, clientes
 
 A função SQL INSERT é uma ferramenta essencial para qualquer pessoa que trabalhe com bancos de dados. É a forma mais simples e direta de inserir dados em uma tabela, e com a prática, você poderá usá-la com facilidade em suas próprias aplicações. Esperamos que este artigo tenha ajudado a entender melhor como usar a função INSERT. Boa sorte em seus projetos de banco de dados! 
 
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

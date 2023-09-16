@@ -52,3 +52,5 @@ Com prática e cuidado, você poderá dominar a função DELETE e excluir dados 
 Abaixo video mostrando tudo isso na prática:
 
 [![DELETE e suas Instâncias](https://img.youtube.com/vi/9Iqp6pP0qGw/0.jpg)](https://youtu.be/9Iqp6pP0qGw)
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

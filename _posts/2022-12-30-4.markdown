@@ -49,3 +49,5 @@ O Pentaho representa uma revolução no mundo do BI. Ele oferece uma abordagem h
 [Site Oficial Pentaho](https://www.hitachivantara.com/en-us/products/data-management-analytics/pentaho-platform.html)
 
 [Tutorial de Instalação Pentaho](https://youtu.be/dLXttrO1IQg)
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

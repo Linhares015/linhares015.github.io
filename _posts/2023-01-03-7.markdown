@@ -38,3 +38,5 @@ Os Data Lakes são geralmente integrados com várias ferramentas de análise de 
 # Conclusão
 
 Os Data Lakes são uma ferramenta valiosa para armazenar e gerenciar grandes quantidades de dados não estruturados e semi-estruturados. Eles oferecem flexibilidade, escalabilidade e integração com várias ferramentas de análise, permitindo que as empresas façam consultas e análises avançadas de maneira eficiente.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

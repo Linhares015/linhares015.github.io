@@ -162,3 +162,5 @@ FROM EmployeeHierarchy;
 ```
 
 Em resumo, as CTEs são uma ferramenta poderosa que pode melhorar a legibilidade, a manutenção e o desempenho de suas consultas SQL. Se você ainda não está usando CTEs em suas consultas SQL, eu recomendo que você comece a explorá-las.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

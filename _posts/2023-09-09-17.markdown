@@ -101,3 +101,5 @@ Pense na ordem das operações; às vezes, reordenar as consultas pode melhorar 
 ## Conclusão:
 
 A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

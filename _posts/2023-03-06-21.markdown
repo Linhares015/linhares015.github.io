@@ -65,4 +65,6 @@ A denormalização pode tornar mais difícil manter a integridade dos dados, poi
 
 ## Conclusão
 
-A modelagem de dados é uma prática importante em projetos de BI, e as técnicas de normalização e denormalização são comuns na modelagem de dados. A normalização pode economizar espaço de armazenamento e reduzir a redundância, mas pode tornar mais difícil recuperar os dados
+A modelagem de dados é uma prática importante em projetos de BI, e as técnicas de normalização e denormalização são comuns na modelagem de dados. A normalização pode economizar espaço de armazenamento e reduzir a redundância, mas pode tornar mais difícil recuperar os dados.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

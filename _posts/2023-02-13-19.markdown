@@ -84,3 +84,5 @@ Com um pouco de prática, você pode criar scripts para lidar com uma ampla vari
 Neste vídeo mostro mais exemplos na prática:
 
 [![SHELL SCRIPTS](https://img.youtube.com/vi/gu7JRy1Vv-c/0.jpg)](https://youtu.be/gu7JRy1Vv-c)
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

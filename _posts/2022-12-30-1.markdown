@@ -22,3 +22,5 @@ Os bancos de dados `NoSQL` são uma opção mais recente e são projetados para 
 Independentemente do tipo de banco de dados, eles são geralmente gerenciados por um `sistema de gerenciamento de banco de dados (DBMS)`, que é responsável por criar, armazenar e gerenciar os dados do banco de dados. O DBMS também fornece uma interface para que os usuários possam acessar e manipular os dados do banco de dados.
 
 Os bancos de dados são uma ferramenta valiosa para armazenar e gerenciar grandes quantidades de dados, mas requerem planejamento cuidadoso e atenção constante para garantir que os dados estejam sempre atualizados e precisos. Eles também podem exigir recursos de hardware e software adicionais para gerenciá-los e garantir a segurança dos dados.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

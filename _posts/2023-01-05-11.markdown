@@ -40,3 +40,5 @@ Com prática e familiaridade com as diversas opções disponíveis na cláusula 
 Abaixo um vídeo com tudo que você precisa saber sobre a cláusula SELECT:
 
 [![SELECT e suas Instâncias](https://img.youtube.com/vi/-HmgKAK-UdA/0.jpg)](https://youtu.be/-HmgKAK-UdA)
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

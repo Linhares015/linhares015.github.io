@@ -75,3 +75,5 @@ dbt seed #Carrega dados brutos no seu banco de dados.
 ## Conclusão:
 
 O DBT é mais do que apenas uma ferramenta; é uma filosofia de trabalho com dados. Ele defende a ideia de que os dados devem ser transformados onde residem, usando SQL, e que os analistas devem ser capazes de testar, documentar e versionar suas transformações. Se você está no mundo da análise de dados, o DBT é uma ferramenta que você definitivamente deve considerar adicionar ao seu conjunto de habilidades.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

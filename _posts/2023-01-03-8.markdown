@@ -59,3 +59,5 @@ Muitas empresas modernas estão adotando uma abordagem combinada, usando Data La
 ## Conclusão
 
 Tanto Data Lakes quanto Data Warehouses têm seu lugar no ecossistema de dados. A chave é entender suas diferenças, avaliar as necessidades da sua empresa e escolher a solução (ou combinação de soluções) que melhor atenda a essas necessidades. Ao fazer isso, sua organização estará bem posicionada para extrair o máximo valor de seus dados.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

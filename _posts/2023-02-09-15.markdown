@@ -84,3 +84,5 @@ Evite JOINs desnecessários; pergunte-se se você realmente precisa de todas as 
 ## Conclusão:
 
 Os JOINs são uma ferramenta essencial no arsenal de qualquer pessoa que trabalhe com SQL. Eles permitem análises mais profundas e insights mais ricos ao combinar dados de várias tabelas. Como qualquer ferramenta poderosa, eles exigem prática para serem dominados, mas o investimento no aprendizado vale a pena pelo poder e flexibilidade que eles oferecem.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

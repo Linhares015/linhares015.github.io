@@ -94,3 +94,5 @@ Existem outras plataformas como Bitbucket e Azure DevOps que também oferecem re
 ## Conclusão
 
 O Git, em sua essência, revolucionou a maneira como desenvolvemos software. Plataformas como GitHub e GitLab ampliaram essa revolução, adicionando camadas de funcionalidade e colaboração. Ao escolher a plataforma certa para sua equipe ou projeto, considere suas necessidades específicas, a escala do projeto e as integrações necessárias. Independentemente da sua escolha, o Git permanecerá como a fundação sólida por trás de todo o processo.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

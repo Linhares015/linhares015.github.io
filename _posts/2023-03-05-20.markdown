@@ -44,3 +44,5 @@ O BI pode ajudar as empresas a promover a colaboração entre departamentos, for
 Em resumo, o Business Intelligence é uma disciplina importante para as empresas que desejam tomar decisões mais informadas e estratégicas. 
 
 As ferramentas de BI permitem que as empresas analisem seus dados de várias maneiras, incluindo relatórios, análise visual e análise preditiva. Isso permite que as empresas identifiquem oportunidades de crescimento, melhorem a eficiência operacional, prevejam tendências de mercado e promovam a colaboração entre departamentos. Em última análise, o BI é uma ferramenta essencial para o sucesso dos negócios no ambiente competitivo de hoje.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

@@ -11,6 +11,10 @@ excerpt: " "
 
 No mundo da integração de dados, ETL e ELT são dois processos fundamentais que desempenham papéis cruciais na preparação e manipulação de dados. Ambos têm suas peculiaridades, vantagens e desvantagens. Neste artigo, vamos mergulhar profundamente nas diferenças entre ETL e ELT, ajudando você a determinar qual abordagem é a mais adequada para as necessidades da sua empresa.
 
+<p align="center">
+  <img src="https://img.freepik.com/fotos-gratis/conceito-de-seguranca-cibernetica-com-computador-de-perto_23-2149101201.jpg?w=360&t=st=1694350697~exp=1694351297~hmac=9b503580b2cd686ebe7b32edc8e23a18ecced482888153b0434ec305469bc4b5">
+</p>
+
 ## Definindo ETL e ELT
 
 ### ETL (Extração, Transformação e Carregamento)

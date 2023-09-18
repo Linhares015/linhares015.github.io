@@ -11,6 +11,10 @@ excerpt: "Entendendo e Criando para Eficiência"
 
 A linguagem SQL é fundamental para interagir com bancos de dados. Uma das ferramentas mais poderosas que o SQL oferece são os procedimentos armazenados ou procedures. Vamos mergulhar no que são, como funcionam e como você pode criar os seus.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.webp" width="500" height="300">
+</p>
+
 ## O que são Procedimentos Armazenados ou procedures?
 
 Procedimentos armazenados são blocos de código SQL que são salvos no banco de dados e podem ser reutilizados. Eles encapsulam uma sequência de operações em uma única entidade, que pode ser invocada como uma função.

@@ -11,6 +11,10 @@ excerpt: " "
 
 Modelagem de dados é uma prática importante em projetos de Business Intelligence (BI). A modelagem de dados ajuda a garantir que os dados sejam organizados de maneira eficiente e que possam ser acessados e analisados ​​com facilidade. Existem duas abordagens comuns para modelagem de dados: normalização e denormalização.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_d7f11dae3e8f4e2281a6d8c98c0afa96~mv2.jpg/v1/fill/w_2734,h_1640,al_c,q_90/710ee0_d7f11dae3e8f4e2281a6d8c98c0afa96~mv2.webp" width="500" height="300">
+</p>
+
 ## Normalização
 
 A normalização é uma técnica de modelagem de dados que envolve a organização de dados em tabelas separadas, com cada tabela representando uma entidade específica no sistema. A normalização é baseada em um conjunto de regras de normalização, que são usadas para garantir que os dados sejam organizados de maneira lógica e consistente.

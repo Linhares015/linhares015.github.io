@@ -11,6 +11,10 @@ excerpt: " "
 
 No universo em rápida evolução da ciência de dados, dois termos têm se destacado: Data Lake e Data Warehouse. Ambos são fundamentais para o armazenamento e análise de dados, mas servem a propósitos distintos e têm características únicas. Vamos mergulhar nas diferenças e ajudá-lo a determinar qual é a melhor opção para sua organização.
 
+<p align="center">
+  <img src="https://img.freepik.com/fotos-gratis/fundo-de-armazenamento-em-nuvem-remixado-do-dominio-publico-pela-nasa_53876-104240.jpg?t=st=1694353570~exp=1694354170~hmac=345948e71323f1c2d18c9720d7dd44b3229f39df5e46df3a408682cfaa7a2c21" width="500" height="300">
+</p>
+
 ## O que são e para que servem?
 
 ### Data Warehouse (DW)

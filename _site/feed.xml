@@ -1,5 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-17T21:51:19-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Manual Diário Git</title><link href="http://localhost:4000/dados/2023/09/17/40.html" rel="alternate" type="text/html" title="Manual Diário Git" /><published>2023-09-17T00:42:47-03:00</published><updated>2023-09-17T00:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/17/40</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/17/40.html"><![CDATA[<p>Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-18T16:16:06-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Ubuntu no Estilo MacBook</title><link href="http://localhost:4000/linux/2023/09/18/41.html" rel="alternate" type="text/html" title="Ubuntu no Estilo MacBook" /><published>2023-09-18T00:42:47-03:00</published><updated>2023-09-18T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/18/41</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/18/41.html"><![CDATA[<p>Se você é um entusiasta de Linux, deve saber que uma das maiores vantagens deste sistema operacional é a personalização. Uma das transformações mais desejadas é replicar a elegante aparência do 
+<code class="language-plaintext highlighter-rouge">macOS</code> no <code class="language-plaintext highlighter-rouge">Linux</code>.</p>
+
+<p>Neste post, vamos explorar como fazer exatamente isso no Ubuntu 22.04, usando o popular tema “WhiteSur”.</p>
+
+<p align="center">
+  <img src="https://img.olhardigital.com.br/wp-content/uploads/2022/03/apple_j-hx.jpg" width="600" height="300" />
+</p>
+
+<h1 id="introdução">Introdução</h1>
+
+<p>A Apple é conhecida por seu design distinto e minimalista. Muitos usuários são atraídos pelo visual sofisticado do macOS, mas preferem a funcionalidade e a flexibilidade do Ubuntu. Felizmente, com algumas ferramentas e temas, você pode ter o melhor dos dois mundos.
+Passo a Passo para a Transformação</p>
+
+<h1 id="1-preparando-o-ambiente">1. Preparando o Ambiente:</h1>
+
+<p>Antes de começarmos, é essencial garantir que temos as ferramentas necessárias. Primeiro, vamos atualizar nosso sistema e instalar algumas dependências:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>git gnome-shell-extensions chrome-gnome-shell gnome-tweaks
+</code></pre></div></div>
+
+<p>A ferramenta gnome-tweaks será fundamental mais tarde para aplicar o tema e os ícones.</p>
+
+<h1 id="2-instalação-do-tema-whitesur">2. Instalação do Tema WhiteSur:</h1>
+
+<p>WhiteSur é um tema GTK inspirado no macOS Big Sur. Para instalar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>WhiteSur-gtk-theme
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install.sh
+</code></pre></div></div>
+
+<p>Este comando baixa o tema diretamente do GitHub e o instala em seu sistema.</p>
+
+<h1 id="3-incorporando-ícones-estilo-macos">3. Incorporando Ícones Estilo macOS:</h1>
+
+<p>Um aspecto crucial da aparência do macOS são os seus ícones característicos. Felizmente, o conjunto de ícones WhiteSur pode nos ajudar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>WhiteSur-icon-theme
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install.sh
+</code></pre></div></div>
+
+<h1 id="4-personalizando-o-shell">4. Personalizando o Shell:</h1>
+
+<p>Embora a versão 22.04 do Ubuntu tenha suas próprias melhorias visuais, para alcançar uma experiência completa do macOS, precisaríamos também de um tema do Gnome Shell. No entanto, note que os repositórios podem mudar, e é sempre bom verificar a disponibilidade.</p>
+
+<h1 id="5-aplicando-o-novo-tema">5. Aplicando o Novo Tema:</h1>
+
+<p>Com tudo pronto, agora é hora de transformar o visual do seu Ubuntu. Abra o <code class="language-plaintext highlighter-rouge">GNOME Tweaks</code> (ferramenta que você instalou anteriormente). Na aba <code class="language-plaintext highlighter-rouge">Aparência</code>, escolha <code class="language-plaintext highlighter-rouge">WhiteSur</code> para o tema GTK, o tema do Shell (se disponível), e o conjunto de ícones.</p>
+
+<h1 id="considerações-finais">Considerações Finais:</h1>
+
+<p>Após seguir os passos acima, seu Ubuntu 22.04 deve ter uma aparência bem próxima ao do macOS. Lembre-se, no mundo Linux, a personalização não tem limites. Você pode explorar outras extensões e temas para aprimorar ainda mais seu desktop.</p>
+
+<p>A comunidade Linux é rica e diversificada. Se por acaso você encontrar dificuldades ou se os repositórios mencionados estiverem indisponíveis, há sempre outros caminhos e recursos disponíveis online. Participe de fóruns, grupos e comunidades. Eles são valiosos não apenas para solução de problemas, mas também para descobrir novas formas de personalizar sua experiência no Linux.</p>
+
+<p>Por fim, enquanto o visual do macOS é sem dúvida atraente, o poder real do Ubuntu está em sua flexibilidade e capacidade de se adaptar às suas necessidades. Com as ferramentas certas e um pouco de paciência, você pode criar um ambiente de trabalho que seja verdadeiramente seu.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Manual Diário Git</title><link href="http://localhost:4000/dados/2023/09/17/40.html" rel="alternate" type="text/html" title="Manual Diário Git" /><published>2023-09-17T00:42:47-03:00</published><updated>2023-09-17T00:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/17/40</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/17/40.html"><![CDATA[<p>Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
 Principais Comandos Git:</p>
+
+<p align="center">
+  <img src="https://www.ratamero.com/blog/assets/git-and-github-logos.png" width="600" height="300" />
+</p>
 
 <h2 id="configuração-inicial">Configuração Inicial:</h2>
 
@@ -291,6 +371,10 @@ Principais Comandos Git:</p>
 
 <p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp" width="500" height="300" />
+</p>
+
 <h2 id="por-que-a-cláusula-union-é-importante">Por que a cláusula UNION é importante?</h2>
 
 <p>Imagine que você tenha dois conjuntos de dados distintos em tabelas diferentes, mas deseja combiná-los para uma análise unificada. A cláusula UNION permite fazer exatamente isso, combinando resultados de múltiplas consultas.</p>
@@ -389,6 +473,10 @@ Principais Comandos Git:</p>
 <p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
 
 <p>O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_4e98f65687114df582a62e702ad246b6~mv2.png" width="600" height="300" />
+</p>
 
 <h2 id="docker-desktop-uma-visão-geral">Docker Desktop: Uma Visão Geral</h2>
 
@@ -489,6 +577,10 @@ Principais Comandos Git:</p>
 
 <p>Uma das ferramentas mais populares e poderosas nesse domínio é o Apache Airflow. Neste artigo, vamos explorar o que é o Airflow, como ele funciona e por que é tão importante no cenário atual de dados.</p>
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_f29b4f7b2a0c40c5b0b8bd2a0dc45b44~mv2.png" width="600" height="300" />
+</p>
+
 <h2 id="o-que-é-apache-airflow">O que é Apache Airflow?</h2>
 
 <p>Apache Airflow é uma plataforma open-source para orquestrar fluxos de trabalho complexos de processamento de dados. Ele permite que os desenvolvedores programem, agendem e monitorem fluxos de trabalho usando programação em Python. Em outras palavras, o Airflow permite definir uma série de tarefas e suas dependências e executá-las em uma ordem específica para alcançar um objetivo de processamento de dados.</p>
@@ -574,6 +666,10 @@ CeleryExecutor
 
 <p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_7f89e297de0a48e68d970df31d86e109~mv2.jpg" width="500" height="300" />
+</p>
+
 <p>A versão Cloud do dbt apresenta uma série de características avançadas e funcionalidades adicionais em comparação com a versão Core. Estas funcionalidades otimizam a experiência do usuário, tornando certas operações mais intuitivas e menos <code class="language-plaintext highlighter-rouge">verbosas</code>. No entanto, é importante destacar que existem métodos para integrar algumas dessas funcionalidades exclusivas da versão Cloud na versão Core.</p>
 
 <p>Neste artigo, nosso objetivo é orientar você através desse processo.</p>
@@ -639,6 +735,10 @@ CeleryExecutor
 <p>Desde sua primeira versão em no-code até sua evolução para uma plataforma robusta construída com Python, o Dracma representa uma jornada de crescimento e inovação.</p>
 
 <p>Neste post, vamos explorar a história do Dracma, seus recursos exclusivos, minha experiência pessoal com ele e os emocionantes planos futuros para este projeto.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_d3130f51ef6d40f9a0b829d891eb2d2e~mv2.png" width="700" height="300" />
+</p>
 
 <h2 id="a-jornada-do-dracma-de-no-code-a-python">A Jornada do Dracma: De No-Code a Python</h2>
 
@@ -719,6 +819,10 @@ CeleryExecutor
 <p>O SQL (Structured Query Language) é uma linguagem de programação usada para gerenciar e manipular bancos de dados.</p>
 
 <p>Uma das características mais poderosas do SQL é a capacidade de escrever consultas complexas para extrair informações valiosas dos dados.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e15873799f2e40c0976ddeb3d507c8e3~mv2.jpg/v1/fill/w_2187,h_1640,al_c,q_90/710ee0_e15873799f2e40c0976ddeb3d507c8e3~mv2.webg" width="500" height="300" />
+</p>
 
 <p>Uma dessas técnicas avançadas é o uso de Expressões de Tabela Comum, ou <code class="language-plaintext highlighter-rouge">CTEs (Common Table Expressions)</code>.</p>
 
@@ -874,111 +978,4 @@ CeleryExecutor
 
 <p>Em resumo, as CTEs são uma ferramenta poderosa que pode melhorar a legibilidade, a manutenção e o desempenho de suas consultas SQL. Se você ainda não está usando CTEs em suas consultas SQL, eu recomendo que você comece a explorá-las.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Como a Análise de Dados pode impulsionar o seu negócio</title><link href="http://localhost:4000/dados/2023/07/03/32.html" rel="alternate" type="text/html" title="Como a Análise de Dados pode impulsionar o seu negócio" /><published>2023-07-03T18:42:47-03:00</published><updated>2023-07-03T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/07/03/32</id><content type="html" xml:base="http://localhost:4000/dados/2023/07/03/32.html"><![CDATA[<h1 id="análise-de-dados-para-negócios">Análise de Dados para Negócios</h1>
-
-<p>Em um mundo cada vez mais digitalizado e competitivo, a análise de dados tornou-se uma ferramenta essencial para o sucesso dos negócios.</p>
-
-<p>Ela permite que as empresas entendam melhor seus clientes, otimizem suas operações, tomem decisões informadas e, em última análise, impulsionem o crescimento.</p>
-
-<p>Neste artigo, vamos explorar como a análise de dados pode impulsionar o seu negócio.</p>
-
-<h2 id="entendendo-a-análise-de-dados">Entendendo a Análise de Dados</h2>
-
-<p>A análise de dados é o processo de coletar, limpar, transformar e modelar dados para descobrir informações úteis, sugerir conclusões e apoiar a tomada de decisões.</p>
-
-<p>Ela pode ser dividida em várias técnicas, incluindo análise <code class="language-plaintext highlighter-rouge">descritiva</code>, <code class="language-plaintext highlighter-rouge">diagnóstica</code>, <code class="language-plaintext highlighter-rouge">preditiva</code> e <code class="language-plaintext highlighter-rouge">prescritiva</code>.</p>
-
-<h2 id="como-a-análise-de-dados-pode-beneficiar-o-seu-negócio">Como a Análise de Dados pode Beneficiar o seu Negócio</h2>
-
-<p>A análise de dados pode beneficiar o seu negócio de várias maneiras. Aqui estão algumas das principais:</p>
-
-<ol>
-  <li>Melhor compreensão do cliente:</li>
-</ol>
-
-<p>A análise de dados pode ajudá-lo a entender melhor seus clientes, incluindo seus comportamentos, preferências e necessidades. Isso pode permitir que você personalize suas ofertas, melhore a satisfação do cliente e aumente a retenção.</p>
-
-<ol>
-  <li>Otimização das operações:</li>
-</ol>
-
-<p>A análise de dados pode ajudá-lo a identificar ineficiências em suas operações e encontrar maneiras de otimizá-las. Isso pode levar a uma maior produtividade e a uma redução de custos.</p>
-
-<ol>
-  <li>Tomada de decisões informada:</li>
-</ol>
-
-<p>A análise de dados pode fornecer insights valiosos que podem informar a tomada de decisões em todos os níveis da sua organização. Isso pode levar a melhores decisões que impulsionam o crescimento e a rentabilidade.</p>
-
-<ol>
-  <li>Previsão de tendências e comportamentos:</li>
-</ol>
-
-<p>A análise de dados pode ajudá-lo a prever tendências futuras e comportamentos, permitindo que você se antecipe e se posicione de forma mais eficaz.</p>
-
-<h2 id="exemplo-prático">Exemplo Prático</h2>
-
-<p>Vamos considerar um exemplo prático de como a análise de dados pode impulsionar o seu negócio.</p>
-
-<p>Suponha que você seja o proprietário de uma loja de varejo online. Você tem acesso a uma grande quantidade de dados, incluindo informações sobre vendas, visitas ao site, comportamento do cliente e muito mais.</p>
-
-<p>Primeiro, você pode usar a análise de dados para entender melhor seus clientes. Por exemplo, você pode analisar os dados de vendas para identificar quais produtos são mais populares, ou você pode analisar os dados do site para entender como os clientes interagem com o seu site.</p>
-
-<p>Em seguida, você pode usar a análise de dados para otimizar suas operações. Por exemplo, você pode analisar os dados de vendas e estoque para otimizar seus níveis de estoque e reduzir os custos.</p>
-
-<p>Além disso, você pode usar a análise de dados para informar suas decisões. Por exemplo, você pode analisar os dados de vendas para decidir quais produtos promover, ou você pode analisar os dados do cliente para decidir onde focar seus esforços de marketing.</p>
-
-<p>Finalmente, você pode usar a análise de dados para prever tendências futuras. Por exemplo, você pode analisar os dados de vendas passadas para prever quais produtos serão populares no futuro, ou você pode analisar os dados do cliente para prever quais segmentos de clientes provavelmente crescerão.</p>
-
-<h2 id="ferramentas-para-análise-de-dados">Ferramentas para Análise de Dados</h2>
-
-<p>Existem várias ferramentas que você pode usar para análise de dados. Algumas das mais populares incluem:</p>
-
-<ol>
-  <li>Excel:</li>
-</ol>
-
-<p>Uma ferramenta básica, mas poderosa, para análise de dados. É ótimo para análise descritiva e pode ser uma boa opção para pequenas empresas.</p>
-
-<ol>
-  <li>SQL:</li>
-</ol>
-
-<p>Uma linguagem de programação usada para gerenciar e consultar bancos de dados relacionais. É essencial para trabalhar com grandes conjuntos de dados.</p>
-
-<ol>
-  <li>Python/R:</li>
-</ol>
-
-<p>Linguagens de programação que são amplamente usadas em análise de dados devido às suas poderosas bibliotecas e frameworks.</p>
-
-<ol>
-  <li>Tableau/Power BI:</li>
-</ol>
-
-<p>Ferramentas de visualização de dados que permitem criar painéis interativos e relatórios.</p>
-
-<ol>
-  <li>Google Analytics:</li>
-</ol>
-
-<p>Uma ferramenta essencial para análise de dados de sites e comportamento do cliente online.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>A análise de dados é uma ferramenta poderosa que pode impulsionar o seu negócio de várias maneiras. Ao fornecer insights valiosos sobre seus clientes, operações e tendências futuras, ela pode ajudá-lo a tomar decisões informadas, otimizar suas operações e, em última análise, impulsionar o crescimento do seu negócio.</p>
-
-<p>No entanto, a análise de dados não é uma solução mágica. Ela requer uma compreensão clara dos seus objetivos de negócios, uma estratégia de dados sólida e a capacidade de interpretar e agir com base nos insights gerados. Além disso, a análise de dados deve ser combinada com outras ferramentas e técnicas de negócios para ser verdadeiramente eficaz.</p>
-
-<h2 id="recursos-adicionais">Recursos Adicionais</h2>
-
-<p>Para aprofundar ainda mais seus conhecimentos em análise de dados e como ela pode impulsionar o seu negócio, recomendo os seguintes livros:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Data Science para Negócios" por Foster Provost e Tom Fawcett
-"Big Data no Trabalho: Desmistificando o Big Data e a Análise de Dados para Empresas" por Thomas H. Davenport
-"A Arte da Análise de Dados" por Cole Nussbaumer Knaflic
-</code></pre></div></div>
-
-<p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>
-
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry></feed>

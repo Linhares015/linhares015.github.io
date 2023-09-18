@@ -11,6 +11,10 @@ excerpt: " "
 
 Os bancos de dados são uma parte fundamental de muitos sistemas de informação e aplicações, pois permitem armazenar e gerenciar grandes quantidades de dados de forma organizada e acessível. Eles são utilizados em uma ampla variedade de contextos, como empresas, governos, organizações sem fins lucrativos e até mesmo em aplicações pessoais.
 
+<p align="center">
+  <img src="https://img.freepik.com/fotos-gratis/senha-com-a-mao-segurando-uma-pinca-e-codigo-binario_23-2148578091.jpg?w=740&t=st=1694350742~exp=1694351342~hmac=4c04419fb3ff1bbfd3364f9cb17b5ce99ec84bb3efcc4e2fd38bbc3473af72ae">
+</p>
+
 Existem vários tipos de bancos de dados, cada um com suas próprias características e aplicações. 
 
 Os bancos de dados `relacionais` são os mais comuns e são organizados em tabelas de dados relacionadas entre si. Eles são muito flexíveis e permitem a realização de consultas complexas, mas podem ser mais difíceis de manter e escalar.

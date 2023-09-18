@@ -13,6 +13,10 @@ O SQL (Structured Query Language) é uma linguagem de programação usada para g
 
 Uma das características mais poderosas do SQL é a capacidade de escrever consultas complexas para extrair informações valiosas dos dados.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e15873799f2e40c0976ddeb3d507c8e3~mv2.jpg/v1/fill/w_2187,h_1640,al_c,q_90/710ee0_e15873799f2e40c0976ddeb3d507c8e3~mv2.webg" width="500" height="300">
+</p>
+
 Uma dessas técnicas avançadas é o uso de Expressões de Tabela Comum, ou `CTEs (Common Table Expressions)`.
 
 As CTEs são uma forma de criar consultas temporárias que são usadas dentro de uma instrução SQL maior.

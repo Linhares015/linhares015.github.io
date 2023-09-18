@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubuntu no Estilo MacBook | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Ubuntu no Estilo MacBook" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/linux/2023/09/18/41.html" />
+  <meta property="og:url" content="http://localhost:4000/linux/2023/09/18/41.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Ubuntu no Estilo MacBook" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Ubuntu no Estilo MacBook</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-09-18T00:42:47-03:00" itemprop="datePublished">Sep 18, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Se você é um entusiasta de Linux, deve saber que uma das maiores vantagens deste sistema operacional é a personalização. Uma das transformações mais desejadas é replicar a elegante aparência do 
+<code class="language-plaintext highlighter-rouge">macOS</code> no <code class="language-plaintext highlighter-rouge">Linux</code>.</p>
+
+<p>Neste post, vamos explorar como fazer exatamente isso no Ubuntu 22.04, usando o popular tema “WhiteSur”.</p>
+
+<p align="center">
+  <img src="https://img.olhardigital.com.br/wp-content/uploads/2022/03/apple_j-hx.jpg" width="600" height="300" />
+</p>
+
+<h1 id="introdução">Introdução</h1>
+
+<p>A Apple é conhecida por seu design distinto e minimalista. Muitos usuários são atraídos pelo visual sofisticado do macOS, mas preferem a funcionalidade e a flexibilidade do Ubuntu. Felizmente, com algumas ferramentas e temas, você pode ter o melhor dos dois mundos.
+Passo a Passo para a Transformação</p>
+
+<h1 id="1-preparando-o-ambiente">1. Preparando o Ambiente:</h1>
+
+<p>Antes de começarmos, é essencial garantir que temos as ferramentas necessárias. Primeiro, vamos atualizar nosso sistema e instalar algumas dependências:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>git gnome-shell-extensions chrome-gnome-shell gnome-tweaks
+</code></pre></div></div>
+
+<p>A ferramenta gnome-tweaks será fundamental mais tarde para aplicar o tema e os ícones.</p>
+
+<h1 id="2-instalação-do-tema-whitesur">2. Instalação do Tema WhiteSur:</h1>
+
+<p>WhiteSur é um tema GTK inspirado no macOS Big Sur. Para instalar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>WhiteSur-gtk-theme
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install.sh
+</code></pre></div></div>
+
+<p>Este comando baixa o tema diretamente do GitHub e o instala em seu sistema.</p>
+
+<h1 id="3-incorporando-ícones-estilo-macos">3. Incorporando Ícones Estilo macOS:</h1>
+
+<p>Um aspecto crucial da aparência do macOS são os seus ícones característicos. Felizmente, o conjunto de ícones WhiteSur pode nos ajudar:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>WhiteSur-icon-theme
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install.sh
+</code></pre></div></div>
+
+<h1 id="4-personalizando-o-shell">4. Personalizando o Shell:</h1>
+
+<p>Embora a versão 22.04 do Ubuntu tenha suas próprias melhorias visuais, para alcançar uma experiência completa do macOS, precisaríamos também de um tema do Gnome Shell. No entanto, note que os repositórios podem mudar, e é sempre bom verificar a disponibilidade.</p>
+
+<h1 id="5-aplicando-o-novo-tema">5. Aplicando o Novo Tema:</h1>
+
+<p>Com tudo pronto, agora é hora de transformar o visual do seu Ubuntu. Abra o <code class="language-plaintext highlighter-rouge">GNOME Tweaks</code> (ferramenta que você instalou anteriormente). Na aba <code class="language-plaintext highlighter-rouge">Aparência</code>, escolha <code class="language-plaintext highlighter-rouge">WhiteSur</code> para o tema GTK, o tema do Shell (se disponível), e o conjunto de ícones.</p>
+
+<h1 id="considerações-finais">Considerações Finais:</h1>
+
+<p>Após seguir os passos acima, seu Ubuntu 22.04 deve ter uma aparência bem próxima ao do macOS. Lembre-se, no mundo Linux, a personalização não tem limites. Você pode explorar outras extensões e temas para aprimorar ainda mais seu desktop.</p>
+
+<p>A comunidade Linux é rica e diversificada. Se por acaso você encontrar dificuldades ou se os repositórios mencionados estiverem indisponíveis, há sempre outros caminhos e recursos disponíveis online. Participe de fóruns, grupos e comunidades. Eles são valiosos não apenas para solução de problemas, mas também para descobrir novas formas de personalizar sua experiência no Linux.</p>
+
+<p>Por fim, enquanto o visual do macOS é sem dúvida atraente, o poder real do Ubuntu está em sua flexibilidade e capacidade de se adaptar às suas necessidades. Com as ferramentas certas e um pouco de paciência, você pode criar um ambiente de trabalho que seja verdadeiramente seu.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>
+
+  </div><a class="u-url" href="/linux/2023/09/18/41.html" hidden></a>
+</article>
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

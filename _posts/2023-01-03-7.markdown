@@ -11,6 +11,10 @@ excerpt: " "
 
 Um Data Lake é um repositório de dados que é usado para armazenar grandes quantidades de dados não estruturados e semi-estruturados de várias fontes de dados. Ele é projetado para ser um local centralizado para armazenar todos os dados da empresa, incluindo dados estruturados, como dados de transações, e dados não estruturados, como log de cliques e arquivos de mídia.
 
+<p align="center">
+  <img src="https://img.freepik.com/vetores-gratis/fundo-de-matriz-de-fluxo-de-algoritmo-de-codigo-binario-digital_1017-25328.jpg?w=360&t=st=1694351624~exp=1694352224~hmac=3dd47ea929b2adf71e0b9dd0c70563a03790f35b05f80b5a57f1d27d3a5920fd" width="500" height="300">
+</p>
+
 O objetivo principal de um Data Lake é fornecer uma plataforma para armazenar e gerenciar grandes quantidades de dados de maneira eficiente, permitindo que os usuários façam consultas e análises avançadas. Além disso, ele é projetado para ser flexível e escalável, permitindo que a empresa adicione novos tipos de dados e novas fontes de dados com facilidade.
 
 Existem muitas vantagens em se utilizar um Data Lake, incluindo:

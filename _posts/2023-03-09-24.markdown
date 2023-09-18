@@ -11,6 +11,10 @@ Storytelling é a arte de contar histórias de maneira envolvente e cativante. E
 
 Storytelling de dados é a prática de contar histórias com dados, usando gráficos e visualizações para transmitir informações de maneira clara e concisa.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_472e6ac195c74b7697a7c76c562f3cec~mv2.jpg/v1/fill/w_3520,h_1640,al_c,q_90/710ee0_472e6ac195c74b7697a7c76c562f3cec~mv2.webp" width="500" height="300">
+</p>
+
 ## Por que o Storytelling é importante?
 
 O Storytelling é importante porque ajuda as pessoas a entenderem os dados de maneira mais eficaz. As visualizações de dados são uma maneira poderosa de apresentar informações, mas elas podem ser confusas ou até mesmo enganosas se não forem apresentadas de maneira clara. 

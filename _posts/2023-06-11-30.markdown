@@ -9,6 +9,10 @@ excerpt: " "
 
 # Dicas e truques para maximizar a eficiência
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_ec346da0854c4671a907285dcbb5e010~mv2.jpg/v1/fill/w_1959,h_1640,al_c,q_90/710ee0_ec346da0854c4671a907285dcbb5e010~mv2.webp" width="500" height="300">
+</p>
+
 ## O Microsoft Excel na Análise de Dados
 
 O Microsoft Excel é uma das ferramentas mais utilizadas no mundo dos negócios.

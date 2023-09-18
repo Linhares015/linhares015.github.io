@@ -10,6 +10,10 @@ excerpt: " "
 Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
 Principais Comandos Git:
 
+<p align="center">
+  <img src="https://www.ratamero.com/blog/assets/git-and-github-logos.png" width="600" height="300">
+</p>
+
 ## Configuração Inicial:
 
 ```bash

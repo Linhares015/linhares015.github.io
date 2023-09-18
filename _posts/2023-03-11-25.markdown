@@ -13,6 +13,10 @@ SQL Fluff é uma ferramenta de linting para SQL que foi criada para ajudar os de
 
 Ele verifica o código SQL em busca de erros comuns, como erros de sintaxe, nomes de coluna e tabela incorretos, e outros problemas que podem afetar a legibilidade e manutenção do código.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_cd7ae8c4889e423ca5158ebc1351cb70~mv2.jpg" width="500" height="300">
+</p>
+
 O SQL Fluff também pode ser usado para aplicar regras personalizadas de linting para atender às necessidades específicas de uma equipe ou projeto. Ele suporta vários dialetos SQL, incluindo PostgreSQL, MySQL, BigQuery e SQLite.
 
 ## Instalando o SQL Fluff

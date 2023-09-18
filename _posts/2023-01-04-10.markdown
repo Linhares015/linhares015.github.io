@@ -11,6 +11,10 @@ excerpt: "A Linguagem Essencial para Decifrar Dados"
 
 Em um mundo onde os dados são o novo petróleo, a capacidade de extrair, analisar e interpretar esses dados é crucial. Aqui entra o SQL (Structured Query Language) - a chave mestra que desbloqueia o tesouro escondido em montanhas de dados.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_4c23d12c46f448be940e5648b35225ab~mv2.jpg" width="500" height="300">
+</p>
+
 ## O que é SQL?
 
 SQL é mais do que uma simples linguagem de consulta para bancos de dados relacionais. É a ponte entre perguntas complexas e respostas claras. Em sua essência, o SQL permite que analistas, cientistas de dados e profissionais de BI interroguem bancos de dados, transformem informações cruas em insights valiosos e moldem a narrativa dos negócios.

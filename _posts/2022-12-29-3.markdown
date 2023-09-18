@@ -11,6 +11,11 @@ excerpt: "Extração, Transformação e Carregamento"
 
 No cenário empresarial atual, onde a tomada de decisões ágil e informada é crucial, a integração de dados desempenha um papel central. Uma das principais tecnologias que facilitam essa integração é o ETL. Mas o que é ETL e por que ele é tão vital para as operações de negócios modernas?
 
+<p align="center">
+  <img src="https://img.freepik.com/vetores-gratis/fundo-de-matriz-de-fluxo-de-algoritmo-de-codigo-binario-digital_1017-25328.jpg?w=740&t=st=1694351624~exp=1694352224~hmac=3dd47ea929b2adf71e0b9dd0c70563a03790f35b05f80b5a57f1d27d3a5920fd">
+</p>
+
+
 ## Desvendando o ETL
 
 ETL é a abreviação de "Extract, Transform, Load" (Extração, Transformação e Carregamento). É um processo que permite às empresas coletar dados de várias fontes, transformá-los em um formato útil e, em seguida, carregá-los em um sistema de destino.

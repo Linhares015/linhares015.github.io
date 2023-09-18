@@ -9,6 +9,10 @@ excerpt: "A Arte dos JOINs"
 
 O SQL é uma linguagem poderosa, e uma de suas características mais valiosas é a capacidade de unir tabelas para obter informações complexas. A operação JOIN é o coração dessa capacidade. Vamos explorar o que são JOINs, por que são tão cruciais e como usá-los efetivamente.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_74cc7ec5ef6d456fad15ec98df780bca~mv2.jpg/v1/fill/w_2457,h_1640,al_c,q_90/710ee0_74cc7ec5ef6d456fad15ec98df780bca~mv2.webp" width="500" height="300">
+</p>
+
 ## Por que JOINs são importantes?
 
 Imagine ter informações de clientes em uma tabela e seus pedidos em outra. Para entender o comportamento de compra de um cliente, você precisaria de dados de ambas as tabelas. Aqui é onde os JOINs entram em jogo, permitindo combinar essas tabelas de forma eficaz.

@@ -13,6 +13,10 @@ Business Intelligence, ou BI, é uma disciplina que envolve a coleta, análise e
 
 Esses dados podem incluir informações sobre vendas, finanças, marketing, operações e muito mais. O objetivo do BI é transformar esses dados em insights acionáveis ​​que possam ser usados para melhorar o desempenho do negócio e a eficiência operacional.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_ab6f944c791d450591b915fe60e2957b~mv2.jpg/v1/fill/w_2187,h_1640,al_c,q_90/710ee0_ab6f944c791d450591b915fe60e2957b~mv2.webp" width="500" height="300">
+</p>
+
 Existem várias ferramentas de BI disponíveis, que variam de simples planilhas de dados a sofisticados sistemas de gerenciamento de informações empresariais (Enterprise Information Management - EIM). Essas ferramentas permitem que as empresas analisem seus dados de várias maneiras, incluindo relatórios, análise visual e análise preditiva.
 
 ## Importância do Business Intelligence nos negócios

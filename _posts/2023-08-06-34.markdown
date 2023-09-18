@@ -15,6 +15,10 @@ Desde sua primeira versão em no-code até sua evolução para uma plataforma ro
 
 Neste post, vamos explorar a história do Dracma, seus recursos exclusivos, minha experiência pessoal com ele e os emocionantes planos futuros para este projeto.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_d3130f51ef6d40f9a0b829d891eb2d2e~mv2.png" width="700" height="300">
+</p>
+
 ## A Jornada do Dracma: De No-Code a Python
 
 O Dracma começou como um projeto no-code, uma abordagem que permitiu uma prototipagem rápida e a validação da ideia. 

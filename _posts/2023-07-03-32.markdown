@@ -15,6 +15,10 @@ Ela permite que as empresas entendam melhor seus clientes, otimizem suas operaç
 
 Neste artigo, vamos explorar como a análise de dados pode impulsionar o seu negócio.
 
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_fd962bc7c3734c6d96a29d23b35746b8~mv2.jpg" width="500" height="300">
+</p>
+
 ## Entendendo a Análise de Dados
 
 A análise de dados é o processo de coletar, limpar, transformar e modelar dados para descobrir informações úteis, sugerir conclusões e apoiar a tomada de decisões.

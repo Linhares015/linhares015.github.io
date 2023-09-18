@@ -10,6 +10,10 @@ excerpt: "A Chave para Decisões Empresariais Estratégicas"
 
 Em um mundo empresarial cada vez mais orientado por dados, a capacidade de compreender e utilizar esses dados é crucial. É aqui que entra o Business Intelligence (BI). Mas o que é exatamente um projeto de BI e por que ele é tão vital para as empresas modernas?
 
+<p align="center">
+  <img src="https://img.freepik.com/fotos-gratis/trabalhadores-de-escritorio-usando-graficos-de-financas_23-2150408661.jpg?w=740&t=st=1694352687~exp=1694353287~hmac=1d5d4a5cfba1823dfe5431172e7893879f0ad8f283bb18ca6d1ec46418e941ce">
+</p>
+
 ## Definindo Business Intelligence (BI)
 
 Um projeto de BI não é apenas uma ferramenta ou software; é uma abordagem estratégica que envolve a coleta, armazenamento, processamento e análise de dados corporativos. O objetivo? Fornecer insights claros e acionáveis que orientem a tomada de decisões e a estratégia empresarial.

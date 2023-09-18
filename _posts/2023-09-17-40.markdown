@@ -1,0 +1,194 @@
+---
+layout: post
+title:  "Manual Diário Git"
+date:   2023-09-17 00:42:47 -0300
+categories: Dados
+thumbnail: "https://www.ratamero.com/blog/assets/git-and-github-logos.png"
+excerpt: " "
+---
+
+Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
+Principais Comandos Git:
+
+## Configuração Inicial:
+
+```bash
+git config --global user.name "Seu Nome" #Define o nome do usuário.
+```
+
+```bash
+git config --global user.email "seuemail@email.com" #Define o email do usuário.
+```
+    
+## Iniciar um Repositório:
+
+```bash        
+git init #Inicializa um novo repositório Git.
+```
+
+```bash
+git clone [URL] #Clona (ou baixa) um repositório existente.
+```
+
+## Trabalhando com Arquivos:
+
+```bash        
+git add [arquivo] #Adiciona um arquivo ao índice.
+```        
+
+```bash  
+git commit -m "Mensagem do commit" #Registra as mudanças feitas no repositório.
+```
+
+## Navegação e Histórico:
+        
+```bash
+git status #Mostra o status dos arquivos no repositório.
+```
+
+```bash
+git log #Exibe o histórico de commits.
+```
+    
+## Trabalhando com Branches:
+        
+```bash
+git branch #Lista todas as branches.
+```
+
+```bash
+git branch [nome_da_branch] #Cria uma nova branch.
+```
+
+```bash
+git checkout [nome_da_branch] #Muda para uma branch específica.
+```
+
+```bash
+git merge [nome_da_branch] #Mescla as mudanças de uma branch na branch atual.
+```
+
+## Sincronização:
+        
+```bash
+git pull #Baixa as mudanças do repositório remoto e mescla com a branch local.
+```
+
+```bash
+git push #Envia as mudanças locais para o repositório remoto.
+```
+
+## Inspeção e Comparação:
+        
+```bash        
+git show #Mostra vários tipos de objetos.
+```
+
+```bash
+git diff #Mostra as diferenças entre commits, commit e árvore de trabalho, etc.
+```
+
+```bash
+git difftool #Mostra as diferenças usando ferramentas externas.
+```        
+
+```bash        
+git shortlog #Resume o log de entrada.
+```
+
+```bash
+git describe #Descreve um ref de commit usando o nome de tag mais recente.
+```
+
+## Patching:
+        
+```bash        
+git apply #Aplica uma série de patches de um arquivo de caixa de correio.
+```
+
+```bash
+git cherry-pick #Aplica as mudanças de um commit existente.
+```
+
+```bash
+git rebase #Reaplica commits em cima de outro commit base.
+```
+
+```bash
+git revert #Reverte algumas mudanças existentes.
+```
+
+## Debugging:
+        
+```bash        
+git bisect #Usa a busca binária para encontrar o commit que introduziu um bug.
+```
+
+```bash
+git blame #Mostra qual commit alterou cada linha de um arquivo.
+```
+
+## Administração:
+        
+```bash        
+git clean #Remove arquivos não rastreados do diretório de trabalho.
+```
+
+```bash
+git gc #Limpa repositório desnecessário.
+```        
+
+```bash        
+git reflog #Gerencia o log de referência.
+```
+
+## Comandos Avançados:
+
+```bash
+git stash #Guarda e restaura mudanças temporárias.
+```
+
+```bash
+git worktree #Gerencia múltiplas árvores de trabalho.
+```
+
+
+## Insights:
+
+- Sempre faça commits pequenos e frequentes. Isso torna mais fácil identificar e corrigir problemas.
+    
+- Antes de fazer um push, sempre faça um pull para garantir que você tenha as últimas mudanças.
+    
+- Use mensagens de commit claras e descritivas para ajudar outros colaboradores a entender suas mudanças.
+
+## Problemas Comuns e Soluções:
+
+### Conflitos de Merge:
+        
+- Problema: Ao tentar mesclar branches, você pode encontrar conflitos.
+        
+- Solução: Abra os arquivos com conflitos, resolva as discrepâncias e faça um novo commit.
+
+Um jeito de fazer isso é voltar a sua branch original atualizar ela com o `git pull` e depois ir a branch que estava desenvolvendo e digitar `git merge "branch origina"` assim as duas ficarão sem conflito. 
+
+### Commit Errado:
+        
+- Problema: Você fez um commit com arquivos errados ou mensagem de commit incorreta.
+        
+- Solução: Use git commit --amend para modificar o último commit ou git reset para desfazer commits.
+
+### Arquivos Deletados Acidentalmente:
+        
+- Problema: Você deletou acidentalmente um arquivo.
+        
+- Solução: Use `git checkout -- [arquivo]` para restaurar um arquivo deletado.
+
+## Bônus: Recursos Adicionais:
+
+[Visual Git Cheat Sheet:](https://ndpsoftware.com/git-cheatsheet.html) Um guia visual para os comandos Git.
+
+[Pro Git Book:](https://git-scm.com/book) O livro Pro Git escrito por Scott Chacon e Ben Straub está disponível para leitura online gratuitamente.
+
+Este manual serve como um guia de consulta rápida para os principais comandos e práticas recomendadas do Git. Recomenda-se também consultar a [documentação oficial do Git](https://git-scm.com/doc) para obter informações mais detalhadas e atualizadas.
+ 
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

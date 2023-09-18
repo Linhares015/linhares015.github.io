@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Acrescentando Consultas no Excel"
+date:   2023-10-07 08:42:47 -0300
+categories: Dados
+thumbnail: "https://img.youtube.com/vi/mNy20tku_h4/0.jpg"
+excerpt: " "
+---
+
+# Técnicas Avançadas com Power Query
+
+O Excel é uma ferramenta poderosa e amplamente utilizada por profissionais de diversas áreas. No entanto, para maximizar seu potencial, é essencial conhecer técnicas avançadas, como as oferecidas pelo Power Query. 
+
+No vídeo apresentado, somos guiados por um tutorial detalhado sobre como adicionar consultas no Excel utilizando o Power Query.
+
+Abaixo video mostrando tudo isso na prática:
+
+[![Acrescentando Consultas no Excel](https://img.youtube.com/vi/mNy20tku_h4/0.jpg)](https://youtu.be/mNy20tku_h4)
+
+# Introdução:
+
+O vídeo destaca a importância de manipular e transformar dados no Excel. Muitas vezes, os usuários se deparam com conjuntos de dados desestruturados ou apresentados de forma não ideal para análises. Aqui, o Power Query entra em cena como uma solução poderosa.
+
+# Principais Pontos:
+
+- Removendo Colunas e Gerenciando Cabeçalhos: O apresentador mostra como remover colunas desnecessárias e gerenciar cabeçalhos usando a opção "Usar Primeira Linha como Cabeçalhos".
+    
+- Filtrando Dados: É explicado como filtrar dados com base em critérios específicos usando a opção "Filtros de Texto".
+    
+- Gerenciando Tipos de Dados: O vídeo enfatiza a importância de ter os tipos de dados corretos e demonstra como alterar os tipos de dados para colunas.
+    
+- Conveniência do Power Query: O apresentador destaca a facilidade e eficiência de usar o Power Query para manipulação e carregamento de dados.
+
+# Exemplos Apresentados:
+
+- O processo de remoção de colunas e gerenciamento de cabeçalhos é demonstrado.
+    
+- O apresentador mostra como filtrar dados usando diferentes critérios.
+    
+- A importância de ter o tipo de dado correto é enfatizada, com exemplos de conversão de colunas.
+
+# Conclusão:
+
+O Power Query é uma ferramenta indispensável para qualquer usuário do Excel que lida regularmente com grandes conjuntos de dados ou dados desestruturados. Ao dominar as técnicas apresentadas no vídeo, os usuários podem economizar tempo, reduzir erros e melhorar a eficiência de seus fluxos de trabalho no Excel.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

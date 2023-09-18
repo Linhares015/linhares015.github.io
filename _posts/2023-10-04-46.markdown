@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Unpivotar Dados no Excel"
+date:   2023-10-04 08:42:47 -0300
+categories: Dados
+thumbnail: "https://img.youtube.com/vi/jjKj-qRLi54/0.jpg"
+excerpt: " "
+---
+
+# Técnicas Avançadas com Power Query
+
+O Excel, uma ferramenta amplamente utilizada por profissionais em diversas áreas, possui funcionalidades que vão além das operações básicas. Uma dessas funcionalidades avançadas é o Power Query, que permite transformar e manipular dados de maneira eficiente. 
+
+No vídeo em questão, é apresentado um tutorial sobre como "unpivotar" dados no Excel utilizando o Power Query.
+
+Abaixo video mostrando tudo isso na prática:
+
+[![Unpivotar Dados no Excel](https://img.youtube.com/vi/jjKj-qRLi54/0.jpg)](https://youtu.be/jjKj-qRLi54)
+
+# Introdução:
+
+O vídeo começa destacando a importância de tratar dados no Excel, especialmente quando se trata de dados desestruturados ou apresentados de forma não ideal para análises. O Power Query surge como uma solução para esses desafios.
+
+# Principais Pontos:
+
+- Desafios com Dados Desestruturados: Muitas vezes, os usuários recebem dados em um formato que não é ideal para análise. Por exemplo, dados extraídos de um formulário podem ter perguntas como cabeçalhos e respostas nas linhas.
+    
+- Transformando Dados com Power Query: O vídeo demonstra como transformar colunas em linhas, uma técnica conhecida como "unpivot". Isso é útil quando se deseja reestruturar dados para análises mais aprofundadas.
+    
+- Automatizando o Processo: Uma das vantagens do Power Query é a capacidade de automatizar processos. Uma vez definidas as transformações, elas podem ser aplicadas automaticamente a novos conjuntos de dados.
+   
+-  Exemplo Prático: O apresentador mostra um exemplo prático de como transformar dados extraídos de um formulário, onde as perguntas são apresentadas como cabeçalhos e as respostas como linhas.
+
+# Conclusão:
+
+O Power Query é uma ferramenta poderosa que permite aos usuários do Excel manipular e transformar dados de maneira eficiente. Ao dominar essa ferramenta, é possível economizar tempo e garantir que os dados estejam no formato correto para análises e relatórios.
+
+[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)

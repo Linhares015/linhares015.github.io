@@ -1,4 +1,178 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-17T19:39:36-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Zsh</title><link href="http://localhost:4000/linux/2023/09/15/39.html" rel="alternate" type="text/html" title="Zsh" /><published>2023-09-15T00:42:47-03:00</published><updated>2023-09-15T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/15/39</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/15/39.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-17T21:51:19-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Manual Diário Git</title><link href="http://localhost:4000/dados/2023/09/17/40.html" rel="alternate" type="text/html" title="Manual Diário Git" /><published>2023-09-17T00:42:47-03:00</published><updated>2023-09-17T00:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/17/40</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/17/40.html"><![CDATA[<p>Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
+Principais Comandos Git:</p>
+
+<h2 id="configuração-inicial">Configuração Inicial:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Seu Nome"</span> <span class="c">#Define o nome do usuário.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.email <span class="s2">"seuemail@email.com"</span> <span class="c">#Define o email do usuário.</span>
+</code></pre></div></div>
+
+<h2 id="iniciar-um-repositório">Iniciar um Repositório:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init <span class="c">#Inicializa um novo repositório Git.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="o">[</span>URL] <span class="c">#Clona (ou baixa) um repositório existente.</span>
+</code></pre></div></div>
+
+<h2 id="trabalhando-com-arquivos">Trabalhando com Arquivos:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="o">[</span>arquivo] <span class="c">#Adiciona um arquivo ao índice.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"Mensagem do commit"</span> <span class="c">#Registra as mudanças feitas no repositório.</span>
+</code></pre></div></div>
+
+<h2 id="navegação-e-histórico">Navegação e Histórico:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status <span class="c">#Mostra o status dos arquivos no repositório.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="c">#Exibe o histórico de commits.</span>
+</code></pre></div></div>
+
+<h2 id="trabalhando-com-branches">Trabalhando com Branches:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="c">#Lista todas as branches.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="o">[</span>nome_da_branch] <span class="c">#Cria uma nova branch.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="o">[</span>nome_da_branch] <span class="c">#Muda para uma branch específica.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git merge <span class="o">[</span>nome_da_branch] <span class="c">#Mescla as mudanças de uma branch na branch atual.</span>
+</code></pre></div></div>
+
+<h2 id="sincronização">Sincronização:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull <span class="c">#Baixa as mudanças do repositório remoto e mescla com a branch local.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="c">#Envia as mudanças locais para o repositório remoto.</span>
+</code></pre></div></div>
+
+<h2 id="inspeção-e-comparação">Inspeção e Comparação:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git show <span class="c">#Mostra vários tipos de objetos.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff <span class="c">#Mostra as diferenças entre commits, commit e árvore de trabalho, etc.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git difftool <span class="c">#Mostra as diferenças usando ferramentas externas.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git shortlog <span class="c">#Resume o log de entrada.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git describe <span class="c">#Descreve um ref de commit usando o nome de tag mais recente.</span>
+</code></pre></div></div>
+
+<h2 id="patching">Patching:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git apply <span class="c">#Aplica uma série de patches de um arquivo de caixa de correio.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git cherry-pick <span class="c">#Aplica as mudanças de um commit existente.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rebase <span class="c">#Reaplica commits em cima de outro commit base.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git revert <span class="c">#Reverte algumas mudanças existentes.</span>
+</code></pre></div></div>
+
+<h2 id="debugging">Debugging:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git bisect <span class="c">#Usa a busca binária para encontrar o commit que introduziu um bug.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git blame <span class="c">#Mostra qual commit alterou cada linha de um arquivo.</span>
+</code></pre></div></div>
+
+<h2 id="administração">Administração:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clean <span class="c">#Remove arquivos não rastreados do diretório de trabalho.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git gc <span class="c">#Limpa repositório desnecessário.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reflog <span class="c">#Gerencia o log de referência.</span>
+</code></pre></div></div>
+
+<h2 id="comandos-avançados">Comandos Avançados:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash <span class="c">#Guarda e restaura mudanças temporárias.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git worktree <span class="c">#Gerencia múltiplas árvores de trabalho.</span>
+</code></pre></div></div>
+
+<h2 id="insights">Insights:</h2>
+
+<ul>
+  <li>
+    <p>Sempre faça commits pequenos e frequentes. Isso torna mais fácil identificar e corrigir problemas.</p>
+  </li>
+  <li>
+    <p>Antes de fazer um push, sempre faça um pull para garantir que você tenha as últimas mudanças.</p>
+  </li>
+  <li>
+    <p>Use mensagens de commit claras e descritivas para ajudar outros colaboradores a entender suas mudanças.</p>
+  </li>
+</ul>
+
+<h2 id="problemas-comuns-e-soluções">Problemas Comuns e Soluções:</h2>
+
+<h3 id="conflitos-de-merge">Conflitos de Merge:</h3>
+
+<ul>
+  <li>
+    <p>Problema: Ao tentar mesclar branches, você pode encontrar conflitos.</p>
+  </li>
+  <li>
+    <p>Solução: Abra os arquivos com conflitos, resolva as discrepâncias e faça um novo commit.</p>
+  </li>
+</ul>
+
+<p>Um jeito de fazer isso é voltar a sua branch original atualizar ela com o <code class="language-plaintext highlighter-rouge">git pull</code> e depois ir a branch que estava desenvolvendo e digitar <code class="language-plaintext highlighter-rouge">git merge "branch origina"</code> assim as duas ficarão sem conflito.</p>
+
+<h3 id="commit-errado">Commit Errado:</h3>
+
+<ul>
+  <li>
+    <p>Problema: Você fez um commit com arquivos errados ou mensagem de commit incorreta.</p>
+  </li>
+  <li>
+    <p>Solução: Use git commit –amend para modificar o último commit ou git reset para desfazer commits.</p>
+  </li>
+</ul>
+
+<h3 id="arquivos-deletados-acidentalmente">Arquivos Deletados Acidentalmente:</h3>
+
+<ul>
+  <li>
+    <p>Problema: Você deletou acidentalmente um arquivo.</p>
+  </li>
+  <li>
+    <p>Solução: Use <code class="language-plaintext highlighter-rouge">git checkout -- [arquivo]</code> para restaurar um arquivo deletado.</p>
+  </li>
+</ul>
+
+<h2 id="bônus-recursos-adicionais">Bônus: Recursos Adicionais:</h2>
+
+<p><a href="https://ndpsoftware.com/git-cheatsheet.html">Visual Git Cheat Sheet:</a> Um guia visual para os comandos Git.</p>
+
+<p><a href="https://git-scm.com/book">Pro Git Book:</a> O livro Pro Git escrito por Scott Chacon e Ben Straub está disponível para leitura online gratuitamente.</p>
+
+<p>Este manual serve como um guia de consulta rápida para os principais comandos e práticas recomendadas do Git. Recomenda-se também consultar a <a href="https://git-scm.com/doc">documentação oficial do Git</a> para obter informações mais detalhadas e atualizadas.</p>
+
+<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zsh</title><link href="http://localhost:4000/linux/2023/09/15/39.html" rel="alternate" type="text/html" title="Zsh" /><published>2023-09-15T00:42:47-03:00</published><updated>2023-09-15T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/15/39</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/15/39.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
 
 <p>Neste artigo, vamos explorar como instalar o Zsh, configurá-lo e personalizá-lo com temas para tornar seu terminal mais atraente e funcional.</p>
 
@@ -806,93 +980,5 @@ CeleryExecutor
 </code></pre></div></div>
 
 <p>Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida ou comentário, por favor, sinta-se à vontade para entrar em contato. Boa sorte em sua jornada de análise de dados!</p>
-
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Análise de Dados Quantitativos vs Qualitativos</title><link href="http://localhost:4000/dados/2023/06/12/31.html" rel="alternate" type="text/html" title="Análise de Dados Quantitativos vs Qualitativos" /><published>2023-06-12T18:42:47-03:00</published><updated>2023-06-12T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/06/12/31</id><content type="html" xml:base="http://localhost:4000/dados/2023/06/12/31.html"><![CDATA[<h1 id="entendendo-as-diferenças">Entendendo as diferenças</h1>
-
-<p>A análise de dados é uma parte crucial de qualquer pesquisa ou estudo.</p>
-
-<p>Ela permite que você entenda as informações coletadas e tire conclusões com base nesses dados.</p>
-
-<p>No entanto, nem todos os dados são iguais.</p>
-
-<p>Eles podem ser categorizados em dois tipos principais: <code class="language-plaintext highlighter-rouge">quantitativos</code> e <code class="language-plaintext highlighter-rouge">qualitativos</code>.</p>
-
-<p>Cada tipo tem suas próprias características, métodos de coleta e técnicas de análise. Neste artigo, vamos explorar as diferenças entre a análise de dados quantitativos e qualitativos.</p>
-
-<h2 id="o-que-são-dados-quantitativos">O que são Dados Quantitativos?</h2>
-
-<p>Dados quantitativos são informações que podem ser medidas e escritas em números. Eles são frequentemente coletados através de métodos estruturados, como questionários ou pesquisas que incluem perguntas fechadas.</p>
-
-<p>Exemplos de dados quantitativos incluem <code class="language-plaintext highlighter-rouge">idade</code>, <code class="language-plaintext highlighter-rouge">altura</code>, <code class="language-plaintext highlighter-rouge">peso</code>, <code class="language-plaintext highlighter-rouge">temperatura</code>, ou a <code class="language-plaintext highlighter-rouge">quantidade de pessoas que preferem um produto em relação a outro</code>.</p>
-
-<p>A análise de dados quantitativos envolve o uso de estatísticas e números. Isso pode incluir calcular a média, a mediana, o desvio padrão, ou usar técnicas mais complexas, como a análise de regressão.</p>
-
-<h2 id="o-que-são-dados-qualitativos">O que são Dados Qualitativos?</h2>
-
-<p>Dados qualitativos, por outro lado, são informações que não podem ser medidas em números. Eles são frequentemente coletados através de métodos não estruturados, como entrevistas ou grupos de discussão que incluem perguntas abertas.</p>
-
-<p>Exemplos de dados qualitativos incluem <code class="language-plaintext highlighter-rouge">opiniões</code>, <code class="language-plaintext highlighter-rouge">experiências</code>, e <code class="language-plaintext highlighter-rouge">descrições</code>.</p>
-
-<p>A análise de dados qualitativos envolve a interpretação de textos e imagens. Isso pode incluir a codificação de respostas, a identificação de temas ou padrões, ou a construção de teorias.</p>
-
-<h2 id="diferenças-entre-dados-quantitativos-e-qualitativos">Diferenças entre Dados Quantitativos e Qualitativos</h2>
-
-<p>A principal diferença entre dados quantitativos e qualitativos reside no que eles representam e como são coletados e analisados.</p>
-
-<p>Dados quantitativos são objetivos e representam fenômenos que podem ser contados ou medidos. Eles são coletados de maneira estruturada e analisados usando técnicas estatísticas.</p>
-
-<p>Dados qualitativos, por outro lado, são subjetivos e representam fenômenos que são descritivos por natureza. Eles são coletados de maneira não estruturada e analisados através da interpretação.</p>
-
-<h2 id="exemplo-prático">Exemplo Prático</h2>
-
-<p>Vamos considerar um exemplo prático para entender melhor a diferença entre a análise de dados quantitativos e qualitativos.</p>
-
-<p>Suponha que você esteja conduzindo uma pesquisa para entender a satisfação do cliente com seu produto. Você pode coletar dados quantitativos perguntando aos clientes para classificar sua satisfação em uma escala de 1 a 10.</p>
-
-<p>Você pode então calcular a média e o desvio padrão dessas classificações para obter uma medida quantitativa da satisfação do cliente.</p>
-
-<p>Por outro lado, você pode coletar dados qualitativos perguntando aos clientes para descrever em suas próprias palavras por que eles estão satisfeitos ou insatisfeitos com o produto. Você pode então analisar essas respostas para identificar temas comuns ou padrões.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>A análise de dados, seja ela quantitativa ou qualitativa, é uma parte essencial de qualquer pesquisa.</p>
-
-<p>Cada tipo tem suas próprias forças e fraquezas, e a escolha entre eles depende do tipo de pergunta de pesquisa que você está tentando responder.</p>
-
-<p>Dados quantitativos são excelentes para responder a perguntas como <code class="language-plaintext highlighter-rouge">quantos?</code> ou <code class="language-plaintext highlighter-rouge">quanto?</code>. Eles fornecem resultados que são objetivos e geralmente mais fáceis de generalizar para uma população maior. No entanto, eles podem não ser capazes de capturar toda a complexidade ou nuances de uma situação.</p>
-
-<p>Por outro lado, dados qualitativos são excelentes para responder a perguntas como <code class="language-plaintext highlighter-rouge">por quê?</code> ou <code class="language-plaintext highlighter-rouge">como?</code>. Eles fornecem uma riqueza de detalhes e insights que podem ajudar a entender os contextos, percepções e experiências das pessoas. No entanto, eles são geralmente mais difíceis de analisar e os resultados podem não ser tão facilmente generalizáveis.</p>
-
-<p>Em muitos casos, a combinação de métodos quantitativos e qualitativos - conhecida como pesquisa de métodos mistos - pode ser a abordagem mais eficaz. Isso permite que você aproveite as forças de ambos os tipos de dados, proporcionando uma compreensão mais completa do fenômeno que você está estudando.</p>
-
-<h2 id="exemplo-prático-continuado">Exemplo Prático Continuado</h2>
-
-<p>Vamos voltar ao nosso exemplo de pesquisa de satisfação do cliente. Depois de coletar e analisar seus dados quantitativos e qualitativos, você pode combinar os resultados para obter uma imagem mais completa da satisfação do cliente.</p>
-
-<p>Por exemplo, seus dados quantitativos podem mostrar que a maioria dos clientes está satisfeita com o produto. No entanto, seus dados qualitativos podem revelar que existem alguns problemas comuns que estão causando insatisfação entre um subconjunto de clientes. Combinando esses insights, você pode desenvolver estratégias para melhorar a satisfação geral do cliente, abordando tanto os pontos fortes identificados nos dados quantitativos quanto os problemas identificados nos dados qualitativos.</p>
-
-<h2 id="recursos-adicionais">Recursos Adicionais</h2>
-
-<p>Para aprofundar ainda mais seus conhecimentos em análise de dados quantitativos e qualitativos, recomendo os seguintes livros:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Pesquisa Qualitativa e Quantitativa: Conceitos e Métodos" por Michael Crotty
-
-"Métodos de Pesquisa em Ciências Sociais: Uma Introdução" por Earl Babbie
-
-"Análise de Dados Qualitativos: Estratégias Metodológicas para as Ciências da Saúde, Humanas e Sociais" por Denise Figueiredo
-</code></pre></div></div>
-
-<p>Lembre-se, a escolha entre dados quantitativos e qualitativos - ou uma combinação de ambos - depende das suas perguntas de pesquisa e dos seus objetivos. Ambos os tipos de dados têm um papel importante a desempenhar na pesquisa e podem fornecer insights valiosos quando usados de forma eficaz.</p>
-
-<h2 id="referências">Referências</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sandelowski, M. (2000). Combining Qualitative and Quantitative Sampling, Data Collection, and Analysis Techniques in Mixed-Method Studies.  
-
-Knigge, L., &amp; Cope, M. (2006). Grounded Visualization: Integrating the Analysis of Qualitative and Quantitative Data through Grounded Theory and Visualization. 
-
-Elo, S., &amp; Kyngäs, H. (2008). The qualitative content analysis process.
-
-Creswell, J. W., &amp; Plano Clark, V. L. (2007). Designing and Conducting Mixed Methods Research.
-</code></pre></div></div>
 
 <p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>

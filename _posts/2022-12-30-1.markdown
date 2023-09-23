@@ -27,4 +27,6 @@ Independentemente do tipo de banco de dados, eles são geralmente gerenciados po
 
 Os bancos de dados são uma ferramenta valiosa para armazenar e gerenciar grandes quantidades de dados, mas requerem planejamento cuidadoso e atenção constante para garantir que os dados estejam sempre atualizados e precisos. Eles também podem exigir recursos de hardware e software adicionais para gerenciá-los e garantir a segurança dos dados.
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

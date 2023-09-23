@@ -63,4 +63,6 @@ O ETL pode ser a escolha certa para organizações que precisam de um alto grau 
 
 Independentemente da abordagem escolhida, o mais importante é garantir que seus dados sejam precisos, consistentes e prontos para fornecer insights valiosos para sua organização.
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

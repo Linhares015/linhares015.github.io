@@ -35,4 +35,6 @@ O vídeo começa destacando a importância de tratar dados no Excel, especialmen
 
 O Power Query é uma ferramenta poderosa que permite aos usuários do Excel manipular e transformar dados de maneira eficiente. Ao dominar essa ferramenta, é possível economizar tempo e garantir que os dados estejam no formato correto para análises e relatórios.
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

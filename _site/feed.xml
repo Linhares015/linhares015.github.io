@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-18T16:16:06-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Ubuntu no Estilo MacBook</title><link href="http://localhost:4000/linux/2023/09/18/41.html" rel="alternate" type="text/html" title="Ubuntu no Estilo MacBook" /><published>2023-09-18T00:42:47-03:00</published><updated>2023-09-18T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/18/41</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/18/41.html"><![CDATA[<p>Se você é um entusiasta de Linux, deve saber que uma das maiores vantagens deste sistema operacional é a personalização. Uma das transformações mais desejadas é replicar a elegante aparência do 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-23T14:00:28-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">PROCV vs. PROCX no Excel</title><link href="http://localhost:4000/dados/2023/09/21/42.html" rel="alternate" type="text/html" title="PROCV vs. PROCX no Excel" /><published>2023-09-21T08:42:47-03:00</published><updated>2023-09-21T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/21/42</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/21/42.html"><![CDATA[<h1 id="introdução">Introdução:</h1>
+
+<p>No mundo das planilhas, o Excel reina supremo. E dentro do Excel, as funções PROCV e PROCX são duas das mais poderosas ferramentas à disposição dos usuários. Mas qual delas é a melhor? Em um vídeo informativo recente, mergulhamos nas profundezas dessas duas funções para descobrir suas vantagens, limitações e melhores usos.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/tMdf14016bc"><img src="https://img.youtube.com/vi/tMdf14016bc/0.jpg" alt="PROCV vs PROCX" /></a></p>
+
+<h1 id="o-que-é-procv">O que é PROCV?</h1>
+
+<p>O PROCV é uma das funções mais antigas e amplamente utilizadas no Excel. Ela permite aos usuários pesquisar um valor em uma coluna e retornar um resultado correspondente de outra coluna. No entanto, apesar de sua utilidade, ela vem com suas limitações:</p>
+
+<ul>
+  <li>
+    <p>A função procura valores de cima para baixo e sempre na primeira coluna da esquerda.</p>
+  </li>
+  <li>
+    <p>Não pode regredir, ou seja, a coluna de pesquisa deve sempre estar à esquerda da coluna de retorno.</p>
+  </li>
+  <li>
+    <p>Pode haver problemas ao lidar com valores duplicados.</p>
+  </li>
+</ul>
+
+<h1 id="a-evolução-procx">A Evolução: PROCX</h1>
+
+<p>O PROCX é uma resposta da Microsoft às limitações do PROCV. É uma função mais recente que oferece maior flexibilidade e eficiência:</p>
+
+<ul>
+  <li>
+    <p>Permite selecionar apenas a coluna de pesquisa e a coluna de retorno.</p>
+  </li>
+  <li>
+    <p>Não está restrito à primeira coluna, oferecendo mais liberdade na organização dos dados.</p>
+  </li>
+  <li>
+    <p>Oferece funcionalidades adicionais, tornando-o uma ferramenta mais potente.</p>
+  </li>
+</ul>
+
+<h1 id="resolvendo-o-dilema-dos-valores-duplicados">Resolvendo o Dilema dos Valores Duplicados:</h1>
+
+<p>Uma das maiores dores de cabeça ao usar o PROCV é lidar com valores duplicados. No vídeo, é apresentada uma solução engenhosa: a concatenação.</p>
+
+<p>Ao criar uma chave única, combinando, por exemplo, o número da fatura e o nome do cliente, você pode superar essa limitação e garantir resultados precisos.</p>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>Embora o PROCV tenha sido um pilar do Excel por muitos anos, o PROCX está rapidamente se mostrando como a opção superior. Com maior flexibilidade e funcionalidades adicionais, é uma ferramenta indispensável para qualquer entusiasta do Excel. Se você ainda não fez a transição do PROCV para o PROCX, agora pode ser a hora perfeita!</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Ubuntu no Estilo MacBook</title><link href="http://localhost:4000/linux/2023/09/18/41.html" rel="alternate" type="text/html" title="Ubuntu no Estilo MacBook" /><published>2023-09-18T00:42:47-03:00</published><updated>2023-09-18T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/18/41</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/18/41.html"><![CDATA[<p>Se você é um entusiasta de Linux, deve saber que uma das maiores vantagens deste sistema operacional é a personalização. Uma das transformações mais desejadas é replicar a elegante aparência do 
 <code class="language-plaintext highlighter-rouge">macOS</code> no <code class="language-plaintext highlighter-rouge">Linux</code>.</p>
 
 <p>Neste post, vamos explorar como fazer exatamente isso no Ubuntu 22.04, usando o popular tema “WhiteSur”.</p>
@@ -74,7 +126,9 @@ Passo a Passo para a Transformação</p>
 
 <p>Por fim, enquanto o visual do macOS é sem dúvida atraente, o poder real do Ubuntu está em sua flexibilidade e capacidade de se adaptar às suas necessidades. Com as ferramentas certas e um pouco de paciência, você pode criar um ambiente de trabalho que seja verdadeiramente seu.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Manual Diário Git</title><link href="http://localhost:4000/dados/2023/09/17/40.html" rel="alternate" type="text/html" title="Manual Diário Git" /><published>2023-09-17T00:42:47-03:00</published><updated>2023-09-17T00:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/17/40</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/17/40.html"><![CDATA[<p>Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Manual Diário Git</title><link href="http://localhost:4000/dados/2023/09/17/40.html" rel="alternate" type="text/html" title="Manual Diário Git" /><published>2023-09-17T00:42:47-03:00</published><updated>2023-09-17T00:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/17/40</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/17/40.html"><![CDATA[<p>Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
 Principais Comandos Git:</p>
 
 <p align="center">
@@ -252,7 +306,9 @@ Principais Comandos Git:</p>
 
 <p>Este manual serve como um guia de consulta rápida para os principais comandos e práticas recomendadas do Git. Recomenda-se também consultar a <a href="https://git-scm.com/doc">documentação oficial do Git</a> para obter informações mais detalhadas e atualizadas.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zsh</title><link href="http://localhost:4000/linux/2023/09/15/39.html" rel="alternate" type="text/html" title="Zsh" /><published>2023-09-15T00:42:47-03:00</published><updated>2023-09-15T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/15/39</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/15/39.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zsh</title><link href="http://localhost:4000/linux/2023/09/15/39.html" rel="alternate" type="text/html" title="Zsh" /><published>2023-09-15T00:42:47-03:00</published><updated>2023-09-15T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/15/39</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/15/39.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
 
 <p>Neste artigo, vamos explorar como instalar o Zsh, configurá-lo e personalizá-lo com temas para tornar seu terminal mais atraente e funcional.</p>
 
@@ -343,7 +399,9 @@ Principais Comandos Git:</p>
 
 <p>O Zsh é uma poderosa ferramenta que melhora significativamente a experiência no terminal. Com a capacidade de personalizar e usar temas, os usuários podem criar um ambiente de trabalho que não é apenas funcional, mas também esteticamente agradável. Se você ainda não experimentou o Zsh, recomendamos que o faça e explore as infinitas possibilidades que ele oferece.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[Terminal Linux Personalizado]]></summary></entry><entry><title type="html">Autenticação Segura no Linux</title><link href="http://localhost:4000/linux/2023/09/10/38.html" rel="alternate" type="text/html" title="Autenticação Segura no Linux" /><published>2023-09-10T18:42:47-03:00</published><updated>2023-09-10T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/10/38</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/10/38.html"><![CDATA[<h1 id="entendendo-senhas-sombra-e-pam">Entendendo Senhas Sombra e PAM</h1>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[Terminal Linux Personalizado]]></summary></entry><entry><title type="html">Autenticação Segura no Linux</title><link href="http://localhost:4000/linux/2023/09/10/38.html" rel="alternate" type="text/html" title="Autenticação Segura no Linux" /><published>2023-09-10T18:42:47-03:00</published><updated>2023-09-10T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/10/38</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/10/38.html"><![CDATA[<h1 id="entendendo-senhas-sombra-e-pam">Entendendo Senhas Sombra e PAM</h1>
 
 <p>A segurança cibernética é uma preocupação crescente em nossa era digital. Com o aumento constante de ameaças e ataques cibernéticos, é essencial garantir que nossos sistemas e dados estejam protegidos. Um vídeo recente no YouTube destacou algumas práticas recomendadas para fortalecer a segurança no Linux. Aqui estão os principais insights:</p>
 
@@ -367,7 +425,9 @@ Principais Comandos Git:</p>
 
 <p><a href="https://youtu.be/IYSuY9jRKQg"><img src="https://img.youtube.com/vi/IYSuY9jRKQg/0.jpg" alt="Segurança 2 Autenticação" /></a></p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
 
 <p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
 
@@ -470,7 +530,9 @@ Principais Comandos Git:</p>
 
 <p>A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
 
 <p>O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.</p>
 
@@ -571,7 +633,9 @@ Principais Comandos Git:</p>
 
 <p>Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Apache Airflow</title><link href="http://localhost:4000/dados/2023/08/21/36.html" rel="alternate" type="text/html" title="Apache Airflow" /><published>2023-08-21T18:42:47-03:00</published><updated>2023-08-21T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/08/21/36</id><content type="html" xml:base="http://localhost:4000/dados/2023/08/21/36.html"><![CDATA[<h1 id="uma-visão-geral-funcionamento-e-sua-importância-no-mundo-dos-dados">Uma Visão Geral, Funcionamento e Sua Importância no Mundo dos Dados</h1>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Apache Airflow</title><link href="http://localhost:4000/dados/2023/08/21/36.html" rel="alternate" type="text/html" title="Apache Airflow" /><published>2023-08-21T18:42:47-03:00</published><updated>2023-08-21T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/08/21/36</id><content type="html" xml:base="http://localhost:4000/dados/2023/08/21/36.html"><![CDATA[<h1 id="uma-visão-geral-funcionamento-e-sua-importância-no-mundo-dos-dados">Uma Visão Geral, Funcionamento e Sua Importância no Mundo dos Dados</h1>
 
 <p>O mundo dos dados tem se tornado cada vez mais complexo e dinâmico. Com o aumento do volume de dados e a necessidade de processá-los rapidamente, as ferramentas de orquestração de fluxo de trabalho se tornaram essenciais.</p>
 
@@ -664,7 +728,9 @@ CeleryExecutor
 
 <p>O Apache Airflow emergiu como uma ferramenta essencial no mundo dos dados devido à sua flexibilidade, escalabilidade e capacidade de orquestrar fluxos de trabalho complexos. Para organizações que lidam com grandes volumes de dados e necessitam de processamento e análise em tempo real, o Airflow oferece uma solução robusta e confiável. Seja você um engenheiro de dados, cientista de dados ou analista, entender o Airflow e suas capacidades pode ser um trunfo valioso em sua carreira.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
 
 <p align="center">
   <img src="https://static.wixstatic.com/media/710ee0_7f89e297de0a48e68d970df31d86e109~mv2.jpg" width="500" height="300" />
@@ -728,7 +794,9 @@ CeleryExecutor
 
 <p>A versão Cloud do dbt oferece uma série de funcionalidades avançadas que podem melhorar significativamente a experiência do usuário. No entanto, é importante destacar que algumas dessas funcionalidades podem ser integradas à versão Core, permitindo que você aproveite o melhor dos dois mundos.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">🌟 Projeto Dracma</title><link href="http://localhost:4000/projeto/2023/08/06/34.html" rel="alternate" type="text/html" title="🌟 Projeto Dracma" /><published>2023-08-06T18:42:47-03:00</published><updated>2023-08-06T18:42:47-03:00</updated><id>http://localhost:4000/projeto/2023/08/06/34</id><content type="html" xml:base="http://localhost:4000/projeto/2023/08/06/34.html"><![CDATA[<p><a href="https://dracma-13f31b0b0e16.herokuapp.com">Acesse o App</a></p>
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">🌟 Projeto Dracma</title><link href="http://localhost:4000/projeto/2023/08/06/34.html" rel="alternate" type="text/html" title="🌟 Projeto Dracma" /><published>2023-08-06T18:42:47-03:00</published><updated>2023-08-06T18:42:47-03:00</updated><id>http://localhost:4000/projeto/2023/08/06/34</id><content type="html" xml:base="http://localhost:4000/projeto/2023/08/06/34.html"><![CDATA[<p><a href="https://dracma-13f31b0b0e16.herokuapp.com">Acesse o App</a></p>
 
 <p>Em um mundo onde o controle financeiro se torna cada vez mais vital, nasceu o Dracma, um projeto inovador que visa ajudar as pessoas a gerenciar suas finanças pessoais.</p>
 
@@ -814,168 +882,6 @@ CeleryExecutor
 
 <p>Se você está buscando uma maneira de transformar suas finanças, convido você a experimentar o Dracma aqui. Junte-se a mim nesta jornada financeira e descubra o poder do controle financeiro inteligente.</p>
 
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="Projeto" /><summary type="html"><![CDATA[Uma Revolução nas Finanças Pessoais]]></summary></entry><entry><title type="html">Modelo de escrita CTE</title><link href="http://localhost:4000/sql/2023/07/17/33.html" rel="alternate" type="text/html" title="Modelo de escrita CTE" /><published>2023-07-17T18:42:47-03:00</published><updated>2023-07-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/07/17/33</id><content type="html" xml:base="http://localhost:4000/sql/2023/07/17/33.html"><![CDATA[<h1 id="como-ele-pode-melhorar-suas-consultas">Como ele pode melhorar suas consultas</h1>
+<p>Selo 🧙‍♂️:</p>
 
-<p>O SQL (Structured Query Language) é uma linguagem de programação usada para gerenciar e manipular bancos de dados.</p>
-
-<p>Uma das características mais poderosas do SQL é a capacidade de escrever consultas complexas para extrair informações valiosas dos dados.</p>
-
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_e15873799f2e40c0976ddeb3d507c8e3~mv2.jpg/v1/fill/w_2187,h_1640,al_c,q_90/710ee0_e15873799f2e40c0976ddeb3d507c8e3~mv2.webg" width="500" height="300" />
-</p>
-
-<p>Uma dessas técnicas avançadas é o uso de Expressões de Tabela Comum, ou <code class="language-plaintext highlighter-rouge">CTEs (Common Table Expressions)</code>.</p>
-
-<p>As CTEs são uma forma de criar consultas temporárias que são usadas dentro de uma instrução SQL maior.</p>
-
-<p>Elas são úteis para simplificar consultas complexas, dividindo-as em partes menores e mais gerenciáveis. Neste post, vamos explorar o que são CTEs, como usá-las e como elas podem melhorar suas consultas SQL.</p>
-
-<h2 id="o-que-é-uma-cte">O que é uma CTE?</h2>
-
-<p>Uma CTE é uma expressão de tabela nomeada temporária que você pode referenciar dentro de uma instrução <code class="language-plaintext highlighter-rouge">SELECT</code>, <code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code>, <code class="language-plaintext highlighter-rouge">DELETE</code> ou outra <code class="language-plaintext highlighter-rouge">CTE</code>.</p>
-
-<p>Ela é usada para simplificar consultas SQL complexas, dividindo-as em partes menores e mais gerenciáveis. A CTE é definida usando a cláusula <code class="language-plaintext highlighter-rouge">WITH</code> antes da consulta SQL e pode ser pensada como uma visão temporária que existe apenas durante a execução da consulta.</p>
-
-<h3 id="aqui-está-um-exemplo-básico-de-uma-cte">Aqui está um exemplo básico de uma CTE:</h3>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">Sales_CTE</span> <span class="p">(</span><span class="n">SalesPersonID</span><span class="p">,</span> <span class="n">NumberOfOrders</span><span class="p">)</span>
-<span class="k">AS</span>
-<span class="p">(</span>
-<span class="k">SELECT</span> 
-    <span class="n">SalesPersonID</span>
-    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">OrderID</span><span class="p">)</span>
-<span class="k">FROM</span> <span class="n">SalesOrderHeader</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">SalesPersonID</span>
-<span class="p">)</span>
-
-<span class="k">SELECT</span> 
-    <span class="n">SalesPersonID</span>
-    <span class="p">,</span> <span class="n">NumberOfOrders</span>
-<span class="k">FROM</span> <span class="n">Sales_CTE</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Neste exemplo, a CTE Sales_CTE agrupa as vendas por SalesPersonID. A consulta principal então seleciona os dados da CTE.</p>
-
-<h2 id="como-as-ctes-podem-melhorar-suas-consultas-sql">Como as CTEs podem melhorar suas consultas SQL?</h2>
-
-<p>As CTEs podem melhorar suas consultas SQL de várias maneiras:</p>
-
-<ol>
-  <li>Simplificação de consultas complexas:</li>
-</ol>
-
-<p>As CTEs permitem que você divida consultas complexas em partes menores e mais gerenciáveis. Isso torna o código mais fácil de entender e manter.</p>
-
-<ol>
-  <li>Reutilização de código:</li>
-</ol>
-
-<p>As CTEs podem ser referenciadas várias vezes na mesma consulta, o que evita a necessidade de repetir o mesmo código.</p>
-
-<ol>
-  <li>Recursividade:</li>
-</ol>
-
-<p>As CTEs permitem consultas recursivas, o que é útil para trabalhar com dados hierárquicos.</p>
-
-<ol>
-  <li>Melhor desempenho:</li>
-</ol>
-
-<p>Em alguns casos, o uso de CTEs pode resultar em um desempenho melhorado em comparação com subconsultas ou joins complexos.</p>
-
-<h2 id="exemplos-práticos-de-ctes">Exemplos práticos de CTEs</h2>
-
-<p>Vamos ver alguns exemplos de como as CTEs podem ser usadas para melhorar suas consultas SQL.</p>
-
-<h3 id="simplificando-consultas-complexas">Simplificando consultas complexas</h3>
-
-<p>Suponha que você tenha uma consulta que envolva várias junções e agregações. Sem CTEs, sua consulta pode parecer algo assim:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
-    <span class="n">SalesPersonID</span>
-    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">OrderID</span><span class="p">)</span>
-<span class="k">FROM</span> <span class="n">SalesOrderHeader</span>
-<span class="k">WHERE</span> <span class="n">SalesPersonID</span> <span class="k">IN</span>
-
-<span class="p">(</span>
-<span class="k">SELECT</span> 
-    <span class="n">SalesPersonID</span>
-<span class="k">FROM</span> <span class="n">SalesPerson</span>
-<span class="k">WHERE</span> <span class="n">TerritoryID</span> <span class="k">IN</span>
-<span class="p">(</span>
-<span class="k">SELECT</span> 
-    <span class="n">TerritoryID</span>
-<span class="k">FROM</span> <span class="n">SalesTerritory</span>
-<span class="k">WHERE</span> <span class="p">[</span><span class="k">Group</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'North America'</span>
-<span class="p">)</span>
-<span class="p">)</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">SalesPersonID</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Com CTEs, você pode dividir essa consulta complexa em partes menores:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">NorthAmericanTerritories</span> <span class="k">AS</span>
-<span class="p">(</span>
-<span class="k">SELECT</span> 
-    <span class="n">TerritoryID</span>
-<span class="k">FROM</span> <span class="n">SalesTerritory</span>
-<span class="k">WHERE</span> <span class="p">[</span><span class="k">Group</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'North America'</span>
-
-<span class="p">),</span> <span class="n">NorthAmericanSalesPeople</span> <span class="k">AS</span>
-
-<span class="p">(</span>
-<span class="k">SELECT</span> 
-    <span class="n">SalesPersonID</span>
-<span class="k">FROM</span> <span class="n">SalesPerson</span>
-<span class="k">WHERE</span> <span class="n">TerritoryID</span> <span class="k">IN</span> <span class="p">(</span>
-                        <span class="k">SELECT</span> 
-                            <span class="n">TerritoryID</span> 
-                        <span class="k">FROM</span> <span class="n">NorthAmericanTerritories</span>
-                    <span class="p">)</span>
-<span class="p">)</span>
-
-<span class="k">SELECT</span> 
-    <span class="n">SalesPersonID</span>
-    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">OrderID</span><span class="p">)</span>
-<span class="k">FROM</span> <span class="n">SalesOrderHeader</span>
-<span class="k">WHERE</span> <span class="n">SalesPersonID</span> <span class="k">IN</span> <span class="p">(</span>
-                        <span class="k">SELECT</span> 
-                            <span class="n">SalesPersonID</span> 
-                        <span class="k">FROM</span> <span class="n">NorthAmericanSalesPeople</span>
-                        <span class="p">)</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">SalesPersonID</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="consultas-recursivas">Consultas recursivas</h2>
-
-<p>As CTEs também podem ser usadas para consultas recursivas. Por exemplo, suponha que você tenha uma tabela Employees com uma relação hierárquica de gerente-empregado. Você pode usar uma CTE recursiva para obter todos os subordinados diretos e indiretos de um gerente:</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">EmployeeHierarchy</span> <span class="k">AS</span>
-<span class="p">(</span>
-<span class="k">SELECT</span> 
-    <span class="n">EmployeeID</span>
-    <span class="p">,</span> <span class="n">FirstName</span>
-    <span class="p">,</span> <span class="n">LastName</span>
-    <span class="p">,</span> <span class="n">ManagerID</span>
-<span class="k">FROM</span> <span class="n">Employees</span>
-<span class="k">WHERE</span> <span class="n">ManagerID</span> <span class="k">IS</span> <span class="k">NULL</span>
-
-<span class="k">UNION</span> <span class="k">ALL</span>
-
-<span class="k">SELECT</span> 
-    <span class="n">E</span><span class="p">.</span><span class="n">EmployeeID</span>
-    <span class="p">,</span> <span class="n">E</span><span class="p">.</span><span class="n">FirstName</span>
-    <span class="p">,</span> <span class="n">E</span><span class="p">.</span><span class="n">LastName</span>
-    <span class="p">,</span> <span class="n">E</span><span class="p">.</span><span class="n">ManagerID</span>
-<span class="k">FROM</span> <span class="n">Employees</span> <span class="n">E</span>
-<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">EmployeeHierarchy</span> <span class="n">EH</span> <span class="k">ON</span> <span class="n">E</span><span class="p">.</span><span class="n">ManagerID</span> <span class="o">=</span> <span class="n">EH</span><span class="p">.</span><span class="n">EmployeeID</span>
-<span class="p">)</span>
-<span class="k">SELECT</span> 
-    <span class="o">*</span>
-<span class="k">FROM</span> <span class="n">EmployeeHierarchy</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Em resumo, as CTEs são uma ferramenta poderosa que pode melhorar a legibilidade, a manutenção e o desempenho de suas consultas SQL. Se você ainda não está usando CTEs em suas consultas SQL, eu recomendo que você comece a explorá-las.</p>
-
-<p><a href="https://github.com/Linhares015">Linhares015 - 🧙‍♂️</a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Projeto" /><summary type="html"><![CDATA[Uma Revolução nas Finanças Pessoais]]></summary></entry></feed>

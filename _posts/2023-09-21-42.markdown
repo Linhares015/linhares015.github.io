@@ -46,4 +46,6 @@ Ao criar uma chave única, combinando, por exemplo, o número da fatura e o nome
 Embora o PROCV tenha sido um pilar do Excel por muitos anos, o PROCX está rapidamente se mostrando como a opção superior. Com maior flexibilidade e funcionalidades adicionais, é uma ferramenta indispensável para qualquer entusiasta do Excel. Se você ainda não fez a transição do PROCV para o PROCX, agora pode ser a hora perfeita!
 
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

@@ -53,4 +53,6 @@ Esses testes são usados para avaliar se as diferenças entre dois grupos de dad
 
 A análise exploratória de dados é uma técnica importante para a tomada de decisões de negócios e ciência de dados. As ferramentas e técnicas usadas na análise exploratória de dados, como visualizações e análises estatísticas básicas, podem ajudar a identificar padrões e tendências nos dados e fornecer informações valiosas para a tomada de decisões.
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

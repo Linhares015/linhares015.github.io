@@ -35,4 +35,6 @@ Manjaro é uma distribuição Linux baseada no Arch Linux, conhecida por sua fac
 
 O Manjaro Linux é uma excelente opção para aqueles que procuram uma distribuição Linux robusta, fácil de usar e altamente personalizável. Seja você um novato no mundo Linux ou um usuário experiente, o Manjaro oferece uma experiência rica e gratificante. O vídeo é um recurso valioso para quem deseja começar com o Manjaro e explorar seus muitos recursos.
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

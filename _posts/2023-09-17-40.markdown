@@ -195,4 +195,6 @@ Um jeito de fazer isso é voltar a sua branch original atualizar ela com o `git 
 
 Este manual serve como um guia de consulta rápida para os principais comandos e práticas recomendadas do Git. Recomenda-se também consultar a [documentação oficial do Git](https://git-scm.com/doc) para obter informações mais detalhadas e atualizadas.
  
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

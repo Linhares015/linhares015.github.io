@@ -112,4 +112,6 @@ Espero que este guia tenha sido útil para você. Se você tiver alguma dúvida 
 
 [Brown, S.J., Hutton, B., Clifford, T. et al. A Microsoft-Excel-based tool for running and critically appraising network meta-analyses—an overview and application of NetMetaXL. Syst Rev 3, 110 (2014).](https://doi.org/10.1186/2046-4053-3-110)
 
-[Linhares015 - 🧙‍♂️](https://github.com/Linhares015)
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

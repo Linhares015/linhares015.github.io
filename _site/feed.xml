@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-23T14:11:23-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">PROCV vs. PROCX no Excel</title><link href="http://localhost:4000/dados/2023/09/21/42.html" rel="alternate" type="text/html" title="PROCV vs. PROCX no Excel" /><published>2023-09-21T08:42:47-03:00</published><updated>2023-09-21T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/21/42</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/21/42.html"><![CDATA[<h1 id="introdução">Introdução:</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-01T14:16:53-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Separando Dados em Colunas no Excel</title><link href="http://localhost:4000/dados/2023/10/01/45.html" rel="alternate" type="text/html" title="Separando Dados em Colunas no Excel" /><published>2023-10-01T08:42:47-03:00</published><updated>2023-10-01T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/10/01/45</id><content type="html" xml:base="http://localhost:4000/dados/2023/10/01/45.html"><![CDATA[<h1 id="técnicas-avançadas-com-power-query">Técnicas Avançadas com Power Query</h1>
+
+<p>O Excel é uma ferramenta poderosa que muitos profissionais utilizam diariamente. No entanto, para aproveitar ao máximo suas capacidades, é essencial conhecer técnicas avançadas, como as oferecidas pelo Power Query.</p>
+
+<p>No vídeo apresentado, somos guiados por um tutorial detalhado sobre como separar dados em colunas no Excel usando o Power Query.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/r6H7LtPKJKE"><img src="https://img.youtube.com/vi/r6H7LtPKJKE/0.jpg" alt="Separando Dados em Colunas no Excel" /></a></p>
+
+<h1 id="introdução">Introdução:</h1>
+
+<p>O vídeo destaca a importância de manipular e transformar dados no Excel. Muitas vezes, os usuários se deparam com conjuntos de dados desestruturados que precisam ser organizados de uma maneira específica. Aqui, o Power Query entra em cena como uma solução poderosa.</p>
+
+<h1 id="principais-pontos">Principais Pontos:</h1>
+
+<ul>
+  <li>
+    <p>Resolvendo Problemas Relacionados a Dados: O Power Query pode resolver rapidamente problemas relacionados a dados com apenas alguns cliques. Transformar dados em um formato de linha única, por exemplo, pode ser feito de forma eficiente.</p>
+  </li>
+  <li>
+    <p>Conectando-se à Fonte de Dados: O vídeo explica como conectar-se à fonte de dados usando o Power Query e a importância de manter essa conexão.</p>
+  </li>
+  <li>
+    <p>Atualizando Dados: Uma vez que os dados são importados e transformados, é essencial saber como atualizá-los. O vídeo demonstra como exportar um novo conjunto de dados e substituir os dados existentes.</p>
+  </li>
+  <li>
+    <p>Atualização Automática: Com o Power Query, os usuários podem configurar suas transformações para que sejam aplicadas automaticamente sempre que os dados forem atualizados.</p>
+  </li>
+</ul>
+
+<h1 id="exemplos-apresentados">Exemplos Apresentados:</h1>
+
+<ul>
+  <li>
+    <p>O apresentador fornece um exemplo prático de como exportar um novo conjunto de dados e substituir os dados existentes em uma pasta designada.</p>
+  </li>
+  <li>
+    <p>Ele também demonstra a capacidade do Power Query de lidar com grandes conjuntos de dados, mostrando a importação e transformação de um conjunto de dados com mais de 4.000 linhas.</p>
+  </li>
+</ul>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>O Power Query é uma ferramenta indispensável para qualquer usuário do Excel que lida regularmente com grandes conjuntos de dados ou dados desestruturados. Ao dominar as técnicas apresentadas no vídeo, os usuários podem economizar tempo, reduzir erros e melhorar a eficiência de seus fluxos de trabalho no Excel.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">O Guia Definitivo do Manjaro</title><link href="http://localhost:4000/linux/2023/09/27/44.html" rel="alternate" type="text/html" title="O Guia Definitivo do Manjaro" /><published>2023-09-27T08:42:47-03:00</published><updated>2023-09-27T08:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/27/44</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/27/44.html"><![CDATA[<h1 id="instalação-e-uso">Instalação e Uso</h1>
+
+<p>O Manjaro Linux é uma distribuição que tem conquistado muitos adeptos no mundo do software livre. No vídeo apresentado, somos guiados por um tutorial detalhado sobre como instalar e usar o Manjaro Linux, especificamente a versão com a interface GNOME.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/qZPILvoYtlg"><img src="https://img.youtube.com/vi/qZPILvoYtlg/0.jpg" alt="O Guia Definitivo do Manjaro" /></a></p>
+
+<h1 id="introdução-ao-manjaro-linux">Introdução ao Manjaro Linux:</h1>
+
+<p>Manjaro é uma distribuição Linux baseada no Arch Linux, conhecida por sua facilidade de uso e acesso a software atualizado. No vídeo, o apresentador destaca a flexibilidade do Manjaro, permitindo aos usuários escolher entre diferentes ambientes de desktop, como XFCE, KDE Plasma e GNOME.</p>
+
+<h1 id="pontos-principais-do-vídeo">Pontos Principais do Vídeo:</h1>
+
+<ul>
+  <li>
+    <p>Instalação: O processo de instalação do Manjaro é simples e intuitivo. O vídeo guia os usuários passo a passo, desde a seleção da linguagem até a configuração do teclado e fuso horário.</p>
+  </li>
+  <li>
+    <p>Interface Gráfica: O Manjaro GNOME apresenta uma interface limpa e moderna. O vídeo destaca a barra lateral, o menu principal e as configurações personalizáveis.</p>
+  </li>
+  <li>
+    <p>Loja de Aplicativos: Uma das maiores vantagens do Manjaro é sua loja de aplicativos. Os usuários podem facilmente instalar softwares, incluindo aqueles que são pacotes Snap ou Flatpak, diretamente da loja.</p>
+  </li>
+  <li>
+    <p>Extensões GNOME: O Manjaro permite aos usuários personalizar sua experiência GNOME com várias extensões, melhorando a funcionalidade e a aparência do ambiente de desktop.</p>
+  </li>
+  <li>
+    <p>Desempenho: Mesmo em uma máquina virtual, o Manjaro opera de forma suave e eficiente, demonstrando ser uma distribuição otimizada e bem desenvolvida.</p>
+  </li>
+</ul>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>O Manjaro Linux é uma excelente opção para aqueles que procuram uma distribuição Linux robusta, fácil de usar e altamente personalizável. Seja você um novato no mundo Linux ou um usuário experiente, o Manjaro oferece uma experiência rica e gratificante. O vídeo é um recurso valioso para quem deseja começar com o Manjaro e explorar seus muitos recursos.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Tabelas Dinâmicas no Excel</title><link href="http://localhost:4000/dados/2023/09/24/43.html" rel="alternate" type="text/html" title="Tabelas Dinâmicas no Excel" /><published>2023-09-24T08:42:47-03:00</published><updated>2023-09-24T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/24/43</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/24/43.html"><![CDATA[<h1 id="um-guia-prático">Um Guia Prático</h1>
+
+<p>Em um mundo onde os dados são o novo petróleo, saber como analisá-los de forma eficaz é uma habilidade essencial. No vídeo apresentado, somos introduzidos à poderosa ferramenta do Excel: a Tabela Dinâmica. Se você já se sentiu sobrecarregado ao tentar analisar grandes volumes de dados, este vídeo é para você.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/A9i5brVmDLs"><img src="https://img.youtube.com/vi/A9i5brVmDLs/0.jpg" alt="Tabelas Dinâmicas no Excel" /></a></p>
+
+<h1 id="o-que-é-uma-tabela-dinâmica">O que é uma Tabela Dinâmica?</h1>
+
+<p>Uma tabela dinâmica é uma ferramenta do Excel que permite aos usuários resumir e analisar grandes conjuntos de dados. Ela oferece uma visão consolidada de dados, que podem ser categorizados, filtrados e classificados de acordo com as necessidades do usuário.</p>
+
+<h1 id="por-que-usar-tabelas-dinâmicas">Por que usar Tabelas Dinâmicas?</h1>
+
+<ul>
+  <li>
+    <p>Eficiência: Em vez de passar horas analisando linhas e colunas de dados, as tabelas dinâmicas permitem que você veja um resumo em minutos.</p>
+  </li>
+  <li>
+    <p>Flexibilidade: Com apenas alguns cliques, você pode reorganizar os dados, alterar a forma como são apresentados e focar em informações específicas.</p>
+  </li>
+  <li>
+    <p>Análise Profunda: As tabelas dinâmicas permitem segmentar dados, aplicar filtros e usar a formatação condicional para destacar informações importantes.</p>
+  </li>
+</ul>
+
+<h1 id="destaques-do-vídeo">Destaques do Vídeo:</h1>
+
+<ul>
+  <li>
+    <p>Começa com uma introdução sobre como selecionar e preparar seus dados para a criação de uma tabela dinâmica.</p>
+  </li>
+  <li>
+    <p>Ele demonstra o processo de criação de uma tabela dinâmica, desde a seleção dos dados até a personalização da tabela.</p>
+  </li>
+  <li>
+    <p>O vídeo também aborda tópicos avançados, como a aplicação de filtros, segmentação de dados e formatação condicional.</p>
+  </li>
+  <li>
+    <p>Ao longo do tutorial, Linhares compartilha dicas valiosas e truques que tornarão sua experiência com tabelas dinâmicas ainda mais eficiente.</p>
+  </li>
+</ul>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>As tabelas dinâmicas são uma das ferramentas mais poderosas do Excel. Seja você um profissional de finanças, marketing, vendas ou qualquer outro campo que lide com grandes volumes de dados, dominar essa ferramenta pode ser um diferencial em sua carreira. O vídeo de Linhares é um excelente ponto de partida para quem deseja aprender mais sobre o assunto. Recomendamos assistir ao vídeo completo para uma compreensão aprofundada e prática.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">PROCV vs. PROCX no Excel</title><link href="http://localhost:4000/dados/2023/09/21/42.html" rel="alternate" type="text/html" title="PROCV vs. PROCX no Excel" /><published>2023-09-21T08:42:47-03:00</published><updated>2023-09-21T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/09/21/42</id><content type="html" xml:base="http://localhost:4000/dados/2023/09/21/42.html"><![CDATA[<h1 id="introdução">Introdução:</h1>
 
 <p>No mundo das planilhas, o Excel reina supremo. E dentro do Excel, as funções PROCV e PROCX são duas das mais poderosas ferramentas à disposição dos usuários. Mas qual delas é a melhor? Em um vídeo informativo recente, mergulhamos nas profundezas dessas duas funções para descobrir suas vantagens, limitações e melhores usos.</p>
 
@@ -635,253 +770,4 @@ Principais Comandos Git:</p>
 
 <p>Selo 🧙‍♂️:</p>
 
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Apache Airflow</title><link href="http://localhost:4000/dados/2023/08/21/36.html" rel="alternate" type="text/html" title="Apache Airflow" /><published>2023-08-21T18:42:47-03:00</published><updated>2023-08-21T18:42:47-03:00</updated><id>http://localhost:4000/dados/2023/08/21/36</id><content type="html" xml:base="http://localhost:4000/dados/2023/08/21/36.html"><![CDATA[<h1 id="uma-visão-geral-funcionamento-e-sua-importância-no-mundo-dos-dados">Uma Visão Geral, Funcionamento e Sua Importância no Mundo dos Dados</h1>
-
-<p>O mundo dos dados tem se tornado cada vez mais complexo e dinâmico. Com o aumento do volume de dados e a necessidade de processá-los rapidamente, as ferramentas de orquestração de fluxo de trabalho se tornaram essenciais.</p>
-
-<p>Uma das ferramentas mais populares e poderosas nesse domínio é o Apache Airflow. Neste artigo, vamos explorar o que é o Airflow, como ele funciona e por que é tão importante no cenário atual de dados.</p>
-
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_f29b4f7b2a0c40c5b0b8bd2a0dc45b44~mv2.png" width="600" height="300" />
-</p>
-
-<h2 id="o-que-é-apache-airflow">O que é Apache Airflow?</h2>
-
-<p>Apache Airflow é uma plataforma open-source para orquestrar fluxos de trabalho complexos de processamento de dados. Ele permite que os desenvolvedores programem, agendem e monitorem fluxos de trabalho usando programação em Python. Em outras palavras, o Airflow permite definir uma série de tarefas e suas dependências e executá-las em uma ordem específica para alcançar um objetivo de processamento de dados.</p>
-
-<h2 id="como-o-apache-airflow-funciona">Como o Apache Airflow funciona?</h2>
-
-<ol>
-  <li>DAG (Directed Acyclic Graph):</li>
-</ol>
-
-<p>No coração do Airflow está o conceito de DAG, que é um conjunto de todas as tarefas que você deseja executar, organizadas de forma que reflitam suas relações e dependências. Um DAG não é apenas uma definição das tarefas, mas também define como as tarefas são executadas: em que ordem, com que frequência e sob quais condições.</p>
-
-<ol>
-  <li>Operadores:</li>
-</ol>
-
-<p>O Airflow utiliza operadores como uma representação abstrata de uma tarefa. Existem diferentes tipos de operadores disponíveis, como:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PythonOperator (para executar funções Python)
-BashOperator (para executar comandos bash)
-PostgresOperator (para executar comandos SQL em um banco de dados Postgres)
-... e muitos outros.
-</code></pre></div></div>
-
-<ol>
-  <li>Executor:</li>
-</ol>
-
-<p>O executor determina como as tarefas são executadas em diferentes máquinas. Existem diferentes tipos de executores, como:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SequentialExecutor
-LocalExecutor
-CeleryExecutor
-</code></pre></div></div>
-
-<ol>
-  <li>Interface Web:</li>
-</ol>
-
-<p>O Airflow vem com uma interface web rica que permite monitorar e gerenciar seus fluxos de trabalho. Através desta interface, você pode visualizar logs, reexecutar tarefas, monitorar execuções e muito mais.</p>
-
-<h2 id="por-que-o-apache-airflow-é-importante-no-mundo-dos-dados">Por que o Apache Airflow é importante no mundo dos dados?</h2>
-
-<ol>
-  <li>Flexibilidade:</li>
-</ol>
-
-<p>O Airflow é extremamente flexível, permitindo que você defina qualquer fluxo de trabalho, independentemente da complexidade. Com sua capacidade de definir dependências, você pode garantir que as tarefas sejam executadas na ordem correta.</p>
-
-<ol>
-  <li>Escalabilidade:</li>
-</ol>
-
-<p>Com executores como o CeleryExecutor, o Airflow pode escalar para executar milhares de tarefas por dia em múltiplas máquinas.</p>
-
-<ol>
-  <li>Programático:</li>
-</ol>
-
-<p>Como os fluxos de trabalho são definidos em Python, você tem toda a flexibilidade e poder da linguagem de programação à sua disposição. Isso também facilita a manutenção e revisão do código.</p>
-
-<ol>
-  <li>Comunidade Ativa:</li>
-</ol>
-
-<p>Sendo um projeto open-source, o Airflow tem uma comunidade ativa que contribui com novos recursos, correções de bugs e suporte.</p>
-
-<ol>
-  <li>Integração:</li>
-</ol>
-
-<p>O Airflow oferece integração com várias fontes de dados, APIs e sistemas, tornando-o uma ferramenta versátil para orquestrar fluxos de trabalho em ambientes heterogêneos.</p>
-
-<ol>
-  <li>Monitoramento e Alertas:</li>
-</ol>
-
-<p>Com sua interface web e capacidades de logging, o Airflow facilita o monitoramento de fluxos de trabalho. Além disso, ele pode ser configurado para enviar alertas em caso de falhas, garantindo que os problemas sejam tratados prontamente.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>O Apache Airflow emergiu como uma ferramenta essencial no mundo dos dados devido à sua flexibilidade, escalabilidade e capacidade de orquestrar fluxos de trabalho complexos. Para organizações que lidam com grandes volumes de dados e necessitam de processamento e análise em tempo real, o Airflow oferece uma solução robusta e confiável. Seja você um engenheiro de dados, cientista de dados ou analista, entender o Airflow e suas capacidades pode ser um trunfo valioso em sua carreira.</p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Funções do DBT Cloud no DBT core</title><link href="http://localhost:4000/sql/2023/08/17/35.html" rel="alternate" type="text/html" title="Funções do DBT Cloud no DBT core" /><published>2023-08-17T18:42:47-03:00</published><updated>2023-08-17T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/08/17/35</id><content type="html" xml:base="http://localhost:4000/sql/2023/08/17/35.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">dbt (data build tool)</code> é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão <code class="language-plaintext highlighter-rouge">Cloud</code>, hospedada em um ambiente de nuvem, e a versão <code class="language-plaintext highlighter-rouge">Core</code>, que é uma aplicação local instalada diretamente no sistema operacional do usuário.</p>
-
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_7f89e297de0a48e68d970df31d86e109~mv2.jpg" width="500" height="300" />
-</p>
-
-<p>A versão Cloud do dbt apresenta uma série de características avançadas e funcionalidades adicionais em comparação com a versão Core. Estas funcionalidades otimizam a experiência do usuário, tornando certas operações mais intuitivas e menos <code class="language-plaintext highlighter-rouge">verbosas</code>. No entanto, é importante destacar que existem métodos para integrar algumas dessas funcionalidades exclusivas da versão Cloud na versão Core.</p>
-
-<p>Neste artigo, nosso objetivo é orientar você através desse processo.</p>
-
-<p>O primeiro passo fundamental é garantir que você tenha o <code class="language-plaintext highlighter-rouge">Visual Studio Code (VSCode)</code> instalado em sua máquina, uma vez que será nossa interface principal de desenvolvimento. Após a instalação do VSCode, é essencial que o <code class="language-plaintext highlighter-rouge">dbt Core</code> esteja devidamente configurado em seu sistema. Este processo envolve a criação de um ambiente virtual <code class="language-plaintext highlighter-rouge">Python (venv)</code> e a instalação de dependências específicas. Se você ainda não configurou o dbt Core, pode seguir as instruções detalhadas disponíveis na <a href="https://docs.getdbt.com/docs/core/installation">documentação oficial</a></p>
-
-<h2 id="iniciando-as-configurações">Iniciando as configurações</h2>
-
-<p>Com o ambiente preparado, o próximo passo é a instalação da extensão <code class="language-plaintext highlighter-rouge">Dbt Power User</code> no VSCode. Para isso, acesse a seção de extensões do VSCode e insira <code class="language-plaintext highlighter-rouge">Dbt Power User</code> no campo de pesquisa:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_d44d8a2890c0436a8a8e61019a0bdcb2~mv2.png" alt="image" /></p>
-
-<p>Agora vamos as configurações para que a extensão funcione, primeiro abra suas <code class="language-plaintext highlighter-rouge">configurações do VSCode</code>:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_e0c148fcf8924e268ed24bfa7804b9c2~mv2.png" alt="image" /></p>
-
-<p>Agora você vai em <code class="language-plaintext highlighter-rouge">Editor de texto &gt; Arquivos</code>:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_d8fbac57c09b42de82267041593e61f9~mv2.png" alt="image" /></p>
-
-<p>Em arquivos vc vai adicionar um item onde Item deve ser: <code class="language-plaintext highlighter-rouge">*.sql</code> e Valor vai ser: <code class="language-plaintext highlighter-rouge">jinja-sql</code></p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_968444276de643f3a2c6ba80f0fae9ac~mv2.png" alt="image" /></p>
-
-<p>Depois disso você ira pesquisar <code class="language-plaintext highlighter-rouge">python</code> nas <code class="language-plaintext highlighter-rouge">configurações de Pesquisa</code>:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_970ddf664eaf4f8d873d7b88163ec0e2~mv2.png" alt="image" /></p>
-
-<p>Vai em <code class="language-plaintext highlighter-rouge">Extensões</code> e depois em <code class="language-plaintext highlighter-rouge">Python › Interpreter: Info Visibility (Não sincronizado)</code> e vai por a opção de <code class="language-plaintext highlighter-rouge">always</code>:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_288e78ae14e743fda7f15d0f54c0ab46~mv2.png" alt="image" /></p>
-
-<p>Agora você vai clicar no canto <code class="language-plaintext highlighter-rouge">inferior direito</code> onde aparece seu <code class="language-plaintext highlighter-rouge">interpretador python</code>:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_4af92524e8c0444e9ccca4b0a01f9b45~mv2.png" alt="image" /></p>
-
-<p>Aqui vem a jogada, você precisa por um novo interpretador e nele por o caminho da <code class="language-plaintext highlighter-rouge">venv</code> onde o <code class="language-plaintext highlighter-rouge">python3</code> está instalado:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_f5429c4f372c4cc28d96975b18fe01b6~mv2.png" alt="image" /></p>
-
-<p>Dessa forma agora a extensão vai conseguir identificar o <code class="language-plaintext highlighter-rouge">dbt</code> e no canto esquerdo vai paracer o nome dbt e um <code class="language-plaintext highlighter-rouge">certinho</code>, isso quer dizer que funcionou, agora temos mais uma configuração, você irá precisar <code class="language-plaintext highlighter-rouge">acessar a extensão</code> na aba de extensões do VSCODE e assim clicar na <code class="language-plaintext highlighter-rouge">engrenagem e ir em Extension Settings</code>, nessa você vai ir na configuração Dbt: <code class="language-plaintext highlighter-rouge">Profiles Dir Override</code> e então nele adicionar o caminho onde fica salvo seu <code class="language-plaintext highlighter-rouge">profiles.yml</code>:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_f8b801eac15844eb82f95d663c20ed9d~mv2.png" alt="image" /></p>
-
-<p>E tudo certo, você vai ver as funções da extensão em ação vou mostrar algumas delas mas exitem muito mais, aqui os botões de ação direto no arquivo:</p>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_44653cf6688145cd85f1f7faa692ce6c~mv2.png" alt="image" /></p>
-
-<h2 id="linhagem-das-tabelas">Linhagem das tabelas:</h2>
-
-<p><img src="https://static.wixstatic.com/media/710ee0_ac5f81411dfb4b0db11e010eaccb3d1a~mv2.png" alt="image" /></p>
-
-<p>e muito mais, adicione no seu VSCODE e seja feliz!</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>A versão Cloud do dbt oferece uma série de funcionalidades avançadas que podem melhorar significativamente a experiência do usuário. No entanto, é importante destacar que algumas dessas funcionalidades podem ser integradas à versão Core, permitindo que você aproveite o melhor dos dois mundos.</p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">🌟 Projeto Dracma</title><link href="http://localhost:4000/projeto/2023/08/06/34.html" rel="alternate" type="text/html" title="🌟 Projeto Dracma" /><published>2023-08-06T18:42:47-03:00</published><updated>2023-08-06T18:42:47-03:00</updated><id>http://localhost:4000/projeto/2023/08/06/34</id><content type="html" xml:base="http://localhost:4000/projeto/2023/08/06/34.html"><![CDATA[<p><a href="https://dracma-13f31b0b0e16.herokuapp.com">Acesse o App</a></p>
-
-<p>Em um mundo onde o controle financeiro se torna cada vez mais vital, nasceu o Dracma, um projeto inovador que visa ajudar as pessoas a gerenciar suas finanças pessoais.</p>
-
-<p>Desde sua primeira versão em no-code até sua evolução para uma plataforma robusta construída com Python, o Dracma representa uma jornada de crescimento e inovação.</p>
-
-<p>Neste post, vamos explorar a história do Dracma, seus recursos exclusivos, minha experiência pessoal com ele e os emocionantes planos futuros para este projeto.</p>
-
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_d3130f51ef6d40f9a0b829d891eb2d2e~mv2.png" width="700" height="300" />
-</p>
-
-<h2 id="a-jornada-do-dracma-de-no-code-a-python">A Jornada do Dracma: De No-Code a Python</h2>
-
-<p>O Dracma começou como um projeto no-code, uma abordagem que permitiu uma prototipagem rápida e a validação da ideia.</p>
-
-<p>Essa primeira versão foi crucial para entender as necessidades dos usuários e moldar a visão do projeto.</p>
-
-<h2 id="a-evolução-para-python">A Evolução para Python</h2>
-
-<p>Com o tempo, percebi que precisava de mais flexibilidade e controle sobre o projeto. Assim, decidi migrar para Python, uma linguagem de programação poderosa que ofereceu as ferramentas necessárias para levar o Dracma ao próximo nível.</p>
-
-<h2 id="a-estrutura-atual-do-projeto">A Estrutura Atual do Projeto</h2>
-
-<h3 id="python">Python</h3>
-
-<p>O núcleo do Dracma é construído em Python, permitindo uma análise de dados sofisticada e a implementação de modelos de machine learning.</p>
-
-<h3 id="heroku">Heroku</h3>
-
-<p>Hospedado no Heroku, o Dracma aproveita a escalabilidade e a facilidade de uso desta plataforma em nuvem.</p>
-
-<h3 id="html">HTML</h3>
-
-<p>A interface do usuário, criada com HTML, oferece uma experiência amigável e intuitiva.</p>
-
-<h3 id="bigquery">BigQuery</h3>
-
-<p>O BigQuery serve como o banco de dados, garantindo eficiência e desempenho na manipulação de grandes volumes de dados.</p>
-
-<h2 id="foco-e-diferenciais-do-dracma">Foco e Diferenciais do Dracma</h2>
-
-<h3 id="foco-em-finanças-pessoais">Foco em Finanças Pessoais</h3>
-
-<p>O Dracma é dedicado a ajudar as pessoas a controlarem suas finanças pessoais. É uma ferramenta gratuita, refletindo meu compromisso em tornar o gerenciamento financeiro acessível a todos.</p>
-
-<h3 id="insights-personalizados">Insights Personalizados</h3>
-
-<p>Com um modelo de machine learning, o Dracma oferece insights personalizados, fornecendo recomendações e dicas adaptadas às necessidades individuais.</p>
-
-<h3 id="gráficos-e-análises">Gráficos e Análises</h3>
-
-<p>A plataforma inclui gráficos e análises detalhadas, permitindo uma visualização clara e compreensível das finanças.</p>
-
-<h3 id="minha-experiência-com-o-dracma">Minha Experiência com o Dracma</h3>
-
-<p>Em um ano usando o Dracma, transformei minha vida financeira, economizando <code class="language-plaintext highlighter-rouge">8 mil reais</code>. O aplicativo me deu a clareza e os insights necessários para tomar decisões financeiras informadas.</p>
-
-<h2 id="o-futuro-do-dracma">O Futuro do Dracma</h2>
-
-<h3 id="melhorar-os-insights-personalizados">Melhorar os Insights Personalizados</h3>
-
-<p>Estou trabalhando para aprimorar ainda mais os insights personalizados, tornando-os mais precisos e úteis.</p>
-
-<h3 id="controles-de-investimentos">Controles de Investimentos</h3>
-
-<p>O próximo passo inclui melhorar os controles de investimentos, fornecendo ferramentas mais robustas para gerenciar portfólios.</p>
-
-<h3 id="gerador-de-renda-extra">Gerador de Renda Extra</h3>
-
-<p>Estou desenvolvendo um gerador de renda extra, uma funcionalidade que ajudará os usuários a encontrar oportunidades de aumentar sua renda.</p>
-
-<h3 id="projeto-prometheus">Projeto Prometheus</h3>
-
-<p>O projeto Prometheus, ainda em segredo, promete ser uma adição revolucionária ao Dracma. Embora os detalhes permaneçam confidenciais, posso garantir que ele terá um impacto significativo na geração de renda.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>O Dracma é mais do que um aplicativo de finanças pessoais; é uma missão para tornar o gerenciamento financeiro acessível e eficaz.</p>
-
-<p>Desde sua humilde origem no-code até sua evolução em uma plataforma poderosa, o Dracma continua a crescer e inovar.</p>
-
-<p>Com planos emocionantes para o futuro, incluindo melhorias nos insights, controles de investimentos, um gerador de renda extra e o misterioso projeto Prometheus, o Dracma está posicionado para se tornar uma ferramenta indispensável nas finanças pessoais.</p>
-
-<p>Se você está buscando uma maneira de transformar suas finanças, convido você a experimentar o Dracma aqui. Junte-se a mim nesta jornada financeira e descubra o poder do controle financeiro inteligente.</p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Projeto" /><summary type="html"><![CDATA[Uma Revolução nas Finanças Pessoais]]></summary></entry></feed>
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry></feed>

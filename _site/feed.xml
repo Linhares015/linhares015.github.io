@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-01T14:16:53-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Separando Dados em Colunas no Excel</title><link href="http://localhost:4000/dados/2023/10/01/45.html" rel="alternate" type="text/html" title="Separando Dados em Colunas no Excel" /><published>2023-10-01T08:42:47-03:00</published><updated>2023-10-01T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/10/01/45</id><content type="html" xml:base="http://localhost:4000/dados/2023/10/01/45.html"><![CDATA[<h1 id="técnicas-avançadas-com-power-query">Técnicas Avançadas com Power Query</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-14T13:51:16-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cognitio Arcanum</title><subtitle>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</subtitle><entry><title type="html">Introdução ao SQL</title><link href="http://localhost:4000/sql/2023/10/13/49.html" rel="alternate" type="text/html" title="Introdução ao SQL" /><published>2023-10-13T08:42:47-03:00</published><updated>2023-10-13T08:42:47-03:00</updated><id>http://localhost:4000/sql/2023/10/13/49</id><content type="html" xml:base="http://localhost:4000/sql/2023/10/13/49.html"><![CDATA[<p>Ah, 2023! Um ano em que a tecnologia continua a avançar a passos largos, e o mundo dos dados se torna cada vez mais central em nossas vidas. Seja você um entusiasta da tecnologia, um profissional aspirante ou alguém simplesmente curioso sobre o que move o mundo digital, há uma linguagem que você absolutamente precisa conhecer: SQL.</p>
+
+<p align="center">
+  <img src="https://www.tshirtgeek.com.br/wp-content/uploads/2021/09/com037-scaled.jpg" width="400" height="300" />
+</p>
+
+<h1 id="o-que-é-sql">O que é SQL?</h1>
+
+<p>SQL, ou Structured Query Language, é a linguagem de programação usada para gerenciar e consultar bancos de dados. Imagine um enorme armazém digital cheio de informações. Sem uma forma eficiente de acessar, modificar ou organizar essas informações, elas seriam praticamente inúteis. É aqui que o SQL entra em cena, atuando como o gerente desse armazém, garantindo que você possa encontrar exatamente o que procura em segundos.</p>
+
+<p>Agora, você pode pensar: “Ok, mas por que eu deveria me importar com uma linguagem de banco de dados?” Bem, pense nisso:</p>
+
+<p>você já usou um aplicativo, fez uma compra online ou até mesmo pesquisou algo na internet? <code class="language-plaintext highlighter-rouge">Todas essas ações envolvem bancos de dados em algum nível, e é o SQL que torna tudo isso possível.</code></p>
+
+<h1 id="por-que-sql-é-tão-relevante-em-2023">Por que SQL é tão relevante em 2023?</h1>
+
+<ul>
+  <li>
+    <p>O Mundo é Movido por Dados: Em 2023, vivemos em uma era de ouro dos dados. Quase todas as decisões empresariais, políticas e até mesmo pessoais são informadas por dados. E para acessar esses dados? Você adivinhou: SQL!</p>
+  </li>
+  <li>
+    <p>Demanda Profissional: Com o aumento da importância dos dados, a demanda por profissionais que saibam SQL está em alta. Seja em startups inovadoras ou em corporações estabelecidas, o conhecimento de SQL é frequentemente listado como uma habilidade essencial.</p>
+  </li>
+  <li>
+    <p>Versatilidade: SQL não é apenas para “geeks de dados”. Profissionais de marketing, gerentes de projeto, e até mesmo designers estão encontrando valor em entender SQL. Por quê? Porque lhes dá autonomia para buscar suas próprias respostas sem depender de um intermediário.</p>
+  </li>
+  <li>
+    <p>Evolução Contínua: Mesmo sendo uma linguagem que existe há décadas, o SQL continua a evoluir e adaptar-se às necessidades modernas. Em 2023, temos variantes de SQL otimizadas para tudo, desde análise de big data até inteligência artificial.</p>
+  </li>
+</ul>
+
+<h1 id="exemplo-prático-o-poder-do-sql-em-ação">Exemplo Prático: O Poder do SQL em Ação</h1>
+
+<p>Vamos imaginar que você é um gerente de e-commerce querendo saber quais produtos foram os mais vendidos no último mês. Sem SQL, você teria que vasculhar planilhas intermináveis ou depender de alguém para obter essa informação. Com SQL? Basta uma simples consulta:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">nome_produto</span>
+    <span class="p">,</span> <span class="k">SUM</span><span class="p">(</span><span class="n">quantidade_vendida</span><span class="p">)</span> 
+<span class="k">FROM</span> <span class="n">vendas</span> 
+<span class="k">WHERE</span> <span class="n">data_venda</span> <span class="k">BETWEEN</span> <span class="s1">'2023-01-01'</span> <span class="k">AND</span> <span class="s1">'2023-01-31'</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">nome_produto</span> 
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">SUM</span><span class="p">(</span><span class="n">quantidade_vendida</span><span class="p">)</span> <span class="k">DESC</span> 
+<span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>E voilà! Em segundos, você tem uma lista dos 10 produtos mais vendidos.</p>
+
+<h1 id="conclusão">Conclusão</h1>
+
+<p>Se você ainda não está convencido do poder e relevância do SQL em 2023, desafio você a observar o mundo ao seu redor. Veja como os dados estão moldando tudo, desde a música que você ouve até as notícias que lê. E no coração de tudo isso? Está o SQL, a linguagem silenciosa, mas poderosa, que ajuda a dar sentido ao vasto oceano de dados em que navegamos todos os dias.</p>
+
+<p>Então, se você está procurando uma habilidade para aprender este ano, que pode abrir portas em quase qualquer indústria, dê uma chance ao SQL. Você não vai se arrepender!</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[O que é e por que é essencial em 2023?]]></summary></entry><entry><title type="html">Como Extrair Dados de PDFs para o Excel</title><link href="http://localhost:4000/dados/2023/10/10/48.html" rel="alternate" type="text/html" title="Como Extrair Dados de PDFs para o Excel" /><published>2023-10-10T08:42:47-03:00</published><updated>2023-10-10T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/10/10/48</id><content type="html" xml:base="http://localhost:4000/dados/2023/10/10/48.html"><![CDATA[<h1 id="técnicas-avançadas-com-power-query">Técnicas Avançadas com Power Query</h1>
+
+<p>O Excel, uma ferramenta essencial no mundo dos negócios e da análise de dados, oferece uma variedade de funcionalidades que vão além das simples fórmulas e tabelas. Uma dessas funcionalidades é o Power Query, uma ferramenta poderosa para tratamento e manipulação de dados.</p>
+
+<p>No vídeo apresentado, aprendemos como extrair dados de um PDF e transformá-los em uma planilha do Excel usando o Power Query.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/muNNOTHjQ70"><img src="https://img.youtube.com/vi/muNNOTHjQ70/0.jpg" alt="Como Extrair Dados de PDFs para o Excel" /></a></p>
+
+<h1 id="introdução">Introdução:</h1>
+
+<p>Muitos profissionais se deparam com a necessidade de extrair informações de PDFs para análises no Excel. Seja para conciliações financeiras, análise de dados ou outros propósitos, a capacidade de transformar um PDF em uma planilha do Excel pode ser extremamente útil.</p>
+
+<h1 id="principais-pontos">Principais Pontos:</h1>
+
+<ul>
+  <li>
+    <p>Origem do Dado: O vídeo começa com a apresentação de um PDF que contém um aviso de pagamento. O objetivo é transformar esse PDF em uma planilha do Excel.</p>
+  </li>
+  <li>
+    <p>Uso do Power Query: O Power Query é apresentado como a ferramenta ideal para essa tarefa. Com ele, é possível extrair tabelas de um PDF e transformá-las em dados estruturados no Excel.</p>
+  </li>
+  <li>
+    <p>Tratamento de Dados: O vídeo demonstra como manipular os dados extraídos, como remover colunas desnecessárias, promover cabeçalhos e alterar tipos de dados.</p>
+  </li>
+  <li>
+    <p>Automatização do Processo: Uma das maiores vantagens do Power Query é a automatização. Uma vez definido o processo de extração e tratamento, ele pode ser aplicado a outros PDFs semelhantes, economizando tempo e esforço.</p>
+  </li>
+</ul>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>O Power Query é uma ferramenta indispensável para quem trabalha com grandes volumes de dados ou precisa extrair informações de documentos como PDFs. Com ele, é possível transformar um processo manual e demorado em algo rápido e automatizado, permitindo que os profissionais se concentrem em análises mais profundas e tomadas de decisão.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Acrescentando Consultas no Excel</title><link href="http://localhost:4000/dados/2023/10/07/47.html" rel="alternate" type="text/html" title="Acrescentando Consultas no Excel" /><published>2023-10-07T08:42:47-03:00</published><updated>2023-10-07T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/10/07/47</id><content type="html" xml:base="http://localhost:4000/dados/2023/10/07/47.html"><![CDATA[<h1 id="técnicas-avançadas-com-power-query">Técnicas Avançadas com Power Query</h1>
+
+<p>O Excel é uma ferramenta poderosa e amplamente utilizada por profissionais de diversas áreas. No entanto, para maximizar seu potencial, é essencial conhecer técnicas avançadas, como as oferecidas pelo Power Query.</p>
+
+<p>No vídeo apresentado, somos guiados por um tutorial detalhado sobre como adicionar consultas no Excel utilizando o Power Query.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/mNy20tku_h4"><img src="https://img.youtube.com/vi/mNy20tku_h4/0.jpg" alt="Acrescentando Consultas no Excel" /></a></p>
+
+<h1 id="introdução">Introdução:</h1>
+
+<p>O vídeo destaca a importância de manipular e transformar dados no Excel. Muitas vezes, os usuários se deparam com conjuntos de dados desestruturados ou apresentados de forma não ideal para análises. Aqui, o Power Query entra em cena como uma solução poderosa.</p>
+
+<h1 id="principais-pontos">Principais Pontos:</h1>
+
+<ul>
+  <li>
+    <p>Removendo Colunas e Gerenciando Cabeçalhos: O apresentador mostra como remover colunas desnecessárias e gerenciar cabeçalhos usando a opção “Usar Primeira Linha como Cabeçalhos”.</p>
+  </li>
+  <li>
+    <p>Filtrando Dados: É explicado como filtrar dados com base em critérios específicos usando a opção “Filtros de Texto”.</p>
+  </li>
+  <li>
+    <p>Gerenciando Tipos de Dados: O vídeo enfatiza a importância de ter os tipos de dados corretos e demonstra como alterar os tipos de dados para colunas.</p>
+  </li>
+  <li>
+    <p>Conveniência do Power Query: O apresentador destaca a facilidade e eficiência de usar o Power Query para manipulação e carregamento de dados.</p>
+  </li>
+</ul>
+
+<h1 id="exemplos-apresentados">Exemplos Apresentados:</h1>
+
+<ul>
+  <li>
+    <p>O processo de remoção de colunas e gerenciamento de cabeçalhos é demonstrado.</p>
+  </li>
+  <li>
+    <p>O apresentador mostra como filtrar dados usando diferentes critérios.</p>
+  </li>
+  <li>
+    <p>A importância de ter o tipo de dado correto é enfatizada, com exemplos de conversão de colunas.</p>
+  </li>
+</ul>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>O Power Query é uma ferramenta indispensável para qualquer usuário do Excel que lida regularmente com grandes conjuntos de dados ou dados desestruturados. Ao dominar as técnicas apresentadas no vídeo, os usuários podem economizar tempo, reduzir erros e melhorar a eficiência de seus fluxos de trabalho no Excel.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Unpivotar Dados no Excel</title><link href="http://localhost:4000/dados/2023/10/04/46.html" rel="alternate" type="text/html" title="Unpivotar Dados no Excel" /><published>2023-10-04T08:42:47-03:00</published><updated>2023-10-04T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/10/04/46</id><content type="html" xml:base="http://localhost:4000/dados/2023/10/04/46.html"><![CDATA[<h1 id="técnicas-avançadas-com-power-query">Técnicas Avançadas com Power Query</h1>
+
+<p>O Excel, uma ferramenta amplamente utilizada por profissionais em diversas áreas, possui funcionalidades que vão além das operações básicas. Uma dessas funcionalidades avançadas é o Power Query, que permite transformar e manipular dados de maneira eficiente.</p>
+
+<p>No vídeo em questão, é apresentado um tutorial sobre como “unpivotar” dados no Excel utilizando o Power Query.</p>
+
+<p>Abaixo video mostrando tudo isso na prática:</p>
+
+<p><a href="https://youtu.be/jjKj-qRLi54"><img src="https://img.youtube.com/vi/jjKj-qRLi54/0.jpg" alt="Unpivotar Dados no Excel" /></a></p>
+
+<h1 id="introdução">Introdução:</h1>
+
+<p>O vídeo começa destacando a importância de tratar dados no Excel, especialmente quando se trata de dados desestruturados ou apresentados de forma não ideal para análises. O Power Query surge como uma solução para esses desafios.</p>
+
+<h1 id="principais-pontos">Principais Pontos:</h1>
+
+<ul>
+  <li>
+    <p>Desafios com Dados Desestruturados: Muitas vezes, os usuários recebem dados em um formato que não é ideal para análise. Por exemplo, dados extraídos de um formulário podem ter perguntas como cabeçalhos e respostas nas linhas.</p>
+  </li>
+  <li>
+    <p>Transformando Dados com Power Query: O vídeo demonstra como transformar colunas em linhas, uma técnica conhecida como “unpivot”. Isso é útil quando se deseja reestruturar dados para análises mais aprofundadas.</p>
+  </li>
+  <li>
+    <p>Automatizando o Processo: Uma das vantagens do Power Query é a capacidade de automatizar processos. Uma vez definidas as transformações, elas podem ser aplicadas automaticamente a novos conjuntos de dados.</p>
+  </li>
+  <li>
+    <p>Exemplo Prático: O apresentador mostra um exemplo prático de como transformar dados extraídos de um formulário, onde as perguntas são apresentadas como cabeçalhos e as respostas como linhas.</p>
+  </li>
+</ul>
+
+<h1 id="conclusão">Conclusão:</h1>
+
+<p>O Power Query é uma ferramenta poderosa que permite aos usuários do Excel manipular e transformar dados de maneira eficiente. Ao dominar essa ferramenta, é possível economizar tempo e garantir que os dados estejam no formato correto para análises e relatórios.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Separando Dados em Colunas no Excel</title><link href="http://localhost:4000/dados/2023/10/01/45.html" rel="alternate" type="text/html" title="Separando Dados em Colunas no Excel" /><published>2023-10-01T08:42:47-03:00</published><updated>2023-10-01T08:42:47-03:00</updated><id>http://localhost:4000/dados/2023/10/01/45</id><content type="html" xml:base="http://localhost:4000/dados/2023/10/01/45.html"><![CDATA[<h1 id="técnicas-avançadas-com-power-query">Técnicas Avançadas com Power Query</h1>
 
 <p>O Excel é uma ferramenta poderosa que muitos profissionais utilizam diariamente. No entanto, para aproveitar ao máximo suas capacidades, é essencial conhecer técnicas avançadas, como as oferecidas pelo Power Query.</p>
 
@@ -443,331 +623,4 @@ Principais Comandos Git:</p>
 
 <p>Selo 🧙‍♂️:</p>
 
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zsh</title><link href="http://localhost:4000/linux/2023/09/15/39.html" rel="alternate" type="text/html" title="Zsh" /><published>2023-09-15T00:42:47-03:00</published><updated>2023-09-15T00:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/15/39</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/15/39.html"><![CDATA[<p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
-
-<p>Neste artigo, vamos explorar como instalar o Zsh, configurá-lo e personalizá-lo com temas para tornar seu terminal mais atraente e funcional.</p>
-
-<h1 id="1-instalação-do-zsh">1. Instalação do Zsh</h1>
-
-<p>A instalação do Zsh é simples e pode ser feita na maioria das distribuições Linux e sistemas macOS:</p>
-
-<ul>
-  <li>Ubuntu/Debian:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>zsh
-</code></pre></div></div>
-
-<ul>
-  <li>Fedora:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>zsh
-</code></pre></div></div>
-
-<ul>
-  <li>Arch Linux:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> zsh
-</code></pre></div></div>
-
-<ul>
-  <li>macOS:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>zsh
-</code></pre></div></div>
-
-<p>Após a instalação, você pode definir o Zsh como seu shell padrão com o comando:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh <span class="nt">-s</span> <span class="si">$(</span>which zsh<span class="si">)</span>
-</code></pre></div></div>
-
-<h1 id="2-oh-my-zsh-um-framework-para-gerenciar-sua-configuração-zsh">2. Oh My Zsh: Um Framework para Gerenciar sua Configuração Zsh</h1>
-
-<p>Oh My Zsh é um framework de código aberto e uma comunidade que ajuda a gerenciar sua configuração Zsh. Ele vem com um conjunto de plugins, temas e funções úteis que podem ser habilitadas ou desabilitadas conforme sua preferência.</p>
-
-<h2 id="para-instalar-o-oh-my-zsh-use">Para instalar o Oh My Zsh, use:</h2>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
-</code></pre></div></div>
-
-<h1 id="3-personalizando-com-temas">3. Personalizando com Temas</h1>
-
-<p>Um dos maiores atrativos do Zsh é a capacidade de personalizá-lo com temas. O Oh My Zsh, por exemplo, vem com muitos temas pré-instalados. Para alterar o tema, edite o arquivo <code class="language-plaintext highlighter-rouge">~/.zshrc</code> e modifique a linha <code class="language-plaintext highlighter-rouge">ZSH_THEME</code> com o nome do tema desejado.</p>
-
-<ul>
-  <li>Por exemplo, para usar o tema agnoster, altere a linha para:</li>
-</ul>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">ZSH_THEME="agnoster"</span>
-</code></pre></div></div>
-
-<h2 id="onde-encontrar-mais-temas">Onde encontrar mais temas?</h2>
-
-<p>Oh My Zsh Temas: O próprio Oh My Zsh tem uma <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">galeria de temas</a> que você pode explorar.</p>
-
-<p>Zsh Users: O repositório <a href="https://github.com/zsh-users">zsh-users</a> no GitHub tem uma variedade de temas e plugins úteis.</p>
-
-<p>Outros repositórios: Muitos desenvolvedores e entusiastas do Zsh criam e compartilham seus próprios temas. Uma busca rápida no GitHub por “Zsh themes” pode revelar muitas joias escondidas.</p>
-
-<p>Dois themas que gosto muito:</p>
-
-<ul>
-  <li>Fino</li>
-</ul>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/49100982/108254809-82cfdf80-716c-11eb-8d66-027fe4ecfd55.jpg" />
-</p>
-
-<ul>
-  <li>Robbyrussell</li>
-</ul>
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/49100982/108254738-764b8700-716c-11eb-9a59-4deb8c8c6193.jpg" />
-</p>
-
-<h1 id="conclusão">Conclusão</h1>
-
-<p>O Zsh é uma poderosa ferramenta que melhora significativamente a experiência no terminal. Com a capacidade de personalizar e usar temas, os usuários podem criar um ambiente de trabalho que não é apenas funcional, mas também esteticamente agradável. Se você ainda não experimentou o Zsh, recomendamos que o faça e explore as infinitas possibilidades que ele oferece.</p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[Terminal Linux Personalizado]]></summary></entry><entry><title type="html">Autenticação Segura no Linux</title><link href="http://localhost:4000/linux/2023/09/10/38.html" rel="alternate" type="text/html" title="Autenticação Segura no Linux" /><published>2023-09-10T18:42:47-03:00</published><updated>2023-09-10T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/10/38</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/10/38.html"><![CDATA[<h1 id="entendendo-senhas-sombra-e-pam">Entendendo Senhas Sombra e PAM</h1>
-
-<p>A segurança cibernética é uma preocupação crescente em nossa era digital. Com o aumento constante de ameaças e ataques cibernéticos, é essencial garantir que nossos sistemas e dados estejam protegidos. Um vídeo recente no YouTube destacou algumas práticas recomendadas para fortalecer a segurança no Linux. Aqui estão os principais insights:</p>
-
-<h2 id="senhas-sombra-no-linux">Senhas Sombra no Linux</h2>
-
-<p>Uma das características notáveis do Linux é o uso de “senhas sombra”. Em vez de armazenar senhas criptografadas no arquivo /etc/passwd, que é tradicionalmente acessível a todos os usuários, o Linux introduziu o conceito de senhas sombra. Essas senhas são armazenadas em um arquivo separado, proporcionando uma camada extra de segurança. Isso garante que mesmo que um invasor obtenha acesso ao sistema, ele não possa facilmente acessar as senhas criptografadas.</p>
-
-<h2 id="a-importância-de-alterar-senhas-regularmente">A Importância de Alterar Senhas Regularmente</h2>
-
-<p>Mudar senhas regularmente é uma prática recomendada em segurança cibernética. Mesmo que isso possa parecer tedioso ou inconveniente, é uma medida preventiva crucial. Forçar os usuários a alterar suas senhas em intervalos regulares pode prevenir muitos ataques potenciais, especialmente se uma senha for comprometida.</p>
-
-<h2 id="pam-flexibilidade-em-autenticação">PAM: Flexibilidade em Autenticação</h2>
-
-<p>O Módulo de Autenticação Pluggable (PAM) é outra característica notável do Linux. Ele permite a criação de várias regras de autenticação. Isso significa que os administradores do sistema podem configurar o sistema para exigir vários tipos de autenticação, tornando-o ainda mais seguro contra ameaças.</p>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>A segurança é uma jornada contínua, e é essencial estar sempre atualizado com as melhores práticas e ferramentas. O Linux, com suas características de senhas sombra e PAM, oferece robustez e flexibilidade em segurança. Ao entender e implementar esses recursos, podemos dar um passo significativo para proteger nossos sistemas e dados.</p>
-
-<p>Abaixo video mostrando tudo isso na prática:</p>
-
-<p><a href="https://youtu.be/IYSuY9jRKQg"><img src="https://img.youtube.com/vi/IYSuY9jRKQg/0.jpg" alt="Segurança 2 Autenticação" /></a></p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Combinando Resultados com SQL com UNION</title><link href="http://localhost:4000/sql/2023/09/09/17.html" rel="alternate" type="text/html" title="Combinando Resultados com SQL com UNION" /><published>2023-09-09T18:42:47-03:00</published><updated>2023-09-09T18:42:47-03:00</updated><id>http://localhost:4000/sql/2023/09/09/17</id><content type="html" xml:base="http://localhost:4000/sql/2023/09/09/17.html"><![CDATA[<h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
-
-<p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
-
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp" width="500" height="300" />
-</p>
-
-<h2 id="por-que-a-cláusula-union-é-importante">Por que a cláusula UNION é importante?</h2>
-
-<p>Imagine que você tenha dois conjuntos de dados distintos em tabelas diferentes, mas deseja combiná-los para uma análise unificada. A cláusula UNION permite fazer exatamente isso, combinando resultados de múltiplas consultas.</p>
-
-<h2 id="entendendo-union-e-suas-variantes">Entendendo UNION e suas variantes:</h2>
-
-<ol>
-  <li>UNION:</li>
-</ol>
-
-<p>Combina os resultados de duas ou mais consultas removendo duplicatas.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">estudantes_2019</span>
-
-<span class="k">UNION</span>
-
-<span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">estudantes_2020</span><span class="p">;</span>
-</code></pre></div></div>
-<p>Uso típico: Quando você deseja combinar listas, mas garantir que cada item apareça apenas uma vez.</p>
-
-<ol>
-  <li>UNION ALL:</li>
-</ol>
-
-<p>Semelhante ao UNION, mas inclui duplicatas.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">vendedores_regiao_norte</span>
-
-<span class="k">UNION</span> <span class="k">ALL</span>
-
-<span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">vendedores_regiao_sul</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Uso típico: Quando você deseja combinar listas e manter todas as entradas, incluindo duplicatas.</p>
-
-<ol>
-  <li>INTERSECT:</li>
-</ol>
-
-<p>Retorna apenas as linhas que aparecem em ambos os conjuntos de resultados.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">alunos_matriculados</span>
-
-<span class="k">INTERSECT</span>
-
-<span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">alunos_presentes_hoje</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Uso típico: Quando você deseja encontrar itens comuns entre dois conjuntos de dados.</p>
-
-<ol>
-  <li>EXCEPT (ou MINUS em alguns sistemas):</li>
-</ol>
-
-<p>Retorna linhas do primeiro conjunto de resultados que não aparecem no segundo.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">todos_os_funcionarios</span>
-
-<span class="k">EXCEPT</span>
-
-<span class="k">SELECT</span> 
-  <span class="n">nome</span> 
-<span class="k">FROM</span> <span class="n">funcionarios_de_ferias</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Uso típico: Quando você deseja encontrar itens em um conjunto de dados que não estão em outro.</p>
-
-<h2 id="considerações-de-performance">Considerações de Performance:</h2>
-
-<p>Assim como com os JOINs, as operações de conjunto podem ser intensivas em termos de recursos. Algumas dicas para otimizar:</p>
-
-<p>Certifique-se de que as colunas que você está combinando tenham tipos de dados compatíveis.</p>
-
-<p>Use cláusulas WHERE para limitar os resultados antes de combiná-los.</p>
-
-<p>Pense na ordem das operações; às vezes, reordenar as consultas pode melhorar a performance.</p>
-
-<h2 id="conclusão">Conclusão:</h2>
-
-<p>A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.</p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="SQL" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Docker e Portainer em Linux</title><link href="http://localhost:4000/linux/2023/09/08/37.html" rel="alternate" type="text/html" title="Docker e Portainer em Linux" /><published>2023-09-08T18:42:47-03:00</published><updated>2023-09-08T18:42:47-03:00</updated><id>http://localhost:4000/linux/2023/09/08/37</id><content type="html" xml:base="http://localhost:4000/linux/2023/09/08/37.html"><![CDATA[<h1 id="uma-combinação-poderosa-para-gerenciamento-de-contêineres">Uma Combinação Poderosa para Gerenciamento de Contêineres</h1>
-
-<p>O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.</p>
-
-<p align="center">
-  <img src="https://static.wixstatic.com/media/710ee0_4e98f65687114df582a62e702ad246b6~mv2.png" width="600" height="300" />
-</p>
-
-<h2 id="docker-desktop-uma-visão-geral">Docker Desktop: Uma Visão Geral</h2>
-
-<p>O Docker Desktop é uma solução completa que permite aos desenvolvedores configurar, iniciar e gerenciar contêineres Docker através de uma interface gráfica amigável. Ele integra-se perfeitamente aos sistemas operacionais Windows e macOS, proporcionando uma experiência de usuário suave. No entanto, o Docker Desktop não está disponível para Linux. Isso pode parecer estranho, dado que o Docker foi originalmente construído para Linux!</p>
-
-<h2 id="a-solução-para-usuários-de-linux-docker-cli-e-portainer">A Solução para Usuários de Linux: Docker CLI e Portainer</h2>
-
-<p>Embora o Docker Desktop não esteja disponível para Linux, os usuários de Fedora, Ubuntu e outras distribuições não estão sem opções. O Docker CLI, embora não seja uma interface gráfica, é uma ferramenta extremamente poderosa que permite aos usuários fazer tudo o que o Docker Desktop faz e até mais. Mas, para aqueles que ainda desejam uma interface gráfica, o Portainer é a solução.</p>
-
-<h2 id="configurando-o-docker">Configurando o Docker</h2>
-
-<h3 id="no-fedora">No Fedora:</h3>
-
-<ol>
-  <li>Instalação:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>docker-ce
-</code></pre></div></div>
-
-<ol>
-  <li>Iniciar e Habilitar o Docker:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start docker
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
-</code></pre></div></div>
-
-<ol>
-  <li>Verificar a Instalação:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
-</code></pre></div></div>
-
-<h3 id="no-ubuntu">No Ubuntu:</h3>
-
-<ol>
-  <li>Instalação:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>docker.io
-</code></pre></div></div>
-
-<ol>
-  <li>Iniciar e Habilitar o Docker:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start docker
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>docker
-</code></pre></div></div>
-
-<ol>
-  <li>Verificar a Instalação:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nt">--version</span>
-</code></pre></div></div>
-
-<h2 id="introdução-ao-portainer">Introdução ao Portainer</h2>
-
-<p>O Portainer é uma solução de gerenciamento para Docker com uma interface de usuário baseada na web. Ele permite que você gerencie seus contêineres, imagens, redes e volumes do Docker. Além disso, é de código aberto e extremamente leve.</p>
-
-<h2 id="instalando-e-configurando-o-portainer">Instalando e Configurando o Portainer</h2>
-
-<ol>
-  <li>Puxe a Imagem do Portainer:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull portainer/portainer-ce
-</code></pre></div></div>
-
-<ol>
-  <li>Execute o Portainer:</li>
-</ol>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">-p</span> 9000:9000 <span class="nt">--name</span> portainer <span class="nt">--restart</span> always <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce
-</code></pre></div></div>
-
-<ol>
-  <li>Acesse o Portainer: Abra um navegador e vá para <code class="language-plaintext highlighter-rouge">http://localhost:9000</code> Você será saudado pela interface do Portainer, onde pode configurar o usuário administrador e começar a gerenciar seus contêineres.</li>
-</ol>
-
-<h2 id="conclusão">Conclusão</h2>
-
-<p>Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.</p>
-
-<p>Selo 🧙‍♂️:</p>
-
-<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>]]></content><author><name></name></author><category term="Dados" /><summary type="html"><![CDATA[]]></summary></entry></feed>

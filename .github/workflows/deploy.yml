@@ -3,7 +3,7 @@ name: Deploy MkDocs Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # ou a branch que você usa para desenvolvimento
+      - main  # ou a branch que você utiliza para desenvolvimento
 
 jobs:
   deploy:
@@ -25,6 +25,10 @@ jobs:
       - name: Build do site com MkDocs
         run: |
           mkdocs build
+
+      - name: Adicionar arquivo .nojekyll ao site
+        run: |
+          touch site/.nojekyll
 
       - name: Publicar site no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

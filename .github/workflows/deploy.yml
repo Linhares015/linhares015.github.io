@@ -8,14 +8,17 @@ name: Deploy MkDocs Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # ou a branch que você utiliza para desenvolvimento
+      - develop   # sua branch de código fonte
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout do repositório
+      - name: Checkout do repositório (branch develop)
         uses: actions/checkout@v4
+        with:
+          ref: develop
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -30,12 +33,13 @@ jobs:
         run: |
           mkdocs build
 
-      - name: Adicionar arquivo .nojekyll ao site
+      - name: Adicionar arquivo .nojekyll ao site gerado
         run: |
           touch site/.nojekyll
 
-      - name: Publicar site no GitHub Pages
+      - name: Deploy para GitHub Pages (branch main)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: main
           publish_dir: ./site

@@ -1,6 +1,7 @@
 site_name: Tiago Linhares
 site_description: Tiago Linhares personal blog
 site_author: Tiago Linhares
+site_url: https://linhares015.github.io/
 theme:
   name: material
   logo: 'images/logo.png'

@@ -1,0 +1,33 @@
+name: Deploy MkDocs Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # ou a branch que você usa para desenvolvimento
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependências do MkDocs
+        run: |
+          pip install mkdocs mkdocs-material
+
+      - name: Build do site com MkDocs
+        run: |
+          mkdocs build
+
+      - name: Publicar site no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

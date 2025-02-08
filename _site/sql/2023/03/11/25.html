@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SQL Fluff | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="SQL Fluff" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/sql/2023/03/11/25.html" />
+  <meta property="og:url" content="http://localhost:4000/sql/2023/03/11/25.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="SQL Fluff" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SQL Fluff</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-03-11T18:42:47-03:00" itemprop="datePublished">Mar 11, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="o-que-é-sql-fluff">O que é SQL Fluff?</h2>
+
+<p>SQL Fluff é uma ferramenta de linting para SQL que foi criada para ajudar os desenvolvedores a escrever código SQL de alta qualidade.</p>
+
+<p>Ele verifica o código SQL em busca de erros comuns, como erros de sintaxe, nomes de coluna e tabela incorretos, e outros problemas que podem afetar a legibilidade e manutenção do código.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_cd7ae8c4889e423ca5158ebc1351cb70~mv2.jpg" width="500" height="300" />
+</p>
+
+<p>O SQL Fluff também pode ser usado para aplicar regras personalizadas de linting para atender às necessidades específicas de uma equipe ou projeto. Ele suporta vários dialetos SQL, incluindo PostgreSQL, MySQL, BigQuery e SQLite.</p>
+
+<h2 id="instalando-o-sql-fluff">Instalando o SQL Fluff</h2>
+
+<p>Para começar a usar o SQL Fluff, você precisará instalá-lo. A maneira mais fácil de fazer isso é usar o gerenciador de pacotes Python pip. Para instalar o SQL Fluff, abra o terminal e digite o seguinte comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>sqlfluff
+</code></pre></div></div>
+
+<h2 id="usando-o-sql-fluff">Usando o SQL Fluff</h2>
+
+<p>Depois de instalar o SQL Fluff, você pode usá-lo para verificar o seu código SQL. Vamos ver alguns exemplos práticos de como usar o SQL Fluff.</p>
+
+<ol>
+  <li>Exemplo: Verificando a Sintaxe</li>
+</ol>
+
+<p>Vamos começar verificando a sintaxe de um código SQL. Crie um arquivo chamado exemplo.sql com o seguinte conteúdo:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="n">FROMtabela</span>
+<span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Para verificar a sintaxe do código SQL, execute o seguinte comando no terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlfluff check exemplo.sql
+</code></pre></div></div>
+
+<p>O SQL Fluff detectará um erro de sintaxe e retornará a seguinte mensagem:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">==</span> <span class="o">[</span>example.sql] FAIL
+L:3|P:0|L003|There<span class="s1">'snowhitespaceafter'</span>FROM<span class="s1">'
+</span></code></pre></div></div>
+<p>A mensagem de erro indica que há um erro na linha 3 do arquivo exemplo.sql, onde falta um espaço em branco após a palavra-chave FROM.</p>
+
+<ol>
+  <li>Exemplo: Verificando o Nome da Tabela</li>
+</ol>
+
+<p>Agora vamos verificar se o nome da tabela está correto. Crie um arquivo chamado exemplo2.sql com o seguinte conteúdo:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">tabela_incorreta</span>
+<span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Para verificar o nome da tabela, execute o seguinte comando no terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlfluff check exemplo2.sql
+</code></pre></div></div>
+<p>O SQL Fluff detectará um erro e retornará a seguinte mensagem:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">==</span> <span class="o">[</span>example2.sql] FAIL
+L:   2 | P:    5 | L002 | Linting Syntax: A Table or Alias name <span class="s1">'tabela_incorreta'</span> wasn<span class="s1">'t found.
+</span></code></pre></div></div>
+
+<p>A mensagem de erro indica que o nome da tabela tabela_incorreta não foi encontrado. Você deve corrigir o nome da tabela para tabela para resolver o erro.</p>
+
+<ol>
+  <li>Exemplo: Aplicando Regras Personalizadas</li>
+</ol>
+
+<p>O SQL Fluff também permite que você aplique suas próprias regras de linting para atender às necessidades específicas de sua equipe ou projeto.</p>
+
+<p>Vamos criar uma regra personalizada para verificar se todas as consultas SQL têm um comentário explicando o que elas fazem.</p>
+
+<p>Crie um arquivo chamado regras_personalizadas.yml com o seguinte conteúdo:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">rules</span><span class="pi">:</span>
+
+  <span class="na">sql_has_comment</span><span class="pi">:</span>
+
+    <span class="c1"># The SQL code to check is given in the `code` variable.</span>
+
+    <span class="c1"># The `errors` list should be modified to include any linting errors.</span>
+
+    <span class="c1"># If no errors are detected, the `errors` list should be left empty.</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">check_sql_has_comment</span>
+
+      <span class="na">code</span><span class="pi">:</span> <span class="pi">|</span>
+
+        <span class="s"># Check that every SELECT query has a comment explaining its purpose</span>
+
+        <span class="s">for block in parsed.tree.iter_blocks():</span>
+
+            <span class="s">if block.get_type() == "query":</span>
+
+                <span class="s">if not block.comment:</span>
+
+                    <span class="s">errors.append(</span>
+
+                        <span class="s">LintError(</span>
+
+                            <span class="s">node=block,</span>
+
+                            <span class="s">message="A SELECT query should have a comment explaining its purpose."</span>
+
+                        <span class="s">)</span>
+
+                    <span class="s">)</span>
+</code></pre></div></div>
+
+<p>A regra personalizada sql_has_comment verifica se todas as consultas SELECT têm um comentário explicando o que elas fazem. Para aplicar essa regra, execute o seguinte comando no terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlfluff check exemplo3.sql <span class="nt">--config</span> regras_personalizadas.yml
+</code></pre></div></div>
+
+<p>O SQL Fluff verificará o arquivo exemplo3.sql em busca de consultas SELECT sem comentários e retornará uma mensagem de erro se encontrar algum.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>O SQL Fluff é uma ferramenta útil para melhorar a qualidade do código SQL, reduzir erros e aumentar a consistência. Ele verifica o código SQL em busca de erros comuns, melhora a legibilidade e simplifica a manutenção.</p>
+
+<p>Neste artigo, exploramos como o SQL Fluff funciona e como usá-lo para melhorar a qualidade do código SQL. Demonstramos exemplos práticos de como verificar a sintaxe do código SQL, verificar nomes de tabela e aplicar regras personalizadas de linting.</p>
+
+<p>Com o SQL Fluff, você pode escrever código SQL de alta qualidade e garantir que ele atenda aos padrões de sua equipe ou projeto.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/sql/2023/03/11/25.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

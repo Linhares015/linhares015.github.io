@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "DBT (Data Build Tool)"
+date:   2023-02-11 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_05ea37d7c50248da982897383e5118a9~mv2.jpg"
+excerpt: "Revolucionando a Transformação de Dados"
+---
+
+Em um mundo onde os dados são o novo petróleo, a capacidade de transformar esses dados de forma eficiente é crucial. Aqui, apresentamos o DBT (Data Build Tool), uma ferramenta que está mudando o jogo na análise de dados.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_05ea37d7c50248da982897383e5118a9~mv2.jpg" width="500" height="300">
+</p>
+
+## Visão Geral do DBT
+
+O DBT é uma ferramenta de código aberto que se concentra na etapa "T" do ETL, ou seja, a Transformação. Em vez de apenas extrair e carregar dados, o DBT permite que os analistas e engenheiros de dados transformem, testem e documentem esses dados, tudo dentro do ambiente de banco de dados.
+
+## Por que o DBT é um Game Changer?
+
+1. SQL Puro e Simples:
+
+Ao contrário de outras ferramentas que exigem linguagens proprietárias, o DBT utiliza `SQL`. Isso significa que não há curva de aprendizado íngreme; se você conhece SQL, pode começar a usar o DBT imediatamente.
+
+2. Automação e Versionamento:
+
+O DBT permite que você versione seu código de transformação, assim como faria com qualquer outro código em plataformas como o `GitHub`. Isso facilita a colaboração e o rastreamento de mudanças.
+
+3. Testes e Documentação:
+
+Com o DBT, você pode escrever testes para suas transformações, garantindo que os dados sejam precisos e confiáveis. Além disso, ele gera automaticamente a documentação, tornando mais fácil para as equipes entenderem e confiarem nos dados.
+
+## Exemplos de Uso do DBT:
+
+E-commerce: 
+
+Suponha que uma loja online queira analisar a relação entre visualizações de produtos e vendas. Com o DBT, eles podem criar uma transformação que une dados de visualizações de produtos com dados de vendas.
+
+```sql
+SELECT 
+  v.product_id
+  , v.views
+  , s.sales
+FROM product_views AS v
+JOIN product_sales AS s ON v.product_id = s.product_id;
+```
+Saúde: 
+
+Uma clínica pode querer analisar a eficácia de um novo tratamento. Usando o DBT, eles podem combinar dados de pacientes, tratamentos e resultados.
+
+```sql
+SELECT 
+  p.patient_id
+  , t.treatment_type
+  , r.result
+FROM patients AS p
+JOIN treatments AS t ON p.patient_id = t.patient_id
+JOIN results AS r ON t.treatment_id = r.treatment_id;
+```
+
+## Comandos Básicos do DBT:
+```bash
+dbt run #Executa modelos SQL no seu banco de dados.
+```
+
+```bash    
+dbt test #Executa testes em seus modelos.
+```
+
+```bash    
+dbt docs generate #Gera documentação para seus modelos.
+```
+
+```bash
+dbt seed #Carrega dados brutos no seu banco de dados.
+```
+
+## Conclusão:
+
+O DBT é mais do que apenas uma ferramenta; é uma filosofia de trabalho com dados. Ele defende a ideia de que os dados devem ser transformados onde residem, usando SQL, e que os analistas devem ser capazes de testar, documentar e versionar suas transformações. Se você está no mundo da análise de dados, o DBT é uma ferramenta que você definitivamente deve considerar adicionar ao seu conjunto de habilidades.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

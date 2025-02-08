@@ -1,0 +1,94 @@
+---
+layout: post
+title:  "Combinando Tabelas em SQL"
+date:   2023-02-09 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_74cc7ec5ef6d456fad15ec98df780bca~mv2.jpg/v1/fill/w_2457,h_1640,al_c,q_90/710ee0_74cc7ec5ef6d456fad15ec98df780bca~mv2.webp"
+excerpt: "A Arte dos JOINs"
+---
+
+O SQL é uma linguagem poderosa, e uma de suas características mais valiosas é a capacidade de unir tabelas para obter informações complexas. A operação JOIN é o coração dessa capacidade. Vamos explorar o que são JOINs, por que são tão cruciais e como usá-los efetivamente.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_74cc7ec5ef6d456fad15ec98df780bca~mv2.jpg/v1/fill/w_2457,h_1640,al_c,q_90/710ee0_74cc7ec5ef6d456fad15ec98df780bca~mv2.webp" width="500" height="300">
+</p>
+
+## Por que JOINs são importantes?
+
+Imagine ter informações de clientes em uma tabela e seus pedidos em outra. Para entender o comportamento de compra de um cliente, você precisaria de dados de ambas as tabelas. Aqui é onde os JOINs entram em jogo, permitindo combinar essas tabelas de forma eficaz.
+
+### Tipos de JOINs e seus usos:
+
+1. INNER JOIN:
+
+Retorna linhas quando há uma correspondência em ambas as tabelas.
+
+```sql
+SELECT 
+  clientes.nome
+  , pedidos.produto
+FROM clientes
+INNER JOIN pedidos ON clientes.id = pedidos.id_cliente;
+```
+
+Uso típico: Quando você só quer resultados que têm correspondência em ambas as tabelas.
+
+2. LEFT JOIN (ou LEFT OUTER JOIN):
+
+Retorna todas as linhas da tabela à esquerda, e as correspondentes da direita. Se não houver correspondência, o resultado é `NULL` do lado direito.
+
+```sql
+SELECT 
+  alunos.nome
+  , notas.nota
+FROM alunos
+LEFT JOIN notas ON alunos.id = notas.id_aluno;
+```
+
+Uso típico: Quando você quer todos os registros de uma tabela (como todos os alunos) e qualquer correspondência da outra (como suas notas).
+
+3. RIGHT JOIN (ou RIGHT OUTER JOIN):
+
+O oposto do LEFT JOIN. Retorna todas as linhas da tabela à direita e as correspondentes da esquerda.
+
+```sql
+SELECT 
+  empregados.nome
+  , departamentos.nome
+FROM empregados
+RIGHT JOIN departamentos ON empregados.id_departamento = departamentos.id;
+```
+
+Uso típico: Menos comum que o LEFT JOIN, mas útil quando sua consulta está mais orientada aos dados da tabela à direita.
+
+4. FULL OUTER JOIN:
+
+Combina LEFT e RIGHT JOIN. Retorna linhas quando há uma correspondência em uma das tabelas.
+
+```sql
+SELECT 
+  clientes.nome
+  , pedidos.produto
+FROM clientes
+FULL OUTER JOIN pedidos ON clientes.id = pedidos.id_cliente;
+```
+
+Uso típico: Quando você quer todas as linhas de ambas as tabelas e quer ver onde há e onde não há correspondências.
+
+## Considerações de Performance:
+
+JOINs podem ser intensivos em termos de recursos. Para otimizar:
+
+Use índices nas colunas que você está juntando.
+    
+Limite os resultados usando cláusulas WHERE sempre que possível.
+    
+Evite JOINs desnecessários; pergunte-se se você realmente precisa de todas as tabelas que está juntando.
+
+## Conclusão:
+
+Os JOINs são uma ferramenta essencial no arsenal de qualquer pessoa que trabalhe com SQL. Eles permitem análises mais profundas e insights mais ricos ao combinar dados de várias tabelas. Como qualquer ferramenta poderosa, eles exigem prática para serem dominados, mas o investimento no aprendizado vale a pena pelo poder e flexibilidade que eles oferecem.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "SQL para Resolver Problemas do Dia a Dia"
+date:   2023-03-20 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_3b8fe7f2ba3c42aab47d316eb866977b~mv2.jpg/v1/fill/w_2916,h_1640,al_c,q_90/710ee0_3b8fe7f2ba3c42aab47d316eb866977b~mv2.webp"
+excerpt: " "
+---
+
+## Introdução
+
+O SQL (Structured Query Language) é uma linguagem de programação amplamente utilizada para gerenciar bancos de dados relacionais. No dia a dia, os desenvolvedores de banco de dados e analistas de dados podem encontrar várias situações em que ajustes específicos são necessários para garantir a qualidade e a consistência dos dados. Este artigo discute algumas dessas situações comuns e fornece exemplos de como ajustá-las usando o SQL.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_3b8fe7f2ba3c42aab47d316eb866977b~mv2.jpg/v1/fill/w_2916,h_1640,al_c,q_90/710ee0_3b8fe7f2ba3c42aab47d316eb866977b~mv2.webp" width="500" height="300">
+</p>
+
+1. Preencher campos com zeros à esquerda
+
+Um problema comum ocorre quando os números, como CNPJ, CPF ou códigos de produtos, são armazenados como texto e precisam ser preenchidos com zeros à esquerda para atingir um determinado comprimento. No SQL Server, você pode usar a função RIGHT em combinação com a função REPLICATE para resolver esse problema.
+
+Exemplo:
+
+```sql
+UPDATE sua_tabela 
+    SET cnpj =RIGHT(REPLICATE('0', 14) + cnpj, 14);
+```
+
+2. Remover espaços em branco indesejados
+
+Os espaços em branco indesejados no início ou no final das strings podem causar problemas de correspondência ou classificação. Para remover espaços em branco do início e do final das strings, use a função TRIM.
+
+Exemplo:
+
+```sql
+UPDATE sua_tabela 
+    SET nome =TRIM(nome);
+```
+
+3. Converter strings para maiúsculas ou minúsculas
+
+Às vezes, é necessário converter strings para maiúsculas ou minúsculas para garantir a consistência dos dados e facilitar a correspondência e a pesquisa. Use as funções UPPER e LOWER para converter strings para maiúsculas ou minúsculas, respectivamente.
+
+Exemplo:
+
+```sql
+UPDATE sua_tabela 
+    SET nome = UPPER(nome);
+```
+
+4. Dividir strings em várias colunas
+
+Em alguns casos, os dados são armazenados como strings concatenadas e é necessário dividi-los em várias colunas. Use a função SUBSTRING em combinação com funções como CHARINDEX ou PATINDEX para extrair partes de uma string.
+
+Exemplo:
+
+```sql
+UPDATE sua_tabela 
+    SET nome = SUBSTRING(nome_completo, 1, CHARINDEX(' ', nome_completo) -1),
+                sobrenome = SUBSTRING(nome_completo, CHARINDEX(' ', nome_completo) +1, LEN(nome_completo));
+```
+
+5. Substituir partes de uma string
+
+Se você precisa substituir partes de uma string, como corrigir erros de digitação ou atualizar informações desatualizadas, use a função REPLACE.
+
+Exemplo:
+
+```sql
+UPDATE sua_tabela 
+    SET endereco = REPLACE(endereco, 'R. ', 'Rua ');
+```
+
+## Conclusão
+
+O SQL oferece uma ampla variedade de funções e recursos para ajudar os desenvolvedores e analistas de dados a ajustar e limpar dados em bancos de dados relacionais. Dominar essas funções e técnicas pode melhorar a qualidade dos dados e facilitar a análise e a manutenção do banco de dados.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

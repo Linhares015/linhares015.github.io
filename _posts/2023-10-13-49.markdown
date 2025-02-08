@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "Introdução ao SQL"
+date:   2023-10-13 08:42:47 -0300
+categories: SQL
+thumbnail: "https://www.tshirtgeek.com.br/wp-content/uploads/2021/09/com037-scaled.jpg"
+excerpt: "O que é e por que é essencial em 2023?"
+---
+
+Ah, 2023! Um ano em que a tecnologia continua a avançar a passos largos, e o mundo dos dados se torna cada vez mais central em nossas vidas. Seja você um entusiasta da tecnologia, um profissional aspirante ou alguém simplesmente curioso sobre o que move o mundo digital, há uma linguagem que você absolutamente precisa conhecer: SQL.
+
+<p align="center">
+  <img src="https://www.tshirtgeek.com.br/wp-content/uploads/2021/09/com037-scaled.jpg" width="400" height="300">
+</p>
+
+# O que é SQL?
+
+SQL, ou Structured Query Language, é a linguagem de programação usada para gerenciar e consultar bancos de dados. Imagine um enorme armazém digital cheio de informações. Sem uma forma eficiente de acessar, modificar ou organizar essas informações, elas seriam praticamente inúteis. É aqui que o SQL entra em cena, atuando como o gerente desse armazém, garantindo que você possa encontrar exatamente o que procura em segundos.
+
+Agora, você pode pensar: "Ok, mas por que eu deveria me importar com uma linguagem de banco de dados?" Bem, pense nisso: 
+
+você já usou um aplicativo, fez uma compra online ou até mesmo pesquisou algo na internet? `Todas essas ações envolvem bancos de dados em algum nível, e é o SQL que torna tudo isso possível.`
+
+# Por que SQL é tão relevante em 2023?
+
+- O Mundo é Movido por Dados: Em 2023, vivemos em uma era de ouro dos dados. Quase todas as decisões empresariais, políticas e até mesmo pessoais são informadas por dados. E para acessar esses dados? Você adivinhou: SQL!
+
+- Demanda Profissional: Com o aumento da importância dos dados, a demanda por profissionais que saibam SQL está em alta. Seja em startups inovadoras ou em corporações estabelecidas, o conhecimento de SQL é frequentemente listado como uma habilidade essencial.
+
+- Versatilidade: SQL não é apenas para "geeks de dados". Profissionais de marketing, gerentes de projeto, e até mesmo designers estão encontrando valor em entender SQL. Por quê? Porque lhes dá autonomia para buscar suas próprias respostas sem depender de um intermediário.
+
+- Evolução Contínua: Mesmo sendo uma linguagem que existe há décadas, o SQL continua a evoluir e adaptar-se às necessidades modernas. Em 2023, temos variantes de SQL otimizadas para tudo, desde análise de big data até inteligência artificial.
+
+# Exemplo Prático: O Poder do SQL em Ação
+
+Vamos imaginar que você é um gerente de e-commerce querendo saber quais produtos foram os mais vendidos no último mês. Sem SQL, você teria que vasculhar planilhas intermináveis ou depender de alguém para obter essa informação. Com SQL? Basta uma simples consulta:
+
+```sql
+SELECT 
+    nome_produto
+    , SUM(quantidade_vendida) 
+FROM vendas 
+WHERE data_venda BETWEEN '2023-01-01' AND '2023-01-31' 
+GROUP BY nome_produto 
+ORDER BY SUM(quantidade_vendida) DESC 
+LIMIT 10;
+```
+
+E voilà! Em segundos, você tem uma lista dos 10 produtos mais vendidos.
+
+# Conclusão
+
+Se você ainda não está convencido do poder e relevância do SQL em 2023, desafio você a observar o mundo ao seu redor. Veja como os dados estão moldando tudo, desde a música que você ouve até as notícias que lê. E no coração de tudo isso? Está o SQL, a linguagem silenciosa, mas poderosa, que ajuda a dar sentido ao vasto oceano de dados em que navegamos todos os dias.
+
+Então, se você está procurando uma habilidade para aprender este ano, que pode abrir portas em quase qualquer indústria, dê uma chance ao SQL. Você não vai se arrepender!
+
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

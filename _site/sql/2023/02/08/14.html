@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Procedures SQL | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Procedures SQL" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/sql/2023/02/08/14.html" />
+  <meta property="og:url" content="http://localhost:4000/sql/2023/02/08/14.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Procedures SQL" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Procedures SQL</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-02-08T18:42:47-03:00" itemprop="datePublished">Feb 8, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="entendendo-e-criando-para-eficiência">Entendendo e Criando para Eficiência</h1>
+
+<p>A linguagem SQL é fundamental para interagir com bancos de dados. Uma das ferramentas mais poderosas que o SQL oferece são os procedimentos armazenados ou procedures. Vamos mergulhar no que são, como funcionam e como você pode criar os seus.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.jpg/v1/fill/w_1524,h_1016,al_c,q_90/710ee0_2aa5cb3a46d042899977bab47bacfc10~mv2.webp" width="500" height="300" />
+</p>
+
+<h2 id="o-que-são-procedimentos-armazenados-ou-procedures">O que são Procedimentos Armazenados ou procedures?</h2>
+
+<p>Procedimentos armazenados são blocos de código SQL que são salvos no banco de dados e podem ser reutilizados. Eles encapsulam uma sequência de operações em uma única entidade, que pode ser invocada como uma função.</p>
+
+<h2 id="benefícios-dos-procedimentos-armazenados">Benefícios dos Procedimentos Armazenados:</h2>
+
+<p>Reutilização de Código: Evita repetir o mesmo código SQL.</p>
+
+<p>Eficiência: Executam mais rapidamente do que múltiplas instruções SQL individuais.</p>
+
+<p>Segurança: Podem restringir o acesso direto às tabelas de dados, servindo como uma camada adicional de segurança.</p>
+
+<h2 id="como-funcionam">Como Funcionam?</h2>
+
+<p>Os procedimentos armazenados ou procedures são compilados e armazenados no banco de dados. Quando são chamados, o banco de dados apenas executa o plano de execução já compilado, em vez de recompilar o SQL, tornando a execução mais rápida.</p>
+
+<h2 id="criando-um-procedimento-armazenado">Criando um Procedimento Armazenado:</h2>
+
+<h4 id="aqui-está-um-exemplo-básico-de-como-criar-um-procedimento-armazenado">Aqui está um exemplo básico de como criar um procedimento armazenado:</h4>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">NomeDoProcedimento</span>
+<span class="k">AS</span>
+<span class="k">BEGIN</span> <span class="c1">-- Abre um bloco de código</span>
+    
+    <span class="c1">-- Seu código SQL aqui</span>
+    <span class="k">SELECT</span> 
+      <span class="o">*</span> 
+    <span class="k">FROM</span> <span class="n">NomeDaTabela</span><span class="p">;</span>
+
+<span class="k">END</span><span class="p">;</span> <span class="c1">-- Fecha o bloco de código</span>
+</code></pre></div></div>
+
+<h4 id="para-invocar-o-procedimento-armazenado">Para invocar o procedimento armazenado:</h4>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXEC</span> <span class="n">NomeDoProcedimento</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h4 id="parâmetros-em-procedimentos-armazenados">Parâmetros em Procedimentos Armazenados:</h4>
+
+<p>Você pode tornar seus procedimentos armazenados mais flexíveis usando parâmetros:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">NomeDoProcedimento</span> <span class="o">@</span><span class="n">NomeParametro</span> <span class="n">TipoDeDado</span>
+<span class="k">AS</span>
+<span class="k">BEGIN</span>
+    <span class="c1">-- Seu código SQL aqui</span>
+    <span class="k">SELECT</span> 
+      <span class="o">*</span> 
+    <span class="k">FROM</span> <span class="n">NomeDaTabela</span> 
+    <span class="k">WHERE</span> <span class="n">Coluna</span> <span class="o">=</span> <span class="o">@</span><span class="n">NomeParametro</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Para invocar o procedimento armazenado com um parâmetro:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXEC</span> <span class="n">NomeDoProcedimento</span> <span class="o">@</span><span class="n">NomeParametro</span> <span class="o">=</span> <span class="s1">'ValorDesejado'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="sempre-pense-em-otimizar-sua-procedure">Sempre pense em otimizar sua procedure</h2>
+
+<p>Otimizar procedimentos armazenados não é apenas uma questão de velocidade. Trata-se de escalabilidade. À medida que sua base de dados cresce, consultas não otimizadas podem se tornar o gargalo de sua aplicação.</p>
+
+<h2 id="técnicas-de-otimização">Técnicas de Otimização:</h2>
+
+<ol>
+  <li>Índices Apropriados</li>
+</ol>
+
+<p>Índices são como índices de livros para bancos de dados. Eles permitem que o sistema de banco de dados encontre dados sem ler toda a tabela.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">idx_nome_coluna</span> <span class="k">ON</span> <span class="n">nome_tabela</span><span class="p">(</span><span class="n">nome_coluna</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Subconsultas vs. Junções</li>
+</ol>
+
+<p>Junções são poderosas, mas podem ser caras em termos de desempenho. Subconsultas, em <code class="language-plaintext highlighter-rouge">certos cenários</code>, podem ser mais eficientes, mas tome cuidado nem sempre é o melhor caminho usar subconsultas.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">coluna1</span>
+  <span class="p">,</span> <span class="n">coluna2</span> 
+<span class="k">FROM</span> <span class="n">tabela1</span> 
+<span class="k">WHERE</span> <span class="n">coluna1</span> <span class="k">IN</span> <span class="p">(</span>
+                  <span class="k">SELECT</span> 
+                    <span class="n">coluna3</span> 
+                  <span class="k">FROM</span> <span class="n">tabela2</span> 
+                  <span class="k">WHERE</span> <span class="n">condicao</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Evite Cursores</li>
+</ol>
+
+<p>Cursores permitem a iteração através de um conjunto de resultados linha por linha. No entanto, eles são lentos e, muitas vezes, uma abordagem baseada em conjunto é mais eficiente.</p>
+
+<ol>
+  <li>Teste de Performance</li>
+</ol>
+
+<p>Antes de implementar qualquer otimização, saiba onde você está. Use ferramentas e comandos para analisar o desempenho de suas consultas.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">EXPLAIN</span> <span class="k">ANALYZE</span> <span class="k">SELECT</span> <span class="n">coluna1</span><span class="p">,</span> <span class="n">coluna2</span> <span class="k">FROM</span> <span class="n">tabela1</span> <span class="k">WHERE</span> <span class="n">coluna1</span> <span class="o">=</span><span class="s1">'valor'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Os procedimentos armazenados são ferramentas poderosas que oferecem eficiência, segurança e reutilização de código. Eles são essenciais para desenvolvedores e administradores de banco de dados que desejam otimizar suas operações e garantir que suas aplicações sejam escaláveis e eficientes. Ao dominar os procedimentos armazenados, você estará equipado com uma habilidade valiosa que pode transformar a maneira como você interage com bancos de dados.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/sql/2023/02/08/14.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

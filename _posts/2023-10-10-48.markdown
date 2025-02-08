@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Como Extrair Dados de PDFs para o Excel"
+date:   2023-10-10 08:42:47 -0300
+categories: Dados
+thumbnail: "https://img.youtube.com/vi/muNNOTHjQ70/0.jpg"
+excerpt: " "
+---
+
+# Técnicas Avançadas com Power Query
+
+O Excel, uma ferramenta essencial no mundo dos negócios e da análise de dados, oferece uma variedade de funcionalidades que vão além das simples fórmulas e tabelas. Uma dessas funcionalidades é o Power Query, uma ferramenta poderosa para tratamento e manipulação de dados. 
+
+No vídeo apresentado, aprendemos como extrair dados de um PDF e transformá-los em uma planilha do Excel usando o Power Query.
+
+Abaixo video mostrando tudo isso na prática:
+
+[![Como Extrair Dados de PDFs para o Excel](https://img.youtube.com/vi/muNNOTHjQ70/0.jpg)](https://youtu.be/muNNOTHjQ70)
+
+# Introdução:
+
+Muitos profissionais se deparam com a necessidade de extrair informações de PDFs para análises no Excel. Seja para conciliações financeiras, análise de dados ou outros propósitos, a capacidade de transformar um PDF em uma planilha do Excel pode ser extremamente útil.
+
+# Principais Pontos:
+
+- Origem do Dado: O vídeo começa com a apresentação de um PDF que contém um aviso de pagamento. O objetivo é transformar esse PDF em uma planilha do Excel.
+    
+- Uso do Power Query: O Power Query é apresentado como a ferramenta ideal para essa tarefa. Com ele, é possível extrair tabelas de um PDF e transformá-las em dados estruturados no Excel.
+    
+- Tratamento de Dados: O vídeo demonstra como manipular os dados extraídos, como remover colunas desnecessárias, promover cabeçalhos e alterar tipos de dados.
+    
+- Automatização do Processo: Uma das maiores vantagens do Power Query é a automatização. Uma vez definido o processo de extração e tratamento, ele pode ser aplicado a outros PDFs semelhantes, economizando tempo e esforço.
+
+# Conclusão:
+
+O Power Query é uma ferramenta indispensável para quem trabalha com grandes volumes de dados ou precisa extrair informações de documentos como PDFs. Com ele, é possível transformar um processo manual e demorado em algo rápido e automatizado, permitindo que os profissionais se concentrem em análises mais profundas e tomadas de decisão.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

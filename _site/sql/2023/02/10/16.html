@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inserir Dados no banco com a Função SQL INSERT | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Inserir Dados no banco com a Função SQL INSERT" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/sql/2023/02/10/16.html" />
+  <meta property="og:url" content="http://localhost:4000/sql/2023/02/10/16.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Inserir Dados no banco com a Função SQL INSERT" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Inserir Dados no banco com a Função SQL INSERT</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-02-10T18:42:47-03:00" itemprop="datePublished">Feb 10, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>O SQL, ou Structured Query Language, é a linguagem padrão utilizada para gerenciar bancos de dados relacionais.</p>
+
+<p>Se você está aprendendo a trabalhar com bancos de dados, é importante saber como inserir dados na base de dados usando a função SQL INSERT.</p>
+
+<p>A função <code class="language-plaintext highlighter-rouge">INSERT</code> é usada para inserir dados em uma tabela específica no banco de dados. É a forma mais simples e direta de adicionar dados a uma tabela. Neste artigo, vamos aprender como usar a função INSERT e ver alguns exemplos de como ela pode ser útil.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp" width="500" height="300" />
+</p>
+
+<h2 id="sintaxe-da-função-insert">Sintaxe da Função INSERT</h2>
+
+<p>A sintaxe básica da função INSERT é a seguinte:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">nome_da_tabela</span> <span class="p">(</span><span class="n">coluna1</span><span class="p">,</span> <span class="n">coluna2</span><span class="p">,</span> <span class="p">...)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="n">valor1</span><span class="p">,</span> <span class="n">valor2</span><span class="p">,</span> <span class="p">...);</span>
+</code></pre></div></div>
+
+<p>A palavra-chave <code class="language-plaintext highlighter-rouge">INSERT INTO</code> é seguida pelo nome da tabela na qual você deseja inserir dados. Em seguida, você especifica as colunas nas quais deseja inserir dados, entre parênteses. Finalmente, você usa a cláusula <code class="language-plaintext highlighter-rouge">VALUES</code> para especificar os valores que deseja inserir nas colunas.</p>
+
+<h2 id="exemplos-de-uso-da-função-insert">Exemplos de Uso da Função INSERT</h2>
+
+<p>Vamos dar uma olhada em alguns exemplos de como usar a função INSERT.</p>
+
+<h3 id="exemplo-1-inserindo-um-único-registro">Exemplo 1: Inserindo um único registro:</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">clientes</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">endereco</span><span class="p">,</span> <span class="n">cidade</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'João da Silva'</span><span class="p">,</span> <span class="s1">'Rua das Flores, 123'</span><span class="p">,</span> <span class="s1">'São Paulo'</span><span class="p">,</span> <span class="s1">'SP'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Neste exemplo, estamos inserindo um único registro na tabela de clientes, especificando valores para as colunas nome, endereço, cidade e estado.</p>
+
+<h3 id="exemplo-2-inserindo-múltiplos-registros">Exemplo 2: Inserindo múltiplos registros:</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">clientes</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">endereco</span><span class="p">,</span> <span class="n">cidade</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'Maria Oliveira'</span><span class="p">,</span> <span class="s1">'Rua das Rosas, 456'</span><span class="p">,</span> <span class="s1">'Rio de Janeiro'</span><span class="p">,</span> <span class="s1">'RJ'</span><span class="p">),</span>   <span class="p">(</span><span class="s1">'José Souza'</span><span class="p">,</span> <span class="s1">'Avenida dos Pássaros, 789'</span><span class="p">,</span> <span class="s1">'Belo Horizonte'</span><span class="p">,</span> <span class="s1">'MG'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Neste exemplo, estamos inserindo dois registros na tabela de clientes de uma só vez, especificando valores para as colunas nome, endereço, cidade e estado.</p>
+
+<h3 id="exemplo-3-inserindo-valores-em-uma-tabela-sem-colunas-especificadas">Exemplo 3: Inserindo valores em uma tabela sem colunas especificadas:</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">clientes</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'Carlos Rodrigues'</span><span class="p">,</span> <span class="s1">'Rua das Árvores, 159'</span><span class="p">,</span> <span class="s1">'Recife'</span><span class="p">,</span> <span class="s1">'PE'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Neste exemplo, estamos inserindo um registro na tabela de clientes sem especificar as colunas. Neste caso, é importante ter certeza de que os valores estão sendo inseridos nas colunas corretas, na ordem correta.</p>
+
+<h3 id="exemplo-4-inserindo-valores-de-uma-outra-tabela">Exemplo 4: Inserindo valores de uma outra tabela:</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">clientes</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">endereco</span><span class="p">,</span> <span class="n">cidade</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> 
+<span class="k">SELECT</span> 
+  <span class="n">nome</span>
+  <span class="p">,</span> <span class="n">endereco</span>
+  <span class="p">,</span> <span class="n">cidade</span>
+  <span class="p">,</span> <span class="n">estado</span> 
+<span class="k">FROM</span> <span class="n">clientes_antigos</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Neste exemplo, estamos inserindo valores de uma outra tabela, clientes_antigos, na tabela de clientes. Neste caso, é importante ter certeza de que as colunas das duas tabelas estão na mesma ordem.</p>
+
+<h3 id="exemplo-5-inserindo-valores-e-gerando-tabela-com-into">Exemplo 5: Inserindo valores e gerando tabela com INTO:</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span>
+  <span class="p">,</span> <span class="n">endereco</span>
+  <span class="p">,</span> <span class="n">cidade</span>
+  <span class="p">,</span> <span class="n">estado</span>
+<span class="k">INTO</span> <span class="n">clientes_novos</span>
+<span class="k">FROM</span> <span class="n">clientes_antigos</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Neste exemplo, estamos gerando e inserindo valores de uma outra tabela, clientes_antigos, na tabela de clientes_novos. Neste caso, a clausula INTO apenas funciona se a tabela de destino não existir. Se a tabela de destino já existir, você receberá um erro.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>A função SQL INSERT é uma ferramenta essencial para qualquer pessoa que trabalhe com bancos de dados. É a forma mais simples e direta de inserir dados em uma tabela, e com a prática, você poderá usá-la com facilidade em suas próprias aplicações. Esperamos que este artigo tenha ajudado a entender melhor como usar a função INSERT. Boa sorte em seus projetos de banco de dados!</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/sql/2023/02/10/16.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

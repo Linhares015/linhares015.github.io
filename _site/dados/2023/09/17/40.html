@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual Diário Git | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Manual Diário Git" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/dados/2023/09/17/40.html" />
+  <meta property="og:url" content="http://localhost:4000/dados/2023/09/17/40.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Manual Diário Git" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Manual Diário Git</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-09-17T00:42:47-03:00" itemprop="datePublished">Sep 17, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Git é uma ferramenta de controle de versão distribuída que permite rastrear mudanças em arquivos e coordenar o trabalho entre múltiplos colaboradores. Este manual fornece uma visão geral dos principais comandos e insights diários para auxiliar os usuários no dia a dia.
+Principais Comandos Git:</p>
+
+<p align="center">
+  <img src="https://www.ratamero.com/blog/assets/git-and-github-logos.png" width="600" height="300" />
+</p>
+
+<h2 id="configuração-inicial">Configuração Inicial:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Seu Nome"</span> <span class="c">#Define o nome do usuário.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.email <span class="s2">"seuemail@email.com"</span> <span class="c">#Define o email do usuário.</span>
+</code></pre></div></div>
+
+<h2 id="iniciar-um-repositório">Iniciar um Repositório:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init <span class="c">#Inicializa um novo repositório Git.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="o">[</span>URL] <span class="c">#Clona (ou baixa) um repositório existente.</span>
+</code></pre></div></div>
+
+<h2 id="trabalhando-com-arquivos">Trabalhando com Arquivos:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="o">[</span>arquivo] <span class="c">#Adiciona um arquivo ao índice.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"Mensagem do commit"</span> <span class="c">#Registra as mudanças feitas no repositório.</span>
+</code></pre></div></div>
+
+<h2 id="navegação-e-histórico">Navegação e Histórico:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status <span class="c">#Mostra o status dos arquivos no repositório.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="c">#Exibe o histórico de commits.</span>
+</code></pre></div></div>
+
+<h2 id="trabalhando-com-branches">Trabalhando com Branches:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="c">#Lista todas as branches.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="o">[</span>nome_da_branch] <span class="c">#Cria uma nova branch.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="o">[</span>nome_da_branch] <span class="c">#Muda para uma branch específica.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git merge <span class="o">[</span>nome_da_branch] <span class="c">#Mescla as mudanças de uma branch na branch atual.</span>
+</code></pre></div></div>
+
+<h2 id="sincronização">Sincronização:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull <span class="c">#Baixa as mudanças do repositório remoto e mescla com a branch local.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="c">#Envia as mudanças locais para o repositório remoto.</span>
+</code></pre></div></div>
+
+<h2 id="inspeção-e-comparação">Inspeção e Comparação:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git show <span class="c">#Mostra vários tipos de objetos.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff <span class="c">#Mostra as diferenças entre commits, commit e árvore de trabalho, etc.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git difftool <span class="c">#Mostra as diferenças usando ferramentas externas.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git shortlog <span class="c">#Resume o log de entrada.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git describe <span class="c">#Descreve um ref de commit usando o nome de tag mais recente.</span>
+</code></pre></div></div>
+
+<h2 id="patching">Patching:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git apply <span class="c">#Aplica uma série de patches de um arquivo de caixa de correio.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git cherry-pick <span class="c">#Aplica as mudanças de um commit existente.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rebase <span class="c">#Reaplica commits em cima de outro commit base.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git revert <span class="c">#Reverte algumas mudanças existentes.</span>
+</code></pre></div></div>
+
+<h2 id="debugging">Debugging:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git bisect <span class="c">#Usa a busca binária para encontrar o commit que introduziu um bug.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git blame <span class="c">#Mostra qual commit alterou cada linha de um arquivo.</span>
+</code></pre></div></div>
+
+<h2 id="administração">Administração:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clean <span class="c">#Remove arquivos não rastreados do diretório de trabalho.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git gc <span class="c">#Limpa repositório desnecessário.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reflog <span class="c">#Gerencia o log de referência.</span>
+</code></pre></div></div>
+
+<h2 id="comandos-avançados">Comandos Avançados:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash <span class="c">#Guarda e restaura mudanças temporárias.</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git worktree <span class="c">#Gerencia múltiplas árvores de trabalho.</span>
+</code></pre></div></div>
+
+<h2 id="insights">Insights:</h2>
+
+<ul>
+  <li>
+    <p>Sempre faça commits pequenos e frequentes. Isso torna mais fácil identificar e corrigir problemas.</p>
+  </li>
+  <li>
+    <p>Antes de fazer um push, sempre faça um pull para garantir que você tenha as últimas mudanças.</p>
+  </li>
+  <li>
+    <p>Use mensagens de commit claras e descritivas para ajudar outros colaboradores a entender suas mudanças.</p>
+  </li>
+</ul>
+
+<h2 id="problemas-comuns-e-soluções">Problemas Comuns e Soluções:</h2>
+
+<h3 id="conflitos-de-merge">Conflitos de Merge:</h3>
+
+<ul>
+  <li>
+    <p>Problema: Ao tentar mesclar branches, você pode encontrar conflitos.</p>
+  </li>
+  <li>
+    <p>Solução: Abra os arquivos com conflitos, resolva as discrepâncias e faça um novo commit.</p>
+  </li>
+</ul>
+
+<p>Um jeito de fazer isso é voltar a sua branch original atualizar ela com o <code class="language-plaintext highlighter-rouge">git pull</code> e depois ir a branch que estava desenvolvendo e digitar <code class="language-plaintext highlighter-rouge">git merge "branch origina"</code> assim as duas ficarão sem conflito.</p>
+
+<h3 id="commit-errado">Commit Errado:</h3>
+
+<ul>
+  <li>
+    <p>Problema: Você fez um commit com arquivos errados ou mensagem de commit incorreta.</p>
+  </li>
+  <li>
+    <p>Solução: Use git commit –amend para modificar o último commit ou git reset para desfazer commits.</p>
+  </li>
+</ul>
+
+<h3 id="arquivos-deletados-acidentalmente">Arquivos Deletados Acidentalmente:</h3>
+
+<ul>
+  <li>
+    <p>Problema: Você deletou acidentalmente um arquivo.</p>
+  </li>
+  <li>
+    <p>Solução: Use <code class="language-plaintext highlighter-rouge">git checkout -- [arquivo]</code> para restaurar um arquivo deletado.</p>
+  </li>
+</ul>
+
+<h2 id="bônus-recursos-adicionais">Bônus: Recursos Adicionais:</h2>
+
+<p><a href="https://ndpsoftware.com/git-cheatsheet.html">Visual Git Cheat Sheet:</a> Um guia visual para os comandos Git.</p>
+
+<p><a href="https://git-scm.com/book">Pro Git Book:</a> O livro Pro Git escrito por Scott Chacon e Ben Straub está disponível para leitura online gratuitamente.</p>
+
+<p>Este manual serve como um guia de consulta rápida para os principais comandos e práticas recomendadas do Git. Recomenda-se também consultar a <a href="https://git-scm.com/doc">documentação oficial do Git</a> para obter informações mais detalhadas e atualizadas.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/dados/2023/09/17/40.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

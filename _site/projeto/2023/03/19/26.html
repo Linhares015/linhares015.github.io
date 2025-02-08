@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌟 Projeto Adventure | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="🌟 Projeto Adventure" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/projeto/2023/03/19/26.html" />
+  <meta property="og:url" content="http://localhost:4000/projeto/2023/03/19/26.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="🌟 Projeto Adventure" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">🌟 Projeto Adventure</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-03-19T18:42:47-03:00" itemprop="datePublished">Mar 19, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="do-zero-ao-dashboard-como-que-há-de-mais-moderno-no-mercado-de-bi">Do zero ao DashBoard como que há de mais moderno no mercado de BI</h2>
+
+<p>O Adventure Project é um projeto de Business Intelligence (BI) que demonstra como criar um projeto de BI do zero utilizando o banco de dados de teste da Microsoft .</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e2f126204a1441d0b293c1a9b0890686~mv2.png" width="700" height="300" />
+</p>
+
+<p>Este artigo apresenta as etapas do projeto em detalhes, destacando as decisões tomadas em cada fase e as ferramentas utilizadas.</p>
+
+<p>💼 Ferramentas de ponta que você vai amar:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PostgreSQL - Sua base sólida para o banco transacional.
+
+BigQuery - O Data Warehouse perfeito para suas necessidades.
+
+GitHub - Controle de versão e colaboração simplificada.
+
+DBT (Data Build Tool) - Revolucione o processamento e transformação de dados.
+
+VSCode - A mais eficiente e amigável IDE de codificação.
+</code></pre></div></div>
+
+<p>🎯 Objetivo do Projeto:</p>
+
+<p>Criamos uma plataforma de dados para potencializar relatórios e dashboards, auxiliando empresas de varejo a compreender profundamente seus dados de vendas e tomar decisões informadas.</p>
+
+<p>O Adventure Project é baseado no banco de dados AdventureWorks, que oferece uma rica variedade de informações, incluindo vendas, estoque, clientes e muito mais.</p>
+
+<p>📝 Etapas do Projeto:</p>
+
+<ol>
+  <li>Carga do banco transacional para o raw:</li>
+</ol>
+
+<p>Nesta etapa, estudamos o diagrama do banco de dados e selecionamos as tabelas necessárias para o projeto. Optamos por carregar os dados via CSV no BigQuery, uma vez que não valeria a pena construir um job de carga automático para este exemplo. Em um cenário real, sugerimos o uso de ferramentas como Spark ou Pentaho para realizar cargas diferenciais e incrementais.</p>
+
+<ol>
+  <li>Etapa staging:</li>
+</ol>
+
+<p>Utilizamos o DBT (Data Build Tool) para realizar o trabalho de preparação dos dados, selecionando colunas necessárias, renomeando colunas e alterando tipos de dados quando necessário. O DBT gera as tabelas após a conclusão do código, utilizando o comando DBT run.</p>
+
+<ol>
+  <li>Etapa intermediate:</li>
+</ol>
+
+<p>Esta é a fase mais complexa e trabalhosa, pois é onde transformamos as tabelas, realizando joins, tratando e limpando os dados, deixando-os prontos para a próxima etapa. Utilizamos o modelo CTE do SQL e algumas funções do próprio DBT para realizar essas transformações.</p>
+
+<ol>
+  <li>Etapa dos Marts:</li>
+</ol>
+
+<p>Nesta etapa, pegamos as tabelas do intermediate e montamos as dimensões e fatos para o modelo final, seguindo o modelo dimensional.</p>
+
+<ol>
+  <li>Etapa de verificação de código:</li>
+</ol>
+
+<p>Utilizamos o SQLFluff para padronizar e verificar o código SQL, removendo espaços em branco, ajustando o estilo de código e identificando possíveis erros.</p>
+
+<ol>
+  <li>Etapa de visualização:</li>
+</ol>
+
+<p>Com os dados preparados, conectamos ao Power BI e começamos a desenvolver as medidas e interligar as tabelas de dimensões e fatos. Às vezes, nesta etapa, precisamos retornar ao DBT para ajustar detalhes que só são percebidos durante a visualização.</p>
+
+<p>Ao seguir essas etapas cuidadosamente, o Adventure Project demonstra como construir um projeto de Business Intelligence completo e robusto, indo além da simples visualização dos dados no Power BI. Utilizando ferramentas de ponta e boas práticas, conseguimos criar um projeto eficiente e escalável que pode ser aplicado em diferentes contextos e setores.</p>
+
+<p>Ao longo do Adventure Project, foram implementadas várias estratégias e técnicas para garantir a qualidade e a eficácia do projeto de BI. Abaixo, destacamos algumas dicas e melhores práticas que podem ser úteis para outros projetos de BI.</p>
+
+<h2 id="-dicas-e-melhores-práticas">🔑 Dicas e melhores práticas:</h2>
+
+<ol>
+  <li>Planejamento e comunicação:</li>
+</ol>
+
+<p>Antes de iniciar o projeto, certifique-se de ter um entendimento claro dos objetivos e requisitos. Mantenha uma comunicação aberta e contínua com as partes interessadas para garantir que suas expectativas sejam atendidas.</p>
+
+<ol>
+  <li>Documentação:</li>
+</ol>
+
+<p>Documentar todas as etapas do projeto, incluindo decisões de design, diagramas de banco de dados e código, é crucial para garantir a manutenção e a escalabilidade do projeto no futuro.</p>
+
+<ol>
+  <li>Testes e validação:</li>
+</ol>
+
+<p>Realizar testes em todas as etapas do projeto é essencial para garantir a qualidade dos dados e a integridade do sistema. Utilize ferramentas de teste e validação para identificar e corrigir problemas antes que eles afetem a funcionalidade do projeto.</p>
+
+<ol>
+  <li>Monitoramento e otimização:</li>
+</ol>
+
+<p>Acompanhe o desempenho do projeto ao longo do tempo e identifique áreas que podem ser otimizadas. Isso pode incluir ajustes no código, na infraestrutura ou na forma como os dados são processados.</p>
+
+<ol>
+  <li>Flexibilidade e adaptabilidade:</li>
+</ol>
+
+<p>Em projetos de BI, é comum que requisitos mudem ou novos desafios surjam. Esteja preparado para adaptar seu projeto e encontrar soluções criativas para atender às necessidades em constante evolução.</p>
+
+<ol>
+  <li>Treinamento e suporte:</li>
+</ol>
+
+<p>Para garantir o sucesso do projeto, é importante que os usuários finais compreendam e saibam utilizar as ferramentas e os relatórios disponíveis. Ofereça treinamento e suporte contínuo para ajudá-los a tomar decisões informadas com base nos dados.</p>
+
+<p>Ao aplicar essas dicas e melhores práticas, você estará no caminho certo para desenvolver projetos de Business Intelligence eficientes, robustos e escaláveis que geram valor real para sua organização.</p>
+
+<p>O Adventure Project serve como um exemplo de como um projeto de BI bem planejado e executado pode fornecer informações valiosas e impulsionar a tomada de decisões informadas. Utilizando as etapas, ferramentas e melhores práticas descritas neste artigo, você pode criar um projeto de BI completo e robusto que atenda às necessidades de sua organização e impulsione o sucesso nos negócios.</p>
+
+<p><a href="https://github.com/Linhares015/adventure-project">Repositório GIT</a></p>
+
+<p><a href="https://mega.nz/file/cAUFUTQb#of0gefZ-cxLfCq1uWt3OElKNk8gl6XsNNexOiwMpYMc">Todos os Arquivos</a></p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/projeto/2023/03/19/26.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

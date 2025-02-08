@@ -1,0 +1,106 @@
+---
+layout: post
+title:  "Docker e Portainer em Linux"
+date:   2023-09-08 18:42:47 -0300
+categories: Linux
+thumbnail: "https://static.wixstatic.com/media/710ee0_4e98f65687114df582a62e702ad246b6~mv2.png"
+excerpt: " "
+---
+
+# Uma Combinação Poderosa para Gerenciamento de Contêineres
+
+O Docker transformou o mundo do desenvolvimento e da implantação de software, permitindo que os desenvolvedores encapsulem suas aplicações em contêineres, garantindo consistência em todos os ambientes. No entanto, enquanto o Docker CLI é uma ferramenta poderosa, nem todos preferem a linha de comando. Muitos desejam uma interface gráfica que facilite o gerenciamento de contêineres. É aqui que entra o Docker Desktop para usuários de Windows e macOS. Mas e os usuários de Linux? Felizmente, temos o Portainer.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_4e98f65687114df582a62e702ad246b6~mv2.png" width="600" height="300">
+</p>
+
+## Docker Desktop: Uma Visão Geral
+
+O Docker Desktop é uma solução completa que permite aos desenvolvedores configurar, iniciar e gerenciar contêineres Docker através de uma interface gráfica amigável. Ele integra-se perfeitamente aos sistemas operacionais Windows e macOS, proporcionando uma experiência de usuário suave. No entanto, o Docker Desktop não está disponível para Linux. Isso pode parecer estranho, dado que o Docker foi originalmente construído para Linux!
+
+## A Solução para Usuários de Linux: Docker CLI e Portainer
+
+Embora o Docker Desktop não esteja disponível para Linux, os usuários de Fedora, Ubuntu e outras distribuições não estão sem opções. O Docker CLI, embora não seja uma interface gráfica, é uma ferramenta extremamente poderosa que permite aos usuários fazer tudo o que o Docker Desktop faz e até mais. Mas, para aqueles que ainda desejam uma interface gráfica, o Portainer é a solução.
+
+## Configurando o Docker
+
+### No Fedora:
+
+1. Instalação:
+
+```bash
+sudo dnf install docker-ce
+```
+
+2. Iniciar e Habilitar o Docker:
+
+```bash
+sudo systemctl start docker
+```
+
+```bash
+sudo systemctl enable docker
+```
+
+3. Verificar a Instalação:
+
+```bash
+docker --version
+```
+
+### No Ubuntu:
+
+1. Instalação:
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt install docker.io
+```
+
+2. Iniciar e Habilitar o Docker:
+
+```bash
+sudo systemctl start docker
+```
+
+```bash
+sudo systemctl enable docker
+```
+
+3. Verificar a Instalação:
+
+```bash
+docker --version
+```
+
+## Introdução ao Portainer
+
+O Portainer é uma solução de gerenciamento para Docker com uma interface de usuário baseada na web. Ele permite que você gerencie seus contêineres, imagens, redes e volumes do Docker. Além disso, é de código aberto e extremamente leve.
+
+## Instalando e Configurando o Portainer
+
+1. Puxe a Imagem do Portainer:
+
+```bash
+docker pull portainer/portainer-ce
+```
+
+2. Execute o Portainer:
+
+```bash
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce
+```
+
+3. Acesse o Portainer: Abra um navegador e vá para `http://localhost:9000` Você será saudado pela interface do Portainer, onde pode configurar o usuário administrador e começar a gerenciar seus contêineres.
+
+## Conclusão
+
+Para os usuários de Fedora, Ubuntu e outras distribuições Linux, a combinação de Docker CLI e Portainer oferece uma solução robusta e flexível para gerenciamento de contêineres. Embora o Docker Desktop não esteja disponível para Linux, com as ferramentas certas, os usuários de Linux podem desfrutar de uma experiência igualmente rica, se não mais poderosa, ao trabalhar com contêineres. Seja você um entusiasta do Docker ou um profissional experiente, o Linux, juntamente com o Portainer, certamente atenderá às suas necessidades de contêinerização.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

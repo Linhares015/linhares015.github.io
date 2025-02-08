@@ -1,0 +1,76 @@
+---
+layout: post
+title:  "Funções do DBT Cloud no DBT core"
+date:   2023-08-17 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_7f89e297de0a48e68d970df31d86e109~mv2.jpg"
+excerpt: " "
+---
+
+O `dbt (data build tool)` é reconhecido no cenário de engenharia de dados como uma das ferramentas de modelagem de dados mais sofisticadas e eficientes disponíveis no mercado. Assim como muitas soluções tecnológicas modernas, o dbt oferece duas variantes distintas: a versão `Cloud`, hospedada em um ambiente de nuvem, e a versão `Core`, que é uma aplicação local instalada diretamente no sistema operacional do usuário.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_7f89e297de0a48e68d970df31d86e109~mv2.jpg" width="500" height="300">
+</p>
+
+A versão Cloud do dbt apresenta uma série de características avançadas e funcionalidades adicionais em comparação com a versão Core. Estas funcionalidades otimizam a experiência do usuário, tornando certas operações mais intuitivas e menos `verbosas`. No entanto, é importante destacar que existem métodos para integrar algumas dessas funcionalidades exclusivas da versão Cloud na versão Core. 
+
+Neste artigo, nosso objetivo é orientar você através desse processo.
+
+O primeiro passo fundamental é garantir que você tenha o `Visual Studio Code (VSCode)` instalado em sua máquina, uma vez que será nossa interface principal de desenvolvimento. Após a instalação do VSCode, é essencial que o `dbt Core` esteja devidamente configurado em seu sistema. Este processo envolve a criação de um ambiente virtual `Python (venv)` e a instalação de dependências específicas. Se você ainda não configurou o dbt Core, pode seguir as instruções detalhadas disponíveis na [documentação oficial](https://docs.getdbt.com/docs/core/installation)
+
+## Iniciando as configurações
+
+Com o ambiente preparado, o próximo passo é a instalação da extensão `Dbt Power User` no VSCode. Para isso, acesse a seção de extensões do VSCode e insira `Dbt Power User` no campo de pesquisa:
+
+![image](https://static.wixstatic.com/media/710ee0_d44d8a2890c0436a8a8e61019a0bdcb2~mv2.png)
+
+Agora vamos as configurações para que a extensão funcione, primeiro abra suas `configurações do VSCode`:
+
+![image](https://static.wixstatic.com/media/710ee0_e0c148fcf8924e268ed24bfa7804b9c2~mv2.png)
+
+Agora você vai em `Editor de texto > Arquivos`:
+
+![image](https://static.wixstatic.com/media/710ee0_d8fbac57c09b42de82267041593e61f9~mv2.png)
+
+Em arquivos vc vai adicionar um item onde Item deve ser: `*.sql` e Valor vai ser: `jinja-sql`
+
+![image](https://static.wixstatic.com/media/710ee0_968444276de643f3a2c6ba80f0fae9ac~mv2.png)
+
+Depois disso você ira pesquisar `python` nas `configurações de Pesquisa`:
+
+![image](https://static.wixstatic.com/media/710ee0_970ddf664eaf4f8d873d7b88163ec0e2~mv2.png)
+
+Vai em `Extensões` e depois em `Python › Interpreter: Info Visibility (Não sincronizado)` e vai por a opção de `always`:
+
+![image](https://static.wixstatic.com/media/710ee0_288e78ae14e743fda7f15d0f54c0ab46~mv2.png)
+
+Agora você vai clicar no canto `inferior direito` onde aparece seu `interpretador python`:
+
+![image](https://static.wixstatic.com/media/710ee0_4af92524e8c0444e9ccca4b0a01f9b45~mv2.png)
+
+Aqui vem a jogada, você precisa por um novo interpretador e nele por o caminho da `venv` onde o `python3` está instalado:
+
+![image](https://static.wixstatic.com/media/710ee0_f5429c4f372c4cc28d96975b18fe01b6~mv2.png)
+
+Dessa forma agora a extensão vai conseguir identificar o `dbt` e no canto esquerdo vai paracer o nome dbt e um `certinho`, isso quer dizer que funcionou, agora temos mais uma configuração, você irá precisar `acessar a extensão` na aba de extensões do VSCODE e assim clicar na `engrenagem e ir em Extension Settings`, nessa você vai ir na configuração Dbt: `Profiles Dir Override` e então nele adicionar o caminho onde fica salvo seu `profiles.yml`:
+
+![image](https://static.wixstatic.com/media/710ee0_f8b801eac15844eb82f95d663c20ed9d~mv2.png)
+
+E tudo certo, você vai ver as funções da extensão em ação vou mostrar algumas delas mas exitem muito mais, aqui os botões de ação direto no arquivo:
+
+![image](https://static.wixstatic.com/media/710ee0_44653cf6688145cd85f1f7faa692ce6c~mv2.png)
+
+## Linhagem das tabelas:
+
+![image](https://static.wixstatic.com/media/710ee0_ac5f81411dfb4b0db11e010eaccb3d1a~mv2.png)
+
+e muito mais, adicione no seu VSCODE e seja feliz!
+
+## Conclusão
+
+A versão Cloud do dbt oferece uma série de funcionalidades avançadas que podem melhorar significativamente a experiência do usuário. No entanto, é importante destacar que algumas dessas funcionalidades podem ser integradas à versão Core, permitindo que você aproveite o melhor dos dois mundos.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

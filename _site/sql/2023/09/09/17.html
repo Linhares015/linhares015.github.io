@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Combinando Resultados com SQL com UNION | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Combinando Resultados com SQL com UNION" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/sql/2023/09/09/17.html" />
+  <meta property="og:url" content="http://localhost:4000/sql/2023/09/09/17.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Combinando Resultados com SQL com UNION" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Combinando Resultados com SQL com UNION</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-09-09T18:42:47-03:00" itemprop="datePublished">Sep 9, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="a-magia-da-cláusula-union">A Magia da Cláusula UNION</h1>
+
+<p>O SQL é repleto de ferramentas poderosas para manipular e consultar dados. Uma dessas ferramentas é a cláusula UNION, que permite combinar os resultados de duas ou mais consultas em um único conjunto de resultados. Vamos mergulhar no mundo do UNION e suas variantes para entender como elas podem ser usadas efetivamente.</p>
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp" width="500" height="300" />
+</p>
+
+<h2 id="por-que-a-cláusula-union-é-importante">Por que a cláusula UNION é importante?</h2>
+
+<p>Imagine que você tenha dois conjuntos de dados distintos em tabelas diferentes, mas deseja combiná-los para uma análise unificada. A cláusula UNION permite fazer exatamente isso, combinando resultados de múltiplas consultas.</p>
+
+<h2 id="entendendo-union-e-suas-variantes">Entendendo UNION e suas variantes:</h2>
+
+<ol>
+  <li>UNION:</li>
+</ol>
+
+<p>Combina os resultados de duas ou mais consultas removendo duplicatas.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">estudantes_2019</span>
+
+<span class="k">UNION</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">estudantes_2020</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Uso típico: Quando você deseja combinar listas, mas garantir que cada item apareça apenas uma vez.</p>
+
+<ol>
+  <li>UNION ALL:</li>
+</ol>
+
+<p>Semelhante ao UNION, mas inclui duplicatas.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">vendedores_regiao_norte</span>
+
+<span class="k">UNION</span> <span class="k">ALL</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">vendedores_regiao_sul</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Uso típico: Quando você deseja combinar listas e manter todas as entradas, incluindo duplicatas.</p>
+
+<ol>
+  <li>INTERSECT:</li>
+</ol>
+
+<p>Retorna apenas as linhas que aparecem em ambos os conjuntos de resultados.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">alunos_matriculados</span>
+
+<span class="k">INTERSECT</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">alunos_presentes_hoje</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Uso típico: Quando você deseja encontrar itens comuns entre dois conjuntos de dados.</p>
+
+<ol>
+  <li>EXCEPT (ou MINUS em alguns sistemas):</li>
+</ol>
+
+<p>Retorna linhas do primeiro conjunto de resultados que não aparecem no segundo.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">todos_os_funcionarios</span>
+
+<span class="k">EXCEPT</span>
+
+<span class="k">SELECT</span> 
+  <span class="n">nome</span> 
+<span class="k">FROM</span> <span class="n">funcionarios_de_ferias</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Uso típico: Quando você deseja encontrar itens em um conjunto de dados que não estão em outro.</p>
+
+<h2 id="considerações-de-performance">Considerações de Performance:</h2>
+
+<p>Assim como com os JOINs, as operações de conjunto podem ser intensivas em termos de recursos. Algumas dicas para otimizar:</p>
+
+<p>Certifique-se de que as colunas que você está combinando tenham tipos de dados compatíveis.</p>
+
+<p>Use cláusulas WHERE para limitar os resultados antes de combiná-los.</p>
+
+<p>Pense na ordem das operações; às vezes, reordenar as consultas pode melhorar a performance.</p>
+
+<h2 id="conclusão">Conclusão:</h2>
+
+<p>A cláusula UNION e suas variantes são ferramentas essenciais para quem trabalha com SQL. Elas oferecem uma maneira flexível de combinar e contrastar conjuntos de dados, permitindo análises mais ricas e insights mais profundos. Como todas as ferramentas poderosas, elas exigem prática e entendimento para serem usadas efetivamente. Mas, com o tempo e a experiência, elas se tornarão uma parte valiosa de sua caixa de ferramentas SQL.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/sql/2023/09/09/17.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

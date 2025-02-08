@@ -1,0 +1,92 @@
+---
+layout: post
+title:  "Inserir Dados no banco com a Função SQL INSERT"
+date:   2023-02-10 18:42:47 -0300
+categories: SQL
+thumbnail: "https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp"
+excerpt: " "
+---
+
+O SQL, ou Structured Query Language, é a linguagem padrão utilizada para gerenciar bancos de dados relacionais. 
+
+Se você está aprendendo a trabalhar com bancos de dados, é importante saber como inserir dados na base de dados usando a função SQL INSERT.
+
+A função `INSERT` é usada para inserir dados em uma tabela específica no banco de dados. É a forma mais simples e direta de adicionar dados a uma tabela. Neste artigo, vamos aprender como usar a função INSERT e ver alguns exemplos de como ela pode ser útil.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.jpg/v1/fill/w_1640,h_1640,al_c,q_90/710ee0_e06ada4c74e54048a6f0d22835e212ba~mv2.webp" width="500" height="300">
+</p>
+
+## Sintaxe da Função INSERT
+
+A sintaxe básica da função INSERT é a seguinte:
+
+```sql
+INSERT INTO nome_da_tabela (coluna1, coluna2, ...) VALUES (valor1, valor2, ...);
+```
+
+A palavra-chave `INSERT INTO` é seguida pelo nome da tabela na qual você deseja inserir dados. Em seguida, você especifica as colunas nas quais deseja inserir dados, entre parênteses. Finalmente, você usa a cláusula `VALUES` para especificar os valores que deseja inserir nas colunas.
+
+## Exemplos de Uso da Função INSERT
+
+Vamos dar uma olhada em alguns exemplos de como usar a função INSERT.
+
+### Exemplo 1: Inserindo um único registro:
+
+```sql
+INSERT INTO clientes (nome, endereco, cidade, estado) VALUES ('João da Silva', 'Rua das Flores, 123', 'São Paulo', 'SP');
+```
+
+Neste exemplo, estamos inserindo um único registro na tabela de clientes, especificando valores para as colunas nome, endereço, cidade e estado.
+
+### Exemplo 2: Inserindo múltiplos registros:
+
+```sql
+INSERT INTO clientes (nome, endereco, cidade, estado) VALUES ('Maria Oliveira', 'Rua das Rosas, 456', 'Rio de Janeiro', 'RJ'),   ('José Souza', 'Avenida dos Pássaros, 789', 'Belo Horizonte', 'MG');
+```
+
+Neste exemplo, estamos inserindo dois registros na tabela de clientes de uma só vez, especificando valores para as colunas nome, endereço, cidade e estado.
+
+### Exemplo 3: Inserindo valores em uma tabela sem colunas especificadas:
+  
+```sql
+INSERT INTO clientes VALUES ('Carlos Rodrigues', 'Rua das Árvores, 159', 'Recife', 'PE');
+```
+
+Neste exemplo, estamos inserindo um registro na tabela de clientes sem especificar as colunas. Neste caso, é importante ter certeza de que os valores estão sendo inseridos nas colunas corretas, na ordem correta.  
+
+### Exemplo 4: Inserindo valores de uma outra tabela:
+
+```sql
+INSERT INTO clientes (nome, endereco, cidade, estado) 
+SELECT 
+  nome
+  , endereco
+  , cidade
+  , estado 
+FROM clientes_antigos;
+```
+
+Neste exemplo, estamos inserindo valores de uma outra tabela, clientes_antigos, na tabela de clientes. Neste caso, é importante ter certeza de que as colunas das duas tabelas estão na mesma ordem.
+
+### Exemplo 5: Inserindo valores e gerando tabela com INTO:
+
+```sql
+SELECT 
+  nome
+  , endereco
+  , cidade
+  , estado
+INTO clientes_novos
+FROM clientes_antigos;
+```
+
+Neste exemplo, estamos gerando e inserindo valores de uma outra tabela, clientes_antigos, na tabela de clientes_novos. Neste caso, a clausula INTO apenas funciona se a tabela de destino não existir. Se a tabela de destino já existir, você receberá um erro.
+
+## Conclusão  
+
+A função SQL INSERT é uma ferramenta essencial para qualquer pessoa que trabalhe com bancos de dados. É a forma mais simples e direta de inserir dados em uma tabela, e com a prática, você poderá usá-la com facilidade em suas próprias aplicações. Esperamos que este artigo tenha ajudado a entender melhor como usar a função INSERT. Boa sorte em seus projetos de banco de dados! 
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

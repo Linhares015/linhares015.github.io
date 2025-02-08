@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "Melhores práticas para modelagem de dados"
+date:   2023-03-07 18:42:47 -0300
+categories: Dados
+thumbnail: "https://static.wixstatic.com/media/710ee0_c2b50567b872435eac5c185f9386b0c7~mv2.jpg/v1/fill/w_3176,h_1640,al_c,q_90/710ee0_c2b50567b872435eac5c185f9386b0c7~mv2.webp"
+excerpt: " "
+---
+
+## Conceitos Básicos e Organização de Dados
+
+Data Warehousing é uma técnica que permite armazenar e organizar dados para facilitar a análise e o acesso a informações importantes para a tomada de decisões em negócios. 
+
+Basicamente, um data warehouse é um banco de dados especialmente projetado para armazenar dados históricos e atualizados de diversas fontes em um único local, permitindo que os usuários possam acessá-los de maneira fácil e integrada.
+
+<p align="center">
+  <img src="https://static.wixstatic.com/media/710ee0_c2b50567b872435eac5c185f9386b0c7~mv2.jpg/v1/fill/w_3176,h_1640,al_c,q_90/710ee0_c2b50567b872435eac5c185f9386b0c7~mv2.webp" width="500" height="300">
+</p>
+
+O objetivo de um data warehouse é fornecer informações úteis para os usuários finais, como executivos e gerentes, para que possam tomar decisões mais informadas e eficazes. Isso pode incluir informações sobre vendas, finanças, marketing, operações, recursos humanos e muito mais.
+
+## Os conceitos básicos de um Data Warehouse
+
+Para entender como funciona um data warehouse, é importante conhecer seus componentes básicos:
+
+1. Fontes de dados: 
+
+As fontes de dados são sistemas e bancos de dados que fornecem dados para o data warehouse. Esses dados podem ser extraídos de várias fontes, como sistemas operacionais, sistemas de gerenciamento de banco de dados (DBMS) e outras fontes de dados externas.
+
+2. ETL (Extração, Transformação e Carga): 
+
+O processo ETL é usado para coletar, transformar e carregar dados de várias fontes de dados para o data warehouse. O ETL também pode ser usado para limpar os dados, remover dados duplicados ou corrompidos e preparar os dados para análise.
+
+3. Data Warehouse: 
+
+O data warehouse é o repositório central onde todos os dados são armazenados. O data warehouse é projetado para armazenar dados históricos e atualizados em um formato fácil de acessar e analisar.
+
+4. Ferramentas de análise: 
+
+As ferramentas de análise são usadas para acessar e analisar os dados armazenados no data warehouse. Essas ferramentas podem incluir consultas SQL, relatórios, dashboards e outras ferramentas de visualização de dados.
+
+## Organização de Dados em um Data Warehouse
+
+Os dados em um data warehouse são organizados em torno de um modelo dimensional. O modelo dimensional é um design de banco de dados que permite que os usuários finais possam acessar e analisar dados de maneira eficaz. 
+
+O modelo dimensional é baseado em dois tipos principais de tabelas: tabelas de fatos e tabelas de dimensões.
+
+1. Tabelas de fatos: 
+
+As tabelas de fatos são tabelas que contêm dados numéricos que representam eventos de negócios, como vendas, receita, despesas ou outras medidas importantes. As tabelas de fatos são normalmente grandes e possuem muitas linhas.
+
+2. Tabelas de dimensões: 
+
+As tabelas de dimensões são tabelas que contêm informações sobre os objetos de negócios que são medidos nas tabelas de fatos. Essas informações podem incluir dados demográficos do cliente, datas, produtos e outras informações importantes para o negócio. As tabelas de dimensões são normalmente menores e possuem menos linhas do que as tabelas de fatos.
+
+## Conclusão
+
+Data warehousing é uma técnica importante para armazenar e organizar dados de várias fontes para análise e tomada de decisões de negócios. Um data warehouse é projetado para armazenar.
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

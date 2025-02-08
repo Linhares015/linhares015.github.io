@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "PROCV vs. PROCX no Excel"
+date:   2023-09-21 08:42:47 -0300
+categories: Dados
+thumbnail: "https://img.youtube.com/vi/tMdf14016bc/0.jpg"
+excerpt: " "
+---
+
+# Introdução:
+
+No mundo das planilhas, o Excel reina supremo. E dentro do Excel, as funções PROCV e PROCX são duas das mais poderosas ferramentas à disposição dos usuários. Mas qual delas é a melhor? Em um vídeo informativo recente, mergulhamos nas profundezas dessas duas funções para descobrir suas vantagens, limitações e melhores usos.
+
+Abaixo video mostrando tudo isso na prática:
+
+[![PROCV vs PROCX](https://img.youtube.com/vi/tMdf14016bc/0.jpg)](https://youtu.be/tMdf14016bc)
+
+# O que é PROCV?
+
+O PROCV é uma das funções mais antigas e amplamente utilizadas no Excel. Ela permite aos usuários pesquisar um valor em uma coluna e retornar um resultado correspondente de outra coluna. No entanto, apesar de sua utilidade, ela vem com suas limitações:
+
+- A função procura valores de cima para baixo e sempre na primeira coluna da esquerda.
+    
+- Não pode regredir, ou seja, a coluna de pesquisa deve sempre estar à esquerda da coluna de retorno.
+    
+- Pode haver problemas ao lidar com valores duplicados.
+
+# A Evolução: PROCX
+
+O PROCX é uma resposta da Microsoft às limitações do PROCV. É uma função mais recente que oferece maior flexibilidade e eficiência:
+
+- Permite selecionar apenas a coluna de pesquisa e a coluna de retorno.
+    
+- Não está restrito à primeira coluna, oferecendo mais liberdade na organização dos dados.
+    
+- Oferece funcionalidades adicionais, tornando-o uma ferramenta mais potente.
+
+# Resolvendo o Dilema dos Valores Duplicados:
+
+Uma das maiores dores de cabeça ao usar o PROCV é lidar com valores duplicados. No vídeo, é apresentada uma solução engenhosa: a concatenação. 
+
+Ao criar uma chave única, combinando, por exemplo, o número da fatura e o nome do cliente, você pode superar essa limitação e garantir resultados precisos.
+
+# Conclusão:
+
+Embora o PROCV tenha sido um pilar do Excel por muitos anos, o PROCX está rapidamente se mostrando como a opção superior. Com maior flexibilidade e funcionalidades adicionais, é uma ferramenta indispensável para qualquer entusiasta do Excel. Se você ainda não fez a transição do PROCV para o PROCX, agora pode ser a hora perfeita!
+
+
+Selo 🧙‍♂️:
+
+[<img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100">](https://github.com/Linhares015)

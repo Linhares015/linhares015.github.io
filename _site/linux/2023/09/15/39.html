@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zsh | Cognitio Arcanum</title>
+  <meta name="generator" content="Jekyll v4.3.2" />
+  <meta property="og:title" content="Zsh" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <meta property="og:description" content="Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc." />
+  <link rel="canonical" href="http://localhost:4000/linux/2023/09/15/39.html" />
+  <meta property="og:url" content="http://localhost:4000/linux/2023/09/15/39.html" />
+  <meta property="og:site_name" content="Cognitio Arcanum" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="Zsh" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cognitio Arcanum" />
+</head>
+<body>
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Cognitio Arcanum</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <!-- SVG for menu icon -->
+        </span>
+      </label>
+      <div class="trigger"><a class="page-link" href="dados.html">Dados</a><a class="page-link" href="sql.html">SQL</a><a class="page-link" href="linux.html">Linux</a><a class="page-link" href="projeto.html">Projeto</a></div>
+        <!-- Add your navigation links here -->
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Zsh</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-09-15T00:42:47-03:00" itemprop="datePublished">Sep 15, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>O <code class="language-plaintext highlighter-rouge">Zsh</code>, ou <code class="language-plaintext highlighter-rouge">Z Shell</code>, é um interpretador de comandos interativo que oferece inúmeras melhorias em relação ao tradicional <code class="language-plaintext highlighter-rouge">Bash</code>, incluindo autocorreção, compartilhamento de comandos e uma experiência de usuário altamente personalizável.</p>
+
+<p>Neste artigo, vamos explorar como instalar o Zsh, configurá-lo e personalizá-lo com temas para tornar seu terminal mais atraente e funcional.</p>
+
+<h1 id="1-instalação-do-zsh">1. Instalação do Zsh</h1>
+
+<p>A instalação do Zsh é simples e pode ser feita na maioria das distribuições Linux e sistemas macOS:</p>
+
+<ul>
+  <li>Ubuntu/Debian:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>zsh
+</code></pre></div></div>
+
+<ul>
+  <li>Fedora:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>zsh
+</code></pre></div></div>
+
+<ul>
+  <li>Arch Linux:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> zsh
+</code></pre></div></div>
+
+<ul>
+  <li>macOS:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>zsh
+</code></pre></div></div>
+
+<p>Após a instalação, você pode definir o Zsh como seu shell padrão com o comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh <span class="nt">-s</span> <span class="si">$(</span>which zsh<span class="si">)</span>
+</code></pre></div></div>
+
+<h1 id="2-oh-my-zsh-um-framework-para-gerenciar-sua-configuração-zsh">2. Oh My Zsh: Um Framework para Gerenciar sua Configuração Zsh</h1>
+
+<p>Oh My Zsh é um framework de código aberto e uma comunidade que ajuda a gerenciar sua configuração Zsh. Ele vem com um conjunto de plugins, temas e funções úteis que podem ser habilitadas ou desabilitadas conforme sua preferência.</p>
+
+<h2 id="para-instalar-o-oh-my-zsh-use">Para instalar o Oh My Zsh, use:</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h1 id="3-personalizando-com-temas">3. Personalizando com Temas</h1>
+
+<p>Um dos maiores atrativos do Zsh é a capacidade de personalizá-lo com temas. O Oh My Zsh, por exemplo, vem com muitos temas pré-instalados. Para alterar o tema, edite o arquivo <code class="language-plaintext highlighter-rouge">~/.zshrc</code> e modifique a linha <code class="language-plaintext highlighter-rouge">ZSH_THEME</code> com o nome do tema desejado.</p>
+
+<ul>
+  <li>Por exemplo, para usar o tema agnoster, altere a linha para:</li>
+</ul>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">ZSH_THEME="agnoster"</span>
+</code></pre></div></div>
+
+<h2 id="onde-encontrar-mais-temas">Onde encontrar mais temas?</h2>
+
+<p>Oh My Zsh Temas: O próprio Oh My Zsh tem uma <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">galeria de temas</a> que você pode explorar.</p>
+
+<p>Zsh Users: O repositório <a href="https://github.com/zsh-users">zsh-users</a> no GitHub tem uma variedade de temas e plugins úteis.</p>
+
+<p>Outros repositórios: Muitos desenvolvedores e entusiastas do Zsh criam e compartilham seus próprios temas. Uma busca rápida no GitHub por “Zsh themes” pode revelar muitas joias escondidas.</p>
+
+<p>Dois themas que gosto muito:</p>
+
+<ul>
+  <li>Fino</li>
+</ul>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49100982/108254809-82cfdf80-716c-11eb-8d66-027fe4ecfd55.jpg" />
+</p>
+
+<ul>
+  <li>Robbyrussell</li>
+</ul>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49100982/108254738-764b8700-716c-11eb-9a59-4deb8c8c6193.jpg" />
+</p>
+
+<h1 id="conclusão">Conclusão</h1>
+
+<p>O Zsh é uma poderosa ferramenta que melhora significativamente a experiência no terminal. Com a capacidade de personalizar e usar temas, os usuários podem criar um ambiente de trabalho que não é apenas funcional, mas também esteticamente agradável. Se você ainda não experimentou o Zsh, recomendamos que o faça e explore as infinitas possibilidades que ele oferece.</p>
+
+<p>Selo 🧙‍♂️:</p>
+
+<p><a href="https://github.com/Linhares015"><img src="https://avatars.githubusercontent.com/u/117866866?v=4" width="100" height="100" /></a></p>
+
+  </div><a class="u-url" href="/linux/2023/09/15/39.html" hidden></a>
+</article>
+
+<script src="https://utteranc.es/client.js"
+        repo="Linhares015/meu-blog-comentarios"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</main>
+<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">Cognitio Arcanum</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cognitio Arcanum</li>
+          <li><a class="u-email" href="mailto:tiagolinhares051@gmail.com">tiagolinhares051@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <!-- Add your social media links here -->
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Este é um blog onde falaremos de assuntos relacionados a dados, tecnologia, programação, desenvolvimento, etc.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

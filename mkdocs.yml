@@ -18,3 +18,9 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Mudar para modo claro
+nav:
+  - Home: index.md
+  - Projetos:
+      - projetos.md
+      - Zero Inadimplência: projetos/zero_inadimplencia.md
+      - Athena Stack: projetos/athena_stack.md

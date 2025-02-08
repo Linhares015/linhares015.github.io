@@ -3,7 +3,7 @@
 Abaixo você encontra uma lista dos meus projetos de dados que desenvolvi, para aplicar meus conhecimentos e ajudar a comunidade de dados.
 
 
-## [Projeto Zero Inadimplência](https://github.com/Linhares015/projetos_end_to_end/tree/main/zero_inadimplencia)
+## [Projeto Zero Inadimplência](/docs/projetos/zero_inadimplencia.md)
 
 - ### Objetivo
     Projeto focado em reduzir a inadimplência de uma empresa, utilizando dados para identificar padrões e criar soluções.
@@ -13,14 +13,8 @@ Abaixo você encontra uma lista dos meus projetos de dados que desenvolvi, para 
     - ![SQL](https://img.shields.io/badge/SQL-Database-blue)
     - ![BigQuery](https://img.shields.io/badge/BigQuery-Database-blue)
     - ![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Viz-blue)
-- ### Aulas Youtube
-    - [Vídeo Parte 1 - Introdução](https://youtu.be/b8FCd9gwoBw)
-    - [Vídeo Parte 2 - Preparando Ambiente](https://youtu.be/tRxCThPRTKU)
-    - [Vídeo Parte 3 - Extraindo Excel para o Banco de Dados](https://youtu.be/C9XjXdyVVRQ)
-    - [Vídeo PArte 4 - Modelagem de dados SQL no Apache Hop](https://youtu.be/vdwLWdIK7fc)
-    - [Vídeo Parte 5 - Criando Dashboards no Power BI - Parte 1](https://youtu.be/k2m_YbdEIRg)
-    - [Vídeo Parte 6 - Criando Dashboards no Power BI - Parte 2](https://youtu.be/FNiLGJTI8-I)
-- ## [Projeto Athena - Stack de dados](https://github.com/Linhares015/athena_stack_infra)
+
+- ## [Projeto Athena - Stack de dados](/docs/projetos/athena_stack.md)
 
     - ### Objetivo
         Evoluir a stack de dados em excel que é como a empresa trabalha atualmente, para uma stack de dados moderna e escalável.
@@ -85,10 +79,6 @@ Abaixo você encontra uma lista dos meus projetos de dados que desenvolvi, para 
     - ![Dbt](https://img.shields.io/badge/Dbt-Data%20Modeling-blue)
     - ![Postgres](https://img.shields.io/badge/Postgres-Database-blue)
     - ![Docker](https://img.shields.io/badge/Docker-Container-blue)
-- ### Aulas Youtube
-    - [Vídeo Parte 1](https://youtu.be/ZjVKkVJZNus)
-    - [Vídeo Parte 2](https://youtu.be/7mIk_X3M2K0)
-    - [Vídeo Parte 3 - Final](https://youtu.be/6pAruuIki9E)
 
 ## [Projeto - Robô envio de alertas Telegram](https://github.com/Linhares015/projetos_end_to_end/tree/main/Robo_telegram)
 
@@ -100,10 +90,6 @@ Abaixo você encontra uma lista dos meus projetos de dados que desenvolvi, para 
     - ![Telegram](https://img.shields.io/badge/Telegram-Chatbot-blue)
     - ![Airflow](https://img.shields.io/badge/Airflow-Data%20Pipeline-blue)
     - ![Docker](https://img.shields.io/badge/Docker-Container-blue)
-- ### Aulas Youtube
-    - [Vídeo Parte 1 - Ingestão de dados do e-mail via apache hop](https://youtu.be/-Ng0xpuSvNA)
-    - [Vídeo Parte 2 - Loop de envio ao telegram via apache hop](https://youtu.be/6-WaTLmzj9s)
-    - [Vídeo Parte 3 - Apache hop rodando no Docker com imagem personalizada](https://youtu.be/Ka29D5UCed4)
 
 ## [Projeto - SQL Database Specialist](https://github.com/Linhares015/modelo_er_projeto)
 

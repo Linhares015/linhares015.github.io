@@ -8,7 +8,7 @@ name: Deploy MkDocs Site to GitHub Pages
 on:
   push:
     branches:
-      - develop   # sua branch de código fonte
+      - develop  # sua branch de código fonte
 
 jobs:
   deploy:
@@ -37,9 +37,9 @@ jobs:
         run: |
           touch site/.nojekyll
 
-      - name: Deploy para GitHub Pages (branch main)
+      - name: Publicar site no GitHub Pages (para branch main)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: main
+          publish_branch: main
           publish_dir: ./site

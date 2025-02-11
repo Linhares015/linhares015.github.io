@@ -3,7 +3,7 @@
 Abaixo você encontra uma lista dos meus projetos de dados que desenvolvi, para aplicar meus conhecimentos e ajudar a comunidade de dados.
 
 
-## [Projeto Zero Inadimplência](/docs/projetos/zero_inadimplencia.md)
+## [Projeto Zero Inadimplência](projetos/zero_inadimplencia.md)
 
 - ### Objetivo
     Projeto focado em reduzir a inadimplência de uma empresa, utilizando dados para identificar padrões e criar soluções.
@@ -14,7 +14,7 @@ Abaixo você encontra uma lista dos meus projetos de dados que desenvolvi, para 
     - ![BigQuery](https://img.shields.io/badge/BigQuery-Database-blue)
     - ![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Viz-blue)
 
-- ## [Projeto Athena - Stack de dados](/docs/projetos/athena_stack.md)
+- ## [Projeto Athena - Stack de dados](projetos/athena_stack.md)
 
     - ### Objetivo
         Evoluir a stack de dados em excel que é como a empresa trabalha atualmente, para uma stack de dados moderna e escalável.

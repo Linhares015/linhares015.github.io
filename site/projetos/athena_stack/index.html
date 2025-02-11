@@ -1,0 +1,1110 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tiago Linhares personal blog">
+      
+      
+        <meta name="author" content="Tiago Linhares">
+      
+      
+        <link rel="canonical" href="https://linhares015.github.io/projetos/athena_stack/">
+      
+      
+        <link rel="prev" href="../zero_inadimplencia/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Athena Stack - Tiago Linhares</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projeto-athena-evolucao-de-uma-stack-de-dados" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tiago Linhares" class="md-header__button md-logo" aria-label="Tiago Linhares" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tiago Linhares
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Athena Stack
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tiago Linhares" class="md-nav__button md-logo" aria-label="Tiago Linhares" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Tiago Linhares
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projetos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zero_inadimplencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Inadimplência
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Athena Stack
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Athena Stack
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descricao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclo-de-vida-da-engenharia-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo de vida da Engenharia de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Inicial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stack Inicial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desvantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvantagens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucao-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolução - Nivel 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolução - Nivel 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n1-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      | N1 | YouTube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos - Nível 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão - Nível 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucao-nivel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolução - Nivel 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolução - Nivel 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n2-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      | N2 | YouTube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-nivel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão - Nível 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-de-dados-evoluida-nivel-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack de Dados Evoluída - Nivel 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stack de Dados Evoluída - Nivel 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n3-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      | N3 | YouTube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descricao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclo-de-vida-da-engenharia-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclo de vida da Engenharia de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Inicial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stack Inicial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desvantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvantagens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucao-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolução - Nivel 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolução - Nivel 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n1-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      | N1 | YouTube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos - Nível 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-nivel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão - Nível 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolucao-nivel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evolução - Nivel 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evolução - Nivel 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n2-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      | N2 | YouTube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-nivel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão - Nível 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-de-dados-evoluida-nivel-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack de Dados Evoluída - Nivel 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stack de Dados Evoluída - Nivel 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vantagens_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n3-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      | N3 | YouTube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="projeto-athena-evolucao-de-uma-stack-de-dados">Projeto Athena - Evolução de uma Stack de Dados 🧙‍♂️</h1>
+<p><a href="https://www.udemy.com/course/projeto-athena-construindo-e-evoluindo-stacks-de-dados/?referralCode=0D30109D4DF20FAEC128">Série completa aqui</a></p>
+<h2 id="descricao">Descrição</h2>
+<p>O Projeto Athena é um projeto de evolução de uma stack de dados, que tem como objetivo demonstrar as habilidades de <code>Engenharia de Dados</code>, <code>DataOps</code>, <code>Arquitetura de Dados</code> e <code>Orquestração de Pipelines</code>.</p>
+<p>Esse é um projeto inovador e desafiador, que aborda conceitos e tecnologias avançadas de Engenharia de Dados, e tem como objetivo capacitar profissionais de dados a construir e evoluir stacks de dados eficientes e escaláveis.</p>
+<h2 id="ciclo-de-vida-da-engenharia-de-dados">Ciclo de vida da Engenharia de Dados</h2>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Segurança</strong></td>
+<td>Controle de acesso para dados<br>Sistemas</td>
+</tr>
+<tr>
+<td><strong>Gerenciamento de dados</strong></td>
+<td>Governança de dados<br>Capacidade de dados<br>Accountability<br>Modelagem de dados<br>Integridade dos dados</td>
+</tr>
+<tr>
+<td><strong>DataOps</strong></td>
+<td>Governança de dados<br>Observabilidade e monitoramento<br>Relatórios de incidentes</td>
+</tr>
+<tr>
+<td><strong>Arquitetura de dados</strong></td>
+<td>Análise de dados<br>Desenvolvimento<br>Plataforma de dados<br>Gerar valor para dados</td>
+</tr>
+<tr>
+<td><strong>Orquestração</strong></td>
+<td>Coordenar fluxos de trabalho<br>Programação<br>Executar tarefas</td>
+</tr>
+<tr>
+<td><strong>Engenharia de software</strong></td>
+<td>Habilidades de programar<br>Prototipação<br>Gestão de código<br>Teste e recuperação</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stack-inicial">Stack Inicial</h2>
+<h3 id="introducao">Introdução</h3>
+<p>O projeto Athena é um projeto de evolução de uma stack de dados. A stack de dados é um conjunto de ferramentas e tecnologias que são utilizadas para a ingestão, armazenamento, processamento e visualização de dados. A stack de dados inicial será baseada na que muitas empresas usam no seu dia a dia e a mesma que muitos profissionais de dados aprendem a utilizar. A stack de dados inicial é composta por:</p>
+<ul>
+<li><code>Excel</code> como origem de dados;</li>
+<li><code>Power Query</code> como ferramenta de ingestão de dados;</li>
+<li><code>Power Query</code> como ferramenta de transformação de dados;</li>
+<li><code>Power Query</code> como ferramenta de carga de dados;</li>
+<li><code>Power BI</code> como ferramenta de visualização de dados.</li>
+</ul>
+<p><img alt="alt text" src="../img/1.png" /></p>
+<h3 id="desvantagens">Desvantagens</h3>
+<p>Apesar dessa ser na maioria das vezes a stack de dados inicial de muitas empresas e analistas de dados, ela possui algumas desvantagens:</p>
+<ul>
+<li>
+<p><strong>Excel como origem de dados</strong>: O Excel é uma ferramenta muito poderosa e versátil, mas não é a melhor ferramenta para armazenar dados. O Excel não é um banco de dados e não foi feito para armazenar grandes volumes de dados. Além disso, o Excel não é uma ferramenta colaborativa, o que dificulta o compartilhamento de dados entre os membros da equipe.</p>
+</li>
+<li>
+<p><strong>Power Query como ferramenta de ingestão de dados</strong>: O Power Query é uma ferramenta muito poderosa e versátil, mas não é a melhor ferramenta para a ingestão de dados. O Power Query não foi feito para lidar com grandes volumes de dados e não é uma ferramenta colaborativa.</p>
+</li>
+<li>
+<p><strong>Power Query como ferramenta de transformação de dados</strong>: Apesar de ter bastante poder de transformação de dados e ser fácil de usar, o Power Query não é a melhor ferramenta para a transformação de dados. O mesmo não foi feito para lidar com grandes volumes de dados além de não possuir versionamento de código, deixar todo o processo na ferramenta e não permitir a reutilização de código. Tudo isso gera uma divida técnica muito grande, para o time de dados.</p>
+</li>
+<li>
+<p><strong>Power Query como ferramenta de carga de dados</strong>: O Power Query não é a melhor ferramenta para a carga de dados.</p>
+</li>
+<li>
+<p><strong>Power BI como ferramenta de visualização de dados</strong>: O Power BI é uma ferramenta muito poderosa e versátil para a visualização de dados, e é ai que ele deve ser utilizado.</p>
+</li>
+</ul>
+<h2 id="evolucao-nivel-1">Evolução - Nivel 1</h2>
+<p>A stack de dados evoluída é composta por:</p>
+<ul>
+<li><code>Excel</code> como origem de dados;</li>
+<li><code>Apache Hop</code> como ferramenta de ingestão de dados;</li>
+<li><code>PostgreSQL</code> como banco de dados (Data Warehouse);</li>
+<li><code>Apache Hop</code> como ferramenta de transformação de dados;</li>
+<li><code>Apache Hop</code> como ferramenta de carga de dados;</li>
+<li><code>Power BI</code> como ferramenta de visualização de dados.</li>
+</ul>
+<p><img alt="alt text" src="../img/2.png" /></p>
+<h3 id="vantagens">Vantagens</h3>
+<p>A stack de dados evoluída possui várias vantagens em relação a stack de dados inicial:</p>
+<ul>
+<li>
+<p><strong>Excel como origem de dados</strong>: O Excel é uma ferramenta muito poderosa e versátil, e é muito utilizada como origem de dados. A stack de dados evoluída mantém o Excel como origem de dados, mas utiliza o Apache Hop para fazer a ingestão dos dados.</p>
+</li>
+<li>
+<p><strong>Apache Hop como ferramenta de ingestão de dados</strong>: O Apache Hop é uma ferramenta muito poderosa e versátil para a ingestão de dados. O Apache Hop foi feito para lidar com grandes volumes de dados e é uma ferramenta colaborativa.</p>
+</li>
+<li>
+<p><strong>PostgreSQL como banco de dados (Data Warehouse)</strong>: O PostgreSQL é um banco de dados muito poderoso e versátil, e é muito utilizado como Data Warehouse. O PostgreSQL foi feito para lidar com grandes volumes de dados e é uma ferramenta colaborativa.</p>
+</li>
+<li>
+<p><strong>Apache Hop como ferramenta de transformação de dados</strong>: O Apache Hop é uma ferramenta muito poderosa e versátil para a transformação de dados. O Apache Hop foi feito para lidar com grandes volumes de dados e possui versionamento de código, permitindo a reutilização de código.</p>
+</li>
+<li>
+<p><strong>Apache Hop como ferramenta de carga de dados</strong>: O Apache Hop é uma ferramenta muito poderosa e versátil para a carga de dados.</p>
+</li>
+<li>
+<p><strong>Power BI como ferramenta de visualização de dados</strong>: O Power BI é uma ferramenta muito poderosa e versátil para a visualização de dados, e é ai que ele deve ser utilizado.</p>
+</li>
+</ul>
+<h3 id="n1-youtube">| N1 | YouTube</h3>
+<ul>
+<li><a href="https://youtu.be/d9yKAGrFB10">Projeto Athena - Aula 01 - Introdução</a></li>
+</ul>
+<h3 id="arquivos-nivel-1">Arquivos - Nível 1</h3>
+<p><a href="https://www.kaggle.com/datasets/cleveranjosqlik/csv-northwind-database">Base de dados de Exemplo</a></p>
+<h3 id="conclusao-nivel-1">Conclusão - Nível 1</h3>
+<p>A stack de dados evoluída é muito mais robusta e poderosa do que a inicial, capaz de processar maiores volumes de dados de forma eficiente e colaborativa.</p>
+<p>Não mudamos só as ferramentas, mas também a forma de pensar e trabalhar com dados. A stack de dados evoluída é baseada em conceitos de DataOps e Data Engineering, que são fundamentais para a construção de pipelines de dados eficientes e escaláveis.</p>
+<p>Porém como mencionamos essa não é a stack definitiva, ela é apenas o primeiro passo de uma longa jornada de evolução de dados. Por conta disso temos algumas oportunidades de melhoria que serão abordadas nas próximas evoluções:</p>
+<ul>
+<li>
+<p>🗒️ <strong>Excel como origem de dados</strong>: Apesar de termos criado validações, ainda é possível que os usuários do Excel façam alterações indevidas nos dados. O que torna o processo de ingestão de dados vulnerável a erros. A melhor abordagem seria a substituição do Excel por um banco de dados relacional, uma API ou um sistema de mensageria.</p>
+</li>
+<li>
+<p><strong>🦺 Modelagem de dados no Apache Hop</strong>: Apesar de termos criado um Data Warehouse no PostgreSQL, a modelagem de dados no Apache Hop ainda é um ponto de atenção, pois estamos usando códigos SQL dentro da ferramenta, o que causa transtornos na hora da manutenção, versionamento e reutilização de código. A melhor abordagem seria a utilização de ferramentas de modelagem de dados como o dbt.</p>
+</li>
+<li>
+<p><strong>🔒 Segurança dos dados</strong>: A segurança dos dados é um ponto crítico em qualquer stack de dados. A stack de dados evoluída não possui nenhum mecanismo de segurança dos dados, o que pode ser um problema em ambientes de produção. A melhor abordagem seria a implementação de mecanismos de segurança dos dados como criptografia, controle de acesso e auditoria.</p>
+</li>
+<li>
+<p><strong>📊 Monitoramento e alertas</strong>: O monitoramento e alertas são fundamentais para garantir a integridade e disponibilidade dos dados. A stack de dados evoluída não possui nenhum mecanismo de monitoramento e alertas. A melhor abordagem seria a implementação de mecanismos de monitoramento e alertas como dashboards, alertas por e-mail e integração com ferramentas de monitoramento.</p>
+</li>
+<li>
+<p><strong>🎼 Orquestração de pipelines de dados</strong>: A orquestração de pipelines de dados é fundamental para garantir a execução dos pipelines de forma eficiente e escalável. A stack de dados evoluída não possui nenhum mecanismo de orquestração de pipelines de dados. A melhor abordagem seria a implementação de mecanismos de orquestração de pipelines de dados como Apache Airflow ou Prefect.</p>
+</li>
+<li>
+<p><strong>🖥️ Ambiente local</strong>: A stack de dados evoluída foi construída em um ambiente local, o que pode tornar o ambiente instável, pois todas as etapas vão depender do poder de processamento da maquina local. A melhor abordagem seria a implementação da stack de dados em um ambiente de nuvem como AWS, GCP ou Azure.</p>
+</li>
+<li>
+<p><strong>🫅 Governança de dados</strong>: A governança de dados é fundamental para garantir a qualidade e integridade dos dados. A stack de dados evoluída não possui nenhum mecanismo de governança de dados. A melhor abordagem seria a implementação de mecanismos de governança de dados como catálogo de dados, glossário de dados e políticas de dados.</p>
+</li>
+<li>
+<p><strong>⌨️ Testes automatizados</strong>: Os testes automatizados são fundamentais para garantir a qualidade e integridade dos dados. A stack de dados evoluída não possui nenhum mecanismo de testes automatizados. A melhor abordagem seria a implementação de mecanismos de testes automatizados como testes de integração, testes de unidade e testes de regressão.</p>
+</li>
+<li>
+<p><strong>👩‍🏫 Documentação dos processos</strong>: A documentação dos processos é fundamental para garantir a qualidade e integridade dos dados. A stack de dados evoluída não possui nenhum mecanismo de documentação dos processos. A melhor abordagem seria a implementação de mecanismos de documentação dos processos como documentação de código, documentação de pipelines e documentação de datasets.</p>
+</li>
+</ul>
+<p>A perfeição é inatingível, mas a melhoria é infinita. A stack de dados evoluída é um grande avanço em relação a stack de dados inicial, mas ainda há muito a ser feito para torná-la ainda mais robusta e poderosa. A stack de dados evoluída é apenas o primeiro passo de uma longa jornada de evolução de dados, e estamos apenas começando, aguardem os próximos níveis.</p>
+<h2 id="evolucao-nivel-2">Evolução - Nivel 2</h2>
+<p>A stack de dados evoluída nível 2 é composta pelas seguintes melhorias:</p>
+<ul>
+<li><code>Banco de dados relacional</code> como origem de dados;</li>
+<li><code>GitHub</code> integrado com <code>Apache Hop</code>;</li>
+<li>Data Warehouse rodando no <code>Linux (Docker)</code>;</li>
+<li><code>Data Warehouse</code> aberto a conexões externas;</li>
+<li>Níveis de acesso no <code>DW PostgreSQL</code>;</li>
+<li>Pipelines do <code>Apache Hop</code> Orquestrados;</li>
+</ul>
+<p><img alt="alt text" src="../img/4.png" /></p>
+<h3 id="vantagens_1">Vantagens</h3>
+<p>A stack de dados evoluída nível 2 possui várias vantagens em relação a stack nível 1:</p>
+<ul>
+<li>
+<p><strong>Banco de dados relacional como origem de dados</strong>: O banco de dados relacional é uma fonte de dados mais robusta e segura do que o Excel. O banco de dados relacional possui mecanismos de segurança e integridade dos dados que o Excel não possui.</p>
+</li>
+<li>
+<p><strong>GitHub integrado com Apache Hop</strong>: O GitHub é uma ferramenta muito poderosa e versátil para o versionamento de código. O GitHub permite o controle de versão do código, o que facilita a colaboração entre os membros da equipe.</p>
+</li>
+<li>
+<p><strong>Data Warehouse rodando no Linux (Docker)</strong>: O Data Warehouse rodando no Linux (Docker) é mais estável e seguro do que o Data Warehouse rodando no Windows. O Linux é um sistema operacional mais robusto e seguro, e o Docker é uma ferramenta muito poderosa e versátil para a execução de containers.</p>
+</li>
+<li>
+<p><strong>Data Warehouse aberto a conexões externas</strong>: O Data Warehouse aberto a conexões externas permite que outras ferramentas e sistemas se conectem ao Data Warehouse. O Data Warehouse aberto a conexões externas facilita a integração automática Power BI, Tableau, Metabase, etc.</p>
+</li>
+<li>
+<p><strong>Níveis de acesso no DW PostgreSQL</strong>: Os níveis de acesso no Data Warehouse PostgreSQL permitem controlar quem pode acessar e modificar os dados. Os níveis de acesso garantem a segurança e integridade dos dados.</p>
+</li>
+<li>
+<p><strong>Pipelines do Apache Hop orquestrados</strong>: Os pipelines do Apache Hop orquestrados garantem a execução dos pipelines de forma eficiente e escalável. Os pipelines orquestrados permitem a execução dos pipelines em paralelo e em sequência, tornando as cargas automáticas e escaláveis.</p>
+</li>
+</ul>
+<h3 id="n2-youtube">| N2 | YouTube</h3>
+<ul>
+<li><a href="https://youtu.be/GV0RuKpsrz4">Projeto Athena - Aula 01 - Introdução</a></li>
+</ul>
+<h3 id="conclusao-nivel-2">Conclusão - Nível 2</h3>
+<p>A stack de dados evoluída nível 2 é um grande avanço em relação a stack de dados evoluída nível 1, capaz de processar maiores volumes de dados de forma eficiente e colaborativa.</p>
+<p>Porém como mencionamos essa não é a stack definitiva, ela é apenas o segundo passo de uma longa jornada de evolução de dados. Por conta disso temos algumas oportunidades de melhoria que serão abordadas nas próximas evoluções:</p>
+<ul>
+<li>
+<p>🗒️ <strong>Banco de dados relacional como origem de dados</strong>: Apesar de termos substituído o Excel por um banco de dados relacional, utilizamos um banco que subimos dentro do próprio ambiente. Vamos melhorar isso no futuro buscando de uma API.</p>
+</li>
+<li>
+<p><strong>🦺 Modelagem de dados no Apache Hop</strong>: Apesar de termos criado um Data Warehouse no PostgreSQL, a modelagem de dados no Apache Hop ainda é um ponto de atenção, pois estamos usando códigos SQL dentro da ferramenta, o que causa transtornos na hora da manutenção, versionamento e reutilização de código. A melhor abordagem seria a utilização de ferramentas de modelagem de dados como o dbt.</p>
+</li>
+<li>
+<p><strong>🔒 Segurança dos dados</strong>: A segurança dos dados é um ponto crítico em qualquer stack de dados. A stack de dados evoluída nível 2 possui apenas um mecanismo de segurança dos dados, o que pode ser um problema em ambientes de produção. A melhor abordagem seria a implementação de mecanismos de segurança dos dados como criptografia, controle de acesso e auditoria.</p>
+</li>
+<li>
+<p><strong>📊 Monitoramento e alertas</strong>: O monitoramento e alertas são fundamentais para garantir a integridade e disponibilidade dos dados. A stack de dados evoluída nível 2 não possui nenhum mecanismo de monitoramento e alertas. A melhor abordagem seria a implementação de mecanismos de monitoramento e alertas como dashboards, alertas por e-mail e integração com ferramentas de monitoramento.</p>
+</li>
+<li>
+<p><strong>🖥️ Ambiente local</strong>: A stack de dados evoluída nível 2 foi construída em um ambiente local, o que pode tornar o ambiente instável, pois todas as etapas vão depender do poder de processamento da maquina local. A melhor abordagem seria a implementação da stack de dados em um ambiente de nuvem como AWS, GCP ou Azure.</p>
+</li>
+<li>
+<p><strong>🫅 Governança de dados</strong>: A governança de dados é fundamental para garantir a qualidade e integridade dos dados. A stack de dados evoluída nível 2 não possui nenhum mecanismo de governança de dados. A melhor abordagem seria a implementação de mecanismos de governança de dados como catálogo de dados, glossário de dados e políticas de dados.</p>
+</li>
+<li>
+<p><strong>⌨️ Testes automatizados</strong>: Os testes automatizados são fundamentais para garantir a qualidade e integridade dos dados. A stack de dados evoluída nível 2 não possui nenhum mecanismo de testes automatizados. A melhor abordagem seria a implementação de mecanismos de testes automatizados como testes de integração, testes de unidade e testes de regressão.</p>
+</li>
+<li>
+<p><strong>👩‍🏫 Documentação dos processos</strong>: A documentação dos processos é fundamental para garantir a qualidade e integridade dos dados. A stack de dados evoluída nível 2 não possui nenhum mecanismo de documentação dos processos. A melhor abordagem seria a implementação de mecanismos de documentação dos processos como documentação de código, documentação de pipelines e documentação de datasets.</p>
+</li>
+</ul>
+<p>A perfeição é inatingível, mas a melhoria é infinita. A stack de dados evoluída nível 2 é um grande avanço em relação a stack de dados evoluída nível 1, mas ainda há muito a ser feito para torná-la ainda mais robusta e poderosa. A stack de dados evoluída nível 2 é apenas o segundo passo de uma longa jornada de evolução de dados, e estamos apenas começando, aguardem os próximos níveis.</p>
+<h2 id="stack-de-dados-evoluida-nivel-3">Stack de Dados Evoluída - Nivel 3</h2>
+<p>A stack de dados evoluída nível 3 é composta pelas seguintes melhorias:</p>
+<ul>
+<li><code>API</code> como origem de dados;</li>
+<li><code>Airbyte</code> para ingestão de dados;</li>
+<li><code>Apache Airflow</code> para orquestração de pipelines;</li>
+<li><code>DBT</code> para modelagem de dados;</li>
+<li><code>DBT</code> para governança de dados;</li>
+<li><code>DBT</code> para documentação de processos;</li>
+<li><code>DBT</code> para testes automatizados;</li>
+<li><code>DBT</code> qualidade de dados;</li>
+<li><code>Postgres</code> como Data Warehouse;</li>
+<li><code>Metabase</code> para visualização de dados;</li>
+<li><code>Grafana</code> para monitoramento de Infraestrutura;</li>
+<li><code>Prometheus</code> para monitoramento de Aplicações;</li>
+<li><code>Cadvisor</code> para monitoramento de Containers;</li>
+<li><code>Docker</code> para orquestração de containers;</li>
+<li><code>Linux</code> como sistema operacional;</li>
+<li><code>GIT</code> para versionamento de código;</li>
+<li><code>Shell Script</code> para automação de tarefas;</li>
+</ul>
+<p><img alt="alt text" src="../img/5.png" /></p>
+<h3 id="vantagens_2">Vantagens</h3>
+<p>A stack de dados evoluída nível 3 oferece diversas vantagens em comparação à stack nível 2, com ferramentas especializadas que aprimoram cada aspecto do processamento de dados:</p>
+<p><strong>API como origem de dados</strong>: A API (Application Programming Interface) é utilizada como fonte de dados, oferecendo <code>robustez</code> e <code>segurança</code> superior aos bancos de dados relacionais tradicionais. APIs permitem a <code>integração</code> com sistemas externos, facilitam o acesso controlado aos dados e garantem a <code>integridade</code> das transações através de <code>autenticação</code>, <code>autorização</code> e <code>mecanismos de criptografia</code>.</p>
+<p><strong>Airbyte para ingestão de dados</strong>: O Airbyte é uma ferramenta <code>open-source</code> projetada para a ingestão de grandes volumes de dados de <code>diversas fontes</code>. Ele oferece conectores <code>pré-construídos</code> para várias origens de dados, permite a configuração de pipelines de dados de maneira <code>colaborativa</code> e suporta funcionalidades como <code>replicação incremental</code>, transformação de dados e <code>monitoramento contínuo dos fluxos de ingestão</code>.</p>
+<p><strong>Apache Airflow para orquestração de pipelines</strong>: O Apache Airflow é uma plataforma poderosa para a <code>orquestração</code> de workflows complexos de dados. Ele permite a definição, <code>agendamento</code> e <code>monitoramento</code> de pipelines de dados através de <code>DAGs</code> (Directed Acyclic Graphs), facilitando o gerenciamento de dependências entre tarefas, a <code>escalabilidade</code> e o monitoramento em tempo real com <code>alertas</code> configuráveis.</p>
+<p><strong>DBT (Data Build Tool) para modelagem, governança e qualidade de dados</strong>: O DBT é uma ferramenta central na stack nível 3, abrangendo várias funções críticas:</p>
+<ul>
+<li>
+<p>Modelagem de dados: Facilita a transformação de dados utilizando <code>SQL</code>, promovendo a <code>reutilização</code> e <code>versionamento</code> de código, além de gerar <code>documentação</code> automática e visível através de uma interface web.</p>
+</li>
+<li>
+<p>Governança de dados: Oferece recursos como <code>catálogo de dados e glossário</code>, ajudando na definição de políticas de dados e na organização de ativos de dados de maneira estruturada.</p>
+</li>
+<li>
+<p>Qualidade de dados: Implementa <code>testes automatizados</code> para validação, limpeza e enriquecimento de dados, garantindo a <code>precisão e confiabilidade dos datasets</code>.</p>
+</li>
+</ul>
+<p><strong>Postgres como Data Warehouse</strong>: O PostgreSQL é utilizado como um banco de dados Data Warehouse devido à sua <code>robustez</code> e capacidade de lidar com grandes volumes de dados. Ele oferece suporte a transações <code>ACID</code>, índices avançados, replicação e ferramentas de backup, além de extensões que melhoram seu desempenho para cargas de trabalho analíticas.</p>
+<p><strong>Metabase para visualização de dados</strong>: O Metabase é uma ferramenta de BI (Business Intelligence) que permite a criação de <code>dashboards interativos</code>, gráficos e relatórios. Ele suporta consultas <code>SQL</code>, visualização de dados em <code>tempo real</code> e colaboração entre usuários através de compartilhamento de painéis.</p>
+<p><strong>Grafana para monitoramento de infraestrutura</strong>: O Grafana é uma plataforma <code>open-source</code> que oferece visualização e análise de <code>métricas de infraestrutura</code>. Ele integra-se com diversas fontes de dados, permitindo a criação de dashboards personalizados e <code>alertas</code> para monitoramento proativo da <code>saúde da infraestrutura</code>.</p>
+<p><strong>Prometheus para monitoramento de aplicações</strong>: O Prometheus é uma ferramenta de monitoramento e alerta de código aberto focada em aplicações. Ele coleta e armazena métricas em <code>séries temporais</code>, suporta consultas avançadas com <code>PromQL (Prometheus Query Language)</code> e integra-se nativamente com Grafana para visualização.</p>
+<p><strong>Cadvisor para monitoramento de containers</strong>: O Cadvisor (Container Advisor) monitora o uso de recursos <code>(CPU, memória, rede e I/O)</code> dos containers em <code>tempo real</code>, fornecendo métricas detalhadas que ajudam na otimização e gerenciamento de ambientes <code>containerizados</code>.</p>
+<p><strong>Docker para gerenciamento de containers</strong>: O Docker permite a criação, implantação e gerenciamento de containers de forma <code>eficiente</code>. Ele isola aplicações em ambientes separados, facilita a <code>escalabilidade horizontal</code> e integra-se com ferramentas de <code>CI/CD</code> e monitoramento para automação completa do ciclo de vida das aplicações.</p>
+<p><strong>Linux como sistema operacional</strong>: O Linux é amplamente utilizado devido à sua <code>estabilidade</code>, <code>segurança</code> e <code>flexibilidade</code>. Ele oferece suporte a scripts de automação, ferramentas de gerenciamento de pacotes e um ecossistema robusto de <code>software livre</code>, essencial para a execução <code>confiável</code> de pipelines de dados.</p>
+<p><strong>GIT para versionamento de código</strong>: O GIT é uma ferramenta de controle de versão <code>distribuída</code> que facilita o rastreamento de mudanças no código, <code>colaboração entre desenvolvedores</code> e manutenção de um histórico completo de alterações, essencial para projetos de dados <code>complexos</code>.</p>
+<p><strong>Shell Script para automação de tarefas</strong>: Shell Scripts são utilizados para automatizar tarefas <code>repetitivas</code> e complexas, integrando diversos processos e ferramentas. Eles são altamente <code>eficientes</code> para a execução de scripts de manutenção, backups, deploys e outras operações administrativas, suportando a <code>escalabilidade</code> e a <code>integração</code> com sistemas de monitoramento.</p>
+<p>Essa stack nível 3, composta por ferramentas especializadas, proporciona uma infraestrutura de dados robusta, segura e eficiente, capaz de lidar com grandes volumes de dados e complexidades operacionais, garantindo alto desempenho e confiabilidade em todas as etapas do pipeline de dados.</p>
+<h3 id="n3-youtube">| N3 | YouTube</h3>
+<ul>
+<li><a href="https://youtu.be/2neuQg14VTA">Projeto Athena - Aula 01 - Introdução</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
